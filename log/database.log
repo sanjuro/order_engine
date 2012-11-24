@@ -1,0 +1,23 @@
+D, [2012-11-01T00:55:09.632092 #52692] DEBUG -- :   [1m[36mOrder Load (19.0ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+D, [2012-11-06T11:44:01.811159 #17056] DEBUG -- :   [1m[36mOrder Load (1.7ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+W, [2012-11-06T11:47:45.038796 #17063]  WARN -- : Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+D, [2012-11-06T11:51:13.715018 #17063] DEBUG -- :   [1m[36mOrder Load (1.0ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+D, [2012-11-06T11:51:53.169040 #17080] DEBUG -- :   [1m[36mUser Load (1.5ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+D, [2012-11-06T11:52:07.052295 #17080] DEBUG -- :   [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` 
+D, [2012-11-06T11:52:13.486560 #17086] DEBUG -- :   [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+D, [2012-11-06T11:52:14.330502 #17086] DEBUG -- :   [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` 
+D, [2012-11-06T11:52:16.631283 #17086] DEBUG -- :   [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+D, [2012-11-06T11:52:19.275667 #17086] DEBUG -- :   [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` 
+D, [2012-11-06T12:03:47.222055 #17145] DEBUG -- : WARNING: Can't mass-assign protected attributes: mobile_number
+W, [2012-11-06T12:41:02.251146 #17145]  WARN -- : Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+D, [2012-11-06T12:41:02.408137 #17145] DEBUG -- : WARNING: Can't mass-assign protected attributes: mobile_number
+D, [2012-11-06T12:56:21.673442 #17430] DEBUG -- :   [1m[36mOrder Load (64.5ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+D, [2012-11-06T17:49:16.070438 #18681] DEBUG -- : WARNING: Can't mass-assign protected attributes: mobile_number
+D, [2012-11-06T17:50:22.855105 #18691] DEBUG -- : WARNING: Can't mass-assign protected attributes: mobile_number
+D, [2012-11-06T17:50:22.880536 #18691] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2012-11-06T17:50:22.881355 #18691] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+W, [2012-11-06T17:51:10.120479 #18691]  WARN -- : Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+D, [2012-11-06T17:55:27.392657 #18715] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2012-11-06T17:55:27.416226 #18715] DEBUG -- :   [1m[35mSQL (1.1ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `full_name`, `last_sign_in_at`, `last_sign_in_ip`, `mobile_number`, `provider`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `uid`, `updated_at`, `username`) VALUES ('2012-11-06 17:55:27', NULL, NULL, 'shad6ster@gmail.com', '', 'Test Customer', NULL, NULL, '0833908314', '', NULL, NULL, NULL, 0, '', '2012-11-06 17:55:27', NULL)
+D, [2012-11-06T17:55:27.428582 #18715] DEBUG -- :   [1m[36m (11.9ms)[0m  [1mCOMMIT[0m
+D, [2012-11-15T18:26:16.440579 #46406] DEBUG -- :   [1m[36mOrder Load (31.8ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
