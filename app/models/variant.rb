@@ -1,12 +1,27 @@
+# Class to model the variant resource
+#
+# Author::    Shadley Wentzel
+#
+# == Schema Information
+#
+# Table name: variants
+#
+#  id                         :integer(4)      not null, primary key
+#  full_name                  :string(255)
+#  user_pin                   :string(255)
+#  email                      :string(255)
+#  mobile_number              :string(255)
+#  gender                     :string(255)
+#  encrypted_password         :string(255)
+#  created_at                 :datetime
+#  updated_at                 :datetime
+#  user_id                    :integer(4)
+#
 
 class Variant < ActiveRecord::Base
     belongs_to :product, :touch => true
 
-    delegate_belongs_to :product, :name, :description, 
-                        :tax_category_id, :meta_description,
-                        :meta_keywords, :tax_category
-
-    attr_accessible :name, :presentation, :position, :on_hand, :option_value_ids,
+    attr_accessible :name, :presentation, :position, :option_value_ids,
                     :product_id, :option_values_attributes, :price, :sku
 
     has_many :inventory_units
@@ -14,19 +29,21 @@ class Variant < ActiveRecord::Base
     has_and_belongs_to_many :option_values, :join_table => :spree_option_values_variants
     has_many :images, :as => :viewable, :order => :position, :dependent => :destroy
 
+    delegate_attributes :product, :name, :description, :meta_description, :meta_keywords, :to => :product
+
     validate :check_price
     validates :price, :numericality => { :greater_than_or_equal_to => 0 }, :presence => true
 
-    after_save :recalculate_product_on_hand, :if => :is_master?
+    # after_save :recalculate_product_on_hand, :if => :is_master?
 
     # default variant scope only lists non-deleted variants
     scope :active, where(:deleted_at => nil)
     scope :deleted, where('deleted_at IS NOT NULL')
 
     # Returns number of inventory units for this variant (new records haven't been saved to database, yet)
-    def on_hand
-      1.0 / 0 # Infinity
-    end
+    # def on_hand
+    #   1.0 / 0 # Infinity
+    # end
 
 
     # strips all non-price-like characters from the price.
@@ -37,16 +54,16 @@ class Variant < ActiveRecord::Base
     end
 
     # and cost_price
-    def cost_price=(price)
-      if price.present?
-        self[:cost_price] = price.to_s.gsub(/[^0-9\.-]/, '').to_f
-      end
-    end
+    # def cost_price=(price)
+    #   if price.present?
+    #     self[:cost_price] = price.to_s.gsub(/[^0-9\.-]/, '').to_f
+    #   end
+    # end
 
     # returns number of units currently on backorder for this variant.
-    def on_backorder
-      inventory_units.with_state('backordered').size
-    end
+    # def on_backorder
+    #   inventory_units.with_state('backordered').size
+    # end
 
     # returns true if at least one inventory unit of this variant is "on_hand"
     def in_stock?
@@ -69,9 +86,9 @@ class Variant < ActiveRecord::Base
       values.to_sentence({ :words_connector => ", ", :two_words_connector => ", " })
     end
 
-    def gross_profit
-      cost_price.nil? ? 0 : (price - cost_price)
-    end
+    # def gross_profit
+    #   cost_price.nil? ? 0 : (price - cost_price)
+    # end
 
     # use deleted? rather than checking the attribute directly. this
     # allows extensions to override deleted? if they want to provide
@@ -122,7 +139,7 @@ class Variant < ActiveRecord::Base
       def check_price
         if price.nil?
           raise 'Must supply price for variant or master.price for product.' if self == product.master
-          self.price = product.master.price
+          self.price = product.price
         end
       end
 

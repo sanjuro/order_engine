@@ -1,14 +1,35 @@
+# Class to model the taxon resource
+#
+# Author::    Shadley Wentzel
+#
+# == Schema Information
+#
+# Table name: taxons
+#
+#  id                         :integer(4)      not null, primary key
+#  full_name                  :string(255)
+#  user_pin                   :string(255)
+#  email                      :string(255)
+#  mobile_number              :string(255)
+#  gender                     :string(255)
+#  encrypted_password         :string(255)
+#  created_at                 :datetime
+#  updated_at                 :datetime
+#  user_id                    :integer(4)
+#
+
+require 'awesome_nested_set'
+
 class Taxon < ActiveRecord::Base
     acts_as_nested_set :dependent => :destroy
 
     belongs_to :taxonomy
     has_and_belongs_to_many :products, :join_table => 'products_taxons'
+    has_and_belongs_to_many :stores, :join_table => 'stores_taxons'
 
-    before_create :set_permalink
+    attr_accessible :name, :parent_id, :position, :icon, :description, :taxonomy_id
 
-    attr_accessible :name, :parent_id, :position, :icon, :description, :permalink, :taxonomy_id
-
-    validates :name, :presence => true
+    validates :name, :position, :presence => true
 
     # has_attached_file :icon,
     #   :styles => { :mini => '32x32>', :normal => '128x128>' },
@@ -27,16 +48,6 @@ class Taxon < ActiveRecord::Base
       fs << ProductFilters.price_filter if ProductFilters.respond_to?(:price_filter)
       fs << ProductFilters.brand_filter if ProductFilters.respond_to?(:brand_filter)
       fs
-    end
-
-    # Creates permalink based on Stringex's .to_url method
-    def set_permalink
-      if parent_id.nil?
-        self.permalink = name.to_url if permalink.blank?
-      else
-        parent_taxon = Taxon.find(parent_id)
-        self.permalink = [parent_taxon.permalink, (permalink.blank? ? name.to_url : permalink.split('/').last)].join('/')
-      end
     end
 
     def active_products

@@ -21,3 +21,1050 @@ D, [2012-11-06T17:55:27.392657 #18715] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mB
 D, [2012-11-06T17:55:27.416226 #18715] DEBUG -- :   [1m[35mSQL (1.1ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `full_name`, `last_sign_in_at`, `last_sign_in_ip`, `mobile_number`, `provider`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `uid`, `updated_at`, `username`) VALUES ('2012-11-06 17:55:27', NULL, NULL, 'shad6ster@gmail.com', '', 'Test Customer', NULL, NULL, '0833908314', '', NULL, NULL, NULL, 0, '', '2012-11-06 17:55:27', NULL)
 D, [2012-11-06T17:55:27.428582 #18715] DEBUG -- :   [1m[36m (11.9ms)[0m  [1mCOMMIT[0m
 D, [2012-11-15T18:26:16.440579 #46406] DEBUG -- :   [1m[36mOrder Load (31.8ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mOrder Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` 
+  [1m[36mAccessGrant Load (40.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') AND (access_token_expires_at > '2012-11-30 18:13:18') LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') AND (access_token_expires_at > '2012-11-30 18:13:34') LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+poes
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+AXSSSSED2ASDASD1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+AXSSSSED2ASDASD1
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+{"access_token"=>"AXSSSSED2ASDASD1"}
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+poes
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+{"access_token"=>"AXSSSSED2ASDASD1"}
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+params
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+params
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+params
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+params
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+{"access_token"=>"AXSSSSED2ASDASD1"}
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+{"access_token"=>"AXSSSSED2ASDASD1"}
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = '---\n- access_token\n- AXSSSSED2ASDASD1\n') LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = '---\n- access_token\n- AXSSSSED2ASDASD1\n') LIMIT 1
+  [1m[36mAccessGrant Load (0.6ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.6ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mOrder Load (0.6ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.5ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.6ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.7ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.5ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.6ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (access_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[36mOrder Load (0.6ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35m (22.7ms)[0m  BEGIN
+  [1m[36mOrder Exists (7.5ms)[0m  [1mSELECT 1 AS one FROM `orders` WHERE `orders`.`number` = BINARY 'R12345234' LIMIT 1[0m
+  [1m[35m (12.0ms)[0m  ROLLBACK
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mOrder Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `orders` WHERE `orders`.`number` = BINARY 'R12345234' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mOrder Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `orders` WHERE `orders`.`number` = BINARY 'R12345234' LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`number` = 'R235656746' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `orders` (`completed_at`, `created_at`, `credit_total`, `item_total`, `number`, `payment_state`, `payment_total`, `special_instructions`, `state`, `store_id`, `total`, `updated_at`, `user_id`) VALUES (NULL, '2012-12-02 22:16:33', 0.0, 99.0, 'R12345234', NULL, 0.0, NULL, 'complete', 1, 99.0, '2012-12-02 22:16:33', NULL)[0m
+  [1m[35m (25.9ms)[0m  COMMIT
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mOrder Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `orders` WHERE `orders`.`number` = BINARY 'R12345234' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.7ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (17.8ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (18.7ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.5ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (17.9ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` [0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (19.8ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (11.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.9ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.6ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = NULL) LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = NULL) LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (15.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT `stores`.* FROM `stores` [0m
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` [0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.6ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 4 LIMIT 1[0m
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT `stores`.* FROM `stores` [0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 4 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 4 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 4 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` [0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 4 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 4 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 1 LIMIT 1[0m
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.7ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` [0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` 
+  [1m[36mStore Load (0.8ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.6ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (16.9ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.7ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` [0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.6ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.7ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.7ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` [0m
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.6ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (19.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+Creating scope :recent_by_sign_in. Overwriting existing method User.recent_by_sign_in.
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.6ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.6ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Creating scope :by_number. Overwriting existing method Order.by_number.
+Creating scope :by_store. Overwriting existing method Order.by_store.
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.6ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mFavourite Load (0.2ms)[0m  [1mSELECT `favourites`.* FROM `favourites` [0m
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.6ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.5ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+FiberError: fiber called across stack rewinding barrier: SHOW TABLES LIKE 'favourites'
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mFavourite Load (0.3ms)[0m  [1mSELECT `favourites`.* FROM `favourites` WHERE (favourties.user_id = 3)[0m
+Mysql2::Error: Unknown column 'favourties.user_id' in 'where clause': SELECT `favourites`.* FROM `favourites`  WHERE (favourties.user_id = 3)
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mFavourite Load (0.2ms)[0m  [1mSELECT `favourites`.* FROM `favourites` WHERE (favourties.user_id = 3)[0m
+Mysql2::Error: Unknown column 'favourties.user_id' in 'where clause': SELECT `favourites`.* FROM `favourites`  WHERE (favourties.user_id = 3)
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mFavourite Load (0.2ms)[0m  [1mSELECT `favourites`.* FROM `favourites` WHERE (favourites.user_id = 3)[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.3ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mOrder Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE (orders.user_id = 3)
+  [1m[36mAccessGrant Load (0.3ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.4ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mAccessGrant Load (0.2ms)[0m  [1mSELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mFavourite Load (0.2ms)[0m  [1mSELECT `favourites`.* FROM `favourites` WHERE (favourites.user_id = 3)[0m
+  [1m[35mAccessGrant Load (0.4ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mFavourite Load (0.2ms)[0m  SELECT `favourites`.* FROM `favourites` WHERE (favourites.user_id = 3)

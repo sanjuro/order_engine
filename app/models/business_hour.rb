@@ -1,7 +1,7 @@
 # Class to model the BusinessHours resource
 #
 # Author::    Shadley Wentzel
-class BusinessHours < ActiveRecord::Base
+class BusinessHour < ActiveRecord::Base
 
 	attr_accessible :day, :open_time, :close_time
 

@@ -2,20 +2,20 @@
 #
 # Author::    Shadley Wentzel
 class Order < ActiveRecord::Base
-
+  
   STATUS_CART = 'cart'
   STATUS_CONFIRM = 'confirm'
   STATUS_COMPLETE = 'complete'
   
   attr_accessible :store_id, :order_items, :bill_address_attributes, :payments_attributes, :invoice_attributes, 
-                  :order_items_attributes, :number, :item_total, :total, :state, :credit_total, :customer_id,
+                  :order_items_attributes, :number, :item_total, :total, :state, :credit_total, :user_id,
                   :payment_total, :payment_state, :special_instructions,
                   :created_at, :completed_at, :updated_at
                   
   validates :number, :uniqueness => true, :on => :create
                  
   belongs_to :store
-  belongs_to :customer, :foreign_key => "customer_id", :class_name => "Customer"
+  belongs_to :user, :foreign_key => "user_id", :class_name => "User"
   # belongs_to :bill_address, :foreign_key => "bill_address_id", :class_name => "Address"
   
   # has_one :invoice
@@ -33,6 +33,7 @@ class Order < ActiveRecord::Base
   
   scope :by_number, lambda {|number| where("orders.number = ?", number)}
   scope :by_store, lambda {|store| where("orders.store_id = ?", store)} 
+  scope :by_user, lambda {|store| where("orders.user_id = ?", store)} 
 
   # Function to count the numbder of orders on a specific date
   #
@@ -85,9 +86,7 @@ class Order < ActiveRecord::Base
     event :next do
       transition :from => :cart, :to => :confirm
       transition :from => :confirm, :to => :sent_store
-      transition :from => :sent_store, :to => :ready
-      transition :from => :ready, :to => :collected
-      transition :from => :collected, :to => :complete
+      transition :from => :sent_store, :to => :complete
     end
 
     event :prdduce_order do

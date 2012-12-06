@@ -1,7 +1,8 @@
 class Taxonomy < ActiveRecord::Base
-  validates :name, :presence => true
 
   attr_accessible :name
+
+  validates :name, :presence => true
 
   belongs_to :store
 

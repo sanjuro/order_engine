@@ -1,3 +1,6 @@
+# Class to model the line item resource
+#
+# Author::    Shadley Wentzel
 class LineItem < ActiveRecord::Base
   before_validation :adjust_quantity
   belongs_to :order

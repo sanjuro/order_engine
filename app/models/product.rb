@@ -17,9 +17,9 @@
 # All other variants have option values and may have inventory units.
 # Sum of on_hand each variant's inventory level determine "on_hand" level for the product.
 #
-require 'delegate_belongs_to'
 
 class Product < ActiveRecord::Base
+    # acts_as_tenant(:store)
 
     belongs_to :store
 
@@ -34,13 +34,14 @@ class Product < ActiveRecord::Base
       :class_name => "Variant",
       :conditions => { :is_master => true }
 
-    delegate_belongs_to :master, :sku, :price, :weight, :height, :width, :depth, :is_master
+    # delegate_attributes_to :master, :sku, :price, :is_master
+    # delegate_attributes_to :master, :is_master
+
 
     after_create :set_master_variant_defaults
     after_create :add_properties_and_option_types_from_prototype
     after_create :build_variants_from_option_values_hash, :if => :option_values_hash
     after_save :save_master
-    after_save :set_master_on_hand_to_zero_when_product_has_variants
 
     has_many :variants,
       :class_name => "Variant",
@@ -57,6 +58,8 @@ class Product < ActiveRecord::Base
       :conditions => { :is_master => true, :deleted_at => nil },
       :dependent => :destroy
 
+    delegate_attributes :master, :is_master, :to => :variants
+
     accepts_nested_attributes_for :variants, :allow_destroy => true
 
     def variant_images
@@ -69,26 +72,27 @@ class Product < ActiveRecord::Base
 
     alias_method :images, :variant_images
 
-    validates :name, :price, :permalink, :presence => true
+    validates :name, :price, :sku, :presence => true
 
     attr_accessor :option_values_hash
 
-    attr_accessible :name, :description, :permalink, :meta_description,
-                    :meta_keywords, :price, :sku, :deleted_at,
-                    :option_values_hash,  :weight, :height, :width, :depth,
+    attr_reader :taxon_tokens
+
+    attr_accessible :name, :description, :price, :sku, :meta_description, :taxon_tokens,
+                    :meta_keywords, :deleted_at, :option_values_hash,
                     :product_properties_attributes, :variants_attributes, :option_type_ids
 
-    # attr_accessible :cost_price if Variant.table_exists? && Variant.column_names.include?('cost_price')
-
     accepts_nested_attributes_for :product_properties, :allow_destroy => true, :reject_if => lambda { |pp| pp[:property_name].blank? }
-
-    # make_permalink :order => :name
 
     alias :options :product_option_types
 
     scope :by_store, lambda {|store| where("products.store_id = ?", store)} 
 
     after_initialize :ensure_master
+
+    def taxon_tokens=(ids)
+      self.taxon_ids = ids.split(",")
+    end
 
     def ensure_master
       return unless new_record?
@@ -208,14 +212,10 @@ class Product < ActiveRecord::Base
         end
       end
 
-      # the master on_hand is meaningless once a product has variants as the inventory
-      # units are now "contained" within the product variants
-      def set_master_on_hand_to_zero_when_product_has_variants
-        master.on_hand = 0 if has_variants? 
-      end
-
       # ensures the master variant is flagged as such
       def set_master_variant_defaults
+        master.sku = self.sku
+        master.price = self.price 
         master.is_master = true
       end
 

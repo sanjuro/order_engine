@@ -3,6 +3,13 @@ require "bundler/setup"
 require 'em-synchrony/activerecord'
 require 'yaml'
 require 'erb'
+require "rspec/core/rake_task"
+
+RSpec::Core::RakeTask.new
+
+task :default => :spec
+task :test => :spec
+
 
 namespace :db do
   desc "loads database configuration in for other tasks to run"

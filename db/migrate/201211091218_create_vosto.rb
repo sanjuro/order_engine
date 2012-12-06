@@ -1,29 +1,34 @@
 class CreateVosto < ActiveRecord::Migration
   
   def self.up
-    create_table :business_hours, :options => "ENGINE=INODB", :id => false do |t|
+    create_table :access_grants, :options => "ENGINE=INODB", :id => false do |t|
+      t.references :user
+      t.references :client_application
+      t.string     :code
+      t.string     :authentication_token
+      t.string     :refresh_token
+      t.datetime   :authentication_token_expires_at
+    end
+    
+    create_table :business_hours, :options => "ENGINE=INODB" do |t|
       t.references :store
       t.integer  :day
-      t.open_time :time
-      t.close_time :time
+      t.time :open_time
+      t.time :close_time
     end
 
-    create_table :customers, :options => "ENGINE=INODB" do |t|
-      t.string :full_name
-      t.string :email
-      t.string :mobile_number
-      t.string :encrypted_password
-      t.integer  :gender 
-      t.string :uid
-      t.string :access_token
-      t.datetime :last_sign_in_at
+    create_table :client_applications, :options => "ENGINE=INODB"do |t|
+      t.string     :name
 
       t.timestamps
-    end 
+    end
 
-    create_table :customers_stores, :options => "ENGINE=INODB", :id => false do |t|
-      t.references :customer
-      t.references :store
+    create_table :favourties, :options => "ENGINE=INODB" do |t|
+      t.string      :favourtie_type
+      t.integer     :favourtie_id
+      t.references  :user
+
+      t.timestamps
     end
 
     create_table :line_items, :options => "ENGINE=INODB" do |t|
@@ -56,7 +61,7 @@ class CreateVosto < ActiveRecord::Migration
 
     create_table :orders, :options => "ENGINE=INODB" do |t| 
       t.references :store 
-      t.references :customer
+      t.references :user
       t.string :number, :limit => 15
       t.decimal :item_total, :precision => 8, :scale => 2, :default => 0.0, :null => false
       t.decimal :total, :precision => 8, :scale => 2, :default => 0.0, :null => false
@@ -126,17 +131,29 @@ class CreateVosto < ActiveRecord::Migration
 
     create_table :stores, :options => "ENGINE=INNODB" do |t|
       t.string :unique_id
+      t.string :fanpage_id
       t.string :store_name
       t.string :store_description
+      t.string :address
       t.string :email
       t.string :telephone
       t.string :url
       t.string :token
       t.string :latitude
       t.string :longitude
+      t.string :manager_nane
+      t.string :manager_contact
       
       t.timestamps
     end
+
+    create_table :stores_taxons, :id => false, :force => true do |t|
+      t.references :store
+      t.references :taxon
+    end
+
+    add_index :stores_taxons, :store_id, :name => 'index_stores_taxons_on_store_id'
+    add_index :stores_taxons, :taxon_id, :name => 'index_stores_taxons_on_taxon_id'
 
     create_table :taxonomies, :force => true do |t|
       t.references :store 
@@ -162,6 +179,9 @@ class CreateVosto < ActiveRecord::Migration
 
       t.string :full_name
 
+      t.string :provider,         :null => false, :default => ""
+      t.string :uid,              :null => false, :default => ""
+
       ## Database authenticatable
       t.string :username
       t.string :email,              :null => false, :default => ""
@@ -181,6 +201,8 @@ class CreateVosto < ActiveRecord::Migration
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
 
+
+
       ## Confirmable
       # t.string   :confirmation_token
       # t.datetime :confirmed_at
@@ -193,14 +215,20 @@ class CreateVosto < ActiveRecord::Migration
       # t.datetime :locked_at
 
       ## Token authenticatable
-      # t.string :authentication_token
+      t.string :authentication_token
 
+      t.references :role, :polymorphic => true
 
       # Uncomment below if timestamps were not included in your original model.
       t.timestamps
     end
 
-    User.create!(:email => 'shad6ster@gmail.com', :full_name => 'shadley', :username => 'sanjuro', :password => 'rad6hia', :password_confirmation => 'rad6hia')
+    create_table :users_stores, :options => "ENGINE=INODB", :id => false do |t|
+      t.references :user
+      t.references :store
+    end
+
+    #User.create!(:store_id => 1, :email => 'shad6ster@gmail.com', :full_name => 'shadley', :username => 'sanjuro', :password => 'rad6hia', :password_confirmation => 'rad6hia')
 
     add_index :users, :email,                :unique => true
     add_index :users, :reset_password_token, :unique => true

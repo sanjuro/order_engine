@@ -11,7 +11,22 @@ gem 'goliath'
 
 gem 'mysql2'
 
+gem 'awesome_nested_set'
+
 gem 'acts_as_list', '>= 0.1.0'
 
+# gem 'acts_as_tenant'
+
+# gem 'geocoder'
+
 gem "state_machine"
-# gem 'devise'
+
+gem 'devise'
+
+group :test do 
+	gem 'rake', :groups=>[:development, :test]
+	gem 'rack-test', :group=>:test
+	gem 'rspec', :group=>:test
+	gem 'factory_girl'
+	gem 'spork'
+end

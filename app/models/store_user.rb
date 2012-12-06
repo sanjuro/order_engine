@@ -17,15 +17,14 @@
 #  updated_at                 :datetime
 #  user_id                    :integer(4)
 #
-require File.dirname(__FILE__) +  '/user.rb'
 
-class Customer < User
+class StoreUser < User
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :id, :full_name, :user_pin, :email, :mobile_number, :gender, :encrypted_password, 
                   :remember_me, :provider, :uid, :user_attributes
 
-  validates :full_name,  :email, :mobile_number, :presence => true
+  validates :full_name, :email, :presence => true
 
   has_one :user, :as => :role
   accepts_nested_attributes_for :user
@@ -40,20 +39,4 @@ class Customer < User
   # scope :recent_by_sign_in, order("users.last_sign_in_at")  
   # scope :by_store, lambda {|store| where("users.store_id = ?", store)} 
   
-  # Function to generate a new user pin
-  #
-  # * *Args*    :
-  #   - 
-  # * *Returns* :
-  #   - 
-  # * *Raises* :
-  #   - 
-  #
-  def genrate_user_pin(user_pin)
-    salt = secure_hash("#{Time.now.utc}--#{user_pin}")
-    self.encrypted_password = secure_hash("#{salt}--#{user_pin}")
-    self.encrypted_password
-    self.save
-  end
-    
 end
