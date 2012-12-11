@@ -1068,3 +1068,1298 @@ Mysql2::Error: Unknown column 'favourties.user_id' in 'where clause': SELECT `fa
   [1m[35mAccessGrant Load (0.2ms)[0m  SELECT `access_grants`.* FROM `access_grants` WHERE (authentication_token = 'AXSSSSED2ASDASD1') LIMIT 1
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
   [1m[35mFavourite Load (0.2ms)[0m  SELECT `favourites`.* FROM `favourites` WHERE (favourites.user_id = 3)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 379076655509178 LIMIT 1[0m
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 379076655509178 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 379076655509178 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` [0m
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[36mStore Load (0.7ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT `stores`.* FROM `stores` [0m
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (1.0ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.7ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.8ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.7ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.6ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.7ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.6ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.7ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.7ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.7ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.6ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (25.6ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.7ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.8ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.8ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 3 LIMIT 1
+  [1m[36mTaxon Load (0.8ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 3 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 3 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 3[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.7ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.9ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.7ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.8ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (1.0ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.7ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.6ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.6ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (22.0ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.7ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.7ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.7ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.6ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.6ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.8ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.8ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.6ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.6ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.7ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.8ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.8ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.6ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.8ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.8ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (11.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 3 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 3 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 3 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 3[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.9ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.6ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.6ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.6ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.6ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (11.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+Mysql2::Error: Unknown column 'position' in 'order clause': SELECT `variants`.* FROM `variants`  WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (1.8ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.5ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.8ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (13.9ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.9ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (35.9ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (8.8ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (22.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.7ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (24.1ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (17.3ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.5ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (13.0ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.9ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.7ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.5ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (24.9ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.5ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (47.1ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.9ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.5ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mStore Load (0.9ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (20.9ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (11.6ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 14 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 14 LIMIT 1[0m
+  [1m[35mProduct Load (0.9ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 14 LIMIT 1
+  [1m[36mVariant Load (0.4ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 14 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 16 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 16 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 16 LIMIT 1
+  [1m[36mVariant Load (0.4ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 16 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.4ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.5ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.4ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (3.5ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.4ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 14 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 14 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 14 LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 14 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (14.0ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.4ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.4ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 15 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 15 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 15 LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 15 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.7ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.6ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+Creating scope :by_number. Overwriting existing method Order.by_number.
+Creating scope :by_store. Overwriting existing method Order.by_store.
+Creating scope :by_user. Overwriting existing method Order.by_user.
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.5ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+Creating scope :by_fanpage_id. Overwriting existing method Store.by_fanpage_id.
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.unique_name = 'sim0000001')[0m
+Mysql2::Error: Unknown column 'stores.unique_name' in 'where clause': SELECT `stores`.* FROM `stores`  WHERE (stores.unique_name = 'sim0000001')
+Creating scope :by_fanpage_id. Overwriting existing method Store.by_fanpage_id.
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001.json?authentication_token=AXSSSSED2ASDASD1')[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim000000')
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim000000')[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim000000')
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim000000')[0m
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim000000')[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim000000')
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim000000')[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001')
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001')[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001')
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001')[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001')
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001')[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001')
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001')[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001')
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001')[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001')
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001')[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001')
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001') LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001') LIMIT 1
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001') LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001') LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001') LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001') LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001') LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001') LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001') LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001') LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001') LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.unique_id = 'sim0000001') LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.9ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mStore Load (0.8ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.7ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.3ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.6ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.4ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.6ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC[0m
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mStore Load (1.0ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.7ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.6ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.5ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.7ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.5ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mStore Load (1.3ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.7ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.4ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.5ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (20.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (15.9ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE (stores.fanpage_id = 379076655509178)[0m
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mTaxon Load (0.3ms)[0m  SELECT `taxons`.* FROM `taxons` INNER JOIN `stores_taxons` ON `taxons`.`id` = `stores_taxons`.`taxon_id` WHERE `stores_taxons`.`store_id` = 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mTaxon Load (0.7ms)[0m  SELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1
+  [1m[36mTaxon Load (0.4ms)[0m  [1mSELECT `taxons`.* FROM `taxons` WHERE `taxons`.`id` = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` INNER JOIN `products_taxons` ON `products`.`id` = `products_taxons`.`product_id` WHERE `products_taxons`.`taxon_id` = 4
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.5ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (10.3ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT `variants`.* FROM `variants` WHERE `variants`.`product_id` = 1 AND `variants`.`is_master` = 0 AND `variants`.`deleted_at` IS NULL ORDER BY position ASC
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+FiberError: fiber called across stack rewinding barrier: SHOW FULL FIELDS FROM `variants`
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+FiberError: fiber called across stack rewinding barrier: SHOW FULL FIELDS FROM `variants`
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+FiberError: fiber called across stack rewinding barrier: SHOW FULL FIELDS FROM `variants`

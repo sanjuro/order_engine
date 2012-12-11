@@ -21,4 +21,7 @@ class Store < ActiveRecord::Base
 
     after_validation :geocode
 
+    scope :by_fanpage_id, lambda {|fanpage_id| where("stores.fanpage_id = ?", fanpage_id)} 
+    scope :by_unique_id, lambda {|unique_id| where("stores.unique_id = ?", unique_id)} 
+
 end

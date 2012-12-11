@@ -80,6 +80,14 @@ class Order < ActiveRecord::Base
     self.number
   end
 
+  # Associates the specified user with the order.
+  def associate_user!(user)
+    self.user = user
+    # disable validations since they can cause issues when associating
+    # an incomplete address during the address step
+    save(:validate => false)
+  end
+
   # order state machine (see http://github.com/pluginaweek/state_machine/tree/master for details)
   state_machine :initial => :cart, :use_transactions => false do
   
@@ -111,6 +119,10 @@ class Order < ActiveRecord::Base
     # after_transition :to => 'payment', :do => :create_shipment!
 
   end 
+  
+  def completed?
+    !! completed_at
+  end
   
   def status_tag
     case self.state
