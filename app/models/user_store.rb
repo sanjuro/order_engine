@@ -1,4 +1,4 @@
-# Class to model the customer stores resource
+# Class to model the user stores resource
 #
 # Author::    Shadley Wentzel
 class UserStore < ActiveRecord::Base
