@@ -1,6 +1,6 @@
 class AccessGrant < ActiveRecord::Base
 
-  attr_accessible :code, :authentication_token, :refresh_token, :authentication_token_expires_at
+  attr_accessible :user_id, :code, :client_application_id, :authentication_token, :refresh_token, :authentication_token_expires_at
 
   belongs_to :user
   belongs_to :client_application  
@@ -15,12 +15,12 @@ class AccessGrant < ActiveRecord::Base
     where(:created_at.lt => 3.days.ago).delete_all
   end
  
-  def self.authenticate(code, application_id)
-    where(:code => code, :application_id => application_id).first
+  def self.authenticate(code, client_application_id)
+    where(:code => code, :client_application_id => client_application_id).first
   end
  
   def start_expiry_period!
-    self.update_attribute(:authentication_token_expires_at, 2.days.from_now)
+    self.update_attribute(:authentication_token_expires_at, 360.days.from_now)
   end
  
   def redirect_uri_for(redirect_uri)
@@ -34,7 +34,7 @@ class AccessGrant < ActiveRecord::Base
   protected
   
   def gen_tokens
-    self.code, self.access_token, self.refresh_token = SecureRandom.hex(16), SecureRandom.hex(16), SecureRandom.hex(16)
+    self.code, self.refresh_token = SecureRandom.hex(8), SecureRandom.hex(8)
   end
  
 end

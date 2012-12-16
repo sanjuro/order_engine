@@ -24,13 +24,11 @@ class StoreUser < User
   attr_accessible :id, :full_name, :user_pin, :email, :mobile_number, :gender, :encrypted_password, 
                   :remember_me, :provider, :uid, :user_attributes
 
-  validates :full_name, :email, :presence => true
+  validates :email, :presence => true
 
-  has_one :user, :as => :role
+  has_one :user, :as => :profileable
   accepts_nested_attributes_for :user
 
-  has_many :orders
-  has_many :favourties
   has_and_belongs_to_many :stores
 
   # before_create :create_client

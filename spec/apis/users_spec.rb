@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe Orders do
+describe Users do
   include Rack::Test::Methods
 
   def app
-    Orders
+    Users
   end
 
     context "viewing all orders by user" do

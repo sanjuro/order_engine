@@ -11,6 +11,7 @@ class Users < Grape::API
 
   resource 'users' do
     get "/" do
+      authenticated_user
       logger.info "Retrieved all users"
       User.all
     end
@@ -19,11 +20,13 @@ class Users < Grape::API
       User.find(params['id'])
     end
     
-    post "/create" do
-      # User.create(params['user'])
-      logger.info "Creating a new user"
-      @user = params['user']
-      SignupCustomerContext.call(@user)
+    desc "Creates a new user of type customer"
+    # params do
+    #   requires :id, :type => Integer, :desc => "Product id."
+    # end
+    post '/create_customer' do
+      logger.info "Creating new customer"
+      SignupCustomerContext.call(params)
     end
   end
   

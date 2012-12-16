@@ -15,6 +15,18 @@ class Store < ActiveRecord::Base
 
   	has_many :business_hours
 
+    has_and_belongs_to_many :customers,
+      :join_table => 'users_stores',
+      :class_name => "User",
+      :conditions => { :profileable_type => 'customer' },
+      :order => 'created_at ASC'
+
+    has_and_belongs_to_many :store_users,
+      :join_table => 'users_stores',
+      :class_name => "User",
+      :conditions => { :profileable_type => 'store_user' },
+      :order => 'created_at ASC'
+
     has_and_belongs_to_many :taxons, :join_table => 'stores_taxons'
 
     accepts_nested_attributes_for :business_hours

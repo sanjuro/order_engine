@@ -12,7 +12,7 @@ class NewCustomerOrderContext
 
   def initialize(user, order, address)
     @user, @order, @address = user, order
-    @user.extend Customer
+    @user.extend CustomerRole
   end
 
   def call

@@ -5,7 +5,6 @@ require 'em-synchrony/activerecord'
 require 'grape'
 require 'acts_as_list'
 require 'state_machine'
-# require 'acts_as_tenant'
 
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/models/*.rb'].each {|file| require file }

@@ -17,6 +17,7 @@
 # All other variants have option values and may have inventory units.
 # Sum of on_hand each variant's inventory level determine "on_hand" level for the product.
 #
+# require File.dirname(__FILE__) + '/../../lib/delegates_attributes_to.rb'
 
 class Product < ActiveRecord::Base
     # acts_as_tenant(:store)
@@ -34,9 +35,7 @@ class Product < ActiveRecord::Base
       :class_name => "Variant",
       :conditions => { :is_master => true }
 
-    # delegate_attributes_to :master, :sku, :price, :is_master
-    # delegate_attributes_to :master, :is_master
-
+    delegate_attributes :sku, :price, :is_master, :to => :master
 
     after_create :set_master_variant_defaults
     after_create :add_properties_and_option_types_from_prototype

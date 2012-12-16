@@ -59,6 +59,13 @@ class CreateVosto < ActiveRecord::Migration
       t.timestamp
     end
 
+    create_table :option_values_variants, :id => false, :force => true do |t|
+      t.integer  :variant_id
+      t.integer  :option_value_id
+    end
+
+    add_index :option_values_variants, :variant_id, :name => 'index_option_values_variants_on_variant_id'
+
     create_table :orders, :options => "ENGINE=INODB" do |t| 
       t.references :store 
       t.references :user
@@ -141,7 +148,7 @@ class CreateVosto < ActiveRecord::Migration
       t.string :token
       t.string :latitude
       t.string :longitude
-      t.string :manager_nane
+      t.string :manager_name
       t.string :manager_contact
       
       t.timestamps
@@ -175,17 +182,21 @@ class CreateVosto < ActiveRecord::Migration
     end
 
     create_table :users, :options => "ENGINE=INODB" do |t|
-      t.references :store 
 
       t.string :full_name
 
       t.string :provider,         :null => false, :default => ""
       t.string :uid,              :null => false, :default => ""
+      t.integer :facebook_id
 
-      ## Database authenticatable
       t.string :username
       t.string :email,              :null => false, :default => ""
       t.string :encrypted_password, :null => false, :default => ""
+      t.string :first_name
+      t.string :last_name
+      t.string :user_pin
+      t.string :mobile_number
+      t.datetime :birthday
 
       ## Recoverable
       t.string   :reset_password_token
@@ -201,8 +212,6 @@ class CreateVosto < ActiveRecord::Migration
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
 
-
-
       ## Confirmable
       # t.string   :confirmation_token
       # t.datetime :confirmed_at
@@ -217,7 +226,7 @@ class CreateVosto < ActiveRecord::Migration
       ## Token authenticatable
       t.string :authentication_token
 
-      t.references :role, :polymorphic => true
+      t.references :profileable, :polymorphic => true
 
       # Uncomment below if timestamps were not included in your original model.
       t.timestamps
@@ -240,6 +249,7 @@ class CreateVosto < ActiveRecord::Migration
       t.references :product
       t.string   :sku,        :default => '', :null => false
       t.decimal  :price,      :precision => 8, :scale => 2,                    :null => false
+      t.integer  :position,    :default => 0
       t.datetime :deleted_at
       t.boolean  :is_master,  :default => false
     end

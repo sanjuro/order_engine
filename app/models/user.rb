@@ -21,22 +21,23 @@ class User < ActiveRecord::Base
   attr_accessor :login
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :login, :full_name, :username, :email, :password, :password_confirmation, :remember_me, :store_id
-                  :authentication_token
+  attr_accessible :login, :full_name, :username, :email, :password, :password_confirmation, :remember_me, :store_id,
+                  :authentication_token, :first_name, :last_name, :mobile_number, :gender, :birthday, :user_pin,
+                  :profileable_type
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   # devise :database_authenticatable, :omniauthable,
   #        :recoverable, :rememberable, :trackable, :validatable
   
-  belongs_to :role, :polymorphic => true
+  belongs_to :profileable, :polymorphic => true
 
   has_many :access_grants
 
-  has_and_belongs_to_many :stores
+  has_and_belongs_to_many :stores, :join_table => 'users_stores'
 
   # before_create :create_client
-  # before_create :generate_user_pin
+  after_create :generate_authentication_token
   
   scope :recent_by_sign_in, order("users.last_sign_in_at") 
 
@@ -59,8 +60,9 @@ class User < ActiveRecord::Base
   def self.current=(user)
     Thread.current[:user] = user
   end  
-  
-  # Function to generate a new user pin
+
+
+  # Function to generate a new authentication token for the user
   #
   # * *Args*    :
   #   - 
@@ -69,21 +71,11 @@ class User < ActiveRecord::Base
   # * *Raises* :
   #   - 
   #
-  def generate_user_password(password)
-    salt = secure_hash("#{Time.now.utc}--#{password}")
-    self.encrypted_password = secure_hash("#{salt}--#{password}")
-    self.encrypted_password
-    self.save
+  def generate_authentication_token
+      begin
+        self.authentication_token = SecureRandom.hex
+      end while self.class.exists?(authentication_token: authentication_token)
+      self.save
   end
-  
-
-  # def self.find_first_by_auth_conditions(warden_conditions)
-  #   conditions = warden_conditions.dup
-  #   if login = conditions.delete(:login)
-  #     where(conditions).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
-  #   else
-  #     where(conditions).first
-  #   end
-  # end
   
 end

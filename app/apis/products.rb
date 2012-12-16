@@ -1,4 +1,7 @@
 class Products < Grape::API
+
+# curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/products/1.json?authentication_token=AXSSSSED2ASDASD1
+# curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/products/1.json?authentication_token=AXSSSSED2ASDASD1
   
   version 'v1', :using => :path
   format :json
