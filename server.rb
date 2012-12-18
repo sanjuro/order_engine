@@ -19,6 +19,7 @@ class API < Grape::API
 	prefix 'api'
 
 	use ApiErrorHandler
+	# use ApiPageHelper
 
 	helpers do
 	    def logger

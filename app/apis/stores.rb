@@ -5,7 +5,7 @@ class Stores < Grape::API
   
   resource 'stores' do
 
-    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/by_unique_id?unique_id=sim000000&authentication_token=AXSSSSED2ASDASD1
+    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/by_fanpage?fanpage_id=379076655509178&authentication_token=AXSSSSED2ASDASD1
 
     get "/" do
       logger.info "Retrieved all stores"

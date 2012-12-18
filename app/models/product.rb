@@ -57,8 +57,6 @@ class Product < ActiveRecord::Base
       :conditions => { :is_master => true, :deleted_at => nil },
       :dependent => :destroy
 
-    delegate_attributes :master, :is_master, :to => :variants
-
     accepts_nested_attributes_for :variants, :allow_destroy => true
 
     def variant_images

@@ -5,7 +5,7 @@ class Taxons < Grape::API
   
   resource 'taxons' do
 
-    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/taxons/1.json?authentication_token=AXSSSSED2ASDASD1
+    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/taxons/1/products.json?authentication_token=AXSSSSED2ASDASD1
 
     get "/" do
       authenticated_user
@@ -29,7 +29,7 @@ class Taxons < Grape::API
     get '/:id/products' do
       logger.info "Retrieved all products for Taxon with ID: #{params['id']}"
       taxon = Taxon.find(params[:id])
-      taxon.products
+      taxon.products.where("deleted_at IS NULL")
     end
   end
   
