@@ -23,6 +23,8 @@ gem "state_machine"
 
 gem 'devise'
 
+gem 'ruby_pagination_logic'
+
 group :test do 
 	gem 'rake', :groups=>[:development, :test]
 	gem 'rack-test', :group=>:test

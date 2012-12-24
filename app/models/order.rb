@@ -9,7 +9,7 @@ class Order < ActiveRecord::Base
   
   attr_accessible :store_id, :order_items, :bill_address_attributes, :payments_attributes, :invoice_attributes, 
                   :order_items_attributes, :number, :item_total, :total, :state, :credit_total, :user_id,
-                  :payment_total, :payment_state, :special_instructions,
+                  :payment_total, :payment_state, :special_instructions, :adjustment_total,
                   :created_at, :completed_at, :updated_at
                   
   validates :number, :uniqueness => true, :on => :create

@@ -11,9 +11,17 @@ class Products < Grape::API
     # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/products/1/master.json?authentication_token=AXSSSSED2ASDASD1
 
     get "/" do
-      authenticated_user
       logger.info "Retrieved all products"
-      Products.all
+      Product.all
+    end
+
+    params do
+      requires :store_id, :type => Integer, :desc => "Store id."
+    end
+    get "/by_store" do
+      logger.info "Retrieved all Products for Store ID: #{params['store_id']}"
+      # GetStoreByFanpageContext.call(params[:fanpage_id]) 
+      store = Product.by_store(params[:store_id])
     end
     
     params do
@@ -31,8 +39,7 @@ class Products < Grape::API
     get '/:id/variants' do
       logger.info "Retrieved all variants for Product with ID: #{params['id']}"
       product = Product.find(params[:id])
-      p product.variants
-      product.variants
+      GetProductDetailContext.call(product) 
     end
 
     desc "Returns the master variant for a Product."
@@ -40,9 +47,8 @@ class Products < Grape::API
       requires :id, :type => Integer, :desc => "Product id."
     end
     get '/:id/master' do
-      logger.info "Retrieved Mater Variant for Product with ID: #{params['id']}"
+      logger.info "Retrieved Master Variant for Product with ID: #{params['id']}"
       product = Product.find(params[:id])
-      p product.master
       product.master
     end
     

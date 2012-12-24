@@ -46,8 +46,8 @@ class CreateVosto < ActiveRecord::Migration
     create_table :option_types, :options => "ENGINE=INODB" do |t|
       t.string :name, :limit => 100
       t.string :presentation, :limit => 100
+      t.integer :position
 
-      t.timestamp
     end    
     
     create_table :option_values, :options => "ENGINE=INODB" do |t|
@@ -71,6 +71,7 @@ class CreateVosto < ActiveRecord::Migration
       t.references :user
       t.string :number, :limit => 15
       t.decimal :item_total, :precision => 8, :scale => 2, :default => 0.0, :null => false
+      t.decimal :adjustment_total, :precision => 8, :scale => 2, :default => 0.0, :null => false
       t.decimal :total, :precision => 8, :scale => 2, :default => 0.0, :null => false
       t.string :state
       t.decimal :credit_total, :precision => 8, :scale => 2, :default => 0.0, :null => false

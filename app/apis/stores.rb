@@ -5,11 +5,18 @@ class Stores < Grape::API
   
   resource 'stores' do
 
-    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/by_fanpage?fanpage_id=379076655509178&authentication_token=AXSSSSED2ASDASD1
+    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores?authentication_token=AXSSSSED2ASDASD1
 
-    get "/" do
+    params do
+      requires :page, :type => Integer, :desc => "Page of results"
+    end
+    get "/page/:page" do
       logger.info "Retrieved all stores"
-      Store.all
+      @page = params[:page].to_i||30
+      limit = 5
+      offset = RPL::paginate @page, limit
+
+      Store.all :limit => limit, :offset => offset, :order => 'created_at'
     end
     
     params do

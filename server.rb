@@ -5,6 +5,7 @@ require 'em-synchrony/activerecord'
 require 'grape'
 require 'acts_as_list'
 require 'state_machine'
+require 'ruby_pagination_logic'
 
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/models/*.rb'].each {|file| require file }
@@ -74,6 +75,17 @@ class API < Grape::API
 	mount Taxons
 
 	mount Users
+
+    resource :systems do
+      desc "Describes API."
+      get :describe_api do
+      	  logger.info "Describes API"
+		  api_hash = {}
+		  api_hash['version'] = 1
+		  api_hash['routes'] = API::routes
+		  api_hash
+      end
+    end
 
 end
 

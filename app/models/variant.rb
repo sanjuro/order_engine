@@ -26,7 +26,7 @@ class Variant < ActiveRecord::Base
 
     has_many :inventory_units
     has_many :line_items
-    has_and_belongs_to_many :option_values, :join_table => :spree_option_values_variants
+    has_and_belongs_to_many :option_values, :join_table => 'option_values_variants'
     has_many :images, :as => :viewable, :order => :position, :dependent => :destroy
 
     delegate_attributes :name, :description, :meta_description, :meta_keywords, :to => :product
