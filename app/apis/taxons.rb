@@ -7,13 +7,13 @@ class Taxons < Grape::API
 
     # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/taxons/1/products.json?authentication_token=AXSSSSED2ASDASD1
 
+    desc "Retrieve all Taxons."
     get "/" do
-      authenticated_user
-      current_user.as_json
       logger.info "Retrieved all taxons"
       Taxon.all
     end
     
+    desc "Retrieve a specific Taxons."
     params do
       requires :id, :type => Integer, :desc => "Taxon id."
     end

@@ -3,19 +3,16 @@ class Users < Grape::API
   version 'v1', :using => :path
   format :json
   
-  helpers do
-    def logger
-      API.logger
-    end
-  end
-
   resource 'users' do
+
+    desc "Retrieve all User"
     get "/" do
       authenticated_user
       logger.info "Retrieved all users"
       User.all
     end
     
+    desc "Retrieve a specific User"
     get "/:id" do 
       User.find(params['id'])
     end

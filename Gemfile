@@ -25,6 +25,8 @@ gem 'devise'
 
 gem 'ruby_pagination_logic'
 
+gem 'kaminari'
+
 group :test do 
 	gem 'rake', :groups=>[:development, :test]
 	gem 'rack-test', :group=>:test

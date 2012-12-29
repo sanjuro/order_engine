@@ -5,20 +5,34 @@ class Stores < Grape::API
   
   resource 'stores' do
 
-    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores?authentication_token=AXSSSSED2ASDASD1
+    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/page/1?authentication_token=AXSSSSED2ASDASD1
+    desc "Retrieve all stores"
+    get "/" do
+      logger.info "Retrieved all stores"
 
+      Store.all 
+    end
+
+    desc "Retrieve a specific store"
+    params do
+      requires :id, :type => Integer, :desc => "Store id."
+    end
+    get "/:id" do 
+      logger.info "Showing Store with ID: #{params['id']}"
+      Store.find(params['id'])
+    end
+
+    desc "Retrieve all stores in a paginated form"
     params do
       requires :page, :type => Integer, :desc => "Page of results"
     end
     get "/page/:page" do
-      logger.info "Retrieved all stores"
+      logger.info "Retrieved all stores paginated"
       @page = params[:page].to_i||30
-      limit = 5
-      offset = RPL::paginate @page, limit
-
-      Store.all :limit => limit, :offset => offset, :order => 'created_at'
+      Store.page(@page)
     end
     
+    desc "Retrieve store by fanpage"
     params do
       requires :fanpage_id, :type => Integer, :desc => "Fanpage id."
     end
@@ -28,6 +42,7 @@ class Stores < Grape::API
       store = Store.by_fanpage_id(params[:fanpage_id])
     end
 
+    desc "Retrieve store by unique id"
     params do
       requires :unique_id, :type => String, :desc => "Unique ID"
     end
@@ -35,14 +50,6 @@ class Stores < Grape::API
       logger.info "Retrieved Store with Unique ID: #{params['unique_id']}"
       # GetStoreByFanpageContext.call(params[:fanpage_id]) 
       store = Store.by_unique_id(params[:unique_id]).first
-    end
-
-    params do
-      requires :id, :type => Integer, :desc => "Store id."
-    end
-    get "/:id" do 
-      logger.info "Showing Store with ID: #{params['id']}"
-      Store.find(params['id'])
     end
     
     desc "Returns taxons for a store."

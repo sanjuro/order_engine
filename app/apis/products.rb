@@ -10,11 +10,22 @@ class Products < Grape::API
 
     # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/products/1/master.json?authentication_token=AXSSSSED2ASDASD1
 
+    desc "Retrieves all Products."
     get "/" do
       logger.info "Retrieved all products"
       Product.all
     end
+    
+    desc "Retrieves a specific Products"
+    params do
+      requires :id, :type => Integer, :desc => "Product id."
+    end
+    get "/:id" do 
+      logger.info "Showing Product with ID: #{params['id']}"
+      Product.find(params['id'])
+    end
 
+    desc "Retrieves Products for a specific Store"
     params do
       requires :store_id, :type => Integer, :desc => "Store id."
     end
@@ -22,14 +33,6 @@ class Products < Grape::API
       logger.info "Retrieved all Products for Store ID: #{params['store_id']}"
       # GetStoreByFanpageContext.call(params[:fanpage_id]) 
       store = Product.by_store(params[:store_id])
-    end
-    
-    params do
-      requires :id, :type => Integer, :desc => "Product id."
-    end
-    get "/:id" do 
-      logger.info "Showing Product with ID: #{params['id']}"
-      Product.find(params['id'])
     end
 
     desc "Returns variants for a Product."
