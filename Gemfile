@@ -27,6 +27,11 @@ gem 'ruby_pagination_logic'
 
 gem 'kaminari'
 
+gem 'sunspot'
+gem 'sunspot_rails'
+
+gem 'bbpush'
+
 group :test do 
 	gem 'rake', :groups=>[:development, :test]
 	gem 'rack-test', :group=>:test

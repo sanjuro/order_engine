@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   attr_accessor :login
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :login, :full_name, :username, :email, :password, :password_confirmation, :remember_me, :store_id,
+  attr_accessible :login, :full_name, :username, :email, :password, :password_confirmation, :remember_me,
                   :authentication_token, :first_name, :last_name, :mobile_number, :gender, :birthday, :user_pin,
                   :profileable_type
 

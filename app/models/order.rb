@@ -7,10 +7,10 @@ class Order < ActiveRecord::Base
   STATUS_CONFIRM = 'confirm'
   STATUS_COMPLETE = 'complete'
   
-  attr_accessible :store_id, :order_items, :bill_address_attributes, :payments_attributes, :invoice_attributes, 
+  attr_accessible :store_id, :line_items, :bill_address_attributes, :payments_attributes, :invoice_attributes, 
                   :order_items_attributes, :number, :item_total, :total, :state, :credit_total, :user_id,
-                  :payment_total, :payment_state, :special_instructions, :adjustment_total,
-                  :created_at, :completed_at, :updated_at
+                  :payment_total, :payment_state, :special_instructions, :adjustment_total, :device_number, 
+                  :device_type, :created_at, :completed_at, :updated_at
                   
   validates :number, :uniqueness => true, :on => :create
                  

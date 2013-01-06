@@ -2,7 +2,6 @@
 #
 # curl -H 'Content-Type: application/json' -H 'Accept: application/json' -X POST -d '{"auth_token": "C3CDR1DCKZQ56NSMXL2BDZN8ZBS6LLL0", "order": {"address": {"alias":"Delivery","id_country": "US", "firstname":"test","lastname":"test","billing_name":"test","address1":"test","address2":"test","postcode":"1234","city":"test","phone":"8001231234"}}}' http://localhost:3000/api/v1/orders/144/add_address
 # Author::    Shadley Wentzel
-
 class NewCustomerOrderContext
   attr_reader :user, :order
 
@@ -10,8 +9,8 @@ class NewCustomerOrderContext
     NewCustomerOrderContext.new(user, order).call
   end
 
-  def initialize(user, order, address)
-    @user, @order, @address = user, order
+  def initialize(user, order)
+    @user, @order = user, order
     @user.extend CustomerRole
   end
 

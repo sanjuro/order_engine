@@ -19,6 +19,9 @@
 #
 
 class Variant < ActiveRecord::Base
+
+    include Sunspot::ActiveRecord
+
     belongs_to :product, :touch => true
 
     attr_accessible :name, :presentation, :position, :option_value_ids,
@@ -40,11 +43,14 @@ class Variant < ActiveRecord::Base
     scope :active, where(:deleted_at => nil)
     scope :deleted, where('deleted_at IS NOT NULL')
 
+    Sunspot.setup(Variant) do
+      string :sku, :stored => true
+    end
+
     # Returns number of inventory units for this variant (new records haven't been saved to database, yet)
     # def on_hand
     #   1.0 / 0 # Infinity
     # end
-
 
     # strips all non-price-like characters from the price.
     def price=(price)

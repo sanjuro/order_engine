@@ -22,6 +22,15 @@ class Stores < Grape::API
       @page = params[:page].to_i||30
       Store.page(@page)
     end
+
+    desc "Search Stores"
+    params do
+      requires :query, :type => String, :desc => "Search query."
+    end
+    get "/search" do
+      logger.info "Searching all Stores for Term: #{params[:query]}"
+      SearchStoresContext.call(params[:query], 1)
+    end
     
     desc "Retrieve store by fanpage"
     params do

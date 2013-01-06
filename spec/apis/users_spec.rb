@@ -7,43 +7,64 @@ describe Users do
     Users
   end
 
-    context "viewing all orders by user" do
-      describe 'GET /api/v1/orders' do
-        it 'should return a 401 when no acces token is supplied /api/v1/orders' do
-          get '/api/v1/orders'
+    context "Viewing all users" do
+
+      describe 'GET /api/v1/users' do
+        it 'should return a 401 when no acces token is supplied /api/v1/users' do
+          get '/api/v1/users'
           last_response.status.should == 401
         end
       end
 
-      describe 'GET /api/v1/orders' do
-        it 'should return a 200 when an access token is provided to /api/v1/orders' do
-          get '/api/v1/orders.json?access_token=AXSSSSED2ASDASD1'
+      describe 'GET /api/v1/users' do
+        it 'should return a 200 when an access token is provided to /api/v1/users' do
+          get '/api/v1/users.json?authentication_token=CXTTTTED2ASDBSD3'
           last_response.status.should == 200
         end
       end
 
-      describe 'GET /api/v1/orders/:id' do
-        order = Order.all.first
-        it 'should return a 200 and the requested order' do
-          get "/api/v1/orders/#{order.id}.json?access_token=AXSSSSED2ASDASD1"
+      describe 'GET /api/v1/users/:id' do
+        user = User.all.first
+        it 'should return a 200 and the requested user' do
+          get "/api/v1/users/#{user.id}.json?authentication_token=CXTTTTED2ASDBSD3"
           last_response.status.should == 200
           retrieved_order = JSON.parse(last_response.body)
-          retrieved_order["number"].should == order.number
+          retrieved_order["full_name"].should == user.full_name
         end
       end
+
+   end
+
+  context "Create a new customer" do
+
+    describe 'POST /api/v1/users/create_customer' do
+
+      user = FactoryGirl.build(:user)
+
+      it 'should add one user' do
+        lambda {
+          post '/api/v1/users/create_customer.json?authentication_token=CXTTTTED2ASDBSD3', user.to_json
+        }.should change(User, :count).by(1)       
+        last_response.status.should eql(201)
+      end
+
     end
 
-    context "creating a new order" do
-      describe 'POST /api/v1/orders' do
-        order = FactoryGirl.build(:order)
+    describe 'after creating, the new user' do
 
-        it 'should return a 201 when an access token is provided to /api/v1/orders' do
-          post '/api/v1/orders.json?access_token=AXSSSSED2ASDASD1', :order => order
-          last_response.status.should eql(201)
-          last_response.body.should eql(order.to_json)
-        end
-      end  
+      before do
+        @user = User.last
+      end
 
-    end  
-  
+      it 'should have the a new authentication_token token and the correct first_name and last_name' do
+        @user.authentication_token.should_not be_empty
+        @user.first_name.should == 'Test'
+        @user.last_name.should == 'Customer'
+      end
+
+      it 'should add one access grant' do
+        @user.access_grants.count.should == 1
+      end
+    end
+  end
 end

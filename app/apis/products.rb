@@ -3,7 +3,7 @@ class Products < Grape::API
 # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/products/1.json?authentication_token=CXTTTTED2ASDBSD3
 # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/products/1.json?authentication_token=CXTTTTED2ASDBSD3
 # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/products/by_store?store_id=3&authentication_token=CXTTTTED2ASDBSD3
-
+# curl -i -H "Accept: application/json" http://localhost:9000/api/v1/products/search?query=test&authentication_token=CXTTTTED2ASDBSD3
   
   version 'v1', :using => :path
   format :json
@@ -24,6 +24,23 @@ class Products < Grape::API
       logger.info "Retrieved all Products for Store ID: #{params[:store_id]}"
       # GetStoreByFanpageContext.call(params[:fanpage_id]) 
       store = Product.by_store(params[:store_id])
+    end
+
+    desc "Search Products"
+    params do
+      requires :query, :type => String, :desc => "Search query."
+    end
+    get "/search" do
+      logger.info "Searching all Products for Term: #{params[:query]}"
+      # GetStoreByFanpageContext.call(params[:fanpage_id]) 
+
+      results = Sunspot.search(Product) do
+        keywords params[:query]      
+        paginate page: params[:page], per_page: 30
+      end
+
+      p results.total 
+      exit
     end
 
     desc "Retrieves a specific Products"

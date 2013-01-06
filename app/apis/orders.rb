@@ -7,6 +7,8 @@ class Orders < Grape::API
 
     # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/orders/page/1?authentication_token=CXTTTTED2ASDBSD3
 
+    # curl -i -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD3","order":{"unique_id":"kau0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "12345", "device_type":"blackberry", "line_items":{ {"variant_id":"13","qunatity":1}}}' http://localhost:9000/api/v1/orders
+
     desc "Retrieve all orders"
     get "/" do      
       logger.info "Retrieved all orders"
@@ -28,8 +30,8 @@ class Orders < Grape::API
     post "/" do
       logger.info "Create new Order"
       authenticated_user
-      order = Order.create(params['order'])
-      # NewCustomerOrderContext.call(current_user, @order) 
+      # order = Order.create(params['order'])
+      NewCustomerOrderContext.call(current_user, @order) 
     end
 
     desc "Retrieve orders in a paginated form"

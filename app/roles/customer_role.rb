@@ -1,6 +1,7 @@
 # Module create the Customer role
 #
 # Author::    Shadley Wentzel
+require 'bbpush'
 
 module CustomerRole
 
@@ -14,7 +15,15 @@ module CustomerRole
 	#   - 
 	#
 	def create_new_order(order)
+		# create order
+		p 'poes'
+		exit
+		# create notification
+		@bbpc = BBPush::Client.new(	:app_id=>"yourappidhere",
+                           			:password=>"yourpasswordhere", 
+									:push_server_url=>"https://cp123.pushapi.na.blackberry.com/mss/PD_pushRequest")
 
+		@bbpc.send_notification(["12345678"], "Hello to the device with PIN 12345678!", 5)
 	end
 
 	# Function to pay an order, invokes the pay method on the specific orde
