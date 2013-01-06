@@ -34,13 +34,14 @@ class Products < Grape::API
       logger.info "Searching all Products for Term: #{params[:query]}"
       # GetStoreByFanpageContext.call(params[:fanpage_id]) 
 
-      results = Sunspot.search(Product) do
-        keywords params[:query]      
-        paginate page: params[:page], per_page: 30
+      search = Sunspot.search(Product) do
+        fulltext params[:query]  do
+          boost_fields :name => 10.0
+        end   
+        paginate :page => params[:page], :per_page => 15
       end
 
-      p results.total 
-      exit
+      search_results = search.results 
     end
 
     desc "Retrieves a specific Products"

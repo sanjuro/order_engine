@@ -22,6 +22,8 @@
 class Product < ActiveRecord::Base
     # acts_as_tenant(:store)
 
+    include Sunspot::ActiveRecord
+
     belongs_to :store
 
     has_many :product_option_types, :dependent => :destroy
@@ -84,6 +86,10 @@ class Product < ActiveRecord::Base
     alias :options :product_option_types
 
     scope :by_store, lambda {|store| where("products.store_id = ?", store)} 
+
+    Sunspot.setup(Product) do
+      text :name
+    end
 
     after_initialize :ensure_master
 

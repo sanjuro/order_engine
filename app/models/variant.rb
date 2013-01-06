@@ -43,10 +43,6 @@ class Variant < ActiveRecord::Base
     scope :active, where(:deleted_at => nil)
     scope :deleted, where('deleted_at IS NOT NULL')
 
-    Sunspot.setup(Variant) do
-      string :sku, :stored => true
-    end
-
     # Returns number of inventory units for this variant (new records haven't been saved to database, yet)
     # def on_hand
     #   1.0 / 0 # Infinity
