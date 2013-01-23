@@ -5,7 +5,7 @@ FactoryGirl.define do
 	  user_id              '1'
 	  item_total           99.00
 	  total                99.00
-	  state      		   'complete'
+	  state      		   'sent_store'
   end
 
   factory :user do

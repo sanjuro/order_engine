@@ -10,6 +10,11 @@ class Store < ActiveRecord::Base
 					        :manager_name, :manager_contact, :is_online, :created_at, :completed_at, :updated_at, 
                   :fanpage_id, :business_hours_attributes
 
+  geocoded_by :address, :latitude => :latitude, :longitude => :longitude
+  after_validation :geocode, :if => :address_changed?
+  reverse_geocoded_by :latitude, :longitude
+  after_validation :reverse_geocode 
+
   validates :store_name, :presence => true
   validates :latitude, :presence => true
   validates :longitude, :presence => true
@@ -33,16 +38,14 @@ class Store < ActiveRecord::Base
 
   accepts_nested_attributes_for :business_hours
 
-  after_validation :geocode
-
   scope :by_fanpage_id, lambda {|fanpage_id| where("stores.fanpage_id = ?", fanpage_id)} 
   scope :by_unique_id, lambda {|unique_id| where("stores.unique_id = ?", unique_id)} 
 
   Sunspot.setup(Store) do
     text :store_name
-    # text :unique_id
-    # string :store_name, :stored => true
-    string :unique_id, :stored => true 
+    string :unique_id
+    string :address
+    location (:location) { Sunspot::Util::Coordinates.new(latitude, longitude) }
   end
 
 end

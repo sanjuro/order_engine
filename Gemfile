@@ -19,7 +19,7 @@ gem 'acts_as_list', '>= 0.1.0'
 
 # gem 'acts_as_tenant'
 
-# gem 'geocoder'
+gem 'geocoder'
 
 gem 'state_machine'
 

@@ -5,7 +5,7 @@ class Stores < Grape::API
   
   resource 'stores' do
 
-    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/page/1?authentication_token=CXTTTTED2ASDBSD3
+    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/1/online?authentication_token=CXTTTTED2ASDBSD3
  
     desc "Retrieve all stores"
     get "/" do
@@ -69,6 +69,30 @@ class Stores < Grape::API
       logger.info "Retrieved all taxons for Store with ID: #{params['id']}"
       store = Store.find(params[:id])
       store.taxons
+    end
+
+    desc "Swtich a store on."
+    params do
+      requires :id, :type => Integer, :desc => "Store id."
+    end
+    get "/:id/online" do
+      logger.info "Switched on Store with ID: #{params['id']}"
+      authenticated_user
+      store = Store.find(params[:id])
+      store.update_attributes(:is_online => true)
+      store
+    end
+
+    desc "Swtich a store off."
+    params do
+      requires :id, :type => Integer, :desc => "Store id."
+    end
+    get "/:id/offline" do
+      logger.info "Switched off Store with ID: #{params['id']}"
+      authenticated_user
+      store = Store.find(params[:id])
+      store.update_attributes(:is_online => false)
+      store
     end
 
     desc "Get new orders for store."
