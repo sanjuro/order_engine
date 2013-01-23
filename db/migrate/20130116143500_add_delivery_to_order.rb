@@ -7,6 +7,4 @@ class AddDeliveryToOrder < ActiveRecord::Migration
 	def self.down
     	remove_column :orders, :is_delivery
 	end
-
-
 end

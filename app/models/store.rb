@@ -7,7 +7,7 @@ class Store < ActiveRecord::Base
   include Sunspot::ActiveRecord
 
 	attr_accessible :store_name, :unique_id, :store_description, :address, :email, :latitude, :longitude, 
-					        :manager_name, :manager_contact, :created_at, :completed_at, :updated_at, 
+					        :manager_name, :manager_contact, :is_online, :created_at, :completed_at, :updated_at, 
                   :fanpage_id, :business_hours_attributes
 
   validates :store_name, :presence => true
