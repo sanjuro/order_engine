@@ -29,7 +29,7 @@ class Stores < Grape::API
     end
     get "/search" do
       logger.info "Searching all Stores for Term: #{params[:query]}"
-      SearchStoresContext.call(params[:query], 1)
+      SearchStoresContext.call(params[:query], params[:page])
     end
     
     desc "Retrieve store by fanpage"
@@ -66,9 +66,19 @@ class Stores < Grape::API
       requires :id, :type => Integer, :desc => "Store id."
     end
     get "/:id/taxons" do
-      logger.info "Retrieved all taxons for Store with ID#{params['id']}"
+      logger.info "Retrieved all taxons for Store with ID: #{params['id']}"
       store = Store.find(params[:id])
       store.taxons
+    end
+
+    desc "Get new orders for store."
+    params do
+      requires :id, :type => Integer, :desc => "Store id."
+    end
+    get "/:id/new_orders" do
+      logger.info "Retrieved all new orders for Store with ID: #{params['id']}"
+      authenticated_user
+      orders = Order.sent_to_store.by_store(params[:id])
     end
   end
   

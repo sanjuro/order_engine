@@ -8,6 +8,7 @@ class AddDeviceNumber < ActiveRecord::Migration
 		add_column :orders, :device_identifier, :string
 		add_column :orders, :device_type, :string
 
+		add_column :state_events, :next_state, :string
 	end
 
 	def self.down
@@ -15,5 +16,6 @@ class AddDeviceNumber < ActiveRecord::Migration
 		
     	remove_column :orders, :device_identifier
     	remove_column :orders, :device_type
+    	emove_column :state_events, :next_state
     end
 end

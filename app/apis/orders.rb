@@ -7,7 +7,7 @@ class Orders < Grape::API
 
     # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/orders/page/1?authentication_token=CXTTTTED2ASDBSD3
 
-    # curl -i -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD3","order":{"unique_id":"kau0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "12345", "device_type":"blackberry", "line_items":{ {"variant_id":"13","qunatity":1}}}' http://localhost:9000/api/v1/orders
+    # curl -i -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD3","order":{"store_id":"1", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "12345", "device_type":"blackberry", "line_items":{ "1": {"variant_id":"13","quantity":"1"}, "2":{"variant_id":"12","quantity":"1"}   }}}' http://localhost:9000/api/v1/orders
 
     desc "Retrieve all orders"
     get "/" do      
@@ -21,17 +21,16 @@ class Orders < Grape::API
       requires :id, :type => Integer, :desc => "Order id."
     end
     get "/:id" do 
-      logger.info "Retrieveing Order with ID #{params[:id]}"
+      logger.info "Retrieveing Order with ID: #{params[:id]}"
       authenticated_user
       Order.find(params['id'])
     end
     
     desc "Creates a new order"
     post "/" do
-      logger.info "Create new Order"
+      logger.info "Create new Order with params"
       authenticated_user
-      # order = Order.create(params['order'])
-      NewCustomerOrderContext.call(current_user, @order) 
+      NewCustomerOrderContext.call(current_user, params['order']) 
     end
 
     desc "Retrieve orders in a paginated form"

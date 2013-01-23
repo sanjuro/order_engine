@@ -130,10 +130,12 @@ class CreateVosto < ActiveRecord::Migration
     end
 
     create_table :state_events, :options => "ENGINE=INODB" do |t|
-      t.string   :name, :previous_state
-      t.references :order
+      t.string     :name
+      t.string     :previous_state
+      t.references :stateful
       t.references :user
-
+      t.string     :stateful_type
+      t.string     :next_state
       t.timestamps
     end
 

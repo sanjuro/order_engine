@@ -7,7 +7,7 @@ class LineItem < ActiveRecord::Base
   belongs_to :variant
 
   has_one :product, :through => :variant
-  has_many :adjustments, :as => :adjustable, :dependent => :destroy
+  # has_many :adjustments, :as => :adjustable, :dependent => :destroy
 
   before_validation :copy_price
 

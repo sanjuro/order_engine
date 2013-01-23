@@ -1,4 +1,4 @@
-class AddDelivery < ActiveRecord::Migration
+class AddAddreses < ActiveRecord::Migration
 
 	def self.up
 
@@ -11,21 +11,6 @@ class AddDelivery < ActiveRecord::Migration
 	      t.references :country
 
 	      t.timestamps
-	    end
-
-	    create_table :deliveries, :force => true do |t|
-	      t.string   :tracking, :number
-	      t.decimal  :cost, :precision => 8, :scale => 2
-	      t.datetime :shipped_at
-	      t.references :order
-	      t.references :delivery_provider
-	      t.references :address
-
-	      t.timestamps
-	    end
-
-	    create_table :delivery_providers, :options => "ENGINE=INODB" do |t|
-	      t.string   :provider_name
 	    end
 
 	    create_table :states, :options => "ENGINE=INODB" do |t|
