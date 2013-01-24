@@ -8,6 +8,14 @@ FactoryGirl.define do
 	  state      		   'sent_store'
   end
 
+  factory :variant do
+	  product_id           1
+	  sku                  260
+	  price                99.00
+	  position             10
+	  is_master      	   1
+  end
+
   factory :user do
 	  first_name           'Test'
 	  last_name            'Customer'

@@ -38,6 +38,8 @@ group :test do
 	gem 'rake', :groups=>[:development, :test]
 	gem 'rack-test', :group=>:test
 	gem 'rspec', :group=>:test
+	gem 'rspec-expectations'
+    gem 'rspec-mocks'
 	gem 'factory_girl'
 	gem 'spork'
 end

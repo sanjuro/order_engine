@@ -44,14 +44,37 @@ describe Orders do
     context "creating a new order" do
 
       describe 'POST /api/v1/orders' do
-        
-        order = FactoryGirl.build(:order)
+
+        before :each do        
+          @order = FactoryGirl.build(:order)
+          @request_payload = {
+            order: {
+              store_id: 1,
+              special_instructions: "Poes",
+              device_identifier: "1234",
+              device_type: 'blackberry',
+              line_items: {
+                            "0" => { :variant_id => 1, :quantity => 5 }
+                          }
+            }
+          }
+
+          post '/api/v1/users/orders?authentication_token=CXTTTTED2ASDBSD3',  @request_payload.to_json
+        end
+
+        it "should retrieve status code of 200" do
+          last_response.should == 201
+        end
 
         it 'should add one order' do
-          lambda {
-            post '/api/v1/users/orders?authentication_token=CXTTTTED2ASDBSD3', order.to_json
-          }.should change(Order, :count).by(1)
-          last_response.status.should eql(201)
+          last_response.should change(Order, :count).by(1)
+        end
+
+        it 'should add one order' do
+          order = Order.last
+          order.line_items.count.should == 1
+          order.line_items.first.variant.should == variant
+          order.line_items.first.quantity.should == 5
         end
 
       end  
