@@ -17,7 +17,7 @@ Dir[File.dirname(__FILE__) + '/app/contexts/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/roles/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/apis/*.rb'].each {|file| require file }
 
-ActiveRecord::Base.send :include, ActiveRecordExtensions 
+# ActiveRecord::Base.send :include, ActiveRecordExtensions 
 
 class API < Grape::API
 	

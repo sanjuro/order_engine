@@ -63,7 +63,6 @@ class Order < ActiveRecord::Base
       transition :from => :sent_store, :to => :in_progress
       transition :from => :in_progress, :to => :ready
       transition :from => :ready, :to => :collected
-      transition :from => :collected, :to => :complete
     end
    
     event :cancel do
@@ -287,10 +286,13 @@ class Order < ActiveRecord::Base
           :previous_state => old_state,
           :next_state => self.send(state),
           :name => name,
-          :user_id => self.user_id
+          :user_id => self.user_id,
+          :stateful_id => self.id,
+          :stateful_type => 'order'
         })
     end
   end
+
 
   # convenience method since many stores will not allow user to create multiple shipments
   def shipment

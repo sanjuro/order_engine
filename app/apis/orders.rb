@@ -5,7 +5,7 @@ class Orders < Grape::API
   
   resource 'orders' do
 
-    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/orders/page/1?authentication_token=CXTTTTED2ASDBSD3
+    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/orders/1/update_status?authentication_token=CXTTTTED2ASDBSD3&status=in_progress
 
     # curl -i -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD3","order":{"store_id":"1", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "12345", "device_type":"blackberry", "line_items":{ "1": {"variant_id":"13","quantity":"1"}, "2":{"variant_id":"12","quantity":"1"}   }}}' http://localhost:9000/api/v1/orders
 
@@ -23,7 +23,7 @@ class Orders < Grape::API
     get "/:id" do 
       logger.info "Retrieveing Order with ID: #{params[:id]}"
       authenticated_user
-      Order.find(params['id'])
+      Order.find(params[:id])
     end
     
     desc "Creates a new order"
@@ -41,6 +41,18 @@ class Orders < Grape::API
       logger.info "Retrieved all orders for #{current_user.full_name}"
       authenticated_user
       GetOrdersContext.call(current_user, params[:page]) 
+    end
+
+    desc "Updates the status of an Order"
+    params do
+      requires :id, :type => Integer, :desc => "Order id."
+      requires :status, :type => String, :desc => "Order status."
+    end
+    get "/:id/update_status/:status" do 
+      logger.info "Retrieveing Order with ID: #{params[:id]}"
+      authenticated_user
+      order = Order.find(params[:id])
+      UpdateOrderStatusContext.call(current_user, order, params[:status]) 
     end
   end
   

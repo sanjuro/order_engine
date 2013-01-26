@@ -1,11 +1,12 @@
-FactoryGirl.define do
+FactoryGirl.define do	
   factory :order do
-	  number               'R12345234'
-	  store_id             '1'
-	  user_id              '1'
-	  item_total           99.00
-	  total                99.00
-	  state      		   'sent_store'
+	id 					1
+	number              'R12345234'
+	store_id            '1'
+	user_id             '1'
+	item_total          99.00
+	total               99.00
+	state      		   'sent_store'
   end
 
   factory :variant do
