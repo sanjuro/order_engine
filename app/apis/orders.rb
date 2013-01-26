@@ -48,8 +48,8 @@ class Orders < Grape::API
       requires :id, :type => Integer, :desc => "Order id."
       requires :status, :type => String, :desc => "Order status."
     end
-    get "/:id/update_status/:status" do 
-      logger.info "Retrieveing Order with ID: #{params[:id]}"
+    put "/:id/update_status" do 
+      logger.info "Updating status of Order with ID: #{params[:id]}"
       authenticated_user
       order = Order.find(params[:id])
       UpdateOrderStatusContext.call(current_user, order, params[:status]) 
