@@ -60,7 +60,7 @@ class Products < Grape::API
     get '/:id/variants' do
       logger.info "Retrieved all variants for Product with ID: #{params[:id]}"
       product = Product.find(params[:id])
-      GetProductDetailContext.call(product) 
+      GetProductVariantsContext.call(product) 
     end
 
     desc "Returns the master variant for a Product."
