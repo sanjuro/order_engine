@@ -24,6 +24,7 @@ gem 'geocoder'
 gem 'state_machine'
 
 gem 'devise'
+gem "bcrypt-ruby"
 
 gem 'ruby_pagination_logic'
 
@@ -33,6 +34,7 @@ gem 'sunspot'
 gem 'sunspot_rails'
 
 gem 'bbpush'
+gem 'pushmeup'
 
 group :test do 
 	gem 'rake', :groups=>[:development, :test]

@@ -78,7 +78,6 @@ class Order < ActiveRecord::Base
     end
 
 
-    after_transition :to => :sent_store, :do => :finalize!
 
     before_transition :to => :complete do |order|
       begin
@@ -93,7 +92,7 @@ class Order < ActiveRecord::Base
     end
 
     after_transition :to => :sent_store do |order|
-      # notify customer of order
+      order.finalize!
     end
 
     after_transition :to => :ready do |order|
@@ -148,6 +147,20 @@ class Order < ActiveRecord::Base
     end
     self.number = random if self.number.blank?
     self.number
+  end
+
+
+  # Function to send the order read notificaiton
+  #
+  # * *Args*    :
+  #   - 
+  # * *Returns* :
+  #   - 
+  # * *Raises* :
+  #   - 
+  #
+  def send_ready_notification
+
   end
 
   def is_delivery_order
@@ -362,6 +375,18 @@ class Order < ActiveRecord::Base
     save
 
     # deliver_order_confirmation_email
+
+    # send notificaiton to specific store
+    Notification.adapter = :andriod
+
+    message = Hash.new
+    message[:order_id] = self.id
+    message[:subject] = "new_order"
+
+    # get all devices for the store
+    devices = self.store.devices.detect { |device| device.device_identifier } 
+
+    Notification.send(devices, message)
 
     self.state_events.create({
       :previous_state => 'confirm',

@@ -36,6 +36,8 @@ class Customer < User
   has_many :favourties
   has_and_belongs_to_many :stores
 
+  has_many :devices, :as => :deviceable
+
   # before_create :create_client
   after_create :generate_user_pin, :create_full_name
   

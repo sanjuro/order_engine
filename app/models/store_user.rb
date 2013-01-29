@@ -17,12 +17,15 @@
 #  updated_at                 :datetime
 #  user_id                    :integer(4)
 #
+require 'bcrypt'
 
 class StoreUser < User
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :id, :full_name, :user_pin, :email, :mobile_number, :gender, :encrypted_password, 
-                  :remember_me, :provider, :uid, :user_attributes
+  attr_accessible :login, :full_name, :username, :email, :password, :password_confirmation, :remember_me,
+                  :authentication_token, :first_name, :last_name, :mobile_number, :gender, :birthday, :user_pin,
+                  :profileable_type, :encrypted_password
+
 
   validates :email, :presence => true
 
@@ -34,7 +37,7 @@ class StoreUser < User
   # before_create :create_client
   # before_create :generate_user_pin
   
-  # scope :recent_by_sign_in, order("users.last_sign_in_at")  
   # scope :by_store, lambda {|store| where("users.store_id = ?", store)} 
+  scope :by_username,lambda {|username| where("users.username = ?", username)} 
   
 end

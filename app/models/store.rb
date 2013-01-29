@@ -21,6 +21,8 @@ class Store < ActiveRecord::Base
   validates :manager_name, :presence => true
 
 	has_many :business_hours
+  
+  has_many :devices, :as => :deviceable
 
   has_and_belongs_to_many :customers,
     :join_table => 'users_stores',
