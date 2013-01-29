@@ -5,7 +5,7 @@ class Stores < Grape::API
   
   resource 'stores' do
 
-    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/1/online?authentication_token=CXTTTTED2ASDBSD3
+    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/1/?authentication_token=CXTTTTED2ASDBSD3
  
     desc "Retrieve all stores"
     get "/" do
@@ -58,7 +58,7 @@ class Stores < Grape::API
     end
     get "/:id" do 
       logger.info "Showing Store with ID: #{params[:id]}"
-      Store.find(params[:id])
+      RetrieveStoreContext.call(params[:id])
     end
     
     desc "Returns taxons for a store."
@@ -102,7 +102,8 @@ class Stores < Grape::API
     get "/:id/new_orders" do
       logger.info "Retrieved all new orders for Store with ID: #{params['id']}"
       authenticated_user
-      orders = Order.sent_to_store.by_store(params[:id])
+      store = Store.find(params[:id])
+      GetNewStoreOrdersContext.(store)
     end
   end
   

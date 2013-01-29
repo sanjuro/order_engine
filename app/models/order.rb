@@ -15,7 +15,7 @@ class Order < ActiveRecord::Base
   validates :number, :uniqueness => true, :on => :create
                  
   belongs_to :store
-  belongs_to :user, :foreign_key => "user_id", :class_name => "User"
+  belongs_to :customer, :foreign_key => "user_id", :class_name => "Customer"
 
   belongs_to :ship_address, :foreign_key => :ship_address_id, :class_name => "Address"
   alias_attribute :shipping_address, :ship_address
