@@ -5,13 +5,16 @@ class StoreUsers < Grape::API
   
   resource 'store_users' do
 
-    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/store_users/authenticate?authentication_token=CXTTTTED2ASDBSD3&useranme=sanjuro&password=rad6hia
+    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/store_users/authenticate.json?authentication_token=AXSSSSED2ASDASD1
+    # curl -d '{"username": "sanjuro", "password": "rad6hia"}' 'http://localhost:9000/api/v1/store_users/authenticate?authentication_token=AXSSSSED2ASDASD1' -H Content-Type:application/json -v
+  
     desc "Authenticates a Store User"
     params do
       requires :username, :type => String, :desc => "Username to authenticate."
       requires :password, :type => String, :desc => "Password to authenticate."
     end
-    get '/authenticate' do
+    post '/authenticate' do
+      p 'poes'
       authenticated_user
       logger.info "Authenticating new InStore Device with Username: #{params[:username]}"
 
