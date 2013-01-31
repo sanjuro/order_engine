@@ -5,7 +5,7 @@ class Orders < Grape::API
   
   resource 'orders' do
 
-    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/orders/1/update_status?authentication_token=CXTTTTED2ASDBSD3&status=in_progress
+    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/orders/page/1?authentication_token=AXSSSSED2ASDASD6
 
     # curl -i -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD3","order":{"store_id":"1", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "12345", "device_type":"blackberry", "line_items":{ "1": {"variant_id":"13","quantity":"1"}, "2":{"variant_id":"12","quantity":"1"}   }}}' http://localhost:9000/api/v1/orders
 
@@ -33,7 +33,7 @@ class Orders < Grape::API
       NewCustomerOrderContext.call(current_user, params['order']) 
     end
 
-    desc "Retrieve orders in a paginated form"
+    desc "Retrieve orders in a paginated form for a user"
     params do
       requires :page, :type => Integer, :desc => "Page of results"
     end

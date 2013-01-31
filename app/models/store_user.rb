@@ -32,12 +32,11 @@ class StoreUser < User
   has_one :user, :as => :profileable
   accepts_nested_attributes_for :user
 
-  has_and_belongs_to_many :stores
+  # has_and_belongs_to_many :stores
 
   # before_create :create_client
   # before_create :generate_user_pin
   
   # scope :by_store, lambda {|store| where("users.store_id = ?", store)} 
-  scope :by_username,lambda {|username| where("users.username = ?", username)} 
   
 end

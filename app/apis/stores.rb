@@ -5,7 +5,7 @@ class Stores < Grape::API
   
   resource 'stores' do
 
-    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/1/?authentication_token=CXTTTTED2ASDBSD3
+    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/1/new_orders.json?authentication_token=CXTTTTED2ASDBSD3
  
     desc "Retrieve all stores"
     get "/" do
@@ -103,7 +103,7 @@ class Stores < Grape::API
       logger.info "Retrieved all new orders for Store with ID: #{params['id']}"
       authenticated_user
       store = Store.find(params[:id])
-      GetNewStoreOrdersContext.(store)
+      GetNewStoreOrdersContext.call(store)
     end
   end
   
