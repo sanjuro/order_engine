@@ -15,25 +15,30 @@ module CustomerRole
 	#   - 
 	#
 	def create_new_order(order_data)
-		# create order
-		order = Order.create(
-							:store_id => order_data.store_id,
-							:user_id => self.id,
-							:state => 'confirm',
-							:device_identifier => order_data.device_identifier,
-							:device_type => order_data.device_type,
-							:special_instructions => order_data.special_instructions
-							)
+		# find store
+		store = Store.by_unique_id(order_data.store_id)
 
-		order_data[:line_items].each do |line_item|
-			order_item = line_item.last
-			variant = Variant.find(order_item.variant_id)
-			order.add_variant(variant, order_item.quantity)
-		end
+		if !store.nil?
+			# create order
+			order = Order.create(
+								:store_id => order_data.store_id,
+								:user_id => self.id,
+								:state => 'confirm',
+								:device_identifier => order_data.device_identifier,
+								:device_type => order_data.device_type,
+								:special_instructions => order_data.special_instructions
+								)
 
-		order.save!
+			order_data[:line_items].each do |line_item|
+				order_item = line_item.last
+				variant = Variant.find(order_item.variant_id)
+				order.add_variant(variant, order_item.quantity)
+			end
 
-		order.next
+			order.save!
+
+			order.next
+		end 
 
 		# create notification
 		# @bbpc = BBPush::Client.new(	:app_id => "3159-s6B17c772Drm355O621r3D9i9486a923777",
