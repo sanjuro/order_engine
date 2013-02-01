@@ -377,16 +377,16 @@ class Order < ActiveRecord::Base
     # deliver_order_confirmation_email
 
     # send notificaiton to specific store
-    Notification.adapter = :andriod
+    # Notification.adapter = :andriod
 
-    message = Hash.new
-    message[:order_id] = self.id
-    message[:subject] = "new_order"
+    # message = Hash.new
+    # message[:order_id] = self.id
+    # message[:subject] = "new_order"
 
-    # get all devices for the store
-    devices = self.store.devices.detect { |device| device.device_identifier } 
+    # # get all devices for the store
+    # devices = self.store.devices.detect { |device| device.device_identifier } 
 
-    Notification.send(devices, message)
+    # Notification.send(devices, message)
 
     self.state_events.create({
       :previous_state => 'confirm',

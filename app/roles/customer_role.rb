@@ -36,9 +36,9 @@ module CustomerRole
 		order.next
 
 		# create notification
-		# @bbpc = BBPush::Client.new(	:app_id=>"yourappidhere",
-  		#                          		:password=>"yourpasswordhere", 
-		# 								:push_server_url=>"https://cp123.pushapi.na.blackberry.com/mss/PD_pushRequest")
+		# @bbpc = BBPush::Client.new(	:app_id => "3159-s6B17c772Drm355O621r3D9i9486a923777",
+  		#                          		:password => "smnBIWO3", 
+		# 								:push_server_url => "https://cp3159.pushapi.eval.blackberry.com")
 
 		# @bbpc.send_notification(["12345678"], "Hello to the device with PIN 12345678!", 5)
 	end
