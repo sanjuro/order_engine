@@ -6,7 +6,7 @@ class Orders < Grape::API
   resource 'orders' do
 
     # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/orders/page/1?authentication_token=AXSSSSED2ASDASD6
-    # curl -i -H "Accept: application/json" -X POST -d '{"order":{"unique_id":"kau0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "12345", "device_type":"blackberry", "line_items":{ "1": {"variant_id":"13","quantity":"1"}, "2":{"variant_id":"12","quantity":"1"}   }}}' http://107.22.211.58:9000/api/v1/orders?authentication_token=1b032cb31ad1f41e662238182ebbf456
+    # curl -i -H "Accept: application/json" -X POST -d '{"order":{"unique_id":"kau0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "12345", "device_type":"blackberry", "line_items":{ "1": {"variant_id":"13","quantity":"1"}, "2":{"variant_id":"12","quantity":"1"}   }}}' http://127.0.0.1:9000/api/v1/orders?authentication_token=1b032cb31ad1f41e662238182ebbf456
 
     desc "Retrieve all orders"
     get "/" do      
@@ -27,7 +27,7 @@ class Orders < Grape::API
     
     desc "Creates a new order"
     post "/" do
-      logger.info "Create new Order with params"
+      logger.warning "Create new Order with params"
       authenticated_user
       NewCustomerOrderContext.call(current_user, params['order']) 
     end
