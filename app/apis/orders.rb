@@ -27,7 +27,7 @@ class Orders < Grape::API
     
     desc "Creates a new order"
     post "/" do
-      logger.warning "Create new Order with params"
+      logger.info "Create new Order with params"
       authenticated_user
       NewCustomerOrderContext.call(current_user, params['order']) 
     end
