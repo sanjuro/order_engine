@@ -16,12 +16,12 @@ module CustomerRole
 	#
 	def create_new_order(order_data)
 		# find store
-		store = Store.by_unique_id(order_data.store_id)
+		store = Store.by_unique_id(order_data.unique_d)
 
 		if !store.nil?
 			# create order
 			order = Order.create(
-								:store_id => order_data.store_id,
+								:store_id => store.id,
 								:user_id => self.id,
 								:state => 'confirm',
 								:device_identifier => order_data.device_identifier,
