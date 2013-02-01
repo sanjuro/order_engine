@@ -17,7 +17,7 @@ module CustomerRole
 	def create_new_order(order_data)
 		# find store
 		# store = Store.by_unique_id(order_data.unique_id)
-		store = Store.by_unique_id('kau0000001')
+		store = Store.by_unique_id('kau0000001').first
 
 		# create order
 		order = Order.create(
