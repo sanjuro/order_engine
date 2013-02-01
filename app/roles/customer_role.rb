@@ -17,16 +17,16 @@ module CustomerRole
 	def create_new_order(order_data)
 		# find store
 		# store = Store.by_unique_id(order_data.unique_id)
-		store = Store.by_unique_id('kau0000001').first
+		store = Store.by_unique_id(order_data[:unique_id]).first
 
 		# create order
 		order = Order.create(
 							:store_id => store.id,
 							:user_id => self.id,
 							:state => 'confirm',
-							:device_identifier => order_data.device_identifier,
-							:device_type => order_data.device_type,
-							:special_instructions => order_data.special_instructions
+							:device_identifier => order_data[:device_identifier],
+							:device_type => order_data[:device_type],
+							:special_instructions => order_data[:special_instructions]
 							)
 
 		order_data[:line_items].each do |line_item|
