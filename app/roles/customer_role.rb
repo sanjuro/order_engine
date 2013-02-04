@@ -63,7 +63,7 @@ module CustomerRole
 
 	    orders_return = Hash.new
 
-	    orders.each do | order |
+	    orders.each do |order|
 	      orders_return[order.id] = order.formant_for_web_serivce 
 	    end
 
