@@ -1,6 +1,6 @@
 # Context to assocaite to add a new order
 #
-# curl -i -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD3","order":{"store_id":"1", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "12345",  "line_items":{ "variant_id":"13","quantity":1}}}' http://localhost:9000/api/v1/orders
+# curl -i -X POST -d '{"authentication_token":"1b032cb31ad1f41e662238182ebbf456","order":{"unique_id":"kau0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "12345",  "line_items":[{ "variant_id":"13","quantity":1}]}}' http://localhost:9000/api/v1/orders
 # Author::    Shadley Wentzel
 class NewCustomerOrderContext
   attr_reader :user, :order

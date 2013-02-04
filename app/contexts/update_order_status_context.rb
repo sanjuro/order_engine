@@ -4,21 +4,19 @@
 # Author::    Shadley Wentzel
 
 class UpdateOrderStatusContext
-  attr_reader :user, :order, :status
+  attr_reader :user, :order, :status, :time_to
 
-  def self.call(user, order, status)
-    UpdateOrderStatusContext.new(user, order, status).call
+  def self.call(user, order, status, time_to)
+    UpdateOrderStatusContext.new(user, order, status, time_to).call
   end
 
-  def initialize(user, order, status)
-    @user = user
+  def initialize(user, order, status, time_to)
+    @user, @order, @status, @time_to = user, order, status, time_to
     @user.extend StoreUserRole
-    @order = order
-    @status = status
   end
 
   def call
     # return favourties
-    @user.update_order_state(@order, @status)
+    @user.update_order_state(@order, @status, @time_to)
   end
 end

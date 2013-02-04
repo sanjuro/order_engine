@@ -46,12 +46,13 @@ class Orders < Grape::API
     params do
       requires :id, :type => Integer, :desc => "Order id."
       requires :status, :type => String, :desc => "Order status."
+      requires :time_to, :type => String, :desc => "Time to Order ready."
     end
     put "/:id/update_status" do 
       logger.info "Updating status of Order with ID: #{params[:id]}"
       authenticated_user
       order = Order.find(params[:id])
-      UpdateOrderStatusContext.call(current_user, order, params[:status]) 
+      UpdateOrderStatusContext.call(current_user, order, params[:status], time_to) 
     end
   end
   

@@ -21,15 +21,15 @@ class SearchStoresContext
     query_term = @query_term
     page = @page
 
-	search = Sunspot.search(Store) do
-		fulltext query_term do
-			boost_fields :unique_id => 10.0
-			boost_fields :store_name => 2.0
-		end   
-		order_by :unique_id, :desc
-		paginate :page => page, :per_page => 15
-	end
+  	search = Sunspot.search(Store) do
+  		fulltext query_term do
+  			boost_fields :unique_id => 10.0
+  			boost_fields :store_name => 2.0
+  		end   
+  		order_by :unique_id, :desc
+  		paginate :page => page, :per_page => 15
+  	end
 
-	search_results = search.results 
+  	search_results = search.results 
   end
 end

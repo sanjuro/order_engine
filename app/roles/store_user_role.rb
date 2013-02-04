@@ -14,7 +14,7 @@ module StoreUserRole
 	# * *Raises* :
 	#   - 
 	#
-	def update_order_state(order, status)
+	def update_order_state(order, status, time_to)
 		# create order
 		order.state = status
 		order.save
