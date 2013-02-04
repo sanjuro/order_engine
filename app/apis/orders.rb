@@ -37,8 +37,8 @@ class Orders < Grape::API
       requires :page, :type => Integer, :desc => "Page of results"
     end
     get "/page/:page" do
-      logger.info "Retrieved all orders for #{current_user.full_name}"
       authenticated_user
+      logger.info "Retrieved all orders for #{current_user.full_name}"
       GetOrdersContext.call(current_user, params[:page]) 
     end
 

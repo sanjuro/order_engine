@@ -38,7 +38,8 @@ module CustomerRole
 		order.save!
 
 		order.next
- 
+
+	    order.formant_for_web_serivce 
 
 		# create notification
 		# @bbpc = BBPush::Client.new(	:app_id => "3159-s6B17c772Drm355O621r3D9i9486a923777",
@@ -64,24 +65,7 @@ module CustomerRole
 	    orders_return = Hash.new
 
 	    orders.each do | order |
-	      orders_return[order.id] = { 
-	            "adjustment_total" => order.adjustment_total,
-	            "completed_at" => order.completed_at,
-	            "created_at" => order.created_at,
-	            "credit_total" => order.credit_total,
-	            "id" => order.id,
-	            "item_total" => order.item_total,
-	            "number" => order.number,
-	            "payment_state" => order.payment_state,
-	            "payment_total" => order.payment_total,
-	            "special_instructions" => order.special_instructions,
-	            "state" => order.state,
-	            "store_id" => order.store_id,
-	            "total" => order.total,
-	            "updated_at" => order.updated_at,
-	            "user_id" => order.user_id,
-	            "line_items" => order.line_items
-	      }
+	      orders_return[order.id] = order.formant_for_web_serivce 
 	    end
 
 	    orders_return

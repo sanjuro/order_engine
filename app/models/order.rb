@@ -261,6 +261,17 @@ class Order < ActiveRecord::Base
     ret = payments.each(&:process!)
   end
 
+  def get_line_items_with_variant_info
+    order_line_items = Array.new
+    line_items.each do |line_item|
+      order_line_item = line_item
+      order_line_item[:name] = line_item.variant.name
+      order_line_item[:sku] = line_item.variant.sku
+      order_line_items << order_line_item
+    end
+    return order_line_items
+  end
+
   # Indicates whether or not the user is allowed to proceed to checkout.  Currently this is implemented as a
   # check for whether or not there is at least one LineItem in the Order.  Feel free to override this logic
   # in your own application if you require additional steps before allowing a checkout.
@@ -376,17 +387,22 @@ class Order < ActiveRecord::Base
 
     # deliver_order_confirmation_email
 
-    # send notificaiton to specific store
     # Notification.adapter = :andriod
 
     # message = Hash.new
     # message[:order_id] = self.id
     # message[:subject] = "new_order"
 
+    # devices = Array.new
+
     # # get all devices for the store
-    # devices = self.store.devices.detect { |device| device.device_identifier } 
+    # self.store.devices.each do |device|
+    #   devices << device.device_identifier 
+    # end
 
     # Notification.send(devices, message)
+
+    # send email
 
     self.state_events.create({
       :previous_state => 'confirm',
@@ -394,6 +410,35 @@ class Order < ActiveRecord::Base
       :name           => 'order' ,
       :user_id        => self.user_id
     }, :without_protection => true)
+  end
+
+  def formant_for_web_serivce
+    orders_return = Hash.new
+
+    orders_return = { 
+            "adjustment_total" => self.adjustment_total,
+            "completed_at" => self.completed_at,
+            "created_at" => self.created_at,
+            "credit_total" => self.credit_total,
+            "id" => self.id,
+            "item_total" => self.item_total,
+            "number" => self.number,
+            "payment_state" => self.payment_state,
+            "payment_total" => self.payment_total,
+            "special_instructions" => self.special_instructions,
+            "state" => self.state,
+            "store_id" => self.store_id,
+            "total" => self.total,
+            "updated_at" => self.updated_at,
+            "user" => { 
+                "full_name" => self.customer.full_name,
+                "first_name" => self.customer.first_name,
+                "last_name" => self.customer.last_name,
+                "email" => self.customer.email,
+                "mobile_number" => self.customer.mobile_number,
+                },
+            "line_items" => self.get_line_items_with_variant_info
+    }
   end
 
   private
