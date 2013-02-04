@@ -78,5 +78,17 @@ class User < ActiveRecord::Base
       end while self.class.exists?(authentication_token: authentication_token)
       self.save
   end
+
+  def formant_for_web_serivce
+    user_return = Hash.new
+
+    user_return = { 
+                "full_name" => self.full_name,
+                "first_name" => self.first_name,
+                "last_name" => self.last_name,
+                "email" => self.email,
+                "mobile_number" => self.mobile_number
+                }
+  end
   
 end
