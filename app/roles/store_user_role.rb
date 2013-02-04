@@ -44,7 +44,7 @@ module StoreUserRole
 	end
 
 
-	# Function to authenticate a store siser
+	# Function to authenticate a store user
 	#
 	# * *Args*    :
 	#   - +password+ -> the password

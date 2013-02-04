@@ -68,6 +68,8 @@ class API < Grape::API
 	    end
 	end
 
+	mount Customers
+
 	mount Favourites
 
 	mount Orders
