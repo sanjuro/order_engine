@@ -1,6 +1,7 @@
 # Context to retrieve all new orders orders for a specific store
 #
 # Author::    Shadley Wentzel
+
 class GetNewStoreOrdersContext
   attr_reader :store
 

@@ -30,8 +30,8 @@ module CustomerRole
 							)
 
 		order_data[:line_items].each do |line_item|
-			variant = Variant.find(line_item.variant_id)
-			order.add_variant(variant, line_item.quantity)
+			variant = Variant.find(line_item.variant_id.to_i)
+			order.add_variant(variant, line_item.quantity.to_i)
 		end
 
 		order.save!

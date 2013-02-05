@@ -1,6 +1,7 @@
 # Context to retrieve a prodcut with its variants and option values
 #
 # Author::    Shadley Wentzel
+
 class GetProductVariantsContext
   attr_reader :product
 

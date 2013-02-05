@@ -2,7 +2,7 @@
 #
 # 
 # Author::    Shadley Wentzel
-#
+
 class AuthenticateCustomerContext
   attr_reader :user, :password
 

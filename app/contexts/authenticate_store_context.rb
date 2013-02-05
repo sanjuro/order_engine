@@ -2,7 +2,7 @@
 #
 # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/search?query=sim0000001&authentication_token=CXTTTTED2ASDBSD3
 # Author::    Shadley Wentzel
-#
+
 class AuthenticateStoreContext
   attr_reader :user, :password
 

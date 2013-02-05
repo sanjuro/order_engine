@@ -1,6 +1,7 @@
 # Context to retrieve all orders for a user
 #
 # Author::    Shadley Wentzel
+
 class GetOrdersContext
   attr_reader :user, :page
 
