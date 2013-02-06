@@ -10,7 +10,7 @@ class Order < ActiveRecord::Base
   attr_accessible :store_id, :line_items, :bill_address_attributes, :ship_address_attributes, :payments_attributes, :invoice_attributes, 
                   :line_items_attributes, :number, :item_total, :total, :state, :credit_total, :user_id, :is_delivery,
                   :payment_total, :payment_state, :shipment_state, :special_instructions, :shipping_method_id, :device_identifier, 
-                  :device_type, :adjustment_total, :created_at, :completed_at, :updated_at
+                  :time_to_ready, :device_type, :adjustment_total, :created_at, :completed_at, :updated_at
                   
   validates :number, :uniqueness => true, :on => :create
                  
@@ -95,7 +95,15 @@ class Order < ActiveRecord::Base
       order.finalize!
     end
 
+    after_transition :to => :in_progress do |order|
+      # notify customer of in_progress wiht time
+    end
+
     after_transition :to => :ready do |order|
+      # notify customer of impending delivery
+    end
+
+    after_transition :to => :cancel do |order|
       # notify customer of impending delivery
     end
     
@@ -427,6 +435,7 @@ class Order < ActiveRecord::Base
             "payment_state" => self.payment_state,
             "payment_total" => self.payment_total,
             "special_instructions" => self.special_instructions,
+            "time_to_ready" => self.time_to_ready,
             "state" => self.state,
             "store_id" => self.store_id,
             "total" => self.total,

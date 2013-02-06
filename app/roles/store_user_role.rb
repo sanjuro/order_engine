@@ -9,13 +9,15 @@ module StoreUserRole
 	# * *Args*    :
 	#   - +order+ -> the order object
 	#   - +status+ -> the status to change too
+	#   - +time_to_ready+ -> the time in minutes for the order to be ready
 	# * *Returns* :
 	#   - 
 	# * *Raises* :
 	#   - 
 	#
-	def update_order_state(order, status, time_to)
+	def update_order_state(order, status, time_to_ready)
 		# create order
+		order.time_to_ready = time_to_ready
 		order.state = status
 		order.save
 
@@ -40,7 +42,7 @@ module StoreUserRole
           :stateful_type => 'order'
         })
 
-		order
+		order.formant_for_web_serivce
 	end
 
 

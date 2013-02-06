@@ -1,6 +1,5 @@
 # Context to register a new device
 #
-#
 # Author::    RegisterNewDeviceContext Wentzel
 
 class RegisterNewDeviceContext

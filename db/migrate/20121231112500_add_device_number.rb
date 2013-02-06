@@ -16,6 +16,6 @@ class AddDeviceNumber < ActiveRecord::Migration
 		
     	remove_column :orders, :device_identifier
     	remove_column :orders, :device_type
-    	emove_column :state_events, :next_state
+    	remove_column :state_events, :next_state
     end
 end
