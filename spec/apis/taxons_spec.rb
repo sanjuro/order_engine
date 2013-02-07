@@ -27,12 +27,35 @@ describe Taxons do
       end
 
       describe 'GET /api/v1/taxons/:id/products' do
-        taxon = Taxon.find(4)
-        it 'should return a 200 and the products for that taxon' do
+
+        before :each do    
+          taxon = Taxon.find(4)    
           get "/api/v1/taxons/#{taxon.id}/products?authentication_token=CXTTTTED2ASDBSD3"
+          @retrieved_products = JSON.parse(last_response.body)
+        end
+
+        it 'should return a 200' do
           last_response.status.should == 200
-          retrieved_products = JSON.parse(last_response.body)
-          retrieved_products.count.should > 1
+        end
+
+        it 'and the products for that taxon' do
+          @retrieved_products.count.should > 1
+        end
+
+        it 'and the products need to have the name' do 
+          @retrieved_products.first['name'].empty?.should == false
+        end        
+
+        it 'and the products need to have the sku' do 
+          @retrieved_products.first['sku'].empty?.should == false
+        end
+
+        it 'and the products need to have the price' do 
+          @retrieved_products.first['price'].empty?.should == false
+        end
+
+        it 'and the products need to have the store id' do 
+          @retrieved_products.first['store_id'].nil?.should == false
         end
       end
     end

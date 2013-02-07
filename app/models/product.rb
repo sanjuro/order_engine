@@ -192,6 +192,21 @@ class Product < ActiveRecord::Base
       end
     end
 
+  def formant_for_web_serivce
+    product_return = Hash.new
+
+    product_return = { 
+            "id" => self.id,
+            "name" => self.name,
+            "price" => self.master.price,
+            "sku" => self.master.sku,
+            "description" => self.description,
+            "meta_description" => self.meta_description,
+            "meta_keywords" => self.meta_keywords,
+            "store_id" => self.store_id,
+    }
+  end    
+
     private
 
       # Builds variants from a hash of option types & values

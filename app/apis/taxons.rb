@@ -29,7 +29,7 @@ class Taxons < Grape::API
     get '/:id/products' do
       logger.info "Retrieved all products for Taxon with ID: #{params['id']}"
       taxon = Taxon.find(params[:id])
-      taxon.products.where("deleted_at IS NULL")
+      GetProductsForTaxonContext.call(taxon)
     end
   end
   
