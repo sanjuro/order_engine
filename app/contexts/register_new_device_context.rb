@@ -38,7 +38,7 @@ class RegisterNewDeviceContext
             "device_identifier" => device.device_identifier,
             "device_token" => device.device_token,
             "deviceable_type" => device.deviceable_type,
-            "user" =>  user.formant_for_web_serivce
+            "user" =>  user.format_for_web_serivce
             }
   end
 end

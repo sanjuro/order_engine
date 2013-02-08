@@ -16,11 +16,8 @@ class RetrieveStoreContext
   def call
     # return favourties
     store = Store.find(@store_id)
-    business_hours = store.business_hours
-
-    store[:business_hours] = business_hours
 
     # return store with business hours attached
-    store
+    store.format_for_web_serivce
   end
 end

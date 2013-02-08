@@ -192,7 +192,7 @@ class Product < ActiveRecord::Base
       end
     end
 
-  def formant_for_web_serivce
+  def format_for_web_serivce
     product_return = Hash.new
 
     product_return = { 

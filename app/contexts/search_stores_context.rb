@@ -1,6 +1,6 @@
 # Context to assocaite to add a new order
 #
-# curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/search?query=sim0000001&authentication_token=CXTTTTED2ASDBSD3
+# curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/search/kauai
 # Author::    Shadley Wentzel
 
 class SearchStoresContext

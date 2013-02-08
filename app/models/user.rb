@@ -79,7 +79,7 @@ class User < ActiveRecord::Base
       self.save
   end
 
-  def formant_for_web_serivce
+  def format_for_web_serivce
     user_return = Hash.new
 
     user_return = { 

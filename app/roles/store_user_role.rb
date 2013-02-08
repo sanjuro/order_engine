@@ -42,7 +42,7 @@ module StoreUserRole
           :stateful_type => 'order'
         })
 
-		order.formant_for_web_serivce
+		order.format_for_web_serivce
 	end
 
 

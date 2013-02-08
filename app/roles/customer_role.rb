@@ -43,7 +43,7 @@ module CustomerRole
 
 		order.next
 
-	    order.formant_for_web_serivce 
+	    order.format_for_web_serivce 
 
 		# create notification
 		# @bbpc = BBPush::Client.new(	:app_id => "3159-s6B17c772Drm355O621r3D9i9486a923777",
@@ -69,7 +69,7 @@ module CustomerRole
 	    orders_return = Hash.new
 
 	    orders.each do |order|
-	      orders_return[order.id] = order.formant_for_web_serivce 
+	      orders_return[order.id] = order.format_for_web_serivce 
 	    end
 
 	    orders_return

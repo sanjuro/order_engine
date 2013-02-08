@@ -421,7 +421,7 @@ class Order < ActiveRecord::Base
     }, :without_protection => true)
   end
 
-  def formant_for_web_serivce
+  def format_for_web_serivce
     orders_return = Hash.new
 
     orders_return = { 

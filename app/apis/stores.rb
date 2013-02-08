@@ -6,7 +6,7 @@ class Stores < Grape::API
   resource 'stores' do
 
     # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/stores/1/new_orders.json?authentication_token=CXTTTTED2ASDBSD3
-    # curl -i -H "Accept: application/json" http://107.22.211:9000/api/v1/stores/search.json?authentication_token=CXTTTTED2ASDBSD3&query=kauai
+    # curl -i -H "Accept: application/json" http://107.22.211:9000/api/v1/stores/search/kauai
     # curl -d '{"authentication_token": "CXTTTTED2ASDBSD4", "query": "kauai"}' 'http://107.22.211.58:9000/api/v1/stores/search' -H Content-Type:application/json -v
 
     desc "Retrieve all stores"
@@ -25,13 +25,18 @@ class Stores < Grape::API
       Store.page(@page)
     end
 
-    desc "Search Stores"
+    desc "Search Stores with or without GPS"
     params do
-      requires :query, :type => String, :desc => "Search query."
+      requires :query_term, :type => String, :desc => "Search query."
     end
-    get "/search/:query" do
-      logger.info "Searching all Stores for Term: #{params[:query]}"
-      SearchStoresContext.call(params[:query], params[:page])
+    post "/search" do
+      if params[:latitude].nil? && params[:longitude].nil?
+        logger.info "Searching all Stores for Term: #{params[:query_term]}"
+        SearchStoresContext.call(params[:query_term], params[:page])
+      else
+        logger.info "Searching with Geo-Coordinates lat:#{params[:latitude]} long:#{params[:longitude]}"
+        SearchStoresWithGPSContext.call(params[:query_term], params[:latitude], params[:longitude], params[:page])
+      end
     end
     
     desc "Retrieve store by fanpage"

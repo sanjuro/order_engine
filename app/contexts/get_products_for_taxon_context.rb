@@ -18,7 +18,7 @@ class GetProductsForTaxonContext
 
     # retrieve all products for taxon
     taxon.products.where("deleted_at IS NULL").each do |product|
-    	products << product.formant_for_web_serivce
+    	products << product.format_for_web_serivce
     end
 
     # return formatted products array

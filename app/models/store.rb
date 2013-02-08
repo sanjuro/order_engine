@@ -48,6 +48,59 @@ class Store < ActiveRecord::Base
     string :unique_id
     string :address
     location (:location) { Sunspot::Util::Coordinates.new(latitude, longitude) }
+    # string(:location, :as => :location) { [lat,lng].join(",") }
   end
 
+  def format_for_web_serivce
+    store_return = Hash.new
+
+    store_return = { 
+            "address" => self.address,
+            "can_deliver" => self.can_deliver,
+            "created_at" => self.created_at,
+            "email" => self.email,
+            "fanpage_id" => self.fanpage_id,
+            "id" => self.id,
+            "is_online" => self.is_online,
+            "latitude" => self.latitude,
+            "longitude" => self.longitude,
+            "manager_contact" => self.manager_contact,
+            "manager_name" => self.manager_name,
+            "store_description" => self.store_description,
+            "store_name" => self.store_name,
+            "telephone" => self.telephone,
+            "unique_id" => self.unique_id,
+            "updated_at" => self.updated_at,
+            "url" => self.url,
+            "business_hours" => self.business_hours
+    }
+  end  
+
+  def format_for_web_serivce_with_gps(latitude, longitude)
+    store_return = Hash.new
+
+    distance = self.distance_to([latitude, longitude], :km).round(2)
+
+    store_return = { 
+            "address" => self.address,
+            "can_deliver" => self.can_deliver,
+            "created_at" => self.created_at,
+            "email" => self.email,
+            "fanpage_id" => self.fanpage_id,
+            "id" => self.id,
+            "is_online" => self.is_online,
+            "latitude" => self.latitude,
+            "longitude" => self.longitude,
+            "manager_contact" => self.manager_contact,
+            "manager_name" => self.manager_name,
+            "store_description" => self.store_description,
+            "store_name" => self.store_name,
+            "telephone" => self.telephone,
+            "unique_id" => self.unique_id,
+            "updated_at" => self.updated_at,
+            "distance" => distance,
+            "url" => self.url,
+            "business_hours" => self.business_hours
+    }
+  end    
 end
