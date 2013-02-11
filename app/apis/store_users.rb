@@ -19,7 +19,7 @@ class StoreUsers < Grape::API
 
       store_user = User.by_username(params[:username]).first
       if store_user.nil?
-
+        throw :error, :status => 400, :message => "store user with username \"#{params[:username]}\" not found"
       else
         AuthenticateStoreContext.call(store_user, params[:password])
       end

@@ -6,8 +6,8 @@ class Stores < Grape::API
   resource 'stores' do
 
     # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/stores/1/new_orders.json?authentication_token=CXTTTTED2ASDBSD3
-    # curl -i -H "Accept: application/json" http://107.22.211:9000/api/v1/stores/search/kauai
-    # curl -d '{"authentication_token": "CXTTTTED2ASDBSD4", "query": "kauai"}' 'http://107.22.211.58:9000/api/v1/stores/search' -H Content-Type:application/json -v
+    # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/stores/search/kauai
+    # curl -d '{"authentication_token": "CXTTTTED2ASDBSD4", "query_term": "kauai"}' 'http://107.22.211.58:9000/api/v1/stores/search' -H Content-Type:application/json -v
 
     desc "Retrieve all stores"
     get "/" do
