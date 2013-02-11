@@ -104,6 +104,24 @@ module CustomerRole
 	      false
 	    end
 	end
+
+	# Function to update a customer
+	#
+	# * *Args*    :
+	#   - +user_data+ -> the array of user data
+	# * *Returns* :
+	#   - 
+	# * *Raises* :
+	#   - 
+	#
+	def update_customer(user_data)
+		user_data.each do |property,value|
+        	self.send( "#{property}=", value )
+        	self.save
+        end 
+        self
+	end
+
 	  
 	def encrypt_password
 	    if password.present?

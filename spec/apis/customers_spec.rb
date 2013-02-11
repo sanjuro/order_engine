@@ -55,5 +55,41 @@ describe Customers do
     end
 
   end
-  
+
+  context "Updating a customer" do
+
+    describe 'PUT /api/v1/customers/' do
+
+      before :each do   
+        @user = FactoryGirl.build(:user)
+        @request_payload = {
+          user: {
+            first_name: "Poes",
+            last_name: "Poes",
+            email: "poes@gmail.com",
+            mobile_number: "1234"
+          }
+        }
+        put "/api/v1/customers/6?authentication_token=1b032cb31ad1f41e662238182ebbf456",  @request_payload.to_json
+        @retrieved_user = JSON.parse(last_response.body)
+      end
+
+      it 'SHOULD return a 200' do          
+        last_response.status.should == 200
+      end
+
+      it 'SHOULD return the user with the correct first name updated' do
+        @retrieved_user['first_name'].should == 'Poes'
+      end  
+
+      it 'SHOULD return the user with the correct last name updated' do
+        @retrieved_user['first_name'].should == 'Poes'
+      end  
+
+      it 'SHOULD return the user with the correct email updated' do
+        @retrieved_user['email'].should == 'poes@gmail.com'
+      end 
+
+    end
+  end  
 end

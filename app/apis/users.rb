@@ -28,6 +28,7 @@ class Users < Grape::API
       logger.info "Creating new customer"
       SignupCustomerContext.call(params)
     end
+
   end
   
 end
