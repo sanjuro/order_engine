@@ -101,7 +101,7 @@ module CustomerRole
 	    if self.valid_password?(password)  
 	      self
 	    else
-	      throw :error, :status => 400, :message => "customer password does not match"
+	      false
 	    end
 	end
 	  

@@ -59,7 +59,7 @@ module StoreUserRole
 	    if self.valid_password?(password)  
 	      self
 	    else
-	      nil
+	      false
 	    end
 	end
 	  

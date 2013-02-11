@@ -22,12 +22,16 @@ class AuthenticateStoreContext
 
     store = store_user.stores.first
 
-    return { 
-            :authentication_token => store_user.authentication_token,
-            :full_name => store_user.full_name,
-            :username => store_user.username,
-            :email => store_user.email,
-            :store_id => store.id
-          }
+    if store_user
+      return { 
+              :authentication_token => store_user.authentication_token,
+              :full_name => store_user.full_name,
+              :username => store_user.username,
+              :email => store_user.email,
+              :store_id => store.id
+            }
+    else 
+      return false
+    end
   end
 end

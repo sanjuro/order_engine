@@ -18,16 +18,21 @@ class AuthenticateCustomerContext
   def call
     # convert query termm
     customer = @user.authenticate(@password)
-    customer.authentication_token
 
-    store = customer.stores.first
+    if customer
+      customer.authentication_token
 
-    return { 
-            :authentication_token => customer.authentication_token,
-            :full_name => customer.full_name,
-            :username => customer.username,
-            :email => customer.email,
-            :store_id => store.id
-          }
+      store = customer.stores.first
+
+      return { 
+              :authentication_token => customer.authentication_token,
+              :full_name => customer.full_name,
+              :username => customer.username,
+              :email => customer.email,
+              :store_id => store.id
+            }
+    else 
+      return false
+    end
   end
 end
