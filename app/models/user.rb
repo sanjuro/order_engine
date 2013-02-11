@@ -41,6 +41,7 @@ class User < ActiveRecord::Base
   
   scope :recent_by_sign_in, order("users.last_sign_in_at") 
   scope :by_username,lambda {|username| where("users.username = ?", username)} 
+  scope :by_email,lambda {|email| where("users.email = ?", email)} 
 
   # Overrides the devise method find_for_authentication
   # Allow users to Sign In using their username or email address

@@ -20,7 +20,7 @@ FactoryGirl.define do
   factory :user do
 	  first_name           'Test'
 	  last_name            'Customer'
-	  email                'test@gmail.com'
+	  email                'shadley2@personera.com'
 	  mobile_number        '0833908314'
 	  birthday              Date.parse '1981-12-04'
 	  user_pin      	   12345
