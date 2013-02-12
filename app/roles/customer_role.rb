@@ -134,7 +134,7 @@ module CustomerRole
 	#
 	def reset_pin
 	    # generate new pin
-	    new_pin = "R#{Array.new(6){rand(6)}.join}"
+	    new_pin = "#{Array.new(6){rand(6)}.join}"
 
 	    self.user_pin = new_pin
 	    self.generate_user_pin
@@ -152,7 +152,7 @@ New Pin:#{new_pin}
 Please keep it in a safe place.
 MESSAGE_END
 
-		Net::SMTP.start('mail.vosto.co.za', 25, 'vosto.co.za', 'info', 'R@d6hi@..', :plain) do |smtp|
+		Net::SMTP.start('mail.vosto.co.za', 25, 'vosto.co.za', 'info@vosto.co.za', 'R@d6hi@..', :plain) do |smtp|
 		  smtp.send_message message, 'info@vosto.co.za', self.email
 		end
 
