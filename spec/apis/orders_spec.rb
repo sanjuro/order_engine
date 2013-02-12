@@ -120,12 +120,12 @@ describe Orders do
 
         before :each do   
           @order = FactoryGirl.build(:order)
-          put "/api/v1/orders/#{@order.id}/in_progress?authentication_token=CXTTTTED2ASDBSD3&time_to_ready=15"
+          post "/api/v1/orders/#{@order.id}/in_progress?authentication_token=CXTTTTED2ASDBSD3&time_to_ready=15"
           @retrieved_order = JSON.parse(last_response.body)
         end
 
-        it 'SHOULD return a 200' do          
-          last_response.status.should == 200
+        it 'SHOULD return a 201' do          
+          last_response.status.should == 201
         end
 
         it 'SHOULD return the order with the status of in_progress' do
@@ -144,7 +144,7 @@ describe Orders do
 
         before :each do   
           @order = FactoryGirl.build(:order)
-          put "/api/v1/orders/#{@order.id}/ready?authentication_token=CXTTTTED2ASDBSD3"
+          post "/api/v1/orders/#{@order.id}/ready?authentication_token=CXTTTTED2ASDBSD3"
           @retrieved_order = JSON.parse(last_response.body)
         end
 

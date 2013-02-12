@@ -63,7 +63,7 @@ class Orders < Grape::API
       requires :id, :type => Integer, :desc => "Order id."
       requires :time_to_ready, :type => String, :desc => "Time to Order is ready."
     end
-    put "/:id/in_progress" do 
+    post "/:id/in_progress" do 
       logger.info "Updating status to in_progress of Order with ID: #{params[:id]}"
       authenticated_user
       logger.info "Authenticated User: #{current_user.full_name}"
@@ -75,7 +75,7 @@ class Orders < Grape::API
     params do
       requires :id, :type => Integer, :desc => "Order id."
     end
-    put "/:id/ready" do 
+    post "/:id/ready" do 
       logger.info "Updating status to ready of Order with ID: #{params[:id]}"
       authenticated_user
       logger.info "Authenticated User: #{current_user.full_name}"
@@ -88,7 +88,7 @@ class Orders < Grape::API
       requires :id, :type => Integer, :desc => "Order id."
       requires :time_to_ready, :type => String, :desc => "Time to Order is ready."
     end
-    put "/:id/cancel" do 
+    post "/:id/cancel" do 
       logger.info "Cancelling of Order with ID: #{params[:id]}"
       authenticated_user
       logger.info "Authenticated User: #{current_user.full_name}"
