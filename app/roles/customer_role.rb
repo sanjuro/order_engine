@@ -122,6 +122,25 @@ module CustomerRole
         self
 	end
 
+	# Function to reset the pin of a csutomer
+	#
+	# * *Args*    :
+	#   - 
+	# * *Returns* :
+	#   - 
+	# * *Raises* :
+	#   - 
+	#
+	def reset_pin
+	    # generate new pin
+	    new_pin = "R#{Array.new(6){rand(6)}.join}"
+
+	    self.user_pin = new_pin
+	    self.generate_user_pin
+
+	    # email pin to user
+	    
+	end
 	  
 	def encrypt_password
 	    if password.present?
