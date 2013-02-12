@@ -22,11 +22,25 @@ class Customers < Grape::API
     end
 
     desc "Rests a pin for a customer"
-    get '/reset_pin' do
+    params do
+      requires :email, :type => String, :desc => "Email to authenticate."
+    end
+    post '/reset_pin' do
       authenticated_user
       logger.info "Reseting pin for customer with Username: #{current_user.email}"
 
-      ResetCustomerPinContext.call(current_user)  
+      customer = User.by_email(params[:email]).first     
+      if customer.nil?
+        error!({ "error" => "authentication error", "detail" => "customer with username \"#{params[:email]}\" not found" }, 400)
+      else
+        customer = ResetCustomerPinContext.call(customer)
+        if customer
+          customer
+        else
+          error!({ "error" => "authentication error", "detail" =>  "customer does not exist on the vosto system" }, 400)  
+        end
+      end
+ 
     end
 
     desc "Authenticates a Customer"
@@ -46,7 +60,7 @@ class Customers < Grape::API
         if customer
           customer
         else
-          error!({ "error" => "authentication error", "detail" =>  "customer password does not match" }, 400)  
+          error!({ "error" => "authentication error", "detail" =>  "customer does not exist on the vosto system" }, 400)  
         end
       end
     end

@@ -92,4 +92,23 @@ describe Customers do
 
     end
   end  
+
+  context "Resetting a customer pin" do
+
+    describe 'POST /api/v1/customers/reset_pin' do
+
+      before :each do   
+        @user = FactoryGirl.build(:user)
+        @request_payload = {
+          email: 'poes@gmail.com'
+        }
+        post "/api/v1/customers/reset_pin?authentication_token=1b032cb31ad1f41e662238182ebbf456",  @request_payload.to_json
+      end
+
+      it 'SHOULD return a 201' do          
+        last_response.status.should == 201
+      end
+
+    end
+  end
 end
