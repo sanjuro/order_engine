@@ -2,6 +2,7 @@
 #
 # Author::    Shadley Wentzel
 require 'bbpush'
+require 'net/smtp'
 
 module CustomerRole
 
@@ -97,8 +98,8 @@ module CustomerRole
 	# * *Raises* :
 	#   - 
 	#
-	def authenticate(password)
-	    if self.valid_password?(password)  
+	def authenticate(pin)
+	    if self.valid_password?(pin)  
 	      self
 	    else
 	      false
@@ -139,24 +140,46 @@ module CustomerRole
 	    self.generate_user_pin
 
 	    # email pin to user
-	    
+message = <<MESSAGE_END
+From: Vosto Info <info@vosto.co.za>
+To: #{self.full_name} <#{self.email}>
+Subject: Reset Pin 
+
+Your request to reset your pin has been processed and your new pin:
+
+New Pin:#{new_pin}
+
+Please keep it in a safe place.
+MESSAGE_END
+
+		Net::SMTP.start('mail.vosto.co.za') do |smtp|
+		  smtp.send_message message, 'info@vosto.co.za', self.email
+		end
+
+		return { "success" => "new pin sent"}
 	end
 	  
-	def encrypt_password
-	    if password.present?
-	      self.password_salt = BCrypt::Engine.generate_salt
-	      self.encrypted_password = BCrypt::Engine.hash_secret(password, password_salt)
-	    end
-	end
-
 	def valid_password?(password)
-	    return false if encrypted_password.blank?
-	    bcrypt   = ::BCrypt::Password.new(encrypted_password)
-	    password = ::BCrypt::Engine.hash_secret("#{password}", bcrypt.salt)
+	    password = Digest::MD5::hexdigest("#{password}")
 	    if password == encrypted_password
 	      true
 	    else
 	      false
 	    end
 	end
+
+	# Function to generate a new user pin
+	#
+	# * *Args*    :
+	#   - 
+	# * *Returns* :
+	#   - 
+	# * *Raises* :
+	#   - 
+	#
+	def generate_user_pin
+		self.user_pin = Digest::MD5::hexdigest("#{self.user_pin}")
+		self.encrypted_password = Digest::MD5::hexdigest("#{self.user_pin}")
+		self.save
+  	end
 end

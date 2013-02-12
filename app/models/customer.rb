@@ -90,7 +90,8 @@ class Customer < User
   #   - 
   #
   def generate_user_pin
-    self.user_pin =  Digest::MD5::hexdigest("#{self.user_pin}")
+    self.user_pin = Digest::MD5::hexdigest("#{self.user_pin}")
+    self.encrypted_password = Digest::MD5::hexdigest("#{self.user_pin}")
     self.save
   end
     

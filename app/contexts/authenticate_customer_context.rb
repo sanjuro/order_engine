@@ -4,25 +4,23 @@
 # Author::    Shadley Wentzel
 
 class AuthenticateCustomerContext
-  attr_reader :user, :password
+  attr_reader :user, :pin
 
-  def self.call(user, password)
-    AuthenticateCustomerContext.new(user, password).call
+  def self.call(user, pin)
+    AuthenticateCustomerContext.new(user, pin).call
   end
 
-  def initialize(user, password)
+  def initialize(user, pin)
     @user = user.extend CustomerRole
-    @password = password
+    @pin = pin
   end
 
   def call
     # convert query termm
-    customer = @user.authenticate(@password)
+    customer = @user.authenticate(@pin)
 
     if customer
       customer.authentication_token
-
-      store = customer.stores.first
       
       return { 
               :authentication_token => customer.authentication_token,
@@ -31,8 +29,7 @@ class AuthenticateCustomerContext
               :last_name => customer.last_name,
               :username => customer.username,
               :email => customer.email,
-              :mobile_number => customer.mobile_number,
-              :store_id => store.id
+              :mobile_number => customer.mobile_number
             }
     else 
       return false
