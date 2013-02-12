@@ -8,7 +8,7 @@ class Store < ActiveRecord::Base
 
 	attr_accessible :store_name, :unique_id, :store_description, :address, :email, :latitude, :longitude, 
 					        :manager_name, :manager_contact, :is_online, :created_at, :completed_at, :updated_at, 
-                  :fanpage_id, :business_hours_attributes
+                  :fanpage_id, :tag, :business_hours_attributes
 
   geocoded_by :address, :latitude => :latitude, :longitude => :longitude
   after_validation :geocode, :if => :address_changed?
@@ -46,6 +46,7 @@ class Store < ActiveRecord::Base
   Sunspot.setup(Store) do
     text :store_name
     string :unique_id
+    text :tag
     string :address
     location (:location) { Sunspot::Util::Coordinates.new(latitude, longitude) }
     # string(:location, :as => :location) { [lat,lng].join(",") }

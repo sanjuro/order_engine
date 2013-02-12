@@ -25,9 +25,9 @@ class SearchStoresWithGPSContext
   	search = Sunspot.search(Store) do
   		fulltext query_term do
   			boost_fields :unique_id => 10.0
-  			boost_fields :store_name => 2.0
+        boost_fields :store_name => 5.0
+        boost_fields :tag => 2.0
   		end   
-
   		with(:location).near(latitude, longitude, :precision => 3)
   		order_by :unique_id, :desc
   		paginate :page => page, :per_page => 15
@@ -37,7 +37,7 @@ class SearchStoresWithGPSContext
 
   	stores_return = Array.new
   	search_results.each do |store|
-		stores_return << store.format_for_web_serivce_with_gps(latitude,longitude)
+		  stores_return << store.format_for_web_serivce_with_gps(latitude,longitude)
   	end
   	stores_return
   end

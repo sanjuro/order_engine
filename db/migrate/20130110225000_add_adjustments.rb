@@ -1,7 +1,7 @@
 class AddAdjustments < ActiveRecord::Migration
 
 	def self.up
-		create_table :spree_adjustments do |t|
+		create_table :adjustments do |t|
 			t.references :source, :polymorphic => true
 			t.references :adjustable, :polymorphic => true
 			t.references :originator, :polymorphic => true

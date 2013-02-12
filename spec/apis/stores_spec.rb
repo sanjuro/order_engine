@@ -80,4 +80,33 @@ describe Stores do
         end
       end
     end  
+
+    context "searching all stores" do
+      describe 'GET /api/v1/stores/search' do
+
+        before :each do        
+          @request_payload = {
+              authentication_token: "CXTTTTED2ASDBSD4",
+              query_term: "kauai",
+          }
+
+          post '/api/v1/stores/search', @request_payload
+          @retrieved_stores = JSON.parse(last_response.body)
+        end
+
+        it 'should return a 201' do  
+          last_response.status.should == 201
+        end
+
+        it 'should return results that match the query term' do            
+          @retrieved_stores.count.should >= 1
+        end
+
+        it 'should return a result with matching the term' do  
+          @retrieved_stores.first['unique_id'].should == 'kau0000002'
+        end
+
+      end
+
+    end
 end
