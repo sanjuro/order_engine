@@ -134,7 +134,7 @@ module CustomerRole
 	#
 	def reset_pin
 	    # generate new pin
-	    new_pin = "#{Array.new(6){rand(6)}.join}"
+	    new_pin = "#{Array.new(5){rand(5)}.join}"
 
 	    self.user_pin = new_pin
 	    self.generate_user_pin
