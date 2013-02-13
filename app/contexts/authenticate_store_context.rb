@@ -18,8 +18,8 @@ class AuthenticateStoreContext
   def call
     # convert query termm
     store_user = @user.authenticate(@password)
-    store_user.authentication_token
 
+    store_user.authentication_token
     store = store_user.stores.first
 
     if store_user
