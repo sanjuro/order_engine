@@ -6,9 +6,9 @@ class Customers < Grape::API
   resource 'customers' do
 
     # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/store_users/authenticate.json?authentication_token=AXSSSSED2ASDASD1
-    # curl -d '{"authentication_token": "CXTTTTED2ASDBSD4", "email": "gavs@lt.co.za", "pin": "12345"}' 'http://localhost:9000/api/v1/customers/authenticate' -H Content-Type:application/json -v
+    # curl -d '{"authentication_token": "CXTTTTED2ASDBSD4", "email": "shad6ster@gmail.com", "pin": "41401"}' 'http://localhost:9000/api/v1/customers/authenticate' -H Content-Type:application/json -v
     # curl -X POST -d '{"user":{"first_name": "Jack"}}' -H "Accept: application/json" -H "Content-Type:application/json" http://localhost:9000/api/v1/customers/update?authentication_token=1b032cb31ad1f41e662238182ebbf456 -v
-    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/customers/reset_pin?authentication_token=1b032cb31ad1f41e662238182ebbf456 -v
+    # curl -X POST -d '{"email": "shad6ster@gmail.com"}' -H "Accept: application/json" http://localhost:9000/api/v1/customers/reset_pin?authentication_token=1b032cb31ad1f41e662238182ebbf456 -v
    
     desc "Updates a customer"
     post '/update' do
@@ -60,7 +60,7 @@ class Customers < Grape::API
         if customer
           customer
         else
-          error!({ "error" => "authentication error", "detail" =>  "customer does not exist on the vosto system" }, 400)  
+          error!({ "error" => "authentication error", "detail" =>  "customer password/pin does not match" }, 400)  
         end
       end
     end

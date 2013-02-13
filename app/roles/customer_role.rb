@@ -136,8 +136,9 @@ module CustomerRole
 	    # generate new pin
 	    new_pin = "#{Array.new(5){rand(5)}.join}"
 
-	    self.user_pin = new_pin
-	    self.generate_user_pin
+		self.user_pin = Digest::MD5::hexdigest("#{new_pin}")
+		self.encrypted_password = Digest::MD5::hexdigest("#{new_pin}")
+		self.save
 
 	    # email pin to user
 message = <<MESSAGE_END
@@ -168,18 +169,4 @@ MESSAGE_END
 	    end
 	end
 
-	# Function to generate a new user pin
-	#
-	# * *Args*    :
-	#   - 
-	# * *Returns* :
-	#   - 
-	# * *Raises* :
-	#   - 
-	#
-	def generate_user_pin
-		self.user_pin = Digest::MD5::hexdigest("#{self.user_pin}")
-		self.encrypted_password = Digest::MD5::hexdigest("#{self.user_pin}")
-		self.save
-  	end
 end
