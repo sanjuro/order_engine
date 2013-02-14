@@ -9,6 +9,7 @@ require 'kaminari/grape'
 require 'geocoder'
 
 require File.dirname(__FILE__) + '/database_configuration.rb'
+require File.dirname(__FILE__) + '/action_mailer_configuration.rb'
 require File.dirname(__FILE__) + '/solr_configuration.rb'
 
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file| require file }
@@ -16,8 +17,7 @@ Dir[File.dirname(__FILE__) + '/app/models/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/contexts/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/roles/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/apis/*.rb'].each {|file| require file }
-
-# ActiveRecord::Base.send :include, ActiveRecordExtensions 
+Dir[File.dirname(__FILE__) + '/app/mailers/*.rb'].each {|file| require file }
 
 class API < Grape::API
 	

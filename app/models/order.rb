@@ -60,7 +60,8 @@ class Order < ActiveRecord::Base
       transition :from => :address, :to => :delivery
       transition :from => :delivery, :to => :confirm
       transition :from => :confirm, :to => :sent_store
-      transition :from => :sent_store, :to => :in_progress
+      transition :from => :sent_store, :to => :store_received
+      transition :from => :store_received, :to => :in_progress
       transition :from => :in_progress, :to => :ready
       transition :from => :ready, :to => :collected
     end
@@ -355,6 +356,23 @@ class Order < ActiveRecord::Base
     self.complete?
   end 
 
+  def deliver_ready_notification
+    # Notification.adapter = :andriod
+
+    # message = Hash.new
+    # message[:order_id] = self.id
+    # message[:subject] = "new_order"
+
+    # devices = Array.new
+
+    # # get all devices for the store
+    # self.store.devices.each do |device|
+    #   devices << device.device_identifier 
+    # end
+
+    # Notification.send(devices, message)
+  end
+
   # Helper methods for checkout steps
 
   def available_shipping_methods(display_on = nil)
@@ -394,24 +412,22 @@ class Order < ActiveRecord::Base
     update_shipment_state
     save
 
-    # deliver_order_confirmation_email
+    deliver_order_confirmation_email(self.customer.email)
 
-    # Notification.adapter = :andriod
+    Notification.adapter = 'andriod'
 
-    # message = Hash.new
-    # message[:order_id] = self.id
-    # message[:subject] = "new_order"
+    message = Hash.new
+    message[:order_id] = self.id
+    message[:subject] = "new_order"
 
-    # devices = Array.new
+    devices = Array.new
 
-    # # get all devices for the store
-    # self.store.devices.each do |device|
-    #   devices << device.device_identifier 
-    # end
+    # get all devices for the store
+    self.store.devices.each do |device|
+      devices << device.device_identifier 
+    end
 
-    # Notification.send(devices, message)
-
-    # send email
+    Notification.send(devices, message)
 
     self.state_events.create({
       :previous_state => 'confirm',
@@ -419,6 +435,15 @@ class Order < ActiveRecord::Base
       :name           => 'order' ,
       :user_id        => self.user_id
     }, :without_protection => true)
+  end
+
+  def deliver_order_confirmation_email(recipient)
+    begin
+      OrderMailer.order_confirmation(self,'shads6ter@gmail.com').deliver
+    rescue Exception => e
+      logger.error("#{e.class.name}: #{e.message}")
+      logger.error(e.backtrace * "\n")
+    end
   end
 
   def format_for_web_serivce

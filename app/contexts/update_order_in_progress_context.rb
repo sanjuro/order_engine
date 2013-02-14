@@ -1,6 +1,6 @@
 # Context to update an order to the in progress state
 #
-# curl -v -H 'Accept: application/json' -X PUT -d '{"authentication_token": "81dc9bdb52d04dc20036dbd8313ed055", "time_to_ready": "15"}' http://localhost:9000/api/v1/orders/28/in_progress
+# curl -v -H 'Accept: application/json' -X POST -d '{"authentication_token": "81dc9bdb52d04dc20036dbd8313ed055",}' http://localhost:9000/api/v1/orders/28/in_progress
 # Author::    Shadley Wentzel
 
 class UpdateOrderInProgressContext
@@ -16,7 +16,7 @@ class UpdateOrderInProgressContext
   end
 
   def call
-    # update status of orer
+    # update status of order
     @user.update_order_state(@order, 'in_progress', @time_to_ready)
   end
 end

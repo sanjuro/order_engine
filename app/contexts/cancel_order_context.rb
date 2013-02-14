@@ -17,6 +17,6 @@ class CancelOrderContext
 
   def call
     # cancel order
-    @user.cancel_order(@orde)
+    @user.cancel_order(@order)
   end
 end

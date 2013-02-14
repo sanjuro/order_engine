@@ -17,6 +17,8 @@ gem 'awesome_nested_set'
 
 gem 'acts_as_list', '>= 0.1.0'
 
+gem 'actionmailer'
+
 # gem 'acts_as_tenant'
 
 gem 'geocoder'

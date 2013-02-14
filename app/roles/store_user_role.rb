@@ -22,8 +22,11 @@ module StoreUserRole
 		order.save
 
 		case status
+		when 'store_received'
+			previous_state = 'confirm'
+			next_state = 'sent_store'
 		when 'in_progress'
-			previous_state = 'sent_store'
+			previous_state = 'store_received'
 			next_state = 'ready'
 		when 'ready'
 			previous_state = 'in_progress'
@@ -45,7 +48,6 @@ module StoreUserRole
 		order.format_for_web_serivce
 	end
 
-
 	# Function to authenticate a store user
 	#
 	# * *Args*    :
@@ -61,6 +63,33 @@ module StoreUserRole
 	    else
 	      false
 	    end
+	end
+
+
+	# Function to set an order to cancelled
+	#
+	# * *Args*    :
+	#   - +order+ -> the order to update
+	# * *Returns* :
+	#   - 
+	# * *Raises* :
+	#   - 
+	#
+	def cancel_order(order)
+
+        StateEvent.create({
+          :previous_state => order.state,
+          :next_state => '',
+          :name => 'order',
+          :user_id => self.id,
+          :stateful_id => order.id,
+          :stateful_type => 'order'
+        })
+
+		order.state = 'cancelled'
+		order.save
+
+		order.format_for_web_serivce
 	end
 	  
 	def encrypt_password
