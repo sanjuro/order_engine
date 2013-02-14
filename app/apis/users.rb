@@ -26,7 +26,16 @@ class Users < Grape::API
     post '/create_customer' do
       authenticated_user
       logger.info "Creating new customer"
-      SignupCustomerContext.call(params)
+
+      # validate customer is unique
+      customer = User.by_email(params[:user][:email]).first     
+
+      if customer.nil?
+        SignupCustomerContext.call(params)
+      else
+        error!({ "error" => "customer error", "detail" =>  "customer with email #{params[:user][:email]} already exists on the vosto system" }, 400)  
+      end
+
     end
 
   end

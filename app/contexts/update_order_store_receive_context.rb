@@ -17,6 +17,6 @@ class UpdateOrderStoreReceiveContext
 
   def call
     # update status of order
-    @user.update_order_state(@order, 'store_receive', 0)
+    @user.update_order_state(@order, 'store_received', 0)
   end
 end

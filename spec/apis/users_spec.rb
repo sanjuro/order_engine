@@ -48,6 +48,14 @@ describe Users do
         last_response.status.should eql(201)
       end
 
+      it 'should throw an error if there is already an existing customer with an email' do
+        user.email = 'shads6ter@gmail.com'
+        lambda {
+          post '/api/v1/users/create_customer.json?authentication_token=CXTTTTED2ASDBSD3', user.to_json
+        }.should change(User, :count).by(1)       
+        last_response.status.should eql(400)
+      end
+
     end
 
     describe 'after creating, the new user' do
