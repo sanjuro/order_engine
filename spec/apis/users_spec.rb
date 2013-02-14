@@ -52,7 +52,7 @@ describe Users do
         user.email = 'shads6ter@gmail.com'
         lambda {
           post '/api/v1/users/create_customer.json?authentication_token=CXTTTTED2ASDBSD3', user.to_json
-        }.should change(User, :count).by(1)       
+        }.should_not change(User, :count).by(1)       
         last_response.status.should eql(400)
       end
 
@@ -76,5 +76,4 @@ describe Users do
     end
   end
 
-  end
 end
