@@ -114,6 +114,27 @@ describe Orders do
       end
     end  
 
+    context "GET /api/v1/orders/:id/store_receive" do
+
+      context "GIVEN moving an order to store_receive" do
+
+        before :each do   
+          @order = FactoryGirl.build(:order)
+          post "/api/v1/orders/#{@order.id}/store_receive?authentication_token=CXTTTTED2ASDBSD3&time_to_ready=15"
+          @retrieved_order = JSON.parse(last_response.body)
+        end
+
+        it 'SHOULD return a 201' do          
+          last_response.status.should == 201
+        end
+
+        it 'SHOULD return the order with the status of store_receive' do
+          @retrieved_order['state'].should == 'store_receive'
+        end
+
+      end
+    end  
+
     context "GET /api/v1/orders/:id/in_progress" do
 
       context "GIVEN moving an order to in progress" do
@@ -156,5 +177,27 @@ describe Orders do
           @retrieved_order['state'].should == 'ready'
         end      
       end
-    end    
+    end   
+
+    context "GET /api/v1/orders/:id/cancel" do
+
+      context "GIVEN moving an order to cancelled" do
+
+        before :each do   
+          @order = FactoryGirl.build(:order)
+          post "/api/v1/orders/#{@order.id}/cancel?authentication_token=CXTTTTED2ASDBSD3&time_to_ready=15"
+          @retrieved_order = JSON.parse(last_response.body)
+        end
+
+        it 'SHOULD return a 201' do          
+          last_response.status.should == 201
+        end
+
+        it 'SHOULD return the order with the status of cancelled' do
+          @retrieved_order['state'].should == 'cancelled'
+        end
+             
+      end
+    end  
+
 end
