@@ -77,17 +77,19 @@ module StoreUserRole
 	#
 	def cancel_order(order)
 
+		previous_state = order.state
+
+		order.state = 'cancelled'
+		order.save
+		
         StateEvent.create({
-          :previous_state => order.state,
+          :previous_state => previous_state,
           :next_state => '',
           :name => 'order',
           :user_id => self.id,
           :stateful_id => order.id,
           :stateful_type => 'order'
         })
-
-		order.state = 'cancelled'
-		order.save
 
 		order.format_for_web_serivce
 	end
