@@ -14,7 +14,7 @@ class GetNewStoreOrdersContext
   end
 
   def call
-    orders = Order.select("orders.*, users.first_name, users.last_name, users.email, users.mobile_number").sent_to_store.joins(:customer).by_store(@store.id)
+    orders = Order.select("orders.*, users.first_name, users.last_name, users.email, users.mobile_number").sent_to_store.joins(:customer).by_store(@store.id).order('created_at asc')
 
     orders_return = Hash.new
 
