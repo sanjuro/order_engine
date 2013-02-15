@@ -104,7 +104,7 @@ class Order < ActiveRecord::Base
       # notify customer of impending delivery
     end
 
-    after_transition :to => :cancel do |order|
+    after_transition :to => :cancelled do |order|
       # notify customer of impending delivery
     end
     
