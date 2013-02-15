@@ -10,7 +10,7 @@ module Notification
   def adapter=(adapter_name)  
     case adapter_name  
     when Symbol, String  
-      require "notificaiton_adapters/#{adapter_name}"  
+      require "notification_adapters/#{adapter_name}"  
       @adapter = Notification::Adapters.const_get("#{adapter_name.to_s.capitalize}")  
     else  
       raise "Missing adapter #{adapter_name}"  

@@ -12,6 +12,7 @@ require File.dirname(__FILE__) + '/database_configuration.rb'
 require File.dirname(__FILE__) + '/action_mailer_configuration.rb'
 require File.dirname(__FILE__) + '/solr_configuration.rb'
 
+Dir[File.dirname(__FILE__) + '/lib/notification_adapters/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/models/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/contexts/*.rb'].each {|file| require file }
