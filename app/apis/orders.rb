@@ -6,7 +6,7 @@ class Orders < Grape::API
   resource 'orders' do
 
     # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/orders/page/1?authentication_token=AXSSSSED2ASDASD6
-    # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/orders/1/cancel?authentication_token=AXSSSSED2ASDASD2
+    # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/orders/170/status?authentication_token=b51565965343bba1c57e66dabf6e9b37
     # curl -i -H "Accept: application/json" -X POST -d '{"order":{"unique_id":"kau0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "12345", "device_type":"blackberry", "line_items":{ "1": {"variant_id":"13","quantity":"1"}, "2":{"variant_id":"12","quantity":"1"}   }}}' http://127.0.0.1:9000/api/v1/orders?authentication_token=1b032cb31ad1f41e662238182ebbf456
 
     desc "Retrieve all orders"
@@ -51,7 +51,7 @@ class Orders < Grape::API
     params do
       requires :id, :type => Integer, :desc => "Order id."
     end
-    get "/:id/status" do 
+    post "/:id/status" do 
       logger.info "Returning status of Order with ID: #{params[:id]}"
       authenticated_user
       logger.info "Authenticated User: #{current_user.full_name}"
