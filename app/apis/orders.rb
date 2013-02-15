@@ -56,7 +56,8 @@ class Orders < Grape::API
       authenticated_user
       logger.info "Authenticated User: #{current_user.full_name}"
       order = Order.find(params[:id])
-      order.state
+
+      return { "state" => order.state}
     end
 
     desc "Sets an order to store received"
