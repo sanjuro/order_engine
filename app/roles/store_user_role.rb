@@ -31,6 +31,13 @@ module StoreUserRole
 		when 'ready'
 			previous_state = 'in_progress'
 			next_state = 'collected'
+
+			# send pusher notification for mobi site
+	      	Pusher.app_id = '37591'
+	      	Pusher.key = 'be3c39c1555da94702ec'
+	      	Pusher.secret = 'deae8cae47a1c88942e1'
+	      	Pusher['order'].trigger('ready_event', {:user_id => "#{order.customer.id}",:message => "Your order: #{order.number} is ready for collection at #{order.store.store_name}. Please contact the store at #{order.store.manager_contact}, if there is a problem with your order."})
+
 		when 'collected'
 			previous_state = 'collected'
 			next_state = 'complete'

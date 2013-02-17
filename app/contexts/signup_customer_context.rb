@@ -22,7 +22,6 @@ class SignupCustomerContext
                             :last_name => @user[:last_name],
                             :email => @user[:email],
                             :mobile_number => @user[:mobile_number],
-                            :birthday => @user[:birthday],
                             :user_pin => @user[:user_pin],
                             :profileable_type => 'customer'
                             )

@@ -2,7 +2,7 @@
 #
 # Author::    Shadley Wentzel
 class Favourite < ActiveRecord::Base
-	attr_accessible :favourtie_type, :favourite_id, :user_id
+	attr_accessible :favourite_type, :favourite_id, :user_id
 
 	belongs_to :user
 

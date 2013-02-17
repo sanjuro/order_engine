@@ -8,7 +8,7 @@ class Order < ActiveRecord::Base
   STATUS_COMPLETE = 'complete'
   
   attr_accessible :store_id, :line_items, :bill_address_attributes, :ship_address_attributes, :payments_attributes, :invoice_attributes, 
-                  :line_items_attributes, :number, :item_total, :total, :state, :credit_total, :user_id, :is_delivery,
+                  :line_items_attributes, :number, :item_total, :total, :state, :credit_total, :user_id, :is_delivery, 
                   :payment_total, :payment_state, :shipment_state, :special_instructions, :shipping_method_id, :device_identifier, 
                   :time_to_ready, :device_type, :adjustment_total, :created_at, :completed_at, :updated_at
                   

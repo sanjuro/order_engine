@@ -37,6 +37,7 @@ gem 'sunspot_rails'
 
 gem 'bbpush'
 gem 'pushmeup'
+gem 'pusher'
 
 group :test do 
 	gem 'rake', :groups=>[:development, :test]

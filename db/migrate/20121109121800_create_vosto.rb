@@ -23,9 +23,9 @@ class CreateVosto < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :favourties, :options => "ENGINE=INODB" do |t|
-      t.string      :favourtie_type
-      t.integer     :favourtie_id
+    create_table :favourites, :options => "ENGINE=INODB" do |t|
+      t.string      :favourite_type
+      t.integer     :favourite_id
       t.references  :user
 
       t.timestamps
