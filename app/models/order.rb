@@ -439,7 +439,7 @@ class Order < ActiveRecord::Base
 
   def deliver_order_confirmation_email(recipient)
     begin
-      OrderMailer.order_confirmation(self,'shads6ter@gmail.com').deliver
+      OrderMailer.order_confirmation(self,recipient).deliver
     rescue Exception => e
       logger.error("#{e.class.name}: #{e.message}")
       logger.error(e.backtrace * "\n")
