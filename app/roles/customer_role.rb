@@ -117,6 +117,10 @@ module CustomerRole
 	#
 	def update_customer(user_data)
 		user_data.each do |property,value|
+			if property == 'user_pin'
+				value = Digest::MD5::hexdigest("#{value}")
+				self.send( "encrypted_password=", value )
+			end
         	self.send( "#{property}=", value )
         	self.save
         end 

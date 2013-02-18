@@ -27,7 +27,7 @@ class Customer < User
                   :remember_me, :provider, :uid, :user_attributes, :first_name, :last_name, 
                   :mobile_number, :birthday, :user_pin
 
-  validates :first_name, :last_name, :email, :mobile_number, :presence => true
+  validates :first_name, :last_name, :email, :presence => true
 
   has_one :user, :as => :profileable
   accepts_nested_attributes_for :user
@@ -92,7 +92,7 @@ class Customer < User
   def generate_user_pin
     pin = self.user_pin
     self.user_pin = Digest::MD5::hexdigest("#{pin}")
-    self.encrypted_password = Digest::MD5::hexdigest("#{pin}")
+    self.encrypted_password = self.user_pin 
     self.save
   end
     
