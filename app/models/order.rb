@@ -272,6 +272,7 @@ class Order < ActiveRecord::Base
 
   def get_line_items_with_variant_info
     order_line_items = Array.new
+
     line_items.each do |line_item|
       order_line_item = line_item
       order_line_item[:name] = line_item.variant.name
@@ -279,6 +280,7 @@ class Order < ActiveRecord::Base
       order_line_item[:option_values] = line_item.variant.options_text 
       order_line_items << order_line_item
     end
+
     return order_line_items
   end
 
@@ -474,6 +476,7 @@ class Order < ActiveRecord::Base
                 },
             "line_items" => self.get_line_items_with_variant_info
     }
+
   end
 
   private

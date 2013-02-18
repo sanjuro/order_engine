@@ -94,18 +94,18 @@ describe Orders do
 
     # end  
 
-    context "GET /api/v1/orders/:id/status" do
+    context "POST /api/v1/orders/:id/status" do
 
-      context "GIVEN updating the status a single order" do
+      context "GIVEN returning the status of a single order" do
 
         before :each do   
           @order = FactoryGirl.build(:order)
-          get "/api/v1/orders/#{@order.id}/status?authentication_token=CXTTTTED2ASDBSD3"
+          post "/api/v1/orders/#{@order.id}/status?authentication_token=CXTTTTED2ASDBSD4"
           
         end
 
         it 'SHOULD return a 200' do          
-          last_response.status.should == 200
+          last_response.status.should == 201
         end
 
         it 'SHOULD return the status of the order' do
@@ -120,7 +120,8 @@ describe Orders do
 
         before :each do   
           @order = FactoryGirl.build(:order)
-          post "/api/v1/orders/#{@order.id}/store_receive?authentication_token=CXTTTTED2ASDBSD3&time_to_ready=15"
+          post "/api/v1/orders/#{@order.id}/store_receive?authentication_token=CXTTTTED2ASDBSD4&time_to_ready=15"
+          p last_response.body
           @retrieved_order = JSON.parse(last_response.body)
         end
 
@@ -129,7 +130,7 @@ describe Orders do
         end
 
         it 'SHOULD return the order with the status of store_receive' do
-          @retrieved_order['state'].should == 'store_receive'
+          @retrieved_order['state'].should == 'store_received'
         end
 
       end
@@ -141,7 +142,7 @@ describe Orders do
 
         before :each do   
           @order = FactoryGirl.build(:order)
-          post "/api/v1/orders/#{@order.id}/in_progress?authentication_token=CXTTTTED2ASDBSD3&time_to_ready=15"
+          post "/api/v1/orders/#{@order.id}/in_progress?authentication_token=CXTTTTED2ASDBSD4&time_to_ready=15"
           @retrieved_order = JSON.parse(last_response.body)
         end
 
@@ -170,7 +171,7 @@ describe Orders do
         end
 
         it 'SHOULD return a 200' do          
-          last_response.status.should == 200
+          last_response.status.should == 201
         end
 
         it 'SHOULD return the order with the status of ready' do

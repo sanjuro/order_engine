@@ -41,19 +41,37 @@ describe Users do
 
       user = FactoryGirl.build(:user)
 
-      it 'should add one user' do
+      it 'SHOULD add one user' do
         lambda {
           post '/api/v1/users/create_customer.json?authentication_token=CXTTTTED2ASDBSD3', user.to_json
         }.should change(User, :count).by(1)       
         last_response.status.should eql(201)
       end
 
-      it 'should throw an error if there is already an existing customer with an email' do
+      it 'SHOULD throw an error if there is already an existing customer with an email' do
         user.email = 'shads6ter@gmail.com'
         lambda {
           post '/api/v1/users/create_customer.json?authentication_token=CXTTTTED2ASDBSD3', user.to_json
         }.should_not change(User, :count).by(1)       
         last_response.status.should eql(400)
+      end
+
+      it 'SHOULD set has the users pin' do
+        post '/api/v1/users/create_customer.json?authentication_token=CXTTTTED2ASDBSD3', user.to_json
+        retrieved_user = JSON.parse(last_response.body)  
+        retrieved_user['user_pin'].should eq(Digest::MD5::hexdigest("11111"))
+      end
+
+      it 'SHOULD set encrypted password to users pin' do
+        post '/api/v1/users/create_customer.json?authentication_token=CXTTTTED2ASDBSD3', user.to_json
+        retrieved_user = JSON.parse(last_response.body)  
+        retrieved_user['user_pin'].should eq(retrieved_user['encrypted_password'])
+      end
+
+      it 'SHOULD set the username to the email' do
+        post '/api/v1/users/create_customer.json?authentication_token=CXTTTTED2ASDBSD3', user.to_json
+        retrieved_user = JSON.parse(last_response.body)  
+        retrieved_user['useranme'].should eq(retrieved_user['email'])
       end
 
     end
@@ -64,13 +82,13 @@ describe Users do
         @user = User.last
       end
 
-      it 'should have the a new authentication_token token and the correct first_name and last_name' do
+      it 'SHOULD have the a new authentication_token token and the correct first_name and last_name' do
         @user.authentication_token.should_not be_empty
         @user.first_name.should == 'Test'
         @user.last_name.should == 'Customer'
       end
 
-      it 'should add one access grant' do
+      it 'SHOULD add one access grant' do
         @user.access_grants.count.should == 1
       end
     end

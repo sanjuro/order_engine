@@ -39,8 +39,7 @@ class Customer < User
   has_many :devices, :as => :deviceable
 
   # before_create :create_client
-  after_create :generate_user_pin, :create_full_name
-  
+  after_create :generate_user_pin, :create_full_name, :create_username
   # scope :recent_by_sign_in, order("users.last_sign_in_at")  
   # scope :by_store, lambda {|store| where("users.store_id = ?", store)} 
 
@@ -56,6 +55,20 @@ class Customer < User
   #
   def create_full_name
     self.full_name = "#{first_name} #{self.last_name}"
+    self.save
+  end
+
+  # Function to set the customers email to the its username
+  #
+  # * *Args*    :
+  #   - 
+  # * *Returns* :
+  #   - 
+  # * *Raises* :
+  #   - 
+  #
+  def create_username
+    self.username = "#{email}"
     self.save
   end
 

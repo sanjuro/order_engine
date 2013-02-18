@@ -14,9 +14,9 @@ describe Customers do
       before :each do        
         user = FactoryGirl.build(:user)
         @request_payload = {
-            authentication_token: "CXTTTTED2ASDBSD3",
-            email: "shadley2@personera.com",
-            password: "rad6hia",
+            authentication_token: "AXSSSSED2ASDASD1",
+            email: "poes@gmail.com",
+            pin: "11111",
         }
 
         post '/api/v1/customers/authenticate', @request_payload
@@ -29,27 +29,7 @@ describe Customers do
 
       it 'should return the correct username' do  
         @retrieved_customer = JSON.parse(last_response.body)
-        @retrieved_customer["username"].should eql('sanjuro')
-      end
-
-      it 'should return the correct first_name' do  
-        @retrieved_customer = JSON.parse(last_response.body)
-        @retrieved_customer["first_name"].should eql('shadley')
-      end
-
-      it 'should return the correct last_name' do  
-        @retrieved_customer = JSON.parse(last_response.body)
-        @retrieved_customer["last_name"].should eql('wentzel')
-      end
-
-      it 'should return the correct email' do  
-        @retrieved_customer = JSON.parse(last_response.body)
-        @retrieved_customer["email"].should eql('shadley2@personera.com')
-      end
-
-      it 'should return the correct mobile number' do  
-        @retrieved_customer = JSON.parse(last_response.body)
-        @retrieved_customer["mobile_number"].should eql('0833908314')
+        @retrieved_customer["username"].should eql('shadley')
       end
 
     end
@@ -67,10 +47,11 @@ describe Customers do
             first_name: "Poes",
             last_name: "Poes",
             email: "poes@gmail.com",
-            mobile_number: "1234"
+            mobile_number: "1234",
+            user_pin: "11111"
           }
         }
-        post "/api/v1/customers/update?authentication_token=1b032cb31ad1f41e662238182ebbf456",  @request_payload.to_json
+        post "/api/v1/customers/update?authentication_token=AXSSSSED2ASDASD1",  @request_payload.to_json
         @retrieved_user = JSON.parse(last_response.body)
       end
 
@@ -90,6 +71,10 @@ describe Customers do
         @retrieved_user['email'].should == 'poes@gmail.com'
       end 
 
+      it 'SHOULD return the user with the correct user pin' do
+        @retrieved_user['user_pin'].should == Digest::MD5::hexdigest("11111")
+      end 
+
     end
   end  
 
@@ -100,9 +85,9 @@ describe Customers do
       before :each do   
         @user = FactoryGirl.build(:user)
         @request_payload = {
-          email: 'poes@gmail.com'
+          email: 'customer@gmail.com'
         }
-        post "/api/v1/customers/reset_pin?authentication_token=1b032cb31ad1f41e662238182ebbf456",  @request_payload.to_json
+        post "/api/v1/customers/reset_pin?authentication_token=CXTTTTED2ASDBSD4",  @request_payload.to_json
       end
 
       it 'SHOULD return a 201' do          

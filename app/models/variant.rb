@@ -25,7 +25,8 @@ class Variant < ActiveRecord::Base
     belongs_to :product, :touch => true
 
     attr_accessible :name, :presentation, :position, :option_value_ids,
-                    :product_id, :option_values_attributes, :price, :sku
+                    :product_id, :option_values_attributes, :price, :sku, :option_values
+
 
     has_many :inventory_units
     has_many :line_items
