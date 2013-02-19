@@ -9,6 +9,7 @@ class Orders < Grape::API
     # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD3", "time_to_ready": "15"}' http://localhost:9000/api/v1/orders/1/store_receive
     # curl -i -X POST -d '{"authentication_token":"54ec660cd621f87dcc9a76c0a33285d1","order":{"unique_id":"kau0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "line_items":[{"variant_id":"11","quantity":"1"}]}}' http://107.22.211.58:9000/api/v1/orders -v
     # curl -i -X POST -d '{"authentication_token":"b5a27178456753ba773d83666d276631","order":{"unique_id":"kau0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "line_items":[{"variant_id":"11","quantity":"1"}]}}' http://127.0.0.1:9000/api/v1/orders -v
+    # curl -i -X POST -d '{"authentication_token":"b5a27178456753ba773d83666d276631","order":{"unique_id":"kau0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "line_items":{"variant_id":"1","quantity":"1"}}}' http://127.0.0.1:9000/api/v1/orders -v
 
     desc "Retrieve all orders"
     get "/" do  
@@ -34,7 +35,7 @@ class Orders < Grape::API
       logger.info "Create new Order with params"
       authenticated_user
       logger.info "Authenticated User: #{current_user.full_name}"
-      logger.info "Order Data: #{params['order']}"
+      logger.info "Order Data: #{params}"
       NewCustomerOrderContext.call(current_user, params['order']) 
     end
 
