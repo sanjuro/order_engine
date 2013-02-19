@@ -15,7 +15,7 @@ describe StoreUsers do
         user = FactoryGirl.build(:user)
         @request_payload = {
             authentication_token: "CXTTTTED2ASDBSD4",
-            username: "sanjuro",
+            username: "kauai_user",
             password: "rad6hia",
         }
 
@@ -28,7 +28,12 @@ describe StoreUsers do
 
       it 'should return the correct customer' do  
         retrieved_store_user = JSON.parse(last_response.body)
-        retrieved_store_user["username"].should eql('sanjuro')
+        retrieved_store_user["username"].should eql('kauai_user')
+      end
+
+      it 'should return the correct store name' do  
+        retrieved_store_user = JSON.parse(last_response.body)
+        retrieved_store_user["store_name"].should eql('Kauai - Greenmarket Square')
       end
 
     end
