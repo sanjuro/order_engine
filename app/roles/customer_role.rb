@@ -119,7 +119,7 @@ module CustomerRole
 	def update_customer(user_data)
 		user_data.each do |property,value|
 			if property == 'user_pin'
-				value = User.encrypt_password("#{value}")
+				value = BCrypt::Password.create("#{value}")
 				self.send( "encrypted_password=", value )
 			end
         	self.send( "#{property}=", value )

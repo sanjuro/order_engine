@@ -104,7 +104,7 @@ class Customer < User
   #
   def generate_user_pin
     pin = self.user_pin
-    self.user_pin = Digest::MD5::hexdigest("#{pin}")
+    self.user_pin = BCrypt::Password.create(pin)
     self.encrypted_password = self.user_pin 
     self.save
   end

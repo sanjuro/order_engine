@@ -12,12 +12,16 @@ describe Customers do
     describe 'POST /api/v1/customers/authenticate' do
 
       before :each do        
-        user = FactoryGirl.build(:user)
+        user = FactoryGirl.build(:customer)
+        user.generate_user_pin
+
         @request_payload = {
             authentication_token: "AXSSSSED2ASDASD1",
-            email: "poes@gmail.com",
-            pin: "11111",
+            email: "shadley@personera.com",
+            pin: "30322",
         }
+
+
 
         post '/api/v1/customers/authenticate', @request_payload
         
@@ -72,7 +76,8 @@ describe Customers do
       end 
 
       it 'SHOULD return the user with the correct user pin' do
-        @retrieved_user['user_pin'].should == Digest::MD5::hexdigest("11111")
+        @user_password = BCrypt::Password.new(@retrieved_user['encrypted_password'])  
+        @user_password == '11111'  
       end 
 
     end

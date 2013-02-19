@@ -1,4 +1,13 @@
 FactoryGirl.define do	
+  factory :customer do
+	  first_name           'Shadley'
+	  last_name            'Wentzel'
+	  mobile_number        '0833908314'
+	  birthday              Date.parse '1981-12-04'
+	  user_pin      	    "$2a$10$x/ZlQum89iAyYDUTQ5kxSOzijBptIZJwta3fEHituZQKGm9DR2D4q"
+	  authentication_token  "AXSSSSED2ASDASD1"
+  end
+
   factory :order do
 	id 					1
 	number              'R12345234'
