@@ -33,6 +33,7 @@ class Orders < Grape::API
       logger.info "Create new Order with params"
       authenticated_user
       logger.info "Authenticated User: #{current_user.full_name}"
+      logger.info "Authenticated User: #{params}"
       NewCustomerOrderContext.call(current_user, params['order']) 
     end
 
