@@ -28,6 +28,12 @@ module StoreUserRole
 		when 'in_progress'
 			previous_state = 'store_received'
 			next_state = 'ready'
+
+			# send pusher notification for mobi site
+	      	Pusher.app_id = '37591'
+	      	Pusher.key = 'be3c39c1555da94702ec'
+	      	Pusher.secret = 'deae8cae47a1c88942e1'
+	      	Pusher['order'].trigger('in_progress_event', {:user_id => "#{order.customer.id}",:message => "Your order: #{order.number}is being cooked up at #{order.store.store_name} and will be ready in #{time_to_ready} minutes."})
 		when 'ready'
 			previous_state = 'in_progress'
 			next_state = 'collected'
@@ -89,11 +95,11 @@ module StoreUserRole
 		order.state = 'cancelled'
 		order.save
 
-			# send pusher notification for mobi site
-	      	Pusher.app_id = '37591'
-	      	Pusher.key = 'be3c39c1555da94702ec'
-	      	Pusher.secret = 'deae8cae47a1c88942e1'
-	      	Pusher['order'].trigger('cancel_event', {:user_id => "#{order.customer.id}",:message => "Your order: #{order.number} was cancelled at #{order.store.store_name}. Please contact the store at #{order.store.manager_contact}, for further information."})
+		# send pusher notification for mobi site
+      	Pusher.app_id = '37591'
+      	Pusher.key = 'be3c39c1555da94702ec'
+      	Pusher.secret = 'deae8cae47a1c88942e1'
+      	Pusher['order'].trigger('cancel_event', {:user_id => "#{order.customer.id}",:message => "Your order: #{order.number} was cancelled at #{order.store.store_name}. Please contact the store at #{order.store.manager_contact}, for further information."})
 		
         StateEvent.create({
           :previous_state => previous_state,
