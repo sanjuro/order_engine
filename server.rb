@@ -30,7 +30,10 @@ class API < Grape::API
 
 	helpers do
 	    def logger
-	      API.logger
+	        # API.logger
+	        logger = Logger.new(File.dirname(__FILE__) + '/log/vosto_order.log')
+			logger.level = Logger::INFO
+			logger
 	    end
 
 	    def warden
