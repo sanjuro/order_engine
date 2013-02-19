@@ -28,7 +28,8 @@ class AuthenticateStoreContext
               :full_name => store_user.full_name,
               :username => store_user.username,
               :email => store_user.email,
-              :store_id => store.id
+              :store_id => store.id,
+              :store_name => store.store_name
             }
     else 
       return false
