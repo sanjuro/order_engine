@@ -26,7 +26,7 @@ gem 'geocoder'
 gem 'state_machine'
 
 gem 'devise'
-gem "bcrypt-ruby"
+gem 'bcrypt-ruby'
 
 gem 'ruby_pagination_logic'
 

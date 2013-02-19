@@ -63,7 +63,6 @@ class User < ActiveRecord::Base
     Thread.current[:user] = user
   end  
 
-
   # Function to generate a new authentication token for the user
   #
   # * *Args*    :

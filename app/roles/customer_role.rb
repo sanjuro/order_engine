@@ -3,6 +3,7 @@
 # Author::    Shadley Wentzel
 require 'bbpush'
 require 'net/smtp'
+require 'bcrypt'
 
 module CustomerRole
 
@@ -118,7 +119,7 @@ module CustomerRole
 	def update_customer(user_data)
 		user_data.each do |property,value|
 			if property == 'user_pin'
-				value = Digest::MD5::hexdigest("#{value}")
+				value = User.encrypt_password("#{value}")
 				self.send( "encrypted_password=", value )
 			end
         	self.send( "#{property}=", value )
@@ -126,6 +127,7 @@ module CustomerRole
         end 
         self
 	end
+
 
 	# Function to reset the pin of a csutomer
 	#
@@ -140,8 +142,10 @@ module CustomerRole
 	    # generate new pin
 	    new_pin = "#{Array.new(5){rand(5)}.join}"
 
-		self.user_pin = Digest::MD5::hexdigest("#{new_pin}")
-		self.encrypted_password = Digest::MD5::hexdigest("#{new_pin}")
+	    new_encrypted_password = BCrypt::Password.create(new_pin)
+
+		self.user_pin = new_encrypted_password
+		self.encrypted_password = new_encrypted_password
 		self.save
 
 	    # email pin to user
@@ -163,14 +167,15 @@ MESSAGE_END
 
 		return { "success" => "new pin sent"}
 	end
-	  
+
 	def valid_password?(password)
-	    password = Digest::MD5::hexdigest("#{password}")
-	    if password == encrypted_password
+	    return false if encrypted_password.blank?
+	    # extract salt from encryped password
+	    @user_password  = BCrypt::Password.new(encrypted_password)	   
+	    if @user_password == password
 	      true
 	    else
 	      false
 	    end
-	end
-
+	end	
 end

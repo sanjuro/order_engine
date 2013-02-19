@@ -101,21 +101,14 @@ module StoreUserRole
 		order.format_for_web_serivce
 	end
 	  
-	def encrypt_password
-	    if password.present?
-	      self.password_salt = BCrypt::Engine.generate_salt
-	      self.encrypted_password = BCrypt::Engine.hash_secret(password, password_salt)
-	    end
-	end
-
 	def valid_password?(password)
 	    return false if encrypted_password.blank?
-	    bcrypt   = ::BCrypt::Password.new(encrypted_password)
-	    password = ::BCrypt::Engine.hash_secret("#{password}", bcrypt.salt)
-	    if password == encrypted_password
+	    # extract salt from encryped password
+	    @user_password = BCrypt::Password.new(encrypted_password)	   
+	    if @user_password == password
 	      true
 	    else
 	      false
 	    end
-	end
+	end	
 end

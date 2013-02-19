@@ -6,8 +6,8 @@ class Customers < Grape::API
   resource 'customers' do
 
     # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/store_users/authenticate.json?authentication_token=AXSSSSED2ASDASD1
-    # curl -d '{"authentication_token": "54ec660cd621f87dcc9a76c0a33285d1", "email": "radhiaw@gmail.com", "pin": "11111"}' 'http://107.22.211.58:9000/api/v1/customers/authenticate' -H Content-Type:application/json -v
-    # curl -d '{"authentication_token": "CXTTTTED2ASDBSD3", "email": "shadley@personera.com"}' 'http://107.22.211.58:9000/api/v1/customers/reset_pin' -H Content-Type:application/json -v
+    # curl -d '{"authentication_token": "CXTTTTED2ASDBSD3", "email": "shadley@personera.com", "pin": "30322"}' 'http://127.0.0.1:9000/api/v1/customers/authenticate' -H Content-Type:application/json -v
+    # curl -d '{"authentication_token": "CXTTTTED2ASDBSD3", "email": "shadley@personera.com"}' 'http://localhost:9000/api/v1/customers/reset_pin' -H Content-Type:application/json -v
     # curl -X POST -d '{"user":{"first_name": "Shadley", "last_name": "Wentzel", "email": "shad6ster@gmail.com", "mobile_number":"0828688222", "user_pin":"11111"}}' -H "Accept: application/json" -H "Content-Type:application/json" http://localhost:9000/api/v1/customers/update?authentication_token=AXSSSSED2ASDASD1 -v
     # curl -X POST -d '{"email": "shadley@vosto.co.za", "pin": "21234"}' -H "Accept: application/json" http://107.22.211.58:9000/api/v1/customers/authenticate?authentication_token=CXTTTTED2ASDBSD3 -v
    
@@ -28,10 +28,10 @@ class Customers < Grape::API
     end
     post '/reset_pin' do
       authenticated_user
-      logger.info "Reseting pin for customer with Username: #{current_user.email}"
-
+      logger.info "Reseting pin for customer"
       customer = User.by_email(params[:email]).first     
       if customer.nil?
+        logger.info "Reseting pin for customer with Username: #{customer.email}"
         error!({ "error" => "authentication error", "detail" => "customer with username \"#{params[:email]}\" not found" }, 400)
       else
         customer = ResetCustomerPinContext.call(customer)
@@ -65,8 +65,5 @@ class Customers < Grape::API
         end
       end
     end
-  end
-
-
-  
+  end  
 end
