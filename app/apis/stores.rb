@@ -5,7 +5,7 @@ class Stores < Grape::API
   
   resource 'stores' do
 
-    # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/stores/1/offline.json?authentication_token=CXTTTTED2ASDBSD3
+    # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/stores/1/orders_for_todat=y?authentication_token=CXTTTTED2ASDBSD3
     # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/stores/search/kauai
     # curl -v -H 'Accept: application/json' -X POST -d '{"authentication_token": "AXSSSSED2ASDASD2",}' http://107.22.211.58:9000/api/v1/orders/1/cancel
     # curl -d '{"authentication_token": "CXTTTTED2ASDBSD4", "query_term": "chicken"}' 'http://127.0.0.1:9000/api/v1/stores/search' -H Content-Type:application/json -v
@@ -67,6 +67,16 @@ class Stores < Grape::API
     get "/:id" do 
       logger.info "Showing Store with ID: #{params[:id]}"
       RetrieveStoreContext.call(params[:id])
+    end
+
+    desc "Retrieve a specific store"
+    params do
+      requires :id, :type => Integer, :desc => "Store id."
+      requires :state, :type => String, :desc => "The order state to search for."
+    end
+    get "/:id/orders_for_today" do 
+      logger.info "Showing orders with state in progress for Store with ID: #{params[:id]}"
+      GetOrdersForStoreContext.call(params[:id], params[:state])
     end
     
     desc "Returns taxons for a store."

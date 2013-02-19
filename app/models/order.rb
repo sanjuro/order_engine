@@ -48,8 +48,10 @@ class Order < ActiveRecord::Base
   
   scope :by_number, lambda {|number| where("orders.number = ?", number)}
   scope :by_store, lambda {|store| where("orders.store_id = ?", store)} 
+  scope :by_state, lambda {|state| where("orders.state = ?", state)}
   scope :sent_to_store,  where("orders.state = 'sent_store'")
   scope :by_user, lambda {|store| where("orders.user_id = ?", store)} 
+  scope :created_on, lambda {|date| {:conditions => ['created_at >= ? AND created_at <= ?', date.beginning_of_day, date.end_of_day]}}
 
   # order state machine (see http://github.com/pluginaweek/state_machine/tree/master for details)
   state_machine :initial => :cart, :use_transactions => false do

@@ -38,6 +38,20 @@ describe Stores do
         end
       end
 
+      describe 'GET /api/v1/stores/:id/orders_for_today' do
+        store = Store.all.first
+        it 'should return a 200' do
+          get "/api/v1/stores/#{store.id}/orders_for_today.json?authentication_token=CXTTTTED2ASDBSD3&state=in_progress"
+          last_response.status.should == 200
+        end
+
+        it 'should return orders in state in_progress' do
+          get "/api/v1/stores/#{store.id}/orders_for_today.json?authentication_token=CXTTTTED2ASDBSD3&state=in_progress"
+          retrieved_orders = JSON.parse(last_response.body)
+          retrieved_orders.first[1]['state'] == 'in_progress'
+        end
+      end
+
       describe 'GET /api/v1/stores/:id/taxons' do
         store = Store.all.first
         it 'should return a 200 and the taxons for that store' do
