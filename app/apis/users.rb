@@ -5,7 +5,7 @@ class Users < Grape::API
   
   resource 'users' do
 
-    # curl -i -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4","user":{"first_name":"TEstee", "last_name":"Test","email":"shads7ster@gmail.com","mobile_number":"0833908314","user_pin":"11111"}}' http://107.22.211.58:9000/api/v1/users/create_customer
+    # curl -i -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4","user":{"first_name":"TEstee", "last_name":"Test","email":"shads11ster@gmail.com","mobile_number":"0833908314","user_pin":"11111"}}' http://107.22.211.58:9000/api/v1/users/create_customer
 
     desc "Retrieve all User"
     get "/" do
