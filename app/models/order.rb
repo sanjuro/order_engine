@@ -23,9 +23,9 @@ class Order < ActiveRecord::Base
   belongs_to :shipping_method  
 
   # has_one :invoice
-  has_one :master,
-      :class_name => "Variant",
-      :conditions => { :is_master => true }
+  # has_one :master,
+  #     :class_name => "Variant",
+  #     :conditions => { :is_master => true }
 
   has_many :state_events, :as => :stateful
   has_many :line_items, :dependent => :destroy, :order => "created_at ASC"
@@ -418,20 +418,20 @@ class Order < ActiveRecord::Base
 
     deliver_order_confirmation_email(self.customer.email)
 
-    # Notification.adapter = 'andriod'
+    Notification.adapter = 'andriod'
 
-    # message = Hash.new
-    # message[:order_id] = self.id
-    # message[:subject] = "new_order"
+    message = Hash.new
+    message[:order_id] = self.id
+    message[:subject] = "new_order"
 
-    # devices = Array.new
+    devices = Array.new
 
-    # # get all devices for the store
-    # self.store.devices.each do |device|
-    #   devices << device.device_identifier 
-    # end
+    # get all devices for the store
+    self.store.devices.each do |device|
+      devices << device.device_identifier 
+    end
 
-    # Notification.send(devices, message)
+    Notification.send(devices, message)
 
     self.state_events.create({
       :previous_state => 'confirm',
