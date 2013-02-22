@@ -418,6 +418,8 @@ class Order < ActiveRecord::Base
 
     deliver_order_confirmation_email(self.customer.email)
 
+    logger.info "Order Id:#{self.id}Sent user confirmation email."
+
     Notification.adapter = 'andriod'
 
     message = Hash.new
