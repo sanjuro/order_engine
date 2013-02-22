@@ -433,6 +433,8 @@ class Order < ActiveRecord::Base
 
     Notification.send(devices, message)
 
+    logger.info "Order Id:#{order.id}Sent store notification to In-Store Application."
+
     self.state_events.create({
       :previous_state => 'confirm',
       :next_state     => 'sent_store',
