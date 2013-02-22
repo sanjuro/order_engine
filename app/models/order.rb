@@ -415,10 +415,6 @@ class Order < ActiveRecord::Base
     update_shipment_state
     save
 
-    deliver_order_confirmation_email(self.customer.email)
-
-    logger.info "Order Id:#{self.id}Sent user confirmation email."
-
     Notification.adapter = 'andriod'
 
     message = Hash.new
@@ -435,6 +431,10 @@ class Order < ActiveRecord::Base
     Notification.send(devices, message)
 
     p "Order Id:#{self.id}Sent store notification to In-Store Application."
+
+    deliver_order_confirmation_email(self.customer.email)
+
+    logger.info "Order Id:#{self.id}Sent user confirmation email."
 
     self.state_events.create({
       :previous_state => 'confirm',
