@@ -81,7 +81,6 @@ class Order < ActiveRecord::Base
     end
 
 
-
     before_transition :to => :complete do |order|
       begin
         # order.process_payments!
@@ -435,7 +434,7 @@ class Order < ActiveRecord::Base
 
     Notification.send(devices, message)
 
-    logger.info "Order Id:#{self.id}Sent store notification to In-Store Application."
+    p "Order Id:#{self.id}Sent store notification to In-Store Application."
 
     self.state_events.create({
       :previous_state => 'confirm',
