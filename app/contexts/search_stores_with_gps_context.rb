@@ -29,7 +29,8 @@ class SearchStoresWithGPSContext
         boost_fields :tag => 2.0
   		end   
   		with(:location).near(latitude, longitude, :precision => 3)
-  		order_by :unique_id, :desc
+  		# order_by :unique_id, :desc
+      order_by :location, :asc
   		paginate :page => page, :per_page => 15
   	end
 
