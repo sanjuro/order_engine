@@ -30,7 +30,7 @@ class SearchStoresWithGPSContext
   		end   
   		with(:location).near(latitude, longitude, :precision => 3)
   		# order_by :unique_id, :desc
-      order_by :location, :asc
+      order_by :location, :desc
   		paginate :page => page, :per_page => 15
   	end
 
