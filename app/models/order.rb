@@ -409,7 +409,7 @@ class Order < ActiveRecord::Base
 
     # get all devices for the store
     self.store.devices.each do |device|
-      devices << device.device_identifier 
+      devices << device.device_token
     end
 
     Notification.send(devices, message)
