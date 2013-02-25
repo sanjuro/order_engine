@@ -409,11 +409,8 @@ class Order < ActiveRecord::Base
 
     # get all devices for the store
     self.store.devices.each do |device|
-      # devices << device.device_identifier 
-      devices << "7dc2a9b20bf8f54a"
+      devices << device.device_identifier 
     end
-
-    p "Order Id:#{self.id}Sending notification to 7dc2a9b20bf8f54a"
 
     Notification.send(devices, message)
 
