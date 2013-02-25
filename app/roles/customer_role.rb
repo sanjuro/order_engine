@@ -47,12 +47,6 @@ module CustomerRole
 
 	    order.format_for_web_serivce 
 
-		# create notification
-		# @bbpc = BBPush::Client.new(	:app_id => "3159-s6B17c772Drm355O621r3D9i9486a923777",
-  		#                          		:password => "smnBIWO3", 
-		# 								:push_server_url => "https://cp3159.pushapi.eval.blackberry.com")
-
-		# @bbpc.send_notification(["12345678"], "Hello to the device with PIN 12345678!", 5)
 	end
 
 	# Function to get orders for a customer

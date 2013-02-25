@@ -360,23 +360,6 @@ class Order < ActiveRecord::Base
     self.complete?
   end 
 
-  def deliver_ready_notification
-    # Notification.adapter = :andriod
-
-    # message = Hash.new
-    # message[:order_id] = self.id
-    # message[:subject] = "new_order"
-
-    # devices = Array.new
-
-    # # get all devices for the store
-    # self.store.devices.each do |device|
-    #   devices << device.device_identifier 
-    # end
-
-    # Notification.send(devices, message)
-  end
-
   # Helper methods for checkout steps
 
   def available_shipping_methods(display_on = nil)
@@ -426,8 +409,11 @@ class Order < ActiveRecord::Base
 
     # get all devices for the store
     self.store.devices.each do |device|
-      devices << device.device_identifier 
+      # devices << device.device_identifier 
+      devices << "7dc2a9b20bf8f54a"
     end
+
+    p "Order Id:#{self.id}Sending notification to 7dc2a9b20bf8f54a"
 
     Notification.send(devices, message)
 
