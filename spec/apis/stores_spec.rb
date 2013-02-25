@@ -86,11 +86,23 @@ describe Stores do
 
       describe 'GET /api/v1/stores/:id/new_orders' do
         store = Store.all.first
-        it 'should return a 200 and retrieve all new orders for the store' do
+        it 'SHOULD return a 200 ' do
           get "/api/v1/stores/#{store.id}/new_orders.json?authentication_token=CXTTTTED2ASDBSD3"
           last_response.status.should == 200
+        end
+
+        it 'SHOULD retrieve all new orders for the store' do
+          get "/api/v1/stores/#{store.id}/new_orders.json?authentication_token=CXTTTTED2ASDBSD3"
           retrieved_orders = JSON.parse(last_response.body)
           retrieved_orders.count.should >= 1
+        end
+
+        it 'SHOULD retrieve all new orders with the product description' do
+          get "/api/v1/stores/#{store.id}/new_orders.json?authentication_token=CXTTTTED2ASDBSD3"
+          retrieved_orders = JSON.parse(last_response.body)
+        
+          product_description =  retrieved_orders.first.last['line_items'].first['description']
+          product_description.empty?.should == false
         end
       end
     end  

@@ -277,6 +277,7 @@ class Order < ActiveRecord::Base
     line_items.each do |line_item|
       order_line_item = line_item
       order_line_item[:name] = line_item.variant.name
+      order_line_item[:description] = line_item.variant.description
       order_line_item[:sku] = line_item.variant.sku
       order_line_item[:option_values] = line_item.variant.options_text 
       order_line_items << order_line_item
