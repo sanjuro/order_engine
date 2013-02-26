@@ -10,7 +10,7 @@ class Devices < Grape::API
 
     desc "Register new Device"
     post "/register" do      
-      logger.info "Register new Device"
+      logger.info "Register new Device #{params['device']}"
       authenticated_user
       RegisterNewDeviceContext.call(params['device'],current_user) 
     end

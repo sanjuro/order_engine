@@ -14,24 +14,28 @@ class RegisterNewDeviceContext
   end
 
   def call
-    # create a new device
-    device = Device.create(
-              :device_identifier => device_data.device_identifier,
-              :device_type => device_data.device_type,
-              :device_token => device_data.device_token,
-              :deviceable_id => user.id,
-              :deviceable_type => user.profileable_type,
-              :is_active => true
-              )
+    device = Device.find_by_device_identifier(device_data.device_identifier)
 
-    case user.profileable_type
-    when 'customer'
-      device.deviceable_type = 'customer'
-    when 'store_user'
-      device.deviceable_type = 'store'
+    if device.nil?
+      # create a new device
+      device = Device.create(
+                :device_identifier => device_data.device_identifier,
+                :device_type => device_data.device_type,
+                :device_token => device_data.device_token,
+                :deviceable_id => user.id,
+                :deviceable_type => user.profileable_type,
+                :is_active => true
+                )
+
+      case user.profileable_type
+      when 'customer'
+        device.deviceable_type = 'customer'
+      when 'store_user'
+        device.deviceable_type = 'store'
+      end
+        
+      device.save
     end
-      
-    device.save
 
     return { 
             "device_type" => device.device_type,

@@ -23,6 +23,7 @@ class Store < ActiveRecord::Base
 	has_many :business_hours
   
   has_many :devices, :as => :deviceable
+  has_many :images, :as => :viewable, :order => :position, :dependent => :destroy
 
   has_and_belongs_to_many :customers,
     :join_table => 'users_stores',

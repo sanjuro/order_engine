@@ -8,6 +8,7 @@ require 'state_machine'
 require 'kaminari/grape'
 require 'geocoder'
 require 'pusher'
+require 'paperclip'
 
 require File.dirname(__FILE__) + '/database_configuration.rb'
 require File.dirname(__FILE__) + '/action_mailer_configuration.rb'

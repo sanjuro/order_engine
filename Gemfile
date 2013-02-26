@@ -39,6 +39,8 @@ gem 'bbpush'
 gem 'pushmeup'
 gem 'pusher'
 
+gem 'paperclip'
+
 group :test do 
 	gem 'rake', :groups=>[:development, :test]
 	gem 'rack-test', :group=>:test
