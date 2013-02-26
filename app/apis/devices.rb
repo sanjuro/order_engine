@@ -6,6 +6,7 @@ class Devices < Grape::API
   resource 'devices' do
 
     # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/orders/page/1?authentication_token=AXSSSSED2ASDASD6
+    # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token": "CXTTTTED2ASDBSD4","device":{"device_type":"blackberry", "device_identifier":"PP-oad11-12345", "device_token": "12345"}}' http://127.0.0.1:9000/api/v1/devices/register
     # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token": "1b032cb31ad1f41e662238182ebbf456","device":{"device_type":"blackberry", "device_identifier":"PP-oad11-12345", "device_token": "12345"}}' http://107.22.211.58:9000/api/v1/devices/register
 
     desc "Register new Device"

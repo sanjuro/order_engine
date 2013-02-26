@@ -16,7 +16,7 @@ class RegisterNewDeviceContext
   def call
     device = Device.find_by_device_identifier(device_data.device_identifier)
 
-    if device.nil?
+    if device.empty?
       # create a new device
       device = Device.create(
                 :device_identifier => device_data.device_identifier,
