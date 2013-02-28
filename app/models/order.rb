@@ -80,6 +80,10 @@ class Order < ActiveRecord::Base
       transition :to => :delivery, :unless => :is_delivery_order
     end
 
+    event :no_collect do
+      transition :to => :no_collected
+    end
+
 
     before_transition :to => :complete do |order|
       begin
