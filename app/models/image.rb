@@ -1,3 +1,5 @@
+require File.dirname(__FILE__) +  '/asset.rb'
+
 class Image < Asset
   include Paperclip::Glue
 
