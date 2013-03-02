@@ -15,7 +15,7 @@ class LineItem < ActiveRecord::Base
   validates :quantity, :numericality => { :only_integer => true, :message => I18n.t('validation.must_be_int') }
   validates :price, :numericality => true
 
-  attr_accessible :quantity, :variant_id
+  attr_accessible :quantity, :variant_id, :special_instructions
 
   after_save :update_order
   after_destroy :update_order

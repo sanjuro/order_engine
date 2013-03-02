@@ -186,7 +186,7 @@ describe Orders do
 
         before :each do   
           @order = FactoryGirl.build(:order)
-          post "/api/v1/orders/#{@order.id}/cancel?authentication_token=CXTTTTED2ASDBSD3&time_to_ready=15"
+          post "/api/v1/orders/#{@order.id}/cancel?authentication_token=CXTTTTED2ASDBSD3"
           @retrieved_order = JSON.parse(last_response.body)
         end
 
@@ -201,4 +201,45 @@ describe Orders do
       end
     end  
 
+    context "GET /api/v1/orders/:id/collected" do
+
+      context "GIVEN moving an order to collected" do
+
+        before :each do   
+          @order = FactoryGirl.build(:order)
+          post "/api/v1/orders/#{@order.id}/collected?authentication_token=CXTTTTED2ASDBSD3"
+          @retrieved_order = JSON.parse(last_response.body)
+        end
+
+        it 'SHOULD return a 201' do          
+          last_response.status.should == 201
+        end
+
+        it 'SHOULD return the order with the status of collected' do
+          @retrieved_order['state'].should == 'collected'
+        end
+             
+      end
+    end 
+
+    context "GET /api/v1/orders/:id/not_collected" do
+
+      context "GIVEN moving an order to not_collected" do
+
+        before :each do   
+          @order = FactoryGirl.build(:order)
+          post "/api/v1/orders/#{@order.id}/not_collected?authentication_token=CXTTTTED2ASDBSD3"
+          @retrieved_order = JSON.parse(last_response.body)
+        end
+
+        it 'SHOULD return a 201' do          
+          last_response.status.should == 201
+        end
+
+        it 'SHOULD return the order with the status of not_collected' do
+          @retrieved_order['state'].should == 'not_collected'
+        end
+             
+      end
+    end 
 end

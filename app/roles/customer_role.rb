@@ -34,10 +34,10 @@ module CustomerRole
 		order_data[:line_items].each do |line_item|
 			if line_item.kind_of?(Array)
 				variant = Variant.find(order_data[:line_items].variant_id.to_i)
-				order.add_variant(variant,order_data[:line_items].quantity.to_i)
+				order.add_variant(variant,order_data[:line_items].quantity.to_i, order_data[:line_items].special_instructions)
 			else
 				variant = Variant.find(line_item.variant_id.to_i)
-				order.add_variant(variant, line_item.quantity.to_i)
+				order.add_variant(variant, line_item.quantity.to_i, line_item.special_instructions)
 			end
 		end
 

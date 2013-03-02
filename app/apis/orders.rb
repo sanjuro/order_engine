@@ -7,9 +7,9 @@ class Orders < Grape::API
 
     # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/orders/?authentication_token=CXTTTTED2ASDBSD4
     # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD3", "time_to_ready": "15"}' http://localhost:9000/api/v1/orders/1/store_receive
-    # curl -i -X POST -d '{"authentication_token":"3bc472d55aa2dac44f12eb3ad71c7676","order":{"unique_id":"sim0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "line_items":[{"variant_id":"1","quantity":"1"}]}}' http://107.22.211.58:9000/api/v1/orders -v
-    # curl -i -X POST -d '{"authentication_token":"b5a27178456753ba773d83666d276631","order":{"unique_id":"kau0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "line_items":[{"variant_id":"1","quantity":"1"}]}}' http://127.0.0.1:9000/api/v1/orders -v
-    # curl -i -X POST -d '{"authentication_token":"b5a27178456753ba773d83666d276631","order":{"unique_id":"kau0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "line_items":{"variant_id":"1","quantity":"1"}}}' http://127.0.0.1:9000/api/v1/orders -v
+    # curl -i -X POST -d '{"authentication_token":"3bc472d55aa2dac44f12eb3ad71c7676","order":{"unique_id":"spu0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "line_items":[{"variant_id":"1","quantity":"1","special_instructions": "test"}]}}' http://107.22.211.58:9000/api/v1/orders -v
+    # curl -i -X POST -d '{"authentication_token":"b5a27178456753ba773d83666d276631","order":{"unique_id":"spu0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "line_items":[{"variant_id":"1","quantity":"1","special_instructions": "test"}]}}' http://127.0.0.1:9000/api/v1/orders -v
+    # curl -i -X POST -d '{"authentication_token":"b5a27178456753ba773d83666d276631","order":{"unique_id":"spu0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "line_items":{"variant_id":"1","quantity":"1","special_instructions": "test"}}}' http://127.0.0.1:9000/api/v1/orders -v
 
     desc "Retrieve all orders"
     get "/" do  
@@ -101,6 +101,30 @@ class Orders < Grape::API
       logger.info "Authenticated User: #{current_user.full_name}"
       order = Order.find(params[:id])
       UpdateOrderReadyContext.call(current_user, order) 
+    end
+
+    desc "Updates the status of an Order to collected"
+    params do
+      requires :id, :type => Integer, :desc => "Order id."
+    end
+    post "/:id/collected" do 
+      logger.info "Updating status to collected of Order with ID: #{params[:id]}"
+      authenticated_user
+      logger.info "Authenticated User: #{current_user.full_name}"
+      order = Order.find(params[:id])
+      UpdateOrderCollectedContext.call(current_user, order) 
+    end
+
+    desc "Updates the status of an Order to not collected"
+    params do
+      requires :id, :type => Integer, :desc => "Order id."
+    end
+    post "/:id/not_collected" do 
+      logger.info "Updating status to collected of Order with ID: #{params[:id]}"
+      authenticated_user
+      logger.info "Authenticated User: #{current_user.full_name}"
+      order = Order.find(params[:id])
+      NotCollectedOrderContext.call(current_user, order) 
     end
 
     desc "Cancels an order"

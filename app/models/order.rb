@@ -80,6 +80,10 @@ class Order < ActiveRecord::Base
       transition :to => :delivery, :unless => :is_delivery_order
     end
 
+    event :collect do
+      transition :to => :collected
+    end
+
     event :no_collect do
       transition :to => :no_collected
     end
@@ -220,15 +224,17 @@ class Order < ActiveRecord::Base
     true
   end
 
-  def add_variant(variant, quantity = 1)
+  def add_variant(variant, quantity = 1, special_instructions)
     current_item = find_line_item_by_variant(variant)
     if current_item
       current_item.quantity += quantity
+      current_item.special_instructions = special_instructions
       current_item.save
     else
       current_item = LineItem.new(:quantity => quantity)
       current_item.variant = variant
       current_item.price   = variant.price
+      current_item.special_instructions = special_instructions
       self.line_items << current_item
     end
 

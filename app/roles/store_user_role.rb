@@ -112,6 +112,41 @@ module StoreUserRole
 
 		order.format_for_web_serivce
 	end
+
+
+	# Function to set an order to cancelled
+	#
+	# * *Args*    :
+	#   - +order+ -> the order to update
+	# * *Returns* :
+	#   - 
+	# * *Raises* :
+	#   - 
+	#
+	def not_collected_order(order)
+
+		previous_state = order.state
+
+		order.state = 'not_collected'
+		order.save
+
+		# send pusher notification for mobi site
+      	Pusher.app_id = '37591'
+      	Pusher.key = 'be3c39c1555da94702ec'
+      	Pusher.secret = 'deae8cae47a1c88942e1'
+      	Pusher['order'].trigger('not_collected', {:user_id => "#{order.customer.id}",:message => "Your order: #{order.number} was not collected at #{order.store.store_name}. Please contact the store at #{order.store.manager_contact}."})
+		
+        StateEvent.create({
+          :previous_state => previous_state,
+          :next_state => '',
+          :name => 'order',
+          :user_id => self.id,
+          :stateful_id => order.id,
+          :stateful_type => 'order'
+        })
+
+		order.format_for_web_serivce
+	end
 	  
 	def valid_password?(password)
 	    return false if encrypted_password.blank?
