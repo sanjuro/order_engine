@@ -21,6 +21,7 @@ class Store < ActiveRecord::Base
   validates :manager_name, :presence => true
 
 	has_many :business_hours
+  has_many :orders
   
   has_many :devices, :as => :deviceable
   has_many :images, :as => :viewable, :order => :position, :dependent => :destroy
@@ -52,6 +53,7 @@ class Store < ActiveRecord::Base
     location (:location) { Sunspot::Util::Coordinates.new(latitude, longitude) }
     # string(:location, :as => :location) { [lat,lng].join(",") }
   end
+
 
   def format_for_web_serivce
     store_return = Hash.new
