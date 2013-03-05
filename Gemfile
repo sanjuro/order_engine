@@ -41,6 +41,8 @@ gem 'pusher'
 
 gem 'paperclip'
 
+gem 'rack-cors'
+
 group :test do 
 	gem 'rake', :groups=>[:development, :test]
 	gem 'rack-test', :group=>:test

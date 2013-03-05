@@ -52,6 +52,7 @@ class Order < ActiveRecord::Base
   scope :sent_to_store,  where("orders.state = 'sent_store'")
   scope :by_user, lambda {|store| where("orders.user_id = ?", store)} 
   scope :created_on, lambda {|date| {:conditions => ['created_at >= ? AND created_at <= ?', date.beginning_of_day, date.end_of_day]}}
+  scope :updated_on, lambda {|date| {:conditions => ['updated_at >= ? AND updated_at <= ?', date.beginning_of_day, date.end_of_day]}}
 
   # order state machine (see http://github.com/pluginaweek/state_machine/tree/master for details)
   state_machine :initial => :cart, :use_transactions => false do

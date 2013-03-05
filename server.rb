@@ -29,6 +29,7 @@ class API < Grape::API
 	use ApiErrorHandler
 	# use ApiPageHelper
 
+
 	helpers do
 	    def logger
 	        # API.logger
@@ -106,6 +107,8 @@ class API < Grape::API
 end
 
 class APIServer < Goliath::API
+  # use Goliath::Rack::Params
+  # use Goliath::Rack::JSONP
 
   def call(env)
     API.call(env)

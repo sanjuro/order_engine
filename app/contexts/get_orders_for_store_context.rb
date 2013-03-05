@@ -17,7 +17,7 @@ class GetOrdersForStoreContext
     	# return favourties
    	 	store = Store.find(@store_id)
 
-    	orders = Order.by_store(@store_id).by_state(state).created_on(Date.today)
+    	orders = Order.by_store(@store_id).by_state(state).updated_on(Date.today)
 
 	    orders_return = Hash.new
 
