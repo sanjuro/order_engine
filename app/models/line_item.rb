@@ -41,6 +41,33 @@ class LineItem < ActiveRecord::Base
     self.quantity = 0 if quantity.nil? || quantity < 0
   end
 
+  # def process!
+  #   begin
+  #     logger.info 'PROCESS ORDER ITEM'
+  #     # Check stock level
+  #     if product.inventory_level.check_level(self)
+  #       update_attribute(:product_id, variant.product_id)
+        
+  #       # get a package for the quantity
+  #       (1..self.quantity).each do |k|
+  #         ret = variant.product_source.new_product(variant, self)
+  #       end
+        
+  #       # Update stock level    
+  #       decrease_stock_level
+  #       logger.info 'UPDATE STOCK LEVEL'
+        
+  #     else
+  #       logger.info 'INVENTORY LEVEL LOW ' + variant.product_source.description
+  #       self.destroy();
+  #       InventoryMailer.low_inventory_email(variant.product_source).deliver
+  #       raise "Stock Level Error"
+  #     end
+  #   rescue Exception => e
+  #     puts "#{ e } (#{ e.class })!"
+  #   end
+  # end
+
   private
     def update_inventory
       return true unless order.completed?

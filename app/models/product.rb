@@ -78,7 +78,7 @@ class Product < ActiveRecord::Base
     attr_reader :taxon_tokens
 
     attr_accessible :name, :description, :price, :sku, :meta_description, :taxon_tokens,
-                    :meta_keywords, :deleted_at, :option_values_hash, :product_type, 
+                    :meta_keywords, :deleted_at, :option_values_hash, :product_type, :reward_points, 
                     :product_properties_attributes, :variants_attributes, :option_type_ids
 
     accepts_nested_attributes_for :product_properties, :allow_destroy => true, :reject_if => lambda { |pp| pp[:property_name].blank? }

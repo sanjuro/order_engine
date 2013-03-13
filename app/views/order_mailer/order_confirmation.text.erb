@@ -1,0 +1,18 @@
+Your order has been sent and will be ready soon 
+
+Your order number is <%= @order.number %>
+
+Order Summary
+<% @order.line_items.each do |item| %>
+	<%= item.variant.product.name %>
+	<%= item.quantity %> X <%= item.price %>
+	total: <%= (item.price * item.quantity) %>
+<% end %>
+
+<%= t(:subtotal) %>:
+<%= @order.item_total %>
+
+<%= t(:order_total) %>:
+<%= @order.total %>
+
+Thanks for ordering with Vosto.

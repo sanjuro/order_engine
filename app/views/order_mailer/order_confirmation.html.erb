@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Your order has been sent and will be ready soon </h1>
+    <p>
+      Your order number is <%= @order.number %><br/>
+    </p>
+    <h3> Order Summary </h3>
+    <% @order.line_items.each do |item| %>
+    <div class="cart_item">
+      <div class="cart-item-description">
+        <h2><%= item.variant.product.name %></h2>
+      </div>
+      <div class="cart-item-quantity">
+        <%= item.quantity %> X <%= item.price %>
+      </div>
+      <div class="cart-item-total">
+        total: <%= (item.price * item.quantity) %>
+      </div> 
+      <br>
+    </div>
+    <% end %>
+
+
+    <div id="cart-summary">
+
+      <div id="subtotal" class="cart-summary-item">
+        <b><%= t(:subtotal) %>:</b> 
+        <span><%= @order.item_total %></span>
+      </div>
+
+      <div id="order_total" class="cart-summary-item">
+        <b><%= t(:order_total) %>:</b> 
+        <span><%= @order.total %></span>
+      </div>
+      
+    </div>
+    <p>Thanks for ordering with Vosto.</p>
+  </body>
+</html>

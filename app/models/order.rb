@@ -86,13 +86,16 @@ class Order < ActiveRecord::Base
     end
 
     event :no_collect do
-      transition :to => :no_collected
+      transition :to => :not_collected
     end
 
 
-    before_transition :to => :complete do |order|
+    before_transition :to => :collected do |order|
       begin
         # order.process_payments!
+
+        order.process_line_items! 
+
       rescue Core::GatewayError
         if Spree::Config[:allow_checkout_on_gateway_error]
           true
@@ -393,6 +396,29 @@ class Order < ActiveRecord::Base
   def clear_adjustments!
     adjustments.tax.each(&:destroy)
     price_adjustments.each(&:destroy)
+  end
+
+  def process_line_items!
+    # ret = order_items.each(&:process!)
+
+    # calculate reward points
+    total_reward_points = 0
+    line_items.each do |item|
+       total_reward_points += item.variant.product.reward_points 
+    end
+
+    reward_point_level = RewardPoint.new(:user_id => self.user_id,
+                                      :total_points => total_reward_points,
+                                      :is_current => 1,
+                                      :created_at => Time.zone.now                         
+                                      )
+    inventory_level.save
+    
+    # line_items.each do |item|
+    #   ret = item.process!
+    #   self.line_items.delete(item) if ret == false
+    # end
+    
   end
 
   # Finalizes an in progress order after checkout is complete.
