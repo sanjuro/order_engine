@@ -1,4 +1,4 @@
-class AddSpecialInstructionsToLineItem < ActiveRecord::Migration
+class AddSpecialInstructionsToLineItems < ActiveRecord::Migration
 
 	def self.up
 		add_column :line_items, :special_instructions, :string
