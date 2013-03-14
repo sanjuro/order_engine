@@ -87,6 +87,8 @@ class API < Grape::API
 
 	mount Stores
 
+	mount StoreTags
+
 	mount StoreUsers
 
 	mount Taxons
