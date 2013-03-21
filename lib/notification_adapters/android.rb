@@ -27,7 +27,7 @@ module Notification
         }
         # must be an hash with all values you want inside you notification
         p data
-        p GCM.send_notification(destination, data, :collapse_key => "placar_score_global", :time_to_live => 3600, :delay_while_idle => false )
+        p GCM.send_notification(destination, data)
        end  
     end  
   end  
