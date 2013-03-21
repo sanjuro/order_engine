@@ -437,7 +437,7 @@ class Order < ActiveRecord::Base
     update_shipment_state
     save
 
-    send_new_order_notification
+    send_new_order_notification unless self.device_type == 'web'
 
     deliver_order_confirmation_email(self.customer.email)
 
