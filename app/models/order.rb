@@ -466,9 +466,6 @@ class Order < ActiveRecord::Base
 
     message = Hash.new
     message[:order_id] = self.id
-    message[:subject] = "new_order"
-    message[:state] = "sent_store"
-    message[:time_to_ready] = 0
     message[:msg] = "new"
 
     devices = Array.new
