@@ -11,7 +11,8 @@ class AddPoints< ActiveRecord::Migration
 
 	    add_column :orders, :reward_points_gained, :integer
 	    add_column :orders, :reward_points_lost, :integer
-		add_column :products, :reward_points, :integer
+		add_column :variants, :reward_points_gain, :integer
+		add_column :variants, :reward_points_spend, :integer
 	end
 
 	def self.down
@@ -19,6 +20,7 @@ class AddPoints< ActiveRecord::Migration
 
 	    remove_column :orders, :reward_points_gained, :integer
 	    remove_column :orders, :reward_points_lost, :integer
-		remove_column :products, :reward_points, :integer
+		remove_column :variants, :reward_points_gain, :integer
+		remove_column :variants, :reward_points_spend, :integer
     end
 end

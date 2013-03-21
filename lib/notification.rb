@@ -3,7 +3,7 @@ module Notification
   
   def adapter  
     return @adapter if @adapter  
-    self.adapter = :andriod  
+    self.adapter = :android  
     @adapter  
   end  
      

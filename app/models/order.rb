@@ -109,8 +109,9 @@ class Order < ActiveRecord::Base
       order.finalize!
     end
 
-    after_transition :to => :in_progress do |order|
+    before_transition :to => :in_progress do |order|
       # notify customer of in_progress wiht time
+      order.send_in_progress_nofitication
     end
 
     after_transition :to => :ready do |order|
@@ -436,11 +437,14 @@ class Order < ActiveRecord::Base
     update_shipment_state
     save
 
-    Notification.adapter = 'andriod'
+    Notification.adapter = 'android'
 
     message = Hash.new
     message[:order_id] = self.id
     message[:subject] = "new_order"
+    message[:state] = "in_progress"
+    message[:time_to_ready] = 0
+    message[:msg] = "new"
 
     devices = Array.new
 
@@ -472,6 +476,53 @@ class Order < ActiveRecord::Base
       logger.error("#{e.class.name}: #{e.message}")
       logger.error(e.backtrace * "\n")
     end
+  end
+
+  def send_in_progress_nofitication
+
+    message = Hash.new
+    message[:order_id] = self.id
+    message[:subject] = "in_progress"
+    message[:state] = "in_progress"
+    message[:time_to_ready] = self.time_to_ready
+    message[:msg] = "Your order: #{self.number} has been received and will be ready in #{self.time_to_ready} minutes."
+
+    device = Device.find_by_device_identifier(self.device_identifier).first
+
+    devices = Array.new
+
+    # get all devices for the store
+    devices << device.device_token
+
+    logger.info "Order Id:#{self.id}Sent in progress notification." 
+
+    Notification.adapter = self.device_type
+
+    Notification.send(devices, message)
+  end
+
+  def send_ready_nofitication
+
+    message = Hash.new
+    message[:order_id] = self.id
+    message[:subject] = "ready"
+    message[:state] = "ready"
+    message[:time_to_ready] = self.time_to_ready
+    message[:msg] = "Your order: #{self.number} is ready for collection at #{self.store.store_name}."
+
+    device = Device.find_by_device_identifier(self.device_identifier).first
+
+    devices = Array.new
+
+    # get all devices for the store
+    # devices << "APA91bFX-US6bO_4AvYJNM5_cLf-v7klAqRob-9o8N13plxBBQutteXFnTbc8JbYvligGZRanJl8OYqcqOOlszHpRDW-It5SpfqdIfHDAPA63EdVqU7oX2W8zCZI3JDoEgLG5gFeTIC0qVl8iQw8KmYSEZXwJDmC_g"
+    devices << device.device_token
+
+    logger.info "Order Id:#{self.id}Sent ready notification." 
+
+    Notification.adapter = self.device_type
+
+    Notification.send(devices, message)
   end
 
   def format_for_web_serivce

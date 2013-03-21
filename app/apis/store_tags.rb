@@ -5,7 +5,8 @@ class StoreTags < Grape::API
   
   resource 'store_tags' do
 
-    # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/store_tags?authentication_token=CXTTTTED2ASDBSD3
+    # curl -i -H "Accept: application/json" http://107.22.211.58::9000/api/v1/store_tags?authentication_token=DXTTTTED2ASDBSD3 -v
+    # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/store_tags?authentication_token=CXTTTTED2ASDBSD3 -v
 
     desc "Returns all store tags"
     get "/" do  
