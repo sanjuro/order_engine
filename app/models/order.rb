@@ -485,9 +485,6 @@ class Order < ActiveRecord::Base
 
     message = Hash.new
     message[:order_id] = self.id
-    message[:subject] = "in_progress"
-    message[:state] = "in_progress"
-    message[:time_to_ready] = self.time_to_ready
     message[:msg] = "Your order: #{self.number} has been received and will be ready in #{self.time_to_ready} minutes."
 
     device = Device.find_by_device_identifier(self.device_identifier).first
@@ -508,9 +505,6 @@ class Order < ActiveRecord::Base
 
     message = Hash.new
     message[:order_id] = self.id
-    message[:subject] = "ready"
-    message[:state] = "ready"
-    message[:time_to_ready] = self.time_to_ready
     message[:msg] = "Your order: #{self.number} is ready for collection at #{self.store.store_name}."
 
     device = Device.find_by_device_identifier(self.device_identifier).first
