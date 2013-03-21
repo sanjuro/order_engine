@@ -437,25 +437,7 @@ class Order < ActiveRecord::Base
     update_shipment_state
     save
 
-    Notification.adapter = 'android'
-
-    message = Hash.new
-    message[:order_id] = self.id
-    message[:subject] = "new_order"
-    message[:state] = "in_progress"
-    message[:time_to_ready] = 0
-    message[:msg] = "new"
-
-    devices = Array.new
-
-    # get all devices for the store
-    self.store.devices.each do |device|
-      devices << device.device_token
-    end
-
-    Notification.send(devices, message)
-
-    p "Order Id:#{self.id}Sent store notification to In-Store Application."
+    send_new_order_notification
 
     deliver_order_confirmation_email(self.customer.email)
 
@@ -476,6 +458,30 @@ class Order < ActiveRecord::Base
       logger.error("#{e.class.name}: #{e.message}")
       logger.error(e.backtrace * "\n")
     end
+  end
+
+  def send_new_order_notification
+
+    Notification.adapter = 'android'
+
+    message = Hash.new
+    message[:order_id] = self.id
+    message[:subject] = "new_order"
+    message[:state] = "sent_store"
+    message[:time_to_ready] = 0
+    message[:msg] = "new"
+
+    devices = Array.new
+
+    # get all devices for the store
+    self.store.devices.each do |device|
+      devices << device.device_token
+    end
+
+    Notification.send(devices, message)
+
+    p "Order Id:#{self.id}Sent store notification to In-Store Application."
+
   end
 
   def send_in_progress_nofitication

@@ -25,9 +25,9 @@ module Notification
           :time_to_ready => message[:time_to_ready],
           :msg => message[:msg]
         }
+        
         # must be an hash with all values you want inside you notification
-        p data
-        p GCM.send_notification(destination, data)
+        GCM.send_notification(destination, data)
        end  
     end  
   end  
