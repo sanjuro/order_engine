@@ -1,5 +1,3 @@
-require "notification_adapters/android" 
-
 module Notification  
   extend self  
   
