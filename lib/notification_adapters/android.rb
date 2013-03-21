@@ -23,7 +23,7 @@ module Notification
           :subject => message[:subject], 
           :state => message[:state],
           :time_to_ready => message[:time_to_ready],
-          :msg => message[:new]
+          :msg => message[:msg]
         }
         # must be an hash with all values you want inside you notification
         p data
