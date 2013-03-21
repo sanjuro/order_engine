@@ -95,7 +95,7 @@ class Orders < Grape::API
       authenticated_user
       logger.info "Authenticated User: #{current_user.full_name}"
       order = Order.find(params[:id])
-      order.send_in_progress_nofitication
+      order.send_in_progress_nofitication unless order.device_identifier.empty?
       UpdateOrderInProgressContext.call(current_user, order, params[:time_to_ready]) 
     end
 
@@ -108,7 +108,7 @@ class Orders < Grape::API
       authenticated_user
       logger.info "Authenticated User: #{current_user.full_name}"
       order = Order.find(params[:id])
-      order.send_ready_nofitication
+      order.send_ready_nofitication unless order.device_identifier.empty?
       UpdateOrderReadyContext.call(current_user, order) 
     end
 

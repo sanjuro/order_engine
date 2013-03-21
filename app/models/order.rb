@@ -111,7 +111,7 @@ class Order < ActiveRecord::Base
 
     before_transition :to => :in_progress do |order|
       # notify customer of in_progress wiht time
-      order.send_in_progress_nofitication unless  order.device_identifier.empty?
+      # order.send_in_progress_nofitication unless  order.device_identifier.empty?
     end
 
     after_transition :to => :ready do |order|
