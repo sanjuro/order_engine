@@ -437,7 +437,9 @@ class Order < ActiveRecord::Base
     update_shipment_state
     save
 
-    send_new_order_notification unless self.device_type == 'web'
+    if order.device_type != 'web' || order.device_type != 'blackberry'
+        send_new_order_notification
+    end
 
     deliver_order_confirmation_email(self.customer.email)
 

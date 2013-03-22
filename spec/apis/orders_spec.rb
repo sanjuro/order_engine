@@ -44,11 +44,17 @@ describe Orders do
     context "GIVEN viewing a single order" do
 
         order = Order.all.first
-        it 'should return a 200 and the requested order' do
+        it 'should return a 200 and the requested order number' do
           get "/api/v1/orders/#{order.id}.json?authentication_token=CXTTTTED2ASDBSD3"
           last_response.status.should == 200
           retrieved_order = JSON.parse(last_response.body)
           retrieved_order["number"].should == order.number
+        end
+
+        it 'should return all associated line items' do
+          get "/api/v1/orders/#{order.id}.json?authentication_token=CXTTTTED2ASDBSD3"
+          retrieved_order = JSON.parse(last_response.body)
+          retrieved_order["line_items"].count.should >= 1
         end
       end
 
