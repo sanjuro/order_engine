@@ -34,7 +34,8 @@ class Orders < Grape::API
       logger.info "Retrieveing Order with ID: #{params[:id]}"
       authenticated_user
       logger.info "Authenticated User: #{current_user.full_name}"
-      Order.find(params[:id])
+      order = Order.find(params[:id])
+      order.format_for_web_serivce
     end
     
     desc "Creates a new order"
