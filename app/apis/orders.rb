@@ -97,7 +97,7 @@ class Orders < Grape::API
       logger.info "Authenticated User: #{current_user.full_name}"
       order = Order.find(params[:id])
 
-      if order.device_type != 'web' || order.device_type != 'blackberry'
+      if order.device_type != 'web' && order.device_type != 'blackberry'
         order.send_in_progress_nofitication 
       end
 
@@ -114,7 +114,7 @@ class Orders < Grape::API
       logger.info "Authenticated User: #{current_user.full_name}"
       order = Order.find(params[:id])
      
-      if order.device_type != 'web' || order.device_type != 'blackberry'
+      if order.device_type != 'web' && order.device_type != 'blackberry'
          order.send_ready_nofitication 
       end
       
