@@ -8,7 +8,7 @@ class Stores < Grape::API
     # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/stores/1/new_orders?authentication_token=AXSSSSED2ASDASD2
     # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/stores/search/thai
     # curl -v -H 'Accept: application/json' -X POST -d '{"authentication_token": "AXSSSSED2ASDASD2",}' http://107.22.211.58:9000/api/v1/orders/1/cancel
-    # curl -H 'Accept: application/json' -X POST -d '{"authentication_token": "CXTTTTED2ASDBSD4", "query_term": "halaal", "latitude": "-33.922796", "longitude": "18.420808"}' 'http://127.0.0.1:9000/api/v1/stores/search' -v
+    # curl -H 'Accept: application/json' -X POST -d '{"authentication_token": "CXTTTTED2ASDBSD4", "query_term": "grill", "latitude": "-33.922796", "longitude": "18.420808"}' 'http://107.22.211.58:9000/api/v1/stores/search' -v
     # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/stores/1/orders_for_today?state=in_progress&authentication_token=CXTTTTED2ASDBSD3 -v
 
     desc "Retrieve all stores"
