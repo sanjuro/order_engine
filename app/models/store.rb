@@ -26,6 +26,8 @@ class Store < ActiveRecord::Base
   has_many :devices, :as => :deviceable
   has_many :images, :as => :viewable, :order => :position, :dependent => :destroy
 
+  has_and_belongs_to_many :tags, :join_table => 'stores_tags'
+
   has_and_belongs_to_many :customers,
     :join_table => 'users_stores',
     :class_name => "User",
@@ -49,6 +51,9 @@ class Store < ActiveRecord::Base
     text :store_name
     string :unique_id
     text :tag
+    text :tags do |store|
+      store.tags.map { |tag| tag.name }
+    end 
     string :address
     location (:location) { Sunspot::Util::Coordinates.new(latitude, longitude) }
     # string(:location, :as => :location) { [lat,lng].join(",") }
