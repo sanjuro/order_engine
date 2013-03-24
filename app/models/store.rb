@@ -51,9 +51,6 @@ class Store < ActiveRecord::Base
     text :store_name
     string :unique_id
     text :tag
-    text :tags do |store|
-      store.tags.map { |tag| tag.name }
-    end 
     string :address
     location (:location) { Sunspot::Util::Coordinates.new(latitude, longitude) }
     # string(:location, :as => :location) { [lat,lng].join(",") }
