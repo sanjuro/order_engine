@@ -26,7 +26,6 @@ class SearchStoresContext
   			boost_fields :store_name => 5.0
         boost_fields :tag => 2.0
   		end   
-      facet :tag_ids 
   		order_by :unique_id, :desc
   		paginate :page => page, :per_page => 15
   	end
