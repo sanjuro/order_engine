@@ -32,7 +32,7 @@ class Stores < Grape::API
       requires :query_term, :type => String, :desc => "Search query."
     end
     post "/search" do
-      if params[:latitude].nil? && params[:longitude].nil?
+      if params[:latitude].nil? && params[:longitude].nil? || params[:latitude] == 0 && params[:longitude]== 0
         logger.info "Searching all Stores for Term: #{params[:query_term]}"
         SearchStoresContext.call(params[:query_term], params[:page])
       else
