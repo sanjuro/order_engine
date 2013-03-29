@@ -16,6 +16,12 @@ class Products < Grape::API
       Product.all
     end
 
+    desc "Retrieve all products based on a group of prducts ids"
+    post "/by_ids" do
+      logger.info "Retrieved products wiht unique ids: #{params[:product_ids]}"
+      GetProductsByIdsContext.call(params[:product_ids])
+    end
+
     desc "Retrieves Products for a specific Store"
     params do
       requires :store_id, :type => Integer, :desc => "Store id."

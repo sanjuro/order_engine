@@ -46,6 +46,7 @@ class Store < ActiveRecord::Base
 
   scope :by_fanpage_id, lambda {|fanpage_id| where("stores.fanpage_id = ?", fanpage_id)} 
   scope :by_unique_id, lambda {|unique_id| where("stores.unique_id = ?", unique_id)} 
+  scope :by_unique_ids, lambda {|unique_id| where("stores.unique_id IN (?)", unique_id)} 
 
   Sunspot.setup(Store) do
     text :store_name

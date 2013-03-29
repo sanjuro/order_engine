@@ -86,6 +86,7 @@ class Product < ActiveRecord::Base
     alias :options :product_option_types
 
     scope :by_store, lambda {|store| where("products.store_id = ?", store)} 
+    scope :by_ids, lambda {|product_ids| where("products.id IN (?)", product_ids)} 
 
     Sunspot.setup(Product) do
       text :name

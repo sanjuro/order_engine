@@ -26,6 +26,31 @@ describe Stores do
 
     end
 
+    context "viewing stores using a group of unique ids" do
+
+      before :each do   
+        @request_payload = {
+          store_ids: 
+            [
+              "spu0000001",
+              "sim0000001"
+            ]
+
+        }
+        post '/api/v1/stores/by_store_ids', @request_payload.to_json
+        
+      end
+
+      it 'SHOULD return a 200' do          
+        last_response.status.should == 201
+      end
+
+      it 'SHOULD return stores using the unique ids' do
+        last_response.body.empty?.should == false
+      end
+
+    end
+
     context "viewing a single store" do
 
       describe 'GET /api/v1/stores/:id' do
