@@ -7,8 +7,8 @@ class Orders < Grape::API
 
     # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/orders/1?authentication_token=AXSSSSED2ASDASD2
     # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/orders/1?authentication_token=b5a27178456753ba773d83666d276631 -v 
-    # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4", "time_to_ready": "15"}' http://107.22.211.58:9000/api/v1/orders/12/in_progress -v 
-    # curl -i -X POST -d '{"authentication_token":"e431a9a0340e22d695c525543a38f8de","order":{"unique_id":"spu0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "f0caca8be12f3fea", "device_type": "android", "line_items":[{"variant_id":"1","quantity":"1","special_instructions": "test"}]}}' http://107.22.211.58:9000/api/v1/orders -v
+    # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4", "time_to_ready": "15"}' http://107.22.211.58:9000/api/v1/orders/8/ready -v 
+    # curl -i -X POST -d '{"authentication_token":"b5a27178456753ba773d83666d276631","order":{"unique_id":"spu0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "f0caca8be12f3fea", "device_type": "android", "line_items":[{"variant_id":"1","quantity":"1","special_instructions": "test"}]}}' http://107.22.211.58:9000/api/v1/orders -v
     # curl -i -X POST -d '{"authentication_token":"b5a27178456753ba773d83666d276631","order":{"unique_id":"spu0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "line_items":[{"variant_id":"1","quantity":"1","special_instructions": "test"}]}}' http://127.0.0.1:9000/api/v1/orders -v
     # curl -i -X POST -d '{"authentication_token":"b5a27178456753ba773d83666d276631","order":{"unique_id":"spu0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "line_items":{"variant_id":"1","quantity":"1","special_instructions": "test"}}}' http://127.0.0.1:9000/api/v1/orders -v
 

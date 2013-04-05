@@ -29,7 +29,7 @@ class RegisterNewDeviceContext
       case user.profileable_type
       when 'customer'
         device.deviceable_type = 'customer'
-        deviceable_id = user.id
+        device.deviceable_id = user.id
       when 'store_user'
         device.deviceable_type = 'store'
         device.deviceable_id = user.stores.first.id

@@ -16,6 +16,7 @@ class SignupCustomerContext
   end
 
   def call
+
     # create the new customer resource
     @customer = Customer.new(
                             :first_name => @user[:first_name],
