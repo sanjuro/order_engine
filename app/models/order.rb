@@ -468,14 +468,14 @@ class Order < ActiveRecord::Base
     message[:order_id] = self.id
     message[:msg] = "new"
 
-    devices = Array.new
+    devices_stored = Array.new
 
     # get all devices for the store
     self.store.devices.each do |device|
-      devices << device.device_token
+      devices_stored << device.device_token
     end
 
-    Notification.send(devices, message)
+    Notification.send(devices_stored, message)
 
     p "Order Id:#{self.id}Sent store notification to In-Store Application."
 
