@@ -21,6 +21,10 @@ module CustomerRole
 		# store = Store.by_unique_id(order_data.unique_id)
 		store = Store.by_unique_id(order_data[:unique_id]).first
 
+		if order_data[:store_order_number].nil?
+			order_data[:store_order_number] = 0
+		end
+
 		# create order
 		order = Order.create(
 							:store_id => store.id,
@@ -28,7 +32,8 @@ module CustomerRole
 							:state => 'confirm',
 							:device_identifier => order_data[:device_identifier],
 							:device_type => order_data[:device_type],
-							:special_instructions => order_data[:special_instructions]
+							:special_instructions => order_data[:special_instructions],
+							:store_order_number => order_data[:store_order_number]
 							)
 
 		order_data[:line_items].each do |line_item|
