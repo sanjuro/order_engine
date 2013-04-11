@@ -56,6 +56,15 @@ class Variant < ActiveRecord::Base
       end
     end
 
+    def to_hash
+      actual_price = self.price
+      #actual_price += Calculator::Vat.calculate_tax_on(self) if Spree::Config[:show_price_inc_vat]
+      {
+        :id => self.id,        
+        :price => actual_price
+      }
+    end
+
     # and cost_price
     # def cost_price=(price)
     #   if price.present?

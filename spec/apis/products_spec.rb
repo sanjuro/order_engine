@@ -32,4 +32,21 @@ describe Products do
       end
 
     end
+
+    context "viewing product option values" do
+
+      before :each do   
+        get '/api/v1/products/152/grouped_option_values.json'
+      end
+
+      it 'SHOULD return a 200' do          
+        last_response.status.should == 200
+      end
+
+      it 'SHOULD return option values' do
+        retrieved_options = JSON.parse(last_response.body)
+        retrieved_options[0]['portion'].empty?.should == false
+      end
+
+    end
 end
