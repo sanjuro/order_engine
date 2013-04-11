@@ -1,7 +1,7 @@
 class Products < Grape::API
 
 # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/products/1.json?authentication_token=CXTTTTED2ASDBSD3
-# curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/products/2/grouped_option_values.json?authentication_token=CXTTTTED2ASDBSD3 -v
+# curl -i -H "Accept: application/json" http://localhost:9000/api/v1/products/152/grouped_option_values.json?authentication_token=CXTTTTED2ASDBSD3 -v
 # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/products/by_store?store_id=3&authentication_token=CXTTTTED2ASDBSD3
 # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/products/search?query=test&authentication_token=CXTTTTED2ASDBSD3
 # curl -i -X POST -d '{"product_ids":["1","2"]}' 'http://107.22.211.58:9000/api/v1/products/by_ids' -v

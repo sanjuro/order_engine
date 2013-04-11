@@ -24,7 +24,7 @@ class GetProductOptionValuesContext
       # option_type_name = option_type[0][:name]
       option_types_return = Hash.new
 
-      option_types_return[option_type[0][:name]] = option_type[1]
+      option_types_return[option_type[0][:presentation]] = option_type[1]
       formatted_option_types << option_types_return
     end
 
