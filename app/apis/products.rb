@@ -5,6 +5,7 @@ class Products < Grape::API
 # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/products/by_store?store_id=3&authentication_token=CXTTTTED2ASDBSD3
 # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/products/search?query=test&authentication_token=CXTTTTED2ASDBSD3
 # curl -i -X POST -d '{"product_ids":["1","2"]}' 'http://107.22.211.58:9000/api/v1/products/by_ids' -v
+# curl -i -X POST -d '{"option_value_ids":["1","2"]}'  http://localhost:9000/api/v1/products/152/find_variant.json?authentication_token=CXTTTTED2ASDBSD3 -v
 
   version 'v1', :using => :path
   format :json
@@ -84,10 +85,10 @@ class Products < Grape::API
     params do
       requires :id, :type => Integer, :desc => "Product id."
     end
-    get '/:id/grouped_option_values' do
-      logger.info "Retrieved all variants by option values for Product with ID: #{params[:id]}"
+    post '/:id/find_variant' do
+      logger.info "Retrieved Master Variant for Product with ID: #{params['id']} and Option Values #{params['option_value_ids']}"
       product = Product.find(params[:id])
-      GetVariantByOptionValuesContext.call(product) 
+      GetVariantByOptionValuesContext.call(product, params[:option_value_ids]) 
     end
 
     desc "Returns the master variant for a Product."

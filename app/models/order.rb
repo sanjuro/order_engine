@@ -539,6 +539,7 @@ class Order < ActiveRecord::Base
             "time_to_ready" => self.time_to_ready,
             "state" => self.state,
             "store_id" => self.store_id,
+            "store_order_number" => self.store_order_number,
             "total" => self.total,
             "updated_at" => self.updated_at,
             "user" => { 
