@@ -21,6 +21,14 @@ module StoreUserRole
 		order.state = status
 		order.save
 
+		order_number = nil
+
+		if order.store_order_number.nil?
+			order_number = order.number
+		else
+			order_number = order.store_order_number
+		end
+
 		case status
 		when 'store_received'
 			previous_state = 'confirm'
@@ -33,7 +41,7 @@ module StoreUserRole
 	      	Pusher.app_id = '37591'
 	      	Pusher.key = 'be3c39c1555da94702ec'
 	      	Pusher.secret = 'deae8cae47a1c88942e1'
-	      	Pusher['order'].trigger('in_progress_event', {:user_id => "#{order.customer.id}",:message => "Your order: #{order.number}is being cooked up at #{order.store.store_name} and will be ready in #{time_to_ready} minutes."})
+	      	Pusher['order'].trigger('in_progress_event', {:user_id => "#{order.customer.id}",:message => "Your order: #{order_number} is being cooked up at #{order.store.store_name} and will be ready in #{time_to_ready} minutes."})
 		when 'ready'
 			previous_state = 'in_progress'
 			next_state = 'collected'
@@ -42,7 +50,7 @@ module StoreUserRole
 	      	Pusher.app_id = '37591'
 	      	Pusher.key = 'be3c39c1555da94702ec'
 	      	Pusher.secret = 'deae8cae47a1c88942e1'
-	      	Pusher['order'].trigger('ready_event', {:user_id => "#{order.customer.id}",:message => "Your order: #{order.number} is ready for collection at #{order.store.store_name}. Please contact the store at #{order.store.manager_contact}, if there is a problem with your order."})
+	      	Pusher['order'].trigger('ready_event', {:user_id => "#{order.customer.id}",:message => "Your order: #{order_number} is ready for collection at #{order.store.store_name}. Please contact the store at #{order.store.manager_contact}, if there is a problem with your order."})
 
 		when 'collected'
 			previous_state = 'collected'
