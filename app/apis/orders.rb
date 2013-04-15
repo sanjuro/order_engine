@@ -103,6 +103,9 @@ class Orders < Grape::API
       end
 
       if order.device_type.eql?('android')
+        order.time_to_ready = params[:time_to_ready]
+        order.save!
+        
         order.send_in_progress_nofitication 
       end
 
