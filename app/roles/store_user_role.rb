@@ -41,7 +41,7 @@ module StoreUserRole
 	      	Pusher.app_id = '37591'
 	      	Pusher.key = 'be3c39c1555da94702ec'
 	      	Pusher.secret = 'deae8cae47a1c88942e1'
-	      	Pusher['order'].trigger('in_progress_event', {:user_id => "#{order.customer.id}",:message => "Your order: #{order_number} is being cooked up at #{order.store.store_name} and will be ready in #{time_to_ready} minutes."})
+	      	Pusher['order'].trigger('in_progress_event', {:user_id => "#{order.customer.id}",:message => "Your order: #{order_number} is being cooked up at #{order.store.store_name} and will be ready in #{order.time_to_ready} minutes."})
 		when 'ready'
 			previous_state = 'in_progress'
 			next_state = 'collected'
