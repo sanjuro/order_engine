@@ -95,6 +95,8 @@ class API < Grape::API
 
 	mount Users
 
+	mount Variants
+
     resource :systems do
       desc "Describes API."
       get :describe_api do
