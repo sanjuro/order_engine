@@ -110,7 +110,7 @@ class Order < ActiveRecord::Base
     end
 
     after_transition :to => :in_progress do |order|
-      # notify customer of in_progress wiht time
+      # notify customer of in_progress with time
       order.send_in_progress_nofitication
     end
 
@@ -494,7 +494,7 @@ class Order < ActiveRecord::Base
     # get all devices for the store
     devices << device.device_token
 
-    logger.info "Order Id:#{self.id}Sent in progress notification." 
+    logger.info "Order Id:#{self.id}Sent in progress notification. Time to ready: #{self.time_to_ready}" 
 
     Notification.adapter = self.device_type
 
