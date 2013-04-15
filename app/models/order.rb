@@ -111,7 +111,7 @@ class Order < ActiveRecord::Base
 
     after_transition :to => :in_progress do |order|
       # notify customer of in_progress with time
-      order.send_in_progress_nofitication
+      # order.send_in_progress_nofitication
     end
 
     after_transition :to => :ready do |order|
