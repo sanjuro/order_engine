@@ -483,9 +483,17 @@ class Order < ActiveRecord::Base
 
   def send_in_progress_nofitication
 
+    order_number = nil
+
+    if self.store_order_number.nil?
+      order_number = self.number
+    else
+      order_number = self.store_order_number
+    end
+
     message = Hash.new
     message[:order_id] = self.id
-    message[:msg] = "Your order: #{self.number} has been received and will be ready in #{self.time_to_ready} minutes."
+    message[:msg] = "Your order: #{order_number} has been received and will be ready in #{self.time_to_ready} minutes."
 
     device = Device.find_by_device_identifier(self.device_identifier).first
 
