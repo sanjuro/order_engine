@@ -22,7 +22,6 @@ class GetVariantByOptionValuesContext
 
     # find all variants
     variants = product.variants_for_option_value(OptionValue.find(option_values[0]))
-
     option_value_check = nil
     matching_variant = nil
 
@@ -39,6 +38,8 @@ class GetVariantByOptionValuesContext
 
         end
       end
+    else
+      matching_variant = variants.first
     end
     
     matching_variant
