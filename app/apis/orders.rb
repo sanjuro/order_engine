@@ -97,13 +97,13 @@ class Orders < Grape::API
       logger.info "Authenticated User: #{current_user.full_name}"
       order = Order.find(params[:id])
 
-      if order.device_type.eql?('android')
-        order.send_in_progress_nofitication 
-      end
-
       if !params[:store_order_number].nil?
         order.store_order_number = params[:store_order_number]
         order.save!
+      end
+
+      if order.device_type.eql?('android')
+        order.send_in_progress_nofitication 
       end
 
       UpdateOrderInProgressContext.call(current_user, order, params[:time_to_ready]) 
