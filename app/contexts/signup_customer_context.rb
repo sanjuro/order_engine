@@ -28,6 +28,9 @@ class SignupCustomerContext
                             )
     @customer.save
 
+    @customer.profileable_id = @customer.id
+    @customer.save
+
     # create access grant for new customer
     access_grant = AccessGrant.find_access(@authentication_token)
     @customer.create_access_grant(access_grant.client_application_id)

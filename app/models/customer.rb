@@ -27,7 +27,7 @@ class Customer < User
                   :remember_me, :provider, :uid, :user_attributes, :first_name, :last_name, 
                   :mobile_number, :birthday, :user_pin
 
-  validates :first_name, :last_name, :email, :presence => true
+  validates :first_name, :email, :presence => true
 
   has_one :user, :as => :profileable
   accepts_nested_attributes_for :user
