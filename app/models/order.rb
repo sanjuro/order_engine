@@ -460,6 +460,24 @@ class Order < ActiveRecord::Base
     end
   end
 
+  def deliver_order_in_progress_email(recipient)
+    begin
+      OrderMailer.in_progress(self,recipient).deliver
+    rescue Exception => e
+      logger.error("#{e.class.name}: #{e.message}")
+      logger.error(e.backtrace * "\n")
+    end
+  end
+
+  def deliver_order_ready_email(recipient)
+    begin
+      OrderMailer.read(self,recipient).deliver
+    rescue Exception => e
+      logger.error("#{e.class.name}: #{e.message}")
+      logger.error(e.backtrace * "\n")
+    end
+  end
+
   def send_new_order_notification
 
     Notification.adapter = 'android'

@@ -4,13 +4,14 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>Your order has been sent and will be ready soon </h1>
+    <h1>Your order is ready please come and collect it</h1>
     <p>
     <% if @order.store_order_number.empty? %>
       Your order number is <%= @order.number %><br/>
     <% else %>
       Your order number is <%= @order.store_order_number %><br/>
     <% end %>
+     
     </p>
     <h3> Order Summary </h3>
     <% @order.line_items.each do |item| %>
