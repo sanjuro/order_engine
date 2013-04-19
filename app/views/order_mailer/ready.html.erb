@@ -4,7 +4,7 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>Your order is ready please come and collect it</h1>
+    <h1>Your order is ready please come and collect at <%= @order.store.store_name %>.</h1>
     <p>
     <% if @order.store_order_number.empty? %>
       Your order number is <%= @order.number %><br/>

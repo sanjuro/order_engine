@@ -4,7 +4,7 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>Your order has been accepted by the store and his being cooked up</h1>
+    <h1>Your order is being cooked up at <%= @order.store.store_name %> and will be ready in <%= @order.time_to_ready %> minutes.</h1>
     <p>
     <% if @order.store_order_number.empty? %>
       Your order number is <%= @order.number %><br/>

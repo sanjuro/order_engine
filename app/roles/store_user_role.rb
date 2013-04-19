@@ -37,6 +37,9 @@ module StoreUserRole
 			previous_state = 'store_received'
 			next_state = 'ready'
 
+			# send email notification
+			order.deliver_order_in_progress_email(order.customer.email)
+
 			# send pusher notification for mobi site
 	      	Pusher.app_id = '37591'
 	      	Pusher.key = 'be3c39c1555da94702ec'
@@ -45,6 +48,9 @@ module StoreUserRole
 		when 'ready'
 			previous_state = 'in_progress'
 			next_state = 'collected'
+
+			# send email notification
+			order.deliver_order_ready_email(order.customer.email)
 
 			# send pusher notification for mobi site
 	      	Pusher.app_id = '37591'

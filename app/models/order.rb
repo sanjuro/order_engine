@@ -471,7 +471,7 @@ class Order < ActiveRecord::Base
 
   def deliver_order_ready_email(recipient)
     begin
-      OrderMailer.read(self,recipient).deliver
+      OrderMailer.ready(self,recipient).deliver
     rescue Exception => e
       logger.error("#{e.class.name}: #{e.message}")
       logger.error(e.backtrace * "\n")
