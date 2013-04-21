@@ -529,9 +529,15 @@ class Order < ActiveRecord::Base
 
   def send_ready_nofitication
 
+    if self.store_order_number.nil?
+      order_number = self.number
+    else
+      order_number = self.store_order_number
+    end
+
     message = Hash.new
     message[:order_id] = self.id
-    message[:msg] = "Your order: #{self.number} is ready for collection at #{self.store.store_name}."
+    message[:msg] = "Your order: #{store_order_number} is ready for collection at #{self.store.store_name}."
 
     device = Device.find_by_device_identifier(self.device_identifier).first
 
