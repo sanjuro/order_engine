@@ -60,7 +60,7 @@ module CustomerRole
 	#
 	def get_orders(page=30)
 		@page = page
-		orders = Order.by_user(self.id).order('created_at').page(page)
+		orders = Order.by_user(self.id).order('created_at DESC').page(page)
 
 	    orders_return = Hash.new
 
