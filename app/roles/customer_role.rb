@@ -58,7 +58,7 @@ module CustomerRole
 	# * *Raises* :
 	#   - 
 	#
-	def get_orders(page=30)
+	def get_orders(page=10)
 		@page = page
 		orders = Order.by_user(self.id).order('created_at DESC').page(page)
 
