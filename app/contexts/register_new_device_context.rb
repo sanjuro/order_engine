@@ -25,18 +25,22 @@ class RegisterNewDeviceContext
                 :deviceable_type => user.profileable_type,
                 :is_active => true
                 )
-
-      case user.profileable_type
-      when 'customer'
-        device.deviceable_type = 'customer'
-        device.deviceable_id = user.id
-      when 'store_user'
-        device.deviceable_type = 'store'
-        device.deviceable_id = user.stores.first.id
-      end
-        
-      device.save
+   else
+      device.device_identifier = device_data.device_identifier
+      device.device_type = device_data.device_type
+      device.device_token = device_data.device_token
     end
+
+    case user.profileable_type
+    when 'customer'
+      device.deviceable_type = 'customer'
+      device.deviceable_id = user.id
+    when 'store_user'
+      device.deviceable_type = 'store'
+      device.deviceable_id = user.stores.first.id
+    end
+      
+    device.save
 
     return { 
             "device_type" => device.device_type,

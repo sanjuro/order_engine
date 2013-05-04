@@ -7,7 +7,7 @@ class StoreUsers < Grape::API
 
     # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/store_users/authenticate.json?authentication_token=AXSSSSED2ASDASD1
     # curl -d '{"authentication_token": "CXTTTTED2ASDBSD4", "username": "gavin", "password": "gavin1234"}' 'http://127.0.0.1:9000/api/v1/store_users/authenticate' -H Content-Type:application/json -v
-    # curl -d '{"authentication_token": "CXTTTTED2ASDBSD4", "username": "simply_user", "password": "rad6hia"}' 'http://107.22.211.58:9000/api/v1/store_users/authenticate' -H Content-Type:application/json -v
+    # curl -d '{"authentication_token": "CXTTTTED2ASDBSD4", "username": "simplyuser", "password": "12204"}' 'http://107.22.211.58:9000/api/v1/store_users/authenticate' -H Content-Type:application/json -v
 
     desc "Authenticates a Store User"
     params do
