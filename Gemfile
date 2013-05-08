@@ -41,6 +41,8 @@ gem 'pusher'
 
 gem 'paperclip'
 
+gem 'daemon-kit'
+
 group :test do 
 	gem 'rake', :groups=>[:development, :test]
 	gem 'rack-test', :group=>:test
@@ -49,4 +51,8 @@ group :test do
     gem 'rspec-mocks'
 	gem 'factory_girl'
 	gem 'spork'
+endgem 'rufus-scheduler', '>= 2.0.3'
+group :development, :test do
+  gem 'rake'
+  gem 'rspec' 
 end

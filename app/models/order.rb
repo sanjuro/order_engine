@@ -70,7 +70,7 @@ class Order < ActiveRecord::Base
     end
    
     event :cancel do
-      transition :to => :canceled, :if => :allow_cancel?
+      transition :to => :cancelled
     end
 
     event :no_delivery do
