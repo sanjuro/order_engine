@@ -61,6 +61,13 @@ describe Stores do
           retrieved_store = JSON.parse(last_response.body)
           retrieved_store["unique_id"].should == store.unique_id
         end
+
+        it 'each store should have a store image' do
+          get "/api/v1/stores/#{store.id}.json?authentication_token=CXTTTTED2ASDBSD3"
+          last_response.status.should == 200
+          retrieved_store = JSON.parse(last_response.body)
+          retrieved_store["store_image"].empty?.should == false
+        end
       end
 
       describe 'GET /api/v1/stores/:id/orders_for_today' do

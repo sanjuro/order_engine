@@ -24,7 +24,7 @@ class Store < ActiveRecord::Base
   has_many :orders
   
   has_many :devices, :as => :deviceable
-  has_many :images, :as => :viewable, :order => :position, :dependent => :destroy
+  has_many :images, :as => :viewable, :order => :position
 
   has_and_belongs_to_many :tags, :join_table => 'stores_tags'
 
@@ -47,6 +47,10 @@ class Store < ActiveRecord::Base
   scope :by_fanpage_id, lambda {|fanpage_id| where("stores.fanpage_id = ?", fanpage_id)} 
   scope :by_unique_id, lambda {|unique_id| where("stores.unique_id = ?", unique_id)} 
   scope :by_unique_ids, lambda {|unique_id| where("stores.unique_id IN (?)", unique_id)} 
+
+  def store_icon
+    self.images.first.attachment.url(:mini, false)
+  end
 
   Sunspot.setup(Store) do
     text :store_name
@@ -79,7 +83,8 @@ class Store < ActiveRecord::Base
             "unique_id" => self.unique_id,
             "updated_at" => self.updated_at,
             "url" => self.url,
-            "business_hours" => self.business_hours
+            "business_hours" => self.business_hours,
+            "store_image" => self.store_icon
     }
   end  
 
