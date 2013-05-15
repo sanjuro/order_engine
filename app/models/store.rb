@@ -84,7 +84,7 @@ class Store < ActiveRecord::Base
             "unique_id" => self.unique_id,
             "updated_at" => self.updated_at,
             "url" => self.url,
-            "store_image" => self.store_icon
+            "store_image" => self.store_icon,
             "business_hours" => self.business_hours,
     }
   end  
@@ -113,7 +113,7 @@ class Store < ActiveRecord::Base
             "updated_at" => self.updated_at,
             "distance" => distance,
             "url" => self.url,
-            "store_image" => self.store_icon
+            "store_image" => self.store_icon,
             "business_hours" => self.business_hours
     }
   end    
