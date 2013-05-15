@@ -24,6 +24,7 @@ class Store < ActiveRecord::Base
   has_many :orders
   
   has_many :devices, :as => :deviceable
+  
   has_many :images, :as => :viewable, :order => :position
 
   has_and_belongs_to_many :tags, :join_table => 'stores_tags'
