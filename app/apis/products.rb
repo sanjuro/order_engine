@@ -1,6 +1,6 @@
 class Products < Grape::API
 
-# curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/products/1.json?authentication_token=CXTTTTED2ASDBSD3
+# curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/products/1.json?authentication_token=CXTTTTED2ASDBSD3
 # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/products/152/variants.json?authentication_token=CXTTTTED2ASDBSD3 -v
 # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/products/by_store?store_id=3&authentication_token=CXTTTTED2ASDBSD3
 # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/products/search?query=test&authentication_token=CXTTTTED2ASDBSD3
@@ -58,7 +58,8 @@ class Products < Grape::API
     end
     get "/:id" do 
       logger.info "Showing Product with ID: #{params[:id]}"
-      Product.find(params[:id])
+      product = Product.find(params[:id])
+      product.format_for_web_serivce
     end
 
     desc "Returns variants for a Product."

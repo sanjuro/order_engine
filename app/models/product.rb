@@ -233,6 +233,8 @@ class Product < ActiveRecord::Base
             "meta_description" => self.meta_description,
             "meta_keywords" => self.meta_keywords,
             "store_id" => self.store_id,
+            "unique_id" => self.store.unique_id,
+            "store_name" => self.store.store_name,
     }
   end    
 
