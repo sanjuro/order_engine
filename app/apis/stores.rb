@@ -14,8 +14,12 @@ class Stores < Grape::API
 
     desc "Retrieve all stores"
     get "/" do
-      logger.info "Retrieved all stores"
-      Store.all 
+      logger.info "Retrieved all stores"      
+      stores_return = Array.new
+      Store.all .each do |store|
+        stores_return << store.format_for_web_serivce
+      end
+      stores_return
     end
 
     desc "Retrieve all stores based on a group of store unique ids"
