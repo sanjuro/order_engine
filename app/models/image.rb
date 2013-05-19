@@ -9,8 +9,8 @@ class Image < Asset
   attr_accessible :alt, :attachment, :position, :viewable_type, :viewable_id
 
   has_attached_file :attachment,
-                    :styles => { :mini => '48x48>', :small => '100x100>', :product => '240x240>', :large => '600x600>' },
-                    :default_style => :product,
+                    :styles => { :mini => '36x36>', :little => '56x56>', :small => '100x100>', :large => '600x600>' },
+                    :default_style => :small,
                     :url =>  "/:id/:style/:basename.:extension",
                     :path => 'http://m.vosto.co.za/public/:viewable_type/:id/:style/:basename.:extension',
                     :convert_options => { :all => '-strip -auto-orient' }
@@ -30,6 +30,14 @@ class Image < Asset
   #used by admin products autocomplete
   def mini_url
     attachment.url(:mini, false)
+  end
+
+  def little_url
+    attachment.url(:little, false)
+  end
+
+  def small_url
+    attachment.url(:small, false)
   end
 
   def find_dimensions
