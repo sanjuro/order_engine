@@ -16,7 +16,7 @@ class Stores < Grape::API
     get "/" do
       logger.info "Retrieved all stores"      
       stores_return = Array.new
-      Store.all .each do |store|
+      Store.all.each do |store|
         stores_return << store.format_for_web_serivce
       end
       stores_return
@@ -35,7 +35,12 @@ class Stores < Grape::API
     get "/page/:page" do
       logger.info "Retrieved all stores paginated"
       @page = params[:page].to_i||30
-      Store.page(@page)
+      
+      stores_return = Array.new
+      Store.page(@page).each do |store|
+        stores_return << store.format_for_web_serivce
+      end
+      stores_return
     end
 
     desc "Search Stores with or without GPS"
