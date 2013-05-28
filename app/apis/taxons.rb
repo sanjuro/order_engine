@@ -5,7 +5,7 @@ class Taxons < Grape::API
   
   resource 'taxons' do
 
-    # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/taxons/1/products.json?authentication_token=AXSSSSED2ASDASD1
+    # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/taxons/34/products.json?authentication_token=AXSSSSED2ASDASD1
 
     desc "Retrieve all Taxons."
     get "/" do

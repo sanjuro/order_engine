@@ -10,7 +10,6 @@ RSpec::Core::RakeTask.new
 task :default => :spec
 task :test => :spec
 
-
 namespace :db do
   desc "loads database configuration in for other tasks to run"
   task :load_config do

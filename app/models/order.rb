@@ -292,6 +292,7 @@ class Order < ActiveRecord::Base
     line_items.each do |line_item|
       order_line_item = line_item
       order_line_item[:name] = line_item.variant.name
+      order_line_item[:quantity] = line_item.quantity 
       order_line_item[:description] = line_item.variant.description
       order_line_item[:sku] = line_item.variant.sku
       order_line_item[:option_values] = line_item.variant.options_text 
@@ -480,20 +481,22 @@ class Order < ActiveRecord::Base
 
   def send_new_order_notification
 
-    Notification.adapter = 'android'
+    # Notification.adapter = 'android'
 
-    message = Hash.new
-    message[:order_id] = self.id
-    message[:msg] = "new"
+    # message = Hash.new
+    # message[:order_id] = self.id
+    # message[:msg] = "new"
 
-    devices_stored = Array.new
+    # devices_stored = Array.new
 
-    # get all devices for the store
-    self.store.devices.each do |device|
-      devices_stored << device.device_token
-    end
+    # # get all devices for the store
+    # self.store.devices.each do |device|
+    #   devices_stored << device.device_token
+    # end
 
-    Notification.send(devices_stored, message)
+    # Notification.send(devices_stored, message)
+
+    Resque.enqueue(NotificationSender, self.id)
 
     p "Order Id:#{self.id}Sent store notification to In-Store Application."
 
