@@ -5,6 +5,8 @@ require 'yaml'
 require 'erb'
 require "rspec/core/rake_task"
 
+Dir[File.join(File.dirname(__FILE__), 'tasks/*.rake')].each { |rake| load rake }
+
 RSpec::Core::RakeTask.new
 
 task :default => :spec

@@ -2,8 +2,7 @@ class NotificationSender
   @queue = :notification_sender_queue
 
   def self.perform(order_id)
-  	
-
+  
     devices_stored = Array.new
 
     order = Order.find(order_id)
