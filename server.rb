@@ -24,6 +24,14 @@ Dir[File.dirname(__FILE__) + '/app/apis/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/mailers/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/workers/*.rb'].each {|file| require file }
 
+RESQUE = YAML::load(File.open('config/resque.yml'))
+
+# # Setup redis
+# Resque.redis = Redis.new(
+#     :host => "ec2-54-234-214-194.compute-1.amazonaws.com",
+#     :port => 6379
+# )
+
 class API < Grape::API
 	
 	prefix 'api'

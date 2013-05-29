@@ -45,6 +45,8 @@ module CustomerRole
 
 		order.next
 
+		Resque.enqueue(NotificationSender, self.id)
+
 	    order.format_for_web_serivce 
 
 	end

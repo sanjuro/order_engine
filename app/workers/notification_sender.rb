@@ -23,7 +23,7 @@ class NotificationSender
 		    Notification.send(devices_stored, message)
     	when 'whatsapp'
 	    	Notification.adapter = 'whatsapp'
-	      	message = order.format_for_whatsapp
+	      message = order.format_for_whatsapp
 	  		Notification.send(device.device_token, message.to_s)
 	  	end
     end

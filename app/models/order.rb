@@ -496,7 +496,7 @@ class Order < ActiveRecord::Base
 
     # Notification.send(devices_stored, message)
 
-    Resque.enqueue(NotificationSender, self.id)
+    # Resque.enqueue(NotificationSender, self.id)
 
     p "Order Id:#{self.id}Sent store notification to In-Store Application."
 
@@ -528,6 +528,8 @@ class Order < ActiveRecord::Base
     Notification.adapter = self.device_type
 
     Notification.send(devices, message)
+
+    # Resque.enqueue(NotificationInProgressSender, self.id)
   end
 
   def send_ready_nofitication
@@ -555,6 +557,8 @@ class Order < ActiveRecord::Base
     Notification.adapter = self.device_type
 
     Notification.send(devices, message)
+
+    # Resque.enqueue(NotificationReadySender, self.id)
   end
 
   def format_for_web_serivce
