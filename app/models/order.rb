@@ -481,20 +481,20 @@ class Order < ActiveRecord::Base
 
   def send_new_order_notification
 
-    # Notification.adapter = 'android'
+    Notification.adapter = 'android'
 
-    # message = Hash.new
-    # message[:order_id] = self.id
-    # message[:msg] = "new"
+    message = Hash.new
+    message[:order_id] = self.id
+    message[:msg] = "new"
 
-    # devices_stored = Array.new
+    devices_stored = Array.new
 
-    # # get all devices for the store
-    # self.store.devices.each do |device|
-    #   devices_stored << device.device_token
-    # end
+    # get all devices for the store
+    self.store.devices.each do |device|
+      devices_stored << device.device_token
+    end
 
-    # Notification.send(devices_stored, message)
+    Notification.send(devices_stored, message)
 
     # Resque.enqueue(NotificationSender, self.id)
 
