@@ -296,6 +296,7 @@ class Order < ActiveRecord::Base
       order_line_item[:description] = line_item.variant.description
       order_line_item[:sku] = line_item.variant.sku
       order_line_item[:option_values] = line_item.variant.options_text 
+      order_line_item[:special_instructions] = line_item.special_instructions
       order_line_items << order_line_item
     end
 
@@ -515,6 +516,10 @@ class Order < ActiveRecord::Base
     message = Hash.new
     message[:order_id] = self.id
     message[:msg] = "Your order: #{order_number} has been received and will be ready in #{self.time_to_ready} minutes."
+    message[:updated_at] = self.updated_at
+    message[:store_order_number] = self.store_order_number
+    message[:state] = self.state
+    message[:time_to_ready] = self.time_to_ready
 
     device = Device.find_by_device_identifier(self.device_identifier).first
 
