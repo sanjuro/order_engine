@@ -4,7 +4,7 @@ module Notification
   module Adapters
     module Ios
       extend self
-      def send(device_token, message)
+      def send(destination, message)
         APNS.host = 'gateway.push.apple.com'
         # gateway.sandbox.push.apple.com is default
 
@@ -18,8 +18,8 @@ module Notification
         # Just in case your pem need a password
 
         # must be an hash with all values you want inside you notification
-        APNS.send_notification(destination, message[:msg] )
-        APNS.send_notification(device_token, :alert => message[:msg],  :sound => 'default', 
+        # APNS.send_notification(destination, message[:msg] )
+        APNS.send_notification(destination, :alert => message[:msg],  :sound => 'default', 
                                         :other => {
                                           :data => {
                                             :ua => message[:updated_at], 

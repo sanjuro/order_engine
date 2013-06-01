@@ -482,22 +482,24 @@ class Order < ActiveRecord::Base
 
   def send_new_order_notification
 
-    # Notification.adapter = 'android'
+    # get all devices for the store
+    order.store.devices.each do |device|
+      case device.device_type
+      when 'android'
+        p "ORDER ID #{self.id}:Sending android notification"
 
-    # message = Hash.new
-    # message[:order_id] = self.id
-    # message[:msg] = "new"
+        message = Hash.new
+        message[:order_id] = self.id
+        message[:msg] = "new"
 
-    # devices_stored = Array.new
+        Resque.enqueue(NotificationAndroidSender, self.id, message)
+      when 'whatsapp'
+        p "ORDER ID #{self.id}:Sending whatsapp notification"
 
-    # # get all devices for the store
-    # self.store.devices.each do |device|
-    #   devices_stored << device.device_token
-    # end
-
-    # Notification.send(devices_stored, message)
-
-    Resque.enqueue(NotificationSender, self.id)
+        message[:msg] = order.format_for_whatsapp
+        Resque.enqueue(NotificationWhatsappSender, self.id, message)
+      end
+    end
 
     p "Order Id:#{self.id}Sent store notification to In-Store Application."
 
@@ -513,28 +515,34 @@ class Order < ActiveRecord::Base
       order_number = self.store_order_number
     end
 
-    message = Hash.new
-    message[:order_id] = self.id
-    message[:msg] = "Your order: #{order_number} has been received and will be ready in #{self.time_to_ready} minutes."
-    message[:updated_at] = self.updated_at
-    message[:store_order_number] = self.store_order_number
-    message[:state] = self.state
-    message[:time_to_ready] = self.time_to_ready
-
     device = Device.find_by_device_identifier(self.device_identifier).first
 
-    devices = Array.new
+    case device.device_type
+    when 'android'
+      logger.info "ORDER ID #{self.id}:Queueing android notification"
 
-    # get all devices for the store
-    devices << device.device_token
+      message = Hash.new
+      message[:order_id] = self.id
+      message[:msg] = "new"
+
+      Resque.enqueue(NotificationAndroidSender, self.id, message)
+    when 'ios'
+      logger.info "ORDER ID #{self.id}:Queueing ios notification"
+
+      message = Hash.new
+      message[:order_id] = self.id
+      message[:msg] = "Your order: #{order_number} has been received and will be ready in #{self.time_to_ready} minutes."
+      message[:updated_at] = self.updated_at
+      message[:store_order_number] = self.store_order_number
+      message[:state] = self.state
+      message[:time_to_ready] = self.time_to_ready
+
+      Resque.enqueue(NotificationIosSender, self.id, message)
+    else
+      logger.info "ORDER ID #{self.id}:Queueing non native notification"
+    end
 
     logger.info "Order Id:#{self.id}Sent in progress notification. Time to ready: #{self.time_to_ready}" 
-
-    Notification.adapter = self.device_type
-
-    Notification.send(devices, message)
-
-    # Resque.enqueue(NotificationInProgressSender, self.id)
   end
 
   def send_ready_nofitication
@@ -545,25 +553,37 @@ class Order < ActiveRecord::Base
       order_number = self.store_order_number
     end
 
-    message = Hash.new
-    message[:order_id] = self.id
-    message[:msg] = "Your order: #{store_order_number} is ready for collection at #{self.store.store_name}."
-
     device = Device.find_by_device_identifier(self.device_identifier).first
 
-    devices = Array.new
+    case device.device_type
+    when 'android'
+      logger.info "ORDER ID #{self.id}:Queueing android notification"
+
+      message = Hash.new
+      message[:order_id] = self.id
+      message[:msg] = "Your order: #{store_order_number} is ready for collection at #{self.store.store_name}."
+
+      Resque.enqueue(NotificationAndroidSender, self.id, message)
+    when 'ios'
+      logger.info "ORDER ID #{self.id}:Queueing ios notification"
+
+      message = Hash.new
+      message[:order_id] = self.id
+      message[:msg] = "Your order: #{store_order_number} is ready for collection at #{self.store.store_name}."
+      message[:updated_at] = self.updated_at
+      message[:store_order_number] = self.store_order_number
+      message[:state] = self.state
+      message[:time_to_ready] = self.time_to_ready
+
+      Resque.enqueue(NotificationIosSender, self.id, message)
+    else
+      logger.info "ORDER ID #{self.id}:Queueing non native notification"
+    end
 
     # get all devices for the store
-    # devices << "APA91bFX-US6bO_4AvYJNM5_cLf-v7klAqRob-9o8N13plxBBQutteXFnTbc8JbYvligGZRanJl8OYqcqOOlszHpRDW-It5SpfqdIfHDAPA63EdVqU7oX2W8zCZI3JDoEgLG5gFeTIC0qVl8iQw8KmYSEZXwJDmC_g"
-    devices << device.device_token
 
     logger.info "Order Id:#{self.id}Sent ready notification." 
 
-    Notification.adapter = self.device_type
-
-    Notification.send(devices, message)
-
-    # Resque.enqueue(NotificationReadySender, self.id)
   end
 
   def format_for_web_serivce
