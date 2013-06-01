@@ -5,7 +5,7 @@ class NotificationIosSender
 
     order = Order.find(order_id)
 
-    device = Device.find_by_device_identifier(order.device_identifier)
+    device = Device.find_by_device_identifier(order.device_identifier).first
 
     p "ORDER ID #{order_id}:Sending ios notification"
     
