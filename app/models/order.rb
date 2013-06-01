@@ -492,6 +492,7 @@ class Order < ActiveRecord::Base
         p "ORDER ID #{self.id}:Sending android notification"
 
         message[:order_id] = self.id
+        message[:subject] = "new order"
         message[:msg] = "new"
 
         Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
@@ -526,7 +527,8 @@ class Order < ActiveRecord::Base
       logger.info "ORDER ID #{self.id}:Queueing android notification"
 
       message[:order_id] = self.id
-      message[:msg] = "new"
+      message[:subject] = "in progress order"
+      message[:msg] = "Your order: #{order_number} has been received and will be ready in #{self.time_to_ready} minutes."
 
       Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
     when 'ios'
@@ -564,6 +566,7 @@ class Order < ActiveRecord::Base
       logger.info "ORDER ID #{self.id}:Queueing android notification"
 
       message[:order_id] = self.id
+      message[:subject] = "ready order"
       message[:msg] = "Your order: #{store_order_number} is ready for collection at #{self.store.store_name}."
 
       Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
