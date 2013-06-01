@@ -483,7 +483,7 @@ class Order < ActiveRecord::Base
   def send_new_order_notification
 
     # get all devices for the store
-    order.store.devices.each do |device|
+    self.store.devices.each do |device|
 
       message = Hash.new
 
@@ -498,7 +498,7 @@ class Order < ActiveRecord::Base
       when 'whatsapp'
         p "ORDER ID #{self.id}:Sending whatsapp notification"
 
-        message[:msg] = order.format_for_whatsapp
+        message[:msg] = self.format_for_whatsapp
         Resque.enqueue(NotificationWhatsappSender, self.id, message)
       end
     end
