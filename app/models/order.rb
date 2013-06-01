@@ -494,12 +494,12 @@ class Order < ActiveRecord::Base
         message[:order_id] = self.id
         message[:msg] = "new"
 
-        Resque.enqueue(NotificationAndroidSender, self.id, message)
+        Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
       when 'whatsapp'
         p "ORDER ID #{self.id}:Sending whatsapp notification"
 
         message[:msg] = self.format_for_whatsapp
-        Resque.enqueue(NotificationWhatsappSender, self.id, message)
+        Resque.enqueue(NotificationWhatsappSender, device.device_token, self.id, message)
       end
     end
 
@@ -528,7 +528,7 @@ class Order < ActiveRecord::Base
       message[:order_id] = self.id
       message[:msg] = "new"
 
-      Resque.enqueue(NotificationAndroidSender, self.id, message)
+      Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
     when 'ios'
       logger.info "ORDER ID #{self.id}:Queueing ios notification"
 
@@ -539,7 +539,7 @@ class Order < ActiveRecord::Base
       message[:state] = self.state
       message[:time_to_ready] = self.time_to_ready
 
-      Resque.enqueue(NotificationIosSender, self.id, message)
+      Resque.enqueue(NotificationIosSender, device.device_token, self.id, message)
     else
       logger.info "ORDER ID #{self.id}:Queueing non native notification"
     end
@@ -566,7 +566,7 @@ class Order < ActiveRecord::Base
       message[:order_id] = self.id
       message[:msg] = "Your order: #{store_order_number} is ready for collection at #{self.store.store_name}."
 
-      Resque.enqueue(NotificationAndroidSender, self.id, message)
+      Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
     when 'ios'
       logger.info "ORDER ID #{self.id}:Queueing ios notification"
 
@@ -577,7 +577,7 @@ class Order < ActiveRecord::Base
       message[:state] = self.state
       message[:time_to_ready] = self.time_to_ready
 
-      Resque.enqueue(NotificationIosSender, self.id, message)
+      Resque.enqueue(NotificationIosSender, device.device_token, self.id, message)
     else
       logger.info "ORDER ID #{self.id}:Queueing non native notification"
     end
