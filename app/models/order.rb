@@ -484,11 +484,13 @@ class Order < ActiveRecord::Base
 
     # get all devices for the store
     order.store.devices.each do |device|
+
+      message = Hash.new
+
       case device.device_type
       when 'android'
         p "ORDER ID #{self.id}:Sending android notification"
 
-        message = Hash.new
         message[:order_id] = self.id
         message[:msg] = "new"
 
@@ -517,11 +519,12 @@ class Order < ActiveRecord::Base
 
     device = Device.find_by_device_identifier(self.device_identifier).first
 
+    message = Hash.new
+
     case device.device_type
     when 'android'
       logger.info "ORDER ID #{self.id}:Queueing android notification"
 
-      message = Hash.new
       message[:order_id] = self.id
       message[:msg] = "new"
 
@@ -529,7 +532,6 @@ class Order < ActiveRecord::Base
     when 'ios'
       logger.info "ORDER ID #{self.id}:Queueing ios notification"
 
-      message = Hash.new
       message[:order_id] = self.id
       message[:msg] = "Your order: #{order_number} has been received and will be ready in #{self.time_to_ready} minutes."
       message[:updated_at] = self.updated_at
@@ -555,11 +557,12 @@ class Order < ActiveRecord::Base
 
     device = Device.find_by_device_identifier(self.device_identifier).first
 
+    message = Hash.new
+
     case device.device_type
     when 'android'
       logger.info "ORDER ID #{self.id}:Queueing android notification"
 
-      message = Hash.new
       message[:order_id] = self.id
       message[:msg] = "Your order: #{store_order_number} is ready for collection at #{self.store.store_name}."
 
@@ -567,7 +570,6 @@ class Order < ActiveRecord::Base
     when 'ios'
       logger.info "ORDER ID #{self.id}:Queueing ios notification"
 
-      message = Hash.new
       message[:order_id] = self.id
       message[:msg] = "Your order: #{store_order_number} is ready for collection at #{self.store.store_name}."
       message[:updated_at] = self.updated_at
