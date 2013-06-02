@@ -509,7 +509,7 @@ class Order < ActiveRecord::Base
 
         Notification.adapter = 'whatsapp'
        
-        Notification.send(destination, message[:msg].to_s)
+        Notification.send(device.device_token, message[:msg].to_s)
       end
     end
 
