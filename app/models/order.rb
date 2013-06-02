@@ -497,7 +497,7 @@ class Order < ActiveRecord::Base
 
         # Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
 
-        p "ORDER ID #{order_id}:Sending android notification"
+        p "ORDER ID #{self.id}:Sending android notification"
         
         Notification.adapter = 'android'
 
