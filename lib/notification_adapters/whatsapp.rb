@@ -8,11 +8,11 @@ module Notification
         # p message   
         if destination.kind_of?(Array)
           destination.each do |number|
-            command = "php #{RESQUE['root_dir']}/current/whatsapp/vosto_sender.php #{number} '#{message}'"     
+            command = "php /usr/share/vosto_order/current/whatsapp/vosto_sender.php #{number} '#{message}'"     
             system(command)          
           end
         else
-          command = "php #{RESQUE['root_dir']}/current/whatsapp/vosto_sender.php #{destination} '#{message}'"     
+          command = "php /usr/share/vosto_order/current/whatsapp/vosto_sender.php #{destination} '#{message}'"     
           system(command)
         end 
       end
