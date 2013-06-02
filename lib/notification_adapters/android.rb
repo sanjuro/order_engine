@@ -11,8 +11,8 @@ module Notification
         GCM.format = :json
         # :json is default and only available at the moment
         
-        # GCM.key = "AIzaSyBY1PsWU8QK-LAh7zgbbtzEHx3okUVbG_8" 
-        GCM.key = "AIzaSyDknsHTiNaGy17pnEldoWQ5E7ZqYa-3Vcs"
+        GCM.key = "AIzaSyBY1PsWU8QK-LAh7zgbbtzEHx3okUVbG_8" 
+        # GCM.key = "AIzaSyDknsHTiNaGy17pnEldoWQ5E7ZqYa-3Vcs"
         # GCM.key = "AIzaSyDTeqUmaRLyKn-odaePjksMoq-PFO2OHP8"
         
         # can be an string or an array of strings containing the regIds of the devices you want to send
