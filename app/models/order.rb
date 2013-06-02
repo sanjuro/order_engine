@@ -552,7 +552,7 @@ class Order < ActiveRecord::Base
       Notification.adapter = 'ios'
 
       Notification.send(destination, message)
-      
+
     else
       logger.info "ORDER ID #{self.id}:Queueing non native notification"
     end
@@ -636,6 +636,18 @@ class Order < ActiveRecord::Base
             "line_items" => self.get_line_items_with_variant_info
     }
 
+  end
+
+  def format_for_whatsapp
+    orders_return = "New VOSTO ORDER #{self.id} - Customer: #{self.customer.full_name}, #{self.customer.mobile_number} "
+    orders_return << "Order Number: #{self.id} "
+
+    line_items = self.get_line_items_with_variant_info
+    line_items.each do |line_item|
+      orders_return << "Item: #{line_item['quantity']} X #{line_item['name']}, Options: #{line_item['option_values']} Special Instructions: #{line_item['special_instructions']}"
+    end
+
+    orders_return
   end
 
   private
