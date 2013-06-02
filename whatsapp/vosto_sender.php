@@ -3,7 +3,7 @@
     require "whatsprot.class.php";
 
     $fromMobNumber = "27745532622"; //ENTER YOUR GOOGLEVOICENUMBER HERE
-    # $destinationPhone = "27833908314"; //ENTER YOUR OWN NUMBER HERE
+    # $fromMobNumber = "27833908314"; //ENTER YOUR OWN NUMBER HERE
     $destinationPhone = $argv[1];
     $message = $argv[2];
 
@@ -21,7 +21,7 @@
      * @param $message string The text message.
      */
     $w->Message($destinationPhone, $message);
-
+    
     /**
      * Wait for message delivery notification.
      */
