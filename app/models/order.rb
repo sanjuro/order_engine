@@ -539,7 +539,9 @@ class Order < ActiveRecord::Base
       message[:subject] = "in progress order"
       message[:msg] = "Your order: #{order_number} has been received and will be ready in #{self.time_to_ready} minutes."
 
-      Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
+      Notification.adapter = 'android'
+
+      Notification.send(device.device_token, message)
     when 'ios'
       logger.info "ORDER ID #{self.id}:Queueing ios notification"
 
@@ -550,7 +552,10 @@ class Order < ActiveRecord::Base
       message[:state] = self.state
       message[:time_to_ready] = self.time_to_ready
 
-      Resque.enqueue(NotificationIosSender, device.device_token, self.id, message)
+      Notification.adapter = 'ios'
+
+      Notification.send(destination, message)
+      
     else
       logger.info "ORDER ID #{self.id}:Queueing non native notification"
     end
@@ -578,7 +583,9 @@ class Order < ActiveRecord::Base
       message[:subject] = "ready order"
       message[:msg] = "Your order: #{store_order_number} is ready for collection at #{self.store.store_name}."
 
-      Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
+      Notification.adapter = 'android'
+
+      Notification.send(device.device_token, message)
     when 'ios'
       logger.info "ORDER ID #{self.id}:Queueing ios notification"
 
@@ -589,7 +596,9 @@ class Order < ActiveRecord::Base
       message[:state] = self.state
       message[:time_to_ready] = self.time_to_ready
 
-      Resque.enqueue(NotificationIosSender, device.device_token, self.id, message)
+      Notification.adapter = 'ios'
+
+      Notification.send(destination, message)
     else
       logger.info "ORDER ID #{self.id}:Queueing non native notification"
     end
