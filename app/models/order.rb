@@ -482,10 +482,10 @@ class Order < ActiveRecord::Base
 
   def send_new_order_notification
 
+    message = Hash.new  
+
     # get all devices for the store
     self.store.devices.each do |device|
-
-      message = Hash.new
 
       case device.device_type
       when 'android'
