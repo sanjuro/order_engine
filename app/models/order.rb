@@ -495,7 +495,13 @@ class Order < ActiveRecord::Base
         message[:subject] = "new order"
         message[:msg] = "new"
 
-        Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
+        # Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
+
+        p "ORDER ID #{order_id}:Sending android notification"
+        
+        Notification.adapter = 'android'
+
+        Notification.send(device.device_token, message)
       when 'whatsapp'
         p "ORDER ID #{self.id}:Sending whatsapp notification"
 
