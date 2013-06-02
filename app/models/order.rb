@@ -503,18 +503,13 @@ class Order < ActiveRecord::Base
 
         Notification.send(device.device_token, message)
       when 'whatsapp'
-        # p "ORDER ID #{self.id}:Sending whatsapp notification"
-
-        # message[:msg] = self.format_for_whatsapp
-
-        # Notification.adapter = 'whatsapp'
-       
-        # Notification.send(device.device_token, message[:msg].to_s)
-
         p "ORDER ID #{self.id}:Sending whatsapp notification"
 
         message[:msg] = self.format_for_whatsapp
-        Resque.enqueue(NotificationWhatsappSender, device.device_token, self.id, message)
+
+        Notification.adapter = 'whatsapp'
+       
+        Notification.send(device.device_token, message[:msg].to_s)
       end
     end
 
