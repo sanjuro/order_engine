@@ -27,7 +27,7 @@ class Image < Asset
   # Vosto::Image.attachment_definitions[:attachment][:default_url] = Vosto::Config[:attachment_default_url]
   # Vosto::Image.attachment_definitions[:attachment][:default_style] = Vosto::Config[:attachment_default_style]
 
-  #used by admin products autocomplete
+  # used by admin products autocomplete
   def mini_url
     attachment.url(:mini, false)
   end

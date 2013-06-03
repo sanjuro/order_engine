@@ -29,7 +29,7 @@ class SearchStoresWithGPSContext
         boost_fields :tag => 2.0
   		end   
 
-  		with(:location).near(latitude, longitude, :precision => 5)
+  		with(:location).near(latitude, longitude, :precision => 6)
       # with(:location).in_radius(latitude, longitude, 100, :bbox => true)
   		# order_by :unique_id, :desc
       order_by :location, :asc
