@@ -29,10 +29,10 @@ class SearchStoresWithGPSContext
         boost_fields :tag => 2.0
   		end   
 
-  		with(:location).near(latitude, longitude, :precision => 6)
-      # with(:location).in_radius(latitude, longitude, 100, :bbox => true)
+  		with(:location).near(latitude, longitude, :precision => 4, :bbox => true)
+      # with(:location).in_radius(latitude, longitude, 50, :bbox => true)
   		# order_by :unique_id, :desc
-      order_by :location, :asc
+      order_by :location, :desc
   		paginate :page => page, :per_page => 15
   	end
 
@@ -40,7 +40,10 @@ class SearchStoresWithGPSContext
 
   	stores_return = Array.new
   	search_results.each do |store|
-		  stores_return << store.format_for_web_serivce_with_gps(latitude,longitude)
+      distance = store.distance_to([latitude, longitude], :km).round(2)
+      if distance <= 25
+		    stores_return << store.format_for_web_serivce_with_gps(latitude,longitude)
+      end
   	end
   	stores_return
   end
