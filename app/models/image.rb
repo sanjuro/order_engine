@@ -1,4 +1,4 @@
-require '/usr/share/vosto_order/current/app/models/asset.rb'
+require File.dirname(__FILE__) +  '/asset.rb'
 
 class Image < Asset
   # validates_attachment_presence :attachment
@@ -27,17 +27,17 @@ class Image < Asset
   #used by admin products autocomplete
   def mini_url
     # attachment.url(:mini, false)
-    "/stores/#{id}/mini/#{attachment_file_name}"
+    "/#{id}/mini/#{attachment_file_name}"
   end
 
   def little_url
     # attachment.url(:little, false)
-    "/stores/#{id}/little/#{attachment_file_name}"
+    "/#{id}/little/#{attachment_file_name}"
   end
 
   def small_url
     # attachment.url(:small, false)
-    "/stores/#{id}/small/#{attachment_file_name}"
+    "/#{id}/small/#{attachment_file_name}"
   end
 
   # def find_dimensions
