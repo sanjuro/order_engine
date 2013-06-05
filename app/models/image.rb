@@ -1,6 +1,8 @@
+require '/usr/share/vosto_order/current/app/models/asset.rb'
+
 class Image < Asset
   # validates_attachment_presence :attachment
-  validate :no_attachment_errors
+  # validate :no_attachment_errors
 
   # attr_accessible :alt, :attachment, :position, :viewable_type, :viewable_id, :attachment_file_name
 

@@ -50,7 +50,7 @@ class Store < ActiveRecord::Base
   scope :by_unique_ids, lambda {|unique_id| where("stores.unique_id IN (?)", unique_id)} 
 
   def store_icon
-    self.images.first.attachment.url(:little, false)
+    self.images.first.little_url
   end
 
   Sunspot.setup(Store) do
