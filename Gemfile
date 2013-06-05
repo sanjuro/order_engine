@@ -39,8 +39,6 @@ gem 'bbpush'
 gem 'pushmeup'
 gem 'pusher'
 
-gem 'paperclip'
-
 gem 'resque'
 
 
