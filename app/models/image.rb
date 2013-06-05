@@ -27,17 +27,17 @@ class Image < Asset
   #used by admin products autocomplete
   def mini_url
     # attachment.url(:mini, false)
-    "m.vosto.co.za/#{viewable_type.pluralize}/#{id}/mini/#{attachment_file_name}"
+    "/stores/#{id}/mini/#{attachment_file_name}"
   end
 
   def little_url
     # attachment.url(:little, false)
-    "m.vosto.co.za/#{viewable_type.pluralize}/#{id}/little/#{attachment_file_name}"
+    "/stores/#{id}/little/#{attachment_file_name}"
   end
 
   def small_url
     # attachment.url(:small, false)
-    "m.vosto.co.za/#{viewable_type.pluralize}/#{id}/small/#{attachment_file_name}"
+    "/stores/#{id}/small/#{attachment_file_name}"
   end
 
   # def find_dimensions
