@@ -9,7 +9,7 @@ require 'kaminari/grape'
 require 'geocoder'
 require 'pusher'
 
-require 'resque'
+# require 'resque'
 
 require File.dirname(__FILE__) + '/database_configuration.rb'
 require File.dirname(__FILE__) + '/action_mailer_configuration.rb'
@@ -24,13 +24,13 @@ Dir[File.dirname(__FILE__) + '/app/apis/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/mailers/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/workers/*.rb'].each {|file| require file }
 
-RESQUE = YAML::load(File.open('config/resque.yml'))
+# RESQUE = YAML::load(File.open('config/resque.yml'))
 
-# Setup redis
-Resque.redis = Redis.new(
-    :host => RESQUE['host'],
-    :port => RESQUE['port']
-)
+# # Setup redis
+# Resque.redis = Redis.new(
+#     :host => RESQUE['host'],
+#     :port => RESQUE['port']
+# )
 
 class API < Grape::API
 	
@@ -85,6 +85,8 @@ class API < Grape::API
 	    end
 	end
 
+	mount Addresses
+
 	mount Customers
 
 	mount Devices
@@ -98,6 +100,8 @@ class API < Grape::API
 	mount Stores
 
 	mount StoreUsers
+
+	mount Suburbs
 
 	mount Tags
 

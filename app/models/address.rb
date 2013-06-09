@@ -9,8 +9,11 @@ class Address < ActiveRecord::Base
 
   attr_accessible :firstname, :lastname, :address1, :address2,
                   :city, :zipcode, :country_id, :state_id,
-                  :country, :state, :phone, :state_name,
-                  :company, :alternative_phone
+                  :country, :state, :phone, :state_name, 
+                  :company, :alternative_phone, :latitude, :longitude
+
+  reverse_geocoded_by :latitude, :longitude
+  after_validation :reverse_geocode 
 
   # Disconnected since there's no code to display error messages yet OR matching client-side validation
   def phone_validate
