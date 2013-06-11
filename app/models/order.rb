@@ -554,7 +554,7 @@ class Order < ActiveRecord::Base
 
       Notification.adapter = 'ios'
 
-      Notification.send(destination, message)
+      Notification.send(device.device_token, message)
 
     else
       logger.info "ORDER ID #{self.id}:Queueing non native notification"
@@ -598,7 +598,7 @@ class Order < ActiveRecord::Base
 
       Notification.adapter = 'ios'
 
-      Notification.send(destination, message)
+      Notification.send(device.device_token, message)
     else
       logger.info "ORDER ID #{self.id}:Queueing non native notification"
     end

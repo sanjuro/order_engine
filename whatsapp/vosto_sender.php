@@ -20,12 +20,14 @@
      * @param $destinationPhone string The reciepient to send.
      * @param $message string The text message.
      */
-    $w->Message($destinationPhone, $message);
-    
+     $w->Message($destinationPhone, $message);
+     
+    exit;
+
     /**
      * Wait for message delivery notification.
      */
-    $w->WaitforReceipt();
+     $w->WaitforReceipt();
 
     exit;
 ?>

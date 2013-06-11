@@ -11,7 +11,7 @@ module Notification
         APNS.port = 2195
         # this is also the default. Shouldn't ever have to set this, but just in case Apple goes crazy, you can.
 
-        APNS.pem  = '/usr/share/vosto_order/shared/apns_production.pem'
+        APNS.pem  = '/usr/share/vosto_order/shared/cert.pem'
         # this is the file you just created
 
         APNS.pass = ''
