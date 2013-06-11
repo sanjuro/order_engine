@@ -122,7 +122,7 @@ class Orders < Grape::API
       logger.info "Authenticated User: #{current_user.full_name}"
       order = Order.find(params[:id])
      
-      if order.device_type.eql?('android')
+      if !order.device_type.eql?('web')
          order.send_ready_nofitication 
       end
 
