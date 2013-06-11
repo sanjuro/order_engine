@@ -10,7 +10,8 @@ module Notification
 
         APNS.port = 2195
         # this is also the default. Shouldn't ever have to set this, but just in case Apple goes crazy, you can.
-
+        
+        # APNS.pem = '/Users/macbookpro/Sites/vosto_order/cert.pem'
         APNS.pem  = '/usr/share/vosto_order/shared/cert.pem'
         # this is the file you just created
 
