@@ -519,8 +519,6 @@ class Order < ActiveRecord::Base
 
   def send_in_progress_nofitication
 
-    order_number = nil
-
     if self.store_order_number.nil?
       order_number = self.number
     else
