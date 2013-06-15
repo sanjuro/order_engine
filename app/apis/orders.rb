@@ -110,16 +110,27 @@ class Orders < Grape::API
         if !order.device_type.eql?('ios')
         order.send_in_progress_nofitication 
         else
-        message[:order_id] = self.id
-        message[:msg] = "Your order: #{store_order_number} has been received and will be ready in #{self.time_to_ready} minutes."
-        message[:updated_at] = self.updated_at
-        message[:store_order_number] = self.store_order_number
-        message[:state] = self.state
-        message[:time_to_ready] = self.time_to_ready
+          
+          if order.store_order_number.nil?
+            order_number = order.number
+          else
+            order_number = order.store_order_number
+          end
 
-        Notification.adapter = 'ios'
+          device = Device.find_by_device_identifier(order.device_identifier).first
 
-        Notification.send(device.device_token, message)
+          message = Hash.new
+
+          message[:order_id] = order.id
+          message[:msg] = "Your order: #{store_order_number} has been received and will be ready in #{order.time_to_ready} minutes."
+          message[:updated_at] = order.updated_at
+          message[:store_order_number] = order.store_order_number
+          message[:state] = order.state
+          message[:time_to_ready] = order.time_to_ready
+
+          Notification.adapter = 'ios'
+
+          Notification.send(device.device_token, message)
         end
       end
 
