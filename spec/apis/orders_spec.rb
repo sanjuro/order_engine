@@ -43,7 +43,8 @@ describe Orders do
 
     context "GIVEN viewing a single order" do
 
-        order = Order.all.first
+        order = Order.find(1287)
+        p order
         it 'should return a 200 and the requested order number' do
           get "/api/v1/orders/#{order.id}.json?authentication_token=CXTTTTED2ASDBSD3"
           last_response.status.should == 200
@@ -55,6 +56,12 @@ describe Orders do
           get "/api/v1/orders/#{order.id}.json?authentication_token=CXTTTTED2ASDBSD3"
           retrieved_order = JSON.parse(last_response.body)
           retrieved_order["line_items"].count.should >= 1
+        end
+
+        it 'should return the shipping address if one is attached' do
+          get "/api/v1/orders/#{order.id}.json?authentication_token=CXTTTTED2ASDBSD3"
+          retrieved_order = JSON.parse(last_response.body)
+          retrieved_order["address"].count.should >= 1
         end
       end
 

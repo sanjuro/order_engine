@@ -1,5 +1,3 @@
-require_dependency 'calculator'
-
 class Calculator::ZoneRate < Calculator
   # preference :amount, :decimal, :default => 0
   attr_accessible :amount
@@ -9,6 +7,16 @@ class Calculator::ZoneRate < Calculator
   end
 
   def compute(object=nil)
-    0
+  	if object.is_a?(Order)
+  		order = object
+    	store = order.store
+    	ship_address = order.ship_address
+  	else
+  		store = object[:store]
+  		ship_address = object[:address]
+  	end
+
+    shipping_zone = ship_address.get_zone('suburb',store.id)
+    ZonesRates.get_rate(shipping_zone.id,store.id)	
   end
 end

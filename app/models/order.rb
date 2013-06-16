@@ -6,6 +6,8 @@ class Order < ActiveRecord::Base
   STATUS_CART = 'cart'
   STATUS_CONFIRM = 'confirm'
   STATUS_COMPLETE = 'complete'
+  SHIPPING_METHOD_TYPE_DELIVERY = 2
+
   
   attr_accessible :store_id, :line_items, :bill_address_attributes, :ship_address_attributes, :payments_attributes, :invoice_attributes, 
                   :line_items_attributes, :number, :item_total, :total, :state, :credit_total, :user_id, :is_delivery, 
@@ -303,6 +305,11 @@ class Order < ActiveRecord::Base
     return order_line_items
   end
 
+  def get_delivery_address
+    return ship_address.address_hash unless self.ship_address.nil?
+    nil
+  end
+
   # Indicates whether or not the user is allowed to proceed to checkout.  Currently this is implemented as a
   # check for whether or not there is at least one LineItem in the Order.  Feel free to override this logic
   # in your own application if you require additional steps before allowing a checkout.
@@ -382,6 +389,11 @@ class Order < ActiveRecord::Base
   def available_shipping_methods(display_on = nil)
     return [] unless ship_address
     ShippingMethod.all_available(self, display_on)
+  end
+
+  def self.available_delivery_methods(store_id)
+    # return [] unless ship_address
+    ShippingMethod.where('store_id = ?', store_id).where('shipping_method_type_id = ?', SHIPPING_METHOD_TYPE_DELIVERY).first
   end
 
   def rate_hash
@@ -625,6 +637,7 @@ class Order < ActiveRecord::Base
             "state" => self.state,
             "store_id" => self.store_id,
             "store_order_number" => self.store_order_number,
+            "is_delivery" => self.is_delivery,
             "total" => self.total,
             "updated_at" => self.updated_at,
             "user" => { 
@@ -634,7 +647,8 @@ class Order < ActiveRecord::Base
                 "email" => self.customer.email,
                 "mobile_number" => self.customer.mobile_number,
                 },
-            "line_items" => self.get_line_items_with_variant_info
+            "line_items" => self.get_line_items_with_variant_info,
+            "address" => self.get_delivery_address
     }
 
   end

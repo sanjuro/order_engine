@@ -62,6 +62,9 @@ class Store < ActiveRecord::Base
     # string(:location, :as => :location) { [lat,lng].join(",") }
   end
 
+  def get_shipping_method_for_delivery
+    ShippingMethod.where('store_id = ?', self.id).where('shipping_method_type_id = 2')
+  end
 
   def format_for_web_serivce
     store_return = Hash.new

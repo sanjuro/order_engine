@@ -1,5 +1,3 @@
-require_dependency 'calculator'
-
 class Calculator::FreeRate < Calculator
   # preference :amount, :decimal, :default => 0
   attr_accessible :amount

@@ -1,19 +1,20 @@
 class Address < ActiveRecord::Base
   belongs_to :country
+  belongs_to :suburb
   belongs_to :state
 
   has_many :shipments
 
-  validates :firstname, :lastname, :address1, :city, :zipcode, :country, :phone, :presence => true
+  validates :address1, :city, :zipcode, :presence => true
   validate :state_validate
 
   attr_accessible :firstname, :lastname, :address1, :address2,
-                  :city, :zipcode, :country_id, :state_id,
+                  :city, :zipcode, :country_id, :state_id, :suburb_id,
                   :country, :state, :phone, :state_name, 
                   :company, :alternative_phone, :latitude, :longitude
 
   reverse_geocoded_by :latitude, :longitude
-  after_validation :reverse_geocode 
+  # after_validation :reverse_geocode 
 
   # Disconnected since there's no code to display error messages yet OR matching client-side validation
   def phone_validate
@@ -35,6 +36,10 @@ class Address < ActiveRecord::Base
 
   def full_name
     "#{firstname} #{lastname}".strip
+  end
+
+  def suburb_text
+    suburb.nil? ? state_name : suburb.name 
   end
 
   def state_text
@@ -69,12 +74,32 @@ class Address < ActiveRecord::Base
     attributes.except('id', 'created_at', 'updated_at', 'order_id', 'country_id').all? { |_, v| v.nil? }
   end
 
+  def get_zone(zone_type, store_id)
+    zone_member = ZoneMember.joins('LEFT OUTER JOIN zones ON zone_members.zone_id = zones.id')
+    .where('zoneable_id = ?', self.suburb_id)
+    .where('zoneable_type = ?', zone_type).first
+    zone_member.zone
+  end
+
   # Generates an ActiveMerchant compatible address hash
   def active_merchant_hash
     {
       :name => full_name,
       :address1 => address1,
       :address2 => address2,
+      :city => city,
+      :state => state_text,
+      :zip => zipcode,
+      :country => country.try(:iso),
+      :phone => phone
+    }
+  end
+
+  def address_hash
+    { 
+      :address1 => address1,
+      :address2 => address2,
+      :suburb => suburb_text,
       :city => city,
       :state => state_text,
       :zip => zipcode,
