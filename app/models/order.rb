@@ -8,6 +8,8 @@ class Order < ActiveRecord::Base
   STATUS_COMPLETE = 'complete'
   SHIPPING_METHOD_TYPE_DELIVERY = 2
 
+  VOSTO_ORDER_MANAGER_ID = 9999999999
+
   
   attr_accessible :store_id, :line_items, :bill_address_attributes, :ship_address_attributes, :payments_attributes, :invoice_attributes, 
                   :line_items_attributes, :number, :item_total, :total, :state, :credit_total, :user_id, :is_delivery, 
@@ -525,7 +527,13 @@ class Order < ActiveRecord::Base
       end
     end
 
-    p "Order Id:#{self.id}Sent store notification to In-Store Application."
+    # send pusher notification for mobi site
+    Pusher.app_id = '37591'
+    Pusher.key = 'be3c39c1555da94702ec'
+    Pusher.secret = 'deae8cae47a1c88942e1'
+    Pusher['order'].trigger('new_order_event', {:user_id => VOSTO_ORDER_MANAGER_ID,:message => "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}."})
+
+    p "Order Id#{self.id}:Sent store notification to In-Store Application."
 
   end
 
@@ -615,7 +623,7 @@ class Order < ActiveRecord::Base
 
     # get all devices for the store
 
-    logger.info "Order Id:#{self.id}Sent ready notification." 
+    logger.info "Order Id #{self.id}:Sent ready notification." 
 
   end
 
@@ -659,7 +667,7 @@ class Order < ActiveRecord::Base
 
     line_items = self.get_line_items_with_variant_info
     line_items.each do |line_item|
-      orders_return << "Item: #{line_item['quantity']} X #{line_item['name']}, Options: #{line_item['option_values']} Special Instructions: #{line_item['special_instructions']}"
+      orders_return << "Item: #{line_item['quantity']} X #{line_item['name']}, Options: #{line_item['option_values']} Special Instructions: #{line_item['special_instructions']}, "
     end
 
     orders_return
