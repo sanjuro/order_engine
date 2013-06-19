@@ -465,6 +465,14 @@ class Order < ActiveRecord::Base
       :name           => 'order' ,
       :user_id        => self.user_id
     }, :without_protection => true)
+
+    # send pusher notification to order manager
+    Pusher.app_id = '37591'
+    Pusher.key = 'be3c39c1555da94702ec'
+    Pusher.secret = 'deae8cae47a1c88942e1'
+    Pusher['order'].trigger('new_order_event', {:user_id => VOSTO_ORDER_MANAGER_ID,:message => "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}."})
+
+    p "Order Id#{self.id}:Sent store notification to In-Store Application."
   end
 
   def deliver_order_confirmation_email(recipient)
@@ -526,14 +534,6 @@ class Order < ActiveRecord::Base
         Notification.send(device.device_token, message[:msg].to_s)
       end
     end
-
-    # send pusher notification for mobi site
-    Pusher.app_id = '37591'
-    Pusher.key = 'be3c39c1555da94702ec'
-    Pusher.secret = 'deae8cae47a1c88942e1'
-    Pusher['order'].trigger('new_order_event', {:user_id => VOSTO_ORDER_MANAGER_ID,:message => "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}."})
-
-    p "Order Id#{self.id}:Sent store notification to In-Store Application."
 
   end
 
