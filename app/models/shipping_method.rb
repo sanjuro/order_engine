@@ -15,7 +15,7 @@ class ShippingMethod < ActiveRecord::Base
   calculated_adjustments
 
   def adjustment_label
-    I18n.t(:shipping)
+    self.name
   end
 
   def available?(order, display_on = nil)

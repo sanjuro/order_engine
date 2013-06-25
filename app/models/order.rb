@@ -261,12 +261,13 @@ class Order < ActiveRecord::Base
 
     shipments.each { |shipment| shipment.update!(self) }#(&:update!)
     update_shipment_state
+
     update_adjustments   
 
     # give each of the shipments a chance to update themselves
     # update totals a second time in case updated adjustments have an effect on the total
     update_totals
-
+  
     update_attributes({
       :payment_state => payment_state,
       :item_total => item_total,
@@ -274,7 +275,6 @@ class Order < ActiveRecord::Base
       :payment_total => payment_total,
       :total => total
     })
-
   end
 
   # Function to process payments
@@ -374,6 +374,7 @@ class Order < ActiveRecord::Base
                                         :shipping_method => shipping_method,
                                         :address => self.ship_address}, :without_protection => true)
    end
+    
   end
 
   def name
@@ -383,7 +384,7 @@ class Order < ActiveRecord::Base
   end
 
   def can_ship?
-    self.complete?
+    true
   end 
 
   # Helper methods for checkout steps
@@ -450,7 +451,7 @@ class Order < ActiveRecord::Base
     # update payment and shipment(s) states, and save
     # update_payment_state
     shipments.each { |shipment| shipment.update!(self) }
-    update_shipment_state
+      update_shipment_state
     save
 
     send_new_order_notification
@@ -646,6 +647,7 @@ class Order < ActiveRecord::Base
             "store_id" => self.store_id,
             "store_order_number" => self.store_order_number,
             "is_delivery" => self.is_delivery,
+            "delivery_total" => self.ship_total,
             "total" => self.total,
             "updated_at" => self.updated_at,
             "user" => { 
@@ -656,7 +658,7 @@ class Order < ActiveRecord::Base
                 "mobile_number" => self.customer.mobile_number,
                 },
             "line_items" => self.get_line_items_with_variant_info,
-            "address" => self.get_delivery_address
+            "address" => self.get_delivery_address            
     }
 
   end

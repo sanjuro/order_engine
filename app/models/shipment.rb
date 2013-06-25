@@ -112,9 +112,9 @@ class Shipment < ActiveRecord::Base
   # ready      all other cases
   def determine_state(order)
     return 'pending' unless order.can_ship?
-    return 'pending' if inventory_units.any? &:backordered?
+    # return 'pending' if inventory_units.any? &:backordered?
     return 'shipped' if state == 'shipped'
-    order.paid? ? 'ready' : 'pending'
+    # order.paid? ? 'ready' : 'pending'
   end
 
   private
@@ -129,7 +129,7 @@ class Shipment < ActiveRecord::Base
     end
 
     def description_for_shipping_charge
-      "#{I18n.t(:shipping)} (#{shipping_method.name})"
+      "(#{shipping_method.name})"
     end
 
     def validate_shipping_method
@@ -158,13 +158,14 @@ class Shipment < ActiveRecord::Base
       ShipmentMailer.shipped_email(self).deliver
     end
 
-    def ensure_correct_adjustment
+    def ensure_correct_adjustment       
       if adjustment
         adjustment.originator = shipping_method
         adjustment.label = shipping_method.adjustment_label
         adjustment.save
       else
-        shipping_method.create_adjustment(shipping_method.adjustment_label, order, self, true)
+        # shipping_method.create_adjustment(shipping_method.adjustment_label, order, self, true)
+        shipping_method.create_adjustment(shipping_method.adjustment_label, order, order, true)
         reload #ensure adjustment is present on later saves
       end
     end

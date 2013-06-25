@@ -7,6 +7,8 @@ require 'bcrypt'
 
 module CustomerRole
 
+  SHIPPING_METHOD_TYPE_DELIVERY = 2
+
 	# Function to create a new order
 	#
 	# * *Args*    :
@@ -17,6 +19,7 @@ module CustomerRole
 	#   - 
 	#
 	def create_new_order(order_data)
+
 		# find store
 		# store = Store.by_unique_id(order_data.unique_id)
 		store = Store.by_unique_id(order_data[:unique_id]).first
@@ -26,6 +29,7 @@ module CustomerRole
 							:store_id => store.id,
 							:user_id => self.id,
 							:state => 'confirm',
+							:is_delivery => order_data[:is_delivery],
 							:device_identifier => order_data[:device_identifier],
 							:device_type => order_data[:device_type],
 							:store_order_number => order_data[:store_order_number]
@@ -42,6 +46,36 @@ module CustomerRole
 		end
 
 		order.save!
+
+		if !order_data[:ship_address].nil?
+
+			shipping_method = ShippingMethod.where('store_id = ?', store.id).where('shipping_method_type_id = ?', SHIPPING_METHOD_TYPE_DELIVERY).first
+
+			order.shipping_method = shipping_method
+
+			shipping_data = order_data[:ship_address][0]
+
+			state = State.find(shipping_data.state_id)
+
+			ship_address = Address.create(
+							:address1 => shipping_data.address1,
+							:address2 => shipping_data.address2,
+							:city => shipping_data.city,
+							:zipcode => shipping_data.zipcode,
+							:country_id => state.country_id,
+							:suburb_id => shipping_data.suburb_id,
+							:latitude => shipping_data.latitude,
+							:longitude => shipping_data.longitude,
+							:state_id => state.id,
+							:state_name => state.name
+							)
+			
+			order.ship_address = ship_address
+			order.save!
+
+			order.create_shipment!
+			
+		end
 
 		order.next
 

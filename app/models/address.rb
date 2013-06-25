@@ -113,7 +113,7 @@ class Address < ActiveRecord::Base
     def state_validate
       # Skip state validation without country (also required)
       # or when disabled by preference
-
+       
       # ensure associated state belongs to country
       if state.present?
         if state.country == country

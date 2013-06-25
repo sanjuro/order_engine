@@ -10,8 +10,8 @@ class Addresses < Grape::API
 
     desc "Get Address from Coordinates."
     params do
-      requires :latitude, :type => String, :desc => "Store id."
-      requires :longitude, :type => String, :desc => "Store id."
+      requires :latitude, :type => String, :desc => "Latitude."
+      requires :longitude, :type => String, :desc => "Longitude."
     end
     post "/get_address" do
       logger.info "Getting Address for Coordinates #{params.latitude} : #{params.longitude} "
