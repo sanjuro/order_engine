@@ -15,7 +15,8 @@ class Addresses < Grape::API
     end
     post "/get_address" do
       logger.info "Getting Address for Coordinates #{params.latitude} : #{params.longitude} "
-      Geocoder.address([params.latitude,params.longitude])
+      # result = Geocoder.geocode([params.latitude,params.longitude])
+      GetAddressFromCoordsContext.call(params.latitude,params.longitude)
     end
 
     desc "Get Delivery cost for an address based on the store"
