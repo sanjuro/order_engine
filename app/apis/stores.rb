@@ -17,7 +17,9 @@ class Stores < Grape::API
       logger.info "Retrieved all stores"      
       stores_return = Array.new
       Store.all.each do |store|
-        stores_return << store.format_for_web_serivce
+        if store.id != 15
+          stores_return << store.format_for_web_serivce
+        end
       end
       stores_return
     end
@@ -38,7 +40,9 @@ class Stores < Grape::API
       
       stores_return = Array.new
       Store.page(@page).each do |store|
-        stores_return << store.format_for_web_serivce
+        if store.id != 15
+          stores_return << store.format_for_web_serivce
+        end
       end
       stores_return
     end
