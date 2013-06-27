@@ -14,7 +14,7 @@ module Notification
         else
           # p "php /Users/macbookpro/Sites/vosto_order/whatsapp/vosto_sender.php #{destination} '#{message}'" 
           # command = "php /Users/macbookpro/Sites/vosto_order/whatsapp/vosto_sender.php #{destination} '#{message}'"  
-          # command = "php /usr/share/vosto_order/current/whatsapp/vosto_sender.php #{destination} '#{message}'"   
+          command = "php /usr/share/vosto_order/current/whatsapp/vosto_sender.php #{destination} '#{message}'"   
           system(command)
         end 
       end
