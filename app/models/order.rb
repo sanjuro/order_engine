@@ -665,7 +665,6 @@ class Order < ActiveRecord::Base
 
   def format_for_whatsapp
     orders_return = "New VOSTO ORDER #{self.id} - Customer: #{self.customer.full_name}, #{self.customer.mobile_number} "
-    orders_return << "Order Number: #{self.id} "
 
     line_items = self.get_line_items_with_variant_info
     line_items.each do |line_item|

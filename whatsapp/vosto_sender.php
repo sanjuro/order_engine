@@ -1,5 +1,5 @@
 <?php
-    #  php vosto_sender.php "27833908314" "New VOSTO ORDER  Customer: Shadley Wentzel, 0833908314  Order: #123, Collection Spurs Famous Pork Ribs 1 X 89.95"
+    #  php vosto_sender.php 27833908314 "New VOSTO ORDER 1705 - Customer: Shadley Wentzel, 0833908314 Order Number: 1705 Item: 4 X Vosto Burger, Options:  Special Instructions: test,"
     #  php vosto_sender.php "0722158889" "Test"
     require "whatsprot.class.php";
 
