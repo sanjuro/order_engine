@@ -98,6 +98,8 @@ class API < Grape::API
 
 	mount Products
 
+	mount States
+
 	mount Stores
 
 	mount StoreUsers

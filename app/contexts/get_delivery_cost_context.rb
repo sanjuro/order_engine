@@ -17,9 +17,9 @@ class GetDeliveryCostContext
   def call
     # convert query terms
     store_id = @store_id
-
+   
     shipping_method = Order.available_delivery_methods(store_id)
- 
+
     shipping_data = Hash.new
     shipping_address = Address.create(
                 :address1 => address.address1,
