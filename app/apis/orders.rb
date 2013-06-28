@@ -9,8 +9,8 @@ class Orders < Grape::API
     # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/orders/1751?authentication_token=b5a27178456753ba773d83666d276631 -v 
     # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/orders/1287?authentication_token=b5a27178456753ba773d83666d276631 -v 
     # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4", "time_to_ready": "15", "store_order_number": "6666"}' http://107.22.211.58:9000/api/v1/orders/1544/in_progress -v 
-    # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4", "time_to_ready": "15", "store_order_number": "6666"}' http://107.22.211.58:9000/api/v1/orders/1544/ready -v 
-    # curl -i -X POST -d '{"authentication_token":"d1b01126294db97ad5588aa50ae90952","order":{"unique_id":"vos0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "0D22FA0B-6682-43D5-8141-D70D90A8874E", "device_type": "ios", "store_order_number": "6465", "line_items":[{"variant_id":"1379","quantity":"1","special_instructions": "test"}]}}' http://107.22.211.58:9000/api/v1/orders -v
+    # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4", "time_to_ready": "15", "store_order_number": "6666"}' http://127.0.0.1:9000/api/v1/orders/1696/ready -v 
+    # curl -i -X POST -d '{"authentication_token":"d1b01126294db97ad5588aa50ae90952","order":{"unique_id":"spu0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "store_order_number": "6465", "line_items":[{"variant_id":"1379","quantity":"1","special_instructions": "test"}]}}' http://107.22.211.58:9000/api/v1/orders -v
     # curl -i -X POST -d '{"authentication_token":"b5a27178456753ba773d83666d276631","order":{"unique_id":"vos0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "is_delivery": "1","shipping_method_id": "2", "ship_address": [{"address1": "31 Ricketts Street","address2": "De Tyger","suburb_id": "1","city": "cape town", "state_id":"1061493587", "zipcode": "7500", "country_id": "187","latitude": "-33.960905", "longitude": "18.470102"}],"store_order_number": "6465", "line_items":[{"variant_id":"1379","quantity":"1","special_instructions": "test"}]}}' http://127.0.0.1:9000/api/v1/orders -v
     # curl -i -X POST -d '{"authentication_token":"b5a27178456753ba773d83666d276631","order":{"unique_id":"vos0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "is_delivery": "0", "line_items":{"variant_id":"1379","quantity":"1","special_instructions": "test"}}}' http://127.0.0.1:9000/api/v1/orders -v
 
@@ -107,8 +107,18 @@ class Orders < Grape::API
         order.time_to_ready = params[:time_to_ready]
         order.save!
 
-      if !order.device_type.eql?('web')        
+
+      # if !order.device_type.eql?('web')        
+      #   order.send_in_progress_nofitication 
+      # end
+      p 'asd'
+      case order.device_type
+      when 'android'
+      when 'ios'
         order.send_in_progress_nofitication 
+      when 'web'
+      when 'blackberry' 
+        logger.info "No In progress notification Order with ID: #{params[:id]}"
       end
 
       UpdateOrderInProgressContext.call(current_user, order, params[:time_to_ready]) 
