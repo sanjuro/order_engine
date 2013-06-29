@@ -8,7 +8,7 @@ class Store < ActiveRecord::Base
 
 	attr_accessible :store_name, :unique_id, :store_description, :address, :email, :latitude, :longitude, 
 					        :manager_name, :manager_contact, :is_online, :created_at, :completed_at, :updated_at, 
-                  :fanpage_id, :tag, :business_hours_attributes
+                  :fanpage_id, :tag, :business_hours_attributes, :is_featured
 
   geocoded_by :address, :latitude => :latitude, :longitude => :longitude
   after_validation :geocode, :if => :address_changed?
@@ -48,6 +48,7 @@ class Store < ActiveRecord::Base
   scope :by_fanpage_id, lambda {|fanpage_id| where("stores.fanpage_id = ?", fanpage_id)} 
   scope :by_unique_id, lambda {|unique_id| where("stores.unique_id = ?", unique_id)} 
   scope :by_unique_ids, lambda {|unique_id| where("stores.unique_id IN (?)", unique_id)} 
+  scope :featured_stores,  where("stores.is_featured = 1")
 
   def store_icon
     self.images.first.little_url
