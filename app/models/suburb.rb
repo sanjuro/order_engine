@@ -3,7 +3,7 @@ class Suburb < ActiveRecord::Base
 
   validates :state, :name, :presence => true
 
-  attr_accessible :name
+  attr_accessible :name, :state_id
 
   def self.find_all_by_name(name)
     where('name = ?', name)

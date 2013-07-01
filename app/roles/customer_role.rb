@@ -46,7 +46,7 @@ module CustomerRole
 		end
 
 		order.save!
-
+		
 		if !order_data[:ship_address].nil?
 
 			shipping_method = ShippingMethod.where('store_id = ?', store.id).where('shipping_method_type_id = ?', SHIPPING_METHOD_TYPE_DELIVERY).first
@@ -55,7 +55,9 @@ module CustomerRole
 
 			shipping_data = order_data[:ship_address][0]
 
-			state = State.find(shipping_data.state_id)
+			suburb = Suburb.find(shipping_data.suburb_id)
+
+			state = State.find(suburb,state_id)
 
 			ship_address = Address.create(
 							:address1 => shipping_data.address1,
