@@ -30,7 +30,5 @@ class GetAddressFromCoordsContext
             "city" => geo.city,
             "country" => geo.country,
           }
-
-    p address
   end
 end
