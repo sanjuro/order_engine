@@ -89,7 +89,7 @@ class Store < ActiveRecord::Base
             "updated_at" => self.updated_at,
             "url" => self.url,
             "store_image" => self.store_icon,
-            "business_hours" => self.business_hours,
+            "business_hours" => self.get_business_hour_info
     }
   end  
 
@@ -118,7 +118,21 @@ class Store < ActiveRecord::Base
             "distance" => distance,
             "url" => self.url,
             "store_image" => self.store_icon,
-            "business_hours" => self.business_hours
+            "business_hours" => self.get_business_hour_info
     }
   end    
+
+  def get_business_hour_info
+    business_hours_return = Array.new
+
+    self.business_hours.each do |business_hour|
+      business_hour_item = Hash.new
+      business_hour_item[:open_time] = business_hour.open_time
+      business_hour_item[:close_time] = business_hour.close_time 
+      business_hour_item[:day] = business_hour.day
+      business_hours_return << business_hour_item
+    end
+
+    return business_hours_return
+  end
 end

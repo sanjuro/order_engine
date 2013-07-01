@@ -17,6 +17,7 @@ class GetDeliveryCostContext
   def call
     # convert query terms
     store_id = @store_id
+    address = @address
    
     shipping_method = Order.available_delivery_methods(store_id)
 
