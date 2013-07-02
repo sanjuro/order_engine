@@ -53,7 +53,7 @@ module CustomerRole
 
 			order.shipping_method = shipping_method
 
-			shipping_data = order_data[:ship_address][0]
+			shipping_data = order_data[:ship_address]
 
 			suburb = Suburb.find(shipping_data.suburb_id)
 
@@ -78,7 +78,7 @@ module CustomerRole
 			order.create_shipment!
 			
 		end
-
+		
 		order.next
 
 	    order.format_for_web_serivce 
