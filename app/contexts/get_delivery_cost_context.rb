@@ -18,7 +18,7 @@ class GetDeliveryCostContext
     # convert query terms
     store_id = @store_id
     address = @address[0]
-    
+
     shipping_method = Order.available_delivery_methods(store_id)
 
     shipping_data = Hash.new

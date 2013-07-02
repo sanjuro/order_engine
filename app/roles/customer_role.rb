@@ -57,7 +57,7 @@ module CustomerRole
 
 			suburb = Suburb.find(shipping_data.suburb_id)
 
-			state = State.find(suburb,state_id)
+			state = store.state
 
 			ship_address = Address.create(
 							:address1 => shipping_data.address1,

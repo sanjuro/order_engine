@@ -5,7 +5,7 @@ class Address < ActiveRecord::Base
 
   has_many :shipments
 
-  validates :address1, :city, :zipcode, :presence => true
+  validates :address1, :zipcode, :presence => true
   validate :state_validate
 
   attr_accessible :firstname, :lastname, :address1, :address2,
