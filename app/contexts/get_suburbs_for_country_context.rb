@@ -19,7 +19,7 @@ class GetSuburbsForCountryContext
 
     suburbs_return = Array.new
     suburbs.each do |suburb|
-      suburbs_return << { "id" => suburb.id, "name" => suburb.name, "state_id" => suburb.state.id, "state_name" => suburb.state.name }
+      suburbs_return << { "id" => suburb.id, "name" => suburb.name }
     end
     suburbs_return
   end
