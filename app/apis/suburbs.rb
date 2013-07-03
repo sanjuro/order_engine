@@ -6,7 +6,7 @@ class Suburbs < Grape::API
   resource 'suburbs' do
 
     # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/suburbs/store/1 -v
-    # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/suburbs/store/1 -v
+    # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/suburbs/store/15 -v
 
     desc "Get Suburbs."
     params do

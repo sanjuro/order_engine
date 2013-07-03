@@ -1,6 +1,6 @@
 <?php
     #  php vosto_sender.php 27833908314 "New VOSTO ORDER 1705 - Customer: Shadley Wentzel, 0833908314 Order Number: 1705 Item: 4 X Vosto Burger, Options:  Special Instructions: test,"
-    #  php vosto_sender.php "27814550496" "Test"
+    #  php vosto_sender.php "27793901927" "Test"
     require "whatsprot.class.php";
 
     $fromMobNumber = "27745532622"; //ENTER YOUR GOOGLEVOICENUMBER HERE

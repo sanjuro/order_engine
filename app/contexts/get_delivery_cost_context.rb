@@ -17,7 +17,11 @@ class GetDeliveryCostContext
   def call
     # convert query terms
     store_id = @store_id
-    address = @address[0]
+    address = @address
+
+    store = Store.find(store_id)
+
+    state = store.state
 
     shipping_method = Order.available_delivery_methods(store_id)
 
@@ -25,9 +29,11 @@ class GetDeliveryCostContext
     shipping_address = Address.create(
                 :address1 => address.address1,
                 :address2 => address.address2,
-                :suburb_id => address.suburb_id,           
+                :suburb_id => address.suburb_id, 
+                :state_id => state.id,          
                 :city => address.city,
                 :zipcode => address.zipcode,
+                :country_id => state.country_id,
                 :latitdue => address.latitude,
                 :longitude => address.longitude
                 )
