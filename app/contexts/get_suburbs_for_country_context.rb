@@ -15,7 +15,7 @@ class GetSuburbsForCountryContext
   end
 
   def call
-    suburbs = Suburb.all
+    suburbs = Suburb.order('name ASC').all
 
     suburbs_return = Array.new
     suburbs.each do |suburb|
