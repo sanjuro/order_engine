@@ -38,6 +38,7 @@ gem 'sunspot_rails'
 gem 'bbpush'
 gem 'pushmeup'
 gem 'pusher'
+gem 'urbanairship'
 
 gem 'resque'
 
