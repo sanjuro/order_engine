@@ -110,8 +110,7 @@ class Order < ActiveRecord::Base
     end
 
     after_transition :to => :sent_store do |order|
-      order.finalize!
-      order.send_new_order_notification
+      order.finalize!      
     end
 
     after_transition :to => :in_progress do |order|
@@ -462,7 +461,7 @@ class Order < ActiveRecord::Base
       :user_id        => self.user_id
     }, :without_protection => true)
 
-    
+    self.send_new_order_notification
 
     deliver_order_confirmation_email(self.customer.email)
 
