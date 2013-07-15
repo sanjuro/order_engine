@@ -111,6 +111,7 @@ class Order < ActiveRecord::Base
 
     after_transition :to => :sent_store do |order|
       order.finalize!
+      order.send_new_order_notification
     end
 
     after_transition :to => :in_progress do |order|
@@ -454,18 +455,18 @@ class Order < ActiveRecord::Base
       update_shipment_state
     save
 
-    send_new_order_notification
-
-    deliver_order_confirmation_email(self.customer.email)
-
-    logger.info "Order Id:#{self.id}Sent user confirmation email."
-
     self.state_events.create({
       :previous_state => 'confirm',
       :next_state     => 'sent_store',
       :name           => 'order' ,
       :user_id        => self.user_id
     }, :without_protection => true)
+
+    
+
+    deliver_order_confirmation_email(self.customer.email)
+
+    logger.info "Order Id:#{self.id}Sent user confirmation email."
 
     # send pusher notification to order manager
     Pusher.app_id = '37591'
@@ -525,6 +526,14 @@ class Order < ActiveRecord::Base
         Notification.adapter = 'android'
 
         Notification.send(device.device_token, message)
+      when 'web'
+        p "ORDER ID #{self.id}:Sending web notification"
+
+        message = "New Order: ID #{self.id} orderd at #{self.created_at}."
+
+        Notification.adapter = 'web'
+       
+        Notification.send(self.store.unique_id, message)
       when 'whatsapp'
         p "ORDER ID #{self.id}:Sending whatsapp notification"
 
