@@ -24,8 +24,12 @@ class GetAddressFromCoordsContext
 
     address = Hash.new
 
+    address_array = geo.address.split(',')
+
     address = { 
             "address" => geo.address,
+            "address1" => address_array[0],
+            "address2" => address_array[1],
             "zipcode" => geo.postal_code,
             "city" => geo.city,
             "country" => geo.country,

@@ -6,7 +6,7 @@ class Addresses < Grape::API
   resource 'addresses' do
 
     # curl -H 'Accept: application/json' -X POST -d '{"latitude": "-33.960350", "longitude": "18.470113"}'  http://127.0.0.1:9000/api/v1/addresses/get_address -v
-    # curl -H 'Accept: application/json' -X POST -d '{"store_id": "15","address":{"address1":"31 Ricketts Street","address2":"De Tyger","suburb_id": "1","city": "cape town", "latitude":"-33.960905","longitude":"18.470102"}}'  http://127.0.0.1:9000/api/v1/addresses/get_delivery_price -v
+    # curl -H 'Accept: application/json' -X POST -d '{"store_id": "15","address":{"address1":"31 Ricketts Street","address2":"De Tyger","suburb_id": "1","city": "cape town", "latitude":"-33.960905","longitude":"18.470102"}}'  http://107.22.211.58:9000/api/v1/addresses/get_delivery_price -v
 
     desc "Get Address from Coordinates."
     params do
