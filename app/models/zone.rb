@@ -1,6 +1,7 @@
 
   class Zone < ActiveRecord::Base
     has_many :zone_members, :dependent => :destroy, :class_name => "ZoneMember"
+    # has_many :zone_members, :as => :zoneable
     has_many :tax_rates, :dependent => :destroy
     has_many :shipping_methods, :dependent => :nullify
 
@@ -31,6 +32,8 @@
         when 'Country'
           zone_member.zoneable_id == address.country_id
         when 'State'
+          zone_member.zoneable_id == address.state_id
+        when 'Suburb'
           zone_member.zoneable_id == address.state_id
         else
           false
