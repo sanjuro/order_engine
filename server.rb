@@ -90,6 +90,8 @@ class API < Grape::API
 
 	mount Customers
 
+	mount Deals
+
 	mount Devices
 
 	mount Favourites
