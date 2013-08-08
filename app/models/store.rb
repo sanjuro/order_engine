@@ -6,9 +6,11 @@ class Store < ActiveRecord::Base
 
   include Sunspot::ActiveRecord
 
-	attr_accessible :store_name, :unique_id, :store_description, :address, :email, :latitude, :longitude, 
-					        :manager_name, :manager_contact, :is_online, :created_at, :completed_at, :updated_at, 
-                  :fanpage_id, :tag, :business_hours_attributes, :is_featured, :suburb_id, :state_id, :country_id
+  attr_accessible :store_name, :unique_id, :store_description, :address, :email, :latitude, :longitude, 
+                  :manager_name, :manager_contact, :created_at, :completed_at, :updated_at, 
+                  :fanpage_id, :tag, :business_hours_attributes, :is_online, :can_deliver, 
+                  :is_active, :url, :telephone, :state_id, :suburb_id, :country_id, :taxonomies, :images,
+                  :is_featured, :suburb_id, :state_id, :country_id
 
   geocoded_by :address, :latitude => :latitude, :longitude => :longitude
   after_validation :geocode, :if => :address_changed?

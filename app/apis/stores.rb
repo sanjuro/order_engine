@@ -34,7 +34,7 @@ class Stores < Grape::API
     desc "Retrieve all features stores"
     get "/featured" do
       logger.info "Retrieved featured stores"
-      GetFeaturedStoresContext.call(5)
+      GetFeaturedStoresContext.call(10)
     end
 
     desc "Retrieve all stores in a paginated form"
