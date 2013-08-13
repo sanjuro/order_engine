@@ -566,8 +566,11 @@ class Order < ActiveRecord::Base
       message[:msg] = "Your order: #{order_number} has been received and will be ready in #{self.time_to_ready} minutes."
 
       Notification.adapter = 'android'
-
       Notification.send(device.device_token, message)
+
+      # Resque.enqueue(NotificationSender, 'android', device.device_token, message)
+
+      # call_rake :send_notification, :device_token => device.device_token, :device_type => 'android', :message => message
     when 'ios'
       device = Device.find_by_device_identifier(self.device_identifier).first
       logger.info "ORDER ID #{self.id}:Queueing ios notification"
@@ -580,8 +583,9 @@ class Order < ActiveRecord::Base
       message[:time_to_ready] = self.time_to_ready
 
       Notification.adapter = 'ios'
-
       Notification.send(device.device_token, message)
+
+      # Resque.enqueue(NotificationSender, 'ios', device.device_token, message)
 
     else
       logger.info "ORDER ID #{self.id}:Queueing non native notification"
@@ -607,7 +611,7 @@ class Order < ActiveRecord::Base
 
       message[:order_id] = self.id
       message[:subject] = "ready order"
-      message[:msg] = "Your order: #{store_order_number} is ready for collection at #{self.store.store_name}."
+      message[:msg] = "Thank you for using Vosto, enjoy your meal at #{self.store.store_name}."
 
       Notification.adapter = 'android'
 
@@ -617,7 +621,7 @@ class Order < ActiveRecord::Base
       logger.info "ORDER ID #{self.id}:Queueing ios notification"
 
       message[:order_id] = self.id
-      message[:msg] = "Your order: #{store_order_number} is ready for collection at #{self.store.store_name}."
+      message[:msg] = "Thank you for using Vosto, enjoy your meal at #{self.store.store_name}."
       message[:updated_at] = self.updated_at
       message[:store_order_number] = self.store_order_number
       message[:state] = self.state
@@ -772,5 +776,11 @@ class Order < ActiveRecord::Base
 
         self.state_changed('shipment')
       end
+
+    def call_rake(task, options = {})
+      args = options.map { |n, v| "#{n.to_s.upcase}='#{v}'" }
+      # system "/usr/bin/rake #{task} #{args.join(' ')} --trace 2>&1 >> #{File.dirname(__FILE__)}/../../log/rake.log &"
+      system "rake #{task} #{args.join(' ')} --trace 2>&1 >> #{File.dirname(__FILE__)}/../../log/rake.log &"
+    end
 
 end

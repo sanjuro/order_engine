@@ -84,6 +84,7 @@ class API < Grape::API
 	      authenticated
 	      error!('401 Unauthorized', 401) unless is_admin?
 	    end
+
 	end
 
 	mount Addresses

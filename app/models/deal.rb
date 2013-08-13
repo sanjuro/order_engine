@@ -14,6 +14,8 @@ class Deal < ActiveRecord::Base
 	def format_for_web_serivce
 		deal_return = Hash.new
 
+		store = Store.find(self.dealable_id)
+
 		deal_return = { 
 		        "deal_name" => self.deal_description,
 		        "deal_description" => self.deal_description,
@@ -22,7 +24,8 @@ class Deal < ActiveRecord::Base
 		        "dealable_type" => self.dealable_type,
 		        "dealable_id" => self.dealable_id,
 		        "deal_image" => self.deal_image,
-		        "is_active" => self.is_active
+		        "is_active" => self.is_active,
+		        "store" => store.format_for_web_serivce
 		}
 	end 
 end

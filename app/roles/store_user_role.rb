@@ -56,7 +56,7 @@ module StoreUserRole
 	      	Pusher.app_id = '37591'
 	      	Pusher.key = 'be3c39c1555da94702ec'
 	      	Pusher.secret = 'deae8cae47a1c88942e1'
-	      	Pusher['order'].trigger('ready_event', {:user_id => "#{order.customer.id}",:message => "Your order: #{order_number} is ready for collection at #{order.store.store_name}. Please contact the store at #{order.store.manager_contact}, if there is a problem with your order."})
+	      	Pusher['order'].trigger('ready_event', {:user_id => "#{order.customer.id}",:message => "Thank you for using Vosto, enjoy your meal at #{self.store.store_name}."})
 
 		when 'collected'
 			previous_state = 'collected'
