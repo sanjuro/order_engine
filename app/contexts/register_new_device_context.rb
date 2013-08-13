@@ -14,7 +14,7 @@ class RegisterNewDeviceContext
   end
 
   def call
-    device = Device.find_by_device_identifier(device_data.device_identifier).first
+    device = Device.where("devices.device_identifier = ?", device_data.device_identifier).first
 
     if device.nil?
       # create a new device

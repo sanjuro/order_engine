@@ -57,7 +57,7 @@ describe Devices do
         end
 
         it 'SHOULD update the old device record' do
-          device = Device.find_by_device_identifier("PP-oad11-1234")
+          device = Device.where("devices.device_identifier = ?", "PP-oad11-1234")
           device.count.should == 1
         end
       end

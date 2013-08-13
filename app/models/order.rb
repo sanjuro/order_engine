@@ -558,7 +558,7 @@ class Order < ActiveRecord::Base
 
     case self.device_type
     when 'android'
-      device = Device.find_by_device_identifier(self.device_identifier).first
+      device = Device.where("devices.device_identifier = ?", self.device_identifier).first
       logger.info "ORDER ID #{self.id}:Queueing android notification"
 
       message[:order_id] = self.id
@@ -572,7 +572,7 @@ class Order < ActiveRecord::Base
 
       # call_rake :send_notification, :device_token => device.device_token, :device_type => 'android', :message => message
     when 'ios'
-      device = Device.find_by_device_identifier(self.device_identifier).first
+      device = Device.where("devices.device_identifier = ?", self.device_identifier).first
       logger.info "ORDER ID #{self.id}:Queueing ios notification"
 
       message[:order_id] = self.id
@@ -604,9 +604,10 @@ class Order < ActiveRecord::Base
 
     message = Hash.new
 
+    device = Device.where("devices.device_identifier = ?", self.device_identifier).first
+
     case self.device_type
     when 'android'
-      device = Device.find_by_device_identifier(self.device_identifier).first
       logger.info "ORDER ID #{self.id}:Queueing android notification"
 
       message[:order_id] = self.id
@@ -617,7 +618,6 @@ class Order < ActiveRecord::Base
 
       Notification.send(device.device_token, message)
     when 'ios'
-      device = Device.find_by_device_identifier(self.device_identifier).first
       logger.info "ORDER ID #{self.id}:Queueing ios notification"
 
       message[:order_id] = self.id
