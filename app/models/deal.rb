@@ -17,7 +17,7 @@ class Deal < ActiveRecord::Base
 		store = Store.find(self.dealable_id)
 
 		deal_return = { 
-		        "deal_name" => self.deal_description,
+		        "deal_name" => self.deal_name,
 		        "deal_description" => self.deal_description,
 		        "is_active" => self.is_active,
 		        "created_at" => self.created_at,
