@@ -1,4 +1,4 @@
-# Context to retrieve all new orders orders
+# Context to retrieve all new orders orders for today
 #
 # Author::    Shadley Wentzel
 
@@ -13,7 +13,7 @@ class GetNewOrdersContext
   end
 
   def call
-    orders = Order.select("orders.*, users.first_name, users.last_name, users.email, users.mobile_number").sent_to_store.joins(:customer).order('created_at asc')
+    orders = Order.select("orders.*, users.first_name, users.last_name, users.email, users.mobile_number").joins(:customer).today.order('created_at asc')
 
     orders_return = Hash.new
 
