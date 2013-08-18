@@ -58,8 +58,8 @@ class Order < ActiveRecord::Base
   scope :created_on, lambda {|date| {:conditions => ['created_at >= ? AND created_at <= ?', date.beginning_of_day, date.end_of_day]}}
   scope :updated_on, lambda {|date| {:conditions => ['updated_at >= ? AND updated_at <= ?', date.beginning_of_day, date.end_of_day]}}
   scope :this_month, where("orders.created_at >= :start_date AND orders.created_at <= :end_date", {:start_date => Date.today.beginning_of_month, :end_date => Date.today.end_of_month})
-  scope :this_week, where("corders.reated_at >= :start_date AND orders.created_at <= :end_date", {:start_date => Date.today.beginning_of_week, :end_date => Date.today.end_of_week})
-  scope :today, where("corders.reated_at >= :start_date AND orders.created_at <= :end_date", {:start_date => Date.today.beginning_of_day, :end_date => Date.today.end_of_day})
+  scope :this_week, where("orders.created_at >= :start_date AND orders.created_at <= :end_date", {:start_date => Date.today.beginning_of_week, :end_date => Date.today.end_of_week})
+  scope :today, where("orders.created_at >= :start_date AND orders.created_at <= :end_date", {:start_date => Date.today.beginning_of_day, :end_date => Date.today.end_of_day})
 
 
   # order state machine (see http://github.com/pluginaweek/state_machine/tree/master for details)
@@ -676,7 +676,42 @@ class Order < ActiveRecord::Base
             "line_items" => self.get_line_items_with_variant_info,
             "address" => self.get_delivery_address            
     }
+  end
 
+  def format_with_store_for_web_serivce
+    orders_return = Hash.new
+
+    orders_return = { 
+            "adjustment_total" => self.adjustment_total,
+            "completed_at" => self.completed_at,
+            "created_at" => self.created_at,
+            "credit_total" => self.credit_total,
+            "id" => self.id,
+            "item_total" => self.item_total,
+            "number" => self.number,
+            "payment_state" => self.payment_state,
+            "payment_total" => self.payment_total,
+            "special_instructions" => self.special_instructions,
+            "time_to_ready" => self.time_to_ready,
+            "state" => self.state,
+            "store_id" => self.store_id,
+            "store_name" => self.store.store_name,
+            "store_contact" => self.store.telephone,
+            "store_order_number" => self.store_order_number,
+            "is_delivery" => self.is_delivery,
+            "delivery_total" => self.ship_total,
+            "total" => self.total,
+            "updated_at" => self.updated_at,
+            "user" => { 
+                "full_name" => self.customer.full_name,
+                "first_name" => self.customer.first_name,
+                "last_name" => self.customer.last_name,
+                "email" => self.customer.email,
+                "mobile_number" => self.customer.mobile_number,
+                },
+            "line_items" => self.get_line_items_with_variant_info,
+            "address" => self.get_delivery_address            
+    }
   end
 
   def format_for_whatsapp

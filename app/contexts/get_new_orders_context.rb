@@ -18,7 +18,7 @@ class GetNewOrdersContext
     orders_return = Hash.new
 
     orders.each do |order|
-      orders_return[order.id] = order.format_for_web_serivce 
+      orders_return[order.id] = order.format_with_store_for_web_serivce 
     end
 
     orders_return
