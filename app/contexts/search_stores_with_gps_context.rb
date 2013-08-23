@@ -28,7 +28,7 @@ class SearchStoresWithGPSContext
         boost_fields :store_name => 5.0
         boost_fields :tag => 2.0
   		end   
-
+      with :is_online, true
   		with(:location).near(latitude, longitude, :precision => 4, :bbox => true)
       # with(:location).in_radius(latitude, longitude, 50, :bbox => true)
   		# order_by :unique_id, :desc

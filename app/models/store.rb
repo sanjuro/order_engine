@@ -65,6 +65,7 @@ class Store < ActiveRecord::Base
     string :unique_id
     text :tag
     string :address
+    boolean :is_online
     location (:location) { Sunspot::Util::Coordinates.new(latitude, longitude) }
     # string(:location, :as => :location) { [lat,lng].join(",") }
   end
