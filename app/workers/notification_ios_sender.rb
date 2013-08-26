@@ -10,5 +10,7 @@ class NotificationIosSender
     Notification.adapter = 'ios'
 
     Notification.send(destination, message)
+
+    p "ORDER ID #{order_id}:Sent ios notification"
   end
 end

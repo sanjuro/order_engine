@@ -27,12 +27,11 @@ Dir[File.dirname(__FILE__) + '/app/roles/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/mailers/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/workers/*.rb'].each {|file| require file }
 
-class Repository
-  def send_android_notification(device_token,message)
-   Resque.enqueue(NotificationAndroidSender, 'android', device_token, message)
-  end
-
-end
+# Setup redis
+Resque.redis = Redis.new(
+    :host => RESQUE['redis_host'],
+    :port => RESQUE['redis_port']
+)
 
 order = Order.find(2363)
 

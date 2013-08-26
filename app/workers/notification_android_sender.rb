@@ -11,5 +11,7 @@ class NotificationAndroidSender
 
     Notification.send(destination, message)
 
+    p "ORDER ID #{order_id}:Sent android notification"
+
   end
 end

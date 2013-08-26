@@ -1,6 +1,6 @@
 Your order is being cooked up at <%= @order.store.store_name %> and will be ready in <%= @order.time_to_ready %> minutes.
 
-<% if @order.store_order_number.empty? %>
+<% if @order.store_order_number.nil? %>
 	Your order number is <%= @order.number %>
 <% else %>
 	Your order number is <%= @order.store_order_number %>

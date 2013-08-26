@@ -16,7 +16,7 @@ module Notification
         # GCM.key = "AIzaSyDTeqUmaRLyKn-odaePjksMoq-PFO2OHP8"
         
         # can be an string or an array of strings containing the regIds of the devices you want to send
-        data = {:order_id => message[:order_id], :subject => message[:subject], :msg => message[:msg]}
+        data = {:order_id => message["order_id"], :subject => message["subject"], :msg => message["msg"]}
         
         # must be an hash with all values you want inside you notification
         GCM.send_notification(destination, data)

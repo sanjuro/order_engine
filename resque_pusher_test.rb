@@ -27,6 +27,12 @@ Dir[File.dirname(__FILE__) + '/app/roles/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/mailers/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/workers/*.rb'].each {|file| require file }
 
+# Setup redis
+Resque.redis = Redis.new(
+    :host => RESQUE['redis_host'],
+    :port => RESQUE['redis_port']
+)
+
 order = Order.find(2363)
 
 message = "Your order: #{order.number} is being cooked up at #{order.store.store_name} and will be ready in #{order.time_to_ready} minutes."

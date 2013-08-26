@@ -6,7 +6,7 @@
   <body>
     <h1>Your order is ready please come and collect at <%= @order.store.store_name %>.</h1>
     <p>
-    <% if @order.store_order_number.empty? %>
+    <% if @order.store_order_number.nil? %>
       Your order number is <%= @order.number %><br/>
     <% else %>
       Your order number is <%= @order.store_order_number %><br/>

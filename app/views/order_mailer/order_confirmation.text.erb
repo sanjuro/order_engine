@@ -1,6 +1,6 @@
 Your order has been sent and will be ready soon 
 
-<% if @order.store_order_number.empty? %>
+<% if @order.store_order_number.nil? %>
 	Your order number is <%= @order.number %>
 <% else %>
 	Your order number is <%= @order.store_order_number %>

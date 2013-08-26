@@ -40,7 +40,7 @@ gem 'pushmeup'
 gem 'pusher'
 gem 'urbanairship'
 
-# gem 'resque'
+gem 'resque'
 
 group :test do 
 	gem 'rake', :groups=>[:development, :test]
