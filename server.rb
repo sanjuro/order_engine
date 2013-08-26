@@ -8,8 +8,7 @@ require 'state_machine'
 require 'kaminari/grape'
 require 'geocoder'
 require 'pusher'
-
-# require 'resque'
+require 'resque'
 
 require File.dirname(__FILE__) + '/database_configuration.rb'
 require File.dirname(__FILE__) + '/action_mailer_configuration.rb'
@@ -25,7 +24,7 @@ Dir[File.dirname(__FILE__) + '/app/apis/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/mailers/*.rb'].each {|file| require file }
 # Dir[File.dirname(__FILE__) + '/app/workers/*.rb'].each {|file| require file }
 
-# RESQUE = YAML::load(File.open('config/resque.yml'))
+RESQUE = YAML::load(File.open('config/resque.yml'))
 
 # Setup redis
 Resque.redis = Redis.new(

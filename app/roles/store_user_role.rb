@@ -38,25 +38,33 @@ module StoreUserRole
 			next_state = 'ready'
 
 			# send email notification
-			order.deliver_order_in_progress_email(order.customer.email)
+			# order.deliver_order_in_progress_email(order.customer.email)
+
+			Resque.enqueue(InProgressMailer, order, order.customer.email)
 
 			# send pusher notification for mobi site
-	      	Pusher.app_id = '37591'
-	      	Pusher.key = 'be3c39c1555da94702ec'
-	      	Pusher.secret = 'deae8cae47a1c88942e1'
-	      	Pusher['order'].trigger('in_progress_event', {:user_id => "#{order.customer.id}",:message => "Your order: #{order_number} is being cooked up at #{order.store.store_name} and will be ready in #{order.time_to_ready} minutes."})
+	      	# Pusher.app_id = '37591'
+	      	# Pusher.key = 'be3c39c1555da94702ec'
+	      	# Pusher.secret = 'deae8cae47a1c88942e1'
+	      	# Pusher['order'].trigger('in_progress_event', {:user_id => "#{order.customer.id}",:message => "Your order: #{order_number} is being cooked up at #{order.store.store_name} and will be ready in #{order.time_to_ready} minutes."})
+
+	      	Resque.enqueue(NotificationPusherSender, 'in_progress_event', order.customer.id, order.id, "Your order: #{order_number} is being cooked up at #{order.store.store_name} and will be ready in #{order.time_to_ready} minutes.")
 		when 'ready'
 			previous_state = 'in_progress'
 			next_state = 'collected'
 
 			# send email notification
-			order.deliver_order_ready_email(order.customer.email)
+			# order.deliver_order_ready_email(order.customer.email)
+
+			Resque.enqueue(ReadyMailer, order, order.customer.email)
 
 			# send pusher notification for mobi site
-	      	Pusher.app_id = '37591'
-	      	Pusher.key = 'be3c39c1555da94702ec'
-	      	Pusher.secret = 'deae8cae47a1c88942e1'
-	      	Pusher['order'].trigger('ready_event', {:user_id => "#{order.customer.id}",:message => "Thank you for using Vosto, enjoy your meal at #{self.store.store_name}."})
+	      	# Pusher.app_id = '37591'
+	      	# Pusher.key = 'be3c39c1555da94702ec'
+	      	# Pusher.secret = 'deae8cae47a1c88942e1'
+	      	# Pusher['order'].trigger('ready_event', {:user_id => "#{order.customer.id}",:message => "Thank you for using Vosto, enjoy your meal at #{self.store.store_name}."})
+
+	      	Resque.enqueue(NotificationPusherSender, 'ready_event', order.customer.id, order.id, "Thank you for using Vosto, enjoy your meal at #{order.store.store_name}.")
 
 		when 'collected'
 			previous_state = 'collected'

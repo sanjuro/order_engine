@@ -469,13 +469,17 @@ class Order < ActiveRecord::Base
 
     deliver_order_confirmation_email(self.customer.email)
 
+    Resque.enqueue(OrderConfirmationMailer, order, order.customer.email)
+
     logger.info "Order Id:#{self.id}Sent user confirmation email."
 
     # send pusher notification to order manager
-    Pusher.app_id = '37591'
-    Pusher.key = 'be3c39c1555da94702ec'
-    Pusher.secret = 'deae8cae47a1c88942e1'
-    Pusher['order'].trigger('new_order_event', {:user_id => VOSTO_ORDER_MANAGER_ID,:message => "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}."})
+    # Pusher.app_id = '37591'
+    # Pusher.key = 'be3c39c1555da94702ec'
+    # Pusher.secret = 'deae8cae47a1c88942e1'
+    # Pusher['order'].trigger('new_order_event', {:user_id => VOSTO_ORDER_MANAGER_ID,:message => "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}."})
+
+    Resque.enqueue(NotificationPusherSender, 'new_order_event', VOSTO_ORDER_MANAGER_ID, self.id, "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}.")
 
     p "Order Id#{self.id}:Sent store notification to In-Store Application."
   end
@@ -526,24 +530,25 @@ class Order < ActiveRecord::Base
 
         p "ORDER ID #{self.id}:Sending android notification"
         
-        Notification.adapter = 'android'
+        # Notification.adapter = 'android'
+        # Notification.send(device.device_token, message)
 
-        Notification.send(device.device_token, message)
+        Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
       when 'web'
         p "ORDER ID #{self.id}:Sending web notification"
 
         message = "New Order: ID #{self.id} orderd at #{self.created_at}."
 
-        Notification.adapter = 'web'
-       
-        Notification.send(self.store.unique_id, message)
+        # Notification.adapter = 'web'       
+        # Notification.send(self.store.unique_id, message)
+
+        Resque.enqueue(NotificationPusherSender, 'new_order_event', self.store.unique_id, self.id, message)
       when 'whatsapp'
         p "ORDER ID #{self.id}:Sending whatsapp notification"
 
         message[:msg] = self.format_for_whatsapp
 
-        Notification.adapter = 'whatsapp'
-       
+        Notification.adapter = 'whatsapp'       
         Notification.send(device.device_token, message[:msg].to_s)
       end
     end
@@ -569,10 +574,10 @@ class Order < ActiveRecord::Base
       message[:subject] = "in progress order"
       message[:msg] = "Your order: #{order_number} has been received and will be ready in #{self.time_to_ready} minutes."
 
-      Notification.adapter = 'android'
-      Notification.send(device.device_token, message)
+      # Notification.adapter = 'android'
+      # Notification.send(device.device_token, message)
 
-      # Resque.enqueue(NotificationSender, 'android', device.device_token, message)
+      Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
 
       # call_rake :send_notification, :device_token => device.device_token, :device_type => 'android', :message => message
     when 'ios'
@@ -586,10 +591,10 @@ class Order < ActiveRecord::Base
       message[:state] = self.state
       message[:time_to_ready] = self.time_to_ready
 
-      Notification.adapter = 'ios'
-      Notification.send(device.device_token, message)
+      # Notification.adapter = 'ios'
+      # Notification.send(device.device_token, message)
 
-      # Resque.enqueue(NotificationSender, 'ios', device.device_token, message)
+      Resque.enqueue(NotificationIosSender, ios_destination, self.id, message)
 
     else
       logger.info "ORDER ID #{self.id}:Queueing non native notification"
@@ -618,9 +623,10 @@ class Order < ActiveRecord::Base
       message[:subject] = "ready order"
       message[:msg] = "Thank you for using Vosto, enjoy your meal at #{self.store.store_name}."
 
-      Notification.adapter = 'android'
+      # Notification.adapter = 'android'
+      # Notification.send(device.device_token, message)
 
-      Notification.send(device.device_token, message)
+      Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
     when 'ios'
       logger.info "ORDER ID #{self.id}:Queueing ios notification"
 
@@ -631,9 +637,10 @@ class Order < ActiveRecord::Base
       message[:state] = self.state
       message[:time_to_ready] = self.time_to_ready
 
-      Notification.adapter = 'ios'
+      # Notification.adapter = 'ios'
+      # Notification.send(device.device_token, message)
 
-      Notification.send(device.device_token, message)
+      Resque.enqueue(NotificationIosSender, ios_destination, self.id, message)
     else
       logger.info "ORDER ID #{self.id}:Queueing non native notification"
     end
