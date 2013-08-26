@@ -22,9 +22,9 @@ Dir[File.dirname(__FILE__) + '/app/contexts/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/roles/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/apis/*.rb'].each {|file| require file }
 Dir[File.dirname(__FILE__) + '/app/mailers/*.rb'].each {|file| require file }
-# Dir[File.dirname(__FILE__) + '/app/workers/*.rb'].each {|file| require file }
+Dir[File.dirname(__FILE__) + '/app/workers/*.rb'].each {|file| require file }
 
-RESQUE = YAML::load(File.open('config/resque.yml'))
+RESQUE = YAML::load(File.open('config/resque.yml'))['production']
 
 # Setup redis
 Resque.redis = Redis.new(

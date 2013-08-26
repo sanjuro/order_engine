@@ -467,7 +467,7 @@ class Order < ActiveRecord::Base
 
     self.send_new_order_notification
 
-    deliver_order_confirmation_email(self.customer.email)
+    # deliver_order_confirmation_email(self.customer.email)
 
     Resque.enqueue(OrderConfirmationMailer, order, order.customer.email)
 
@@ -594,7 +594,7 @@ class Order < ActiveRecord::Base
       # Notification.adapter = 'ios'
       # Notification.send(device.device_token, message)
 
-      Resque.enqueue(NotificationIosSender, ios_destination, self.id, message)
+      Resque.enqueue(NotificationIosSender, device.device_token, self.id, message)
 
     else
       logger.info "ORDER ID #{self.id}:Queueing non native notification"
@@ -640,7 +640,7 @@ class Order < ActiveRecord::Base
       # Notification.adapter = 'ios'
       # Notification.send(device.device_token, message)
 
-      Resque.enqueue(NotificationIosSender, ios_destination, self.id, message)
+      Resque.enqueue(NotificationIosSender, device.device_token, self.id, message)
     else
       logger.info "ORDER ID #{self.id}:Queueing non native notification"
     end
