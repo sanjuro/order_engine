@@ -75,9 +75,10 @@ class Address < ActiveRecord::Base
   end
 
   def get_zone(zone_type, store_id)
-    zone_member = ZoneMember.joins('LEFT OUTER JOIN zones ON zone_members.zone_id = zones.id')
+    zone_member = ZoneMember.joins('LEFT OUTER JOIN zones_rates ON zone_members.zone_id = zones_rates.zone_id')
     .where('zoneable_id = ?', self.suburb_id)
-    .where('zoneable_type = ?', zone_type).first
+    .where('zoneable_type = ?', zone_type)
+    .where('zones_rates.store_id = ?', store_id).first
     zone_member.zone
   end
 

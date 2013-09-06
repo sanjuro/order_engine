@@ -15,7 +15,8 @@ class Order < ActiveRecord::Base
                   :line_items_attributes, :number, :item_total, :total, :state, :credit_total, :user_id, :is_delivery, 
                   :payment_total, :payment_state, :shipment_state, :special_instructions, :shipping_method_id, :device_identifier, :store_order_number,
                   :time_to_ready, :device_type, :adjustment_total, :created_at, :completed_at, :updated_at
-                  
+              
+
   validates :number, :uniqueness => true, :on => :create
                  
   belongs_to :store
@@ -460,7 +461,7 @@ class Order < ActiveRecord::Base
 
     self.state_events.create({
       :previous_state => 'confirm',
-      :next_state     => 'sent_store',
+      :next_state     => 'in_progress',
       :name           => 'order' ,
       :user_id        => self.user_id
     }, :without_protection => true)
@@ -469,7 +470,7 @@ class Order < ActiveRecord::Base
 
     # deliver_order_confirmation_email(self.customer.email)
 
-    Resque.enqueue(OrderConfirmationMailer, order, order.customer.email)
+    Resque.enqueue(OrderConfirmationMailer, self, self.customer.email)
 
     logger.info "Order Id:#{self.id}Sent user confirmation email."
 
@@ -525,10 +526,6 @@ class Order < ActiveRecord::Base
         message[:order_id] = self.id
         message[:subject] = "new order"
         message[:msg] = "new"
-
-        # Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
-
-        p "ORDER ID #{self.id}:Sending android notification"
         
         # Notification.adapter = 'android'
         # Notification.send(device.device_token, message)

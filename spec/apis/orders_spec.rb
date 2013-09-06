@@ -41,6 +41,29 @@ describe Orders do
 
     end
 
+    context "GET /api/v1/orders/by_customer/:customer_id" do
+
+      context "GIVEN you want to retrieve all orders for a customer" do
+
+        it 'should return a 401 when no acces token is supplied /api/v1/orders' do
+          get "/api/v1/orders/by_customer/127.json"
+          last_response.status.should == 401
+        end
+
+        it 'SHOULD return a 200' do      
+           get "/api/v1/orders/by_customer/127.json?authentication_token=CXTTTTED2ASDBSD3"    
+          last_response.status.should == 200
+        end
+
+        it 'SHOULD return orders for the user' do
+          get "/api/v1/orders/by_customer/127.json?authentication_token=CXTTTTED2ASDBSD3"
+          retrieved_orders = JSON.parse(last_response.body)
+          retrieved_orders.count.should >= 1
+        end      
+
+      end
+    end   
+
     context "GIVEN viewing a single order" do
 
         order = Order.find(1287)
