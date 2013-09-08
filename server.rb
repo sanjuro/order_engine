@@ -96,6 +96,8 @@ class API < Grape::API
 
 	mount Favourites
 
+	mount LoyaltyCards
+
 	mount Orders
 
 	mount Products

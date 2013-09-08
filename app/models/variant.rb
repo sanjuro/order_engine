@@ -178,6 +178,40 @@ class Variant < ActiveRecord::Base
       alias_method :has_options, :has_option
     end
 
+    # Function to calcualte and a loyalty item based on the product
+    #
+    # * *Args*    :
+    #   - 
+    # * *Returns* :
+    #   - 
+    # * *Raises* :
+    #   - 
+    #
+    def add_loyalty(user_id)
+      product = self.product
+
+      if !product.product_group_id.nil?
+
+        product_group = ProductGroup.find(product.product_group_id)
+
+        loyalty = product_group.loyalties.first
+
+        loyalty_card = LoyaltyCard.by_loyalty(loyalty.id).by_user(user_id).first
+
+        if loyalty_card.nil?    
+          new_loyalty_card = LoyaltyCard.new
+          new_loyalty_card.loyalty_id = loyalty.id
+          new_loyalty_card.user_id = user_id
+          new_loyalty_card.count = 1
+          p new_loyalty_card
+          new_loyalty_card.save
+        else
+          loyalty_card.count += 1
+          loyalty_card.save
+        end
+      end
+    end
+
 
     private
 

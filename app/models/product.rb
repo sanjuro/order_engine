@@ -77,7 +77,7 @@ class Product < ActiveRecord::Base
 
     attr_reader :taxon_tokens
 
-    attr_accessible :name, :description, :price, :sku, :meta_description, :taxon_tokens,
+    attr_accessible :name, :description, :price, :sku, :meta_description, :taxon_tokens, :product_group_id,
                     :meta_keywords, :deleted_at, :option_values_hash, :product_type, 
                     :product_properties_attributes, :variants_attributes, :option_type_ids
 

@@ -52,10 +52,10 @@ class Order < ActiveRecord::Base
   before_create :generate_order_number  
   
   scope :by_number, lambda {|number| where("orders.number = ?", number)}
-  scope :by_store, lambda {|store| where("orders.store_id = ?", store)} 
+  scope :by_store, lambda {|store_id| where("orders.store_id = ?", store_id)} 
   scope :by_state, lambda {|state| where("orders.state = ?", state)}
   scope :sent_to_store,  where("orders.state = 'sent_store'")
-  scope :by_user, lambda {|store| where("orders.user_id = ?", store)} 
+  scope :by_user, lambda {|user_id| where("orders.user_id = ?", user_id)} 
   scope :created_on, lambda {|date| {:conditions => ['created_at >= ? AND created_at <= ?', date.beginning_of_day, date.end_of_day]}}
   scope :updated_on, lambda {|date| {:conditions => ['updated_at >= ? AND updated_at <= ?', date.beginning_of_day, date.end_of_day]}}
   scope :this_month, where("orders.created_at >= :start_date AND orders.created_at <= :end_date", {:start_date => Date.today.beginning_of_month, :end_date => Date.today.end_of_month})
@@ -483,6 +483,10 @@ class Order < ActiveRecord::Base
     Resque.enqueue(NotificationPusherSender, 'new_order_event', VOSTO_ORDER_MANAGER_ID, self.id, "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}.")
 
     p "Order Id#{self.id}:Sent store notification to In-Store Application."
+
+    Resque.enqueue(LoyaltyAdder, self, self.customer)
+
+    logger.info "Order Id:#{self.id}Loyalty calculated." 
   end
 
   def deliver_order_confirmation_email(recipient)

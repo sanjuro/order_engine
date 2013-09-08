@@ -39,8 +39,13 @@ class Orders < Grape::API
       logger.info "Retrieveing Order with ID: #{params[:id]}"
       authenticated_user
       logger.info "Authenticated User: #{current_user.full_name}"
+      
       order = Order.find(params[:id])
-      order.format_for_web_serivce
+      if !order.nil?
+        order.format_for_web_serivce
+      else
+        error!({ "error" => "Order error", "detail" =>  "Order could not be found" }, 400)  
+      end
     end
 
     desc "Retrieve orders for a specific customer"
@@ -51,7 +56,13 @@ class Orders < Grape::API
       logger.info "Retrieveing Orders for customer with ID: #{params[:customer_id]}"
       authenticated_user
       logger.info "Authenticated User: #{current_user.full_name}"
-      GetOrdersForCustomerContext.call(params['customer_id']) 
+
+      user = User.find(params['customer_id'])
+      if !user.nil?
+        GetOrdersForCustomerContext.call(user) 
+      else
+        error!({ "error" => "Customer error", "detail" =>  "Customer could not be found" }, 400)  
+      end
     end
     
     desc "Creates a new order"

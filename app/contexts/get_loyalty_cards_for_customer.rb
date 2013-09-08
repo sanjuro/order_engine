@@ -1,12 +1,12 @@
-# Context to retrieve a specific store
+# Context to all loyalty cards for a customer
 #
 # Author::    Shadley Wentzel
 
-class GetOrdersForCustomerContext
+class GetLoyaltyCardsForCustomerCostContext
   attr_reader :user
 
   def self.call(user)
-    GetOrdersForCustomerContext.new(user).call
+    GetLoyaltyCardsForCustomerCostContext.new(user).call
   end
 
   def initialize(user)
@@ -15,6 +15,6 @@ class GetOrdersForCustomerContext
   end
 
   def call
-    @user.get_orders(100)
+    @user.get_loyalty_cards(10)
   end
 end

@@ -88,7 +88,7 @@ module CustomerRole
 	# Function to get orders for a customer
 	#
 	# * *Args*    :
-	#   - 
+	#   - +page+ -> the pagination size
 	# * *Returns* :
 	#   - 
 	# * *Raises* :
@@ -96,11 +96,12 @@ module CustomerRole
 	#
 	def get_orders(page=10)
 		@page = page
-		orders = Order.by_user(self.id).order('created_at DESC').page(page)
+
+		orders = Order.by_user(self.id).order('created_at DESC')
 
 	    orders_return = Hash.new
 
-	    orders.each do |order|
+	    orders.each do |order|	    	
 	      orders_return[order.id] = order.format_for_web_serivce 
 	    end
 
@@ -118,6 +119,28 @@ module CustomerRole
 	#
 	def get_favourites
 		Favourite.by_user(self.id)
+	end
+
+	# Function to get loyalty cards for a customer
+	#
+	# * *Args*    :
+	#   - +page+ -> the pagination size
+	# * *Returns* :
+	#   - 
+	# * *Raises* :
+	#   - 
+	#
+	def get_loyalty_cards(page=10)
+		@page = page
+		loyalty_cards = LoyaltyCard.by_user(self.id).order('created_at DESC')
+
+	    loyalty_cards_return = Hash.new
+
+	    loyalty_cards.each do |loyalty_card|
+	      loyalty_cards_return[order.id] = loyalty_card.format_for_web_serivce 
+	    end
+
+	    loyalty_cards_return	
 	end
 
 	# Function to authenticate a customer
