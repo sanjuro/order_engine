@@ -209,7 +209,10 @@ class Variant < ActiveRecord::Base
           loyalty_card.count += 1
           loyalty_card.save
         end
+      else
+        p 'No Loyatly added.'
       end
+
     end
 
 

@@ -99,10 +99,10 @@ module CustomerRole
 
 		orders = Order.by_user(self.id).order('created_at DESC')
 
-	    orders_return = Hash.new
+	    orders_return = Array.new
 
 	    orders.each do |order|	    	
-	      orders_return[order.id] = order.format_for_web_serivce 
+	      orders_return << order.format_for_web_serivce 
 	    end
 
 	    orders_return
