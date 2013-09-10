@@ -132,14 +132,15 @@ module CustomerRole
 	#
 	def get_loyalty_cards(page=10)
 		@page = page
+
 		loyalty_cards = LoyaltyCard.by_user(self.id).order('created_at DESC')
 
 	    loyalty_cards_return = Hash.new
 
 	    loyalty_cards.each do |loyalty_card|
-	      loyalty_cards_return[order.id] = loyalty_card.format_for_web_serivce 
+	      loyalty_cards_return[loyalty_card.id] = loyalty_card.format_for_web_serivce 
 	    end
-
+        		
 	    loyalty_cards_return	
 	end
 

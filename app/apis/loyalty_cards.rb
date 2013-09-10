@@ -5,15 +5,15 @@ class LoyaltyCards < Grape::API
   
   resource 'loyalty_cards' do
 
-    # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/loyalty_cards/by_customer/127?authentication_token=DXTTTTED2ASDBSD3 -v
+    # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/loyalty_cards/by_customer?authentication_token=d1b01126294db97ad5588aa50ae90952 -v
 
     desc "Returns all loyalty cards for a customer"
-    get "/by_customer/:customer_id" do  
-      logger.info "Retrieved all loyalty cards for a customer with ID: #{params.customer_id}"
+    get "/by_customer" do  
+      logger.info "Retrieved all loyalty cards for a customer"
       authenticated_user
       logger.info "Authenticated User: #{current_user.full_name}"
 
-      user = User.find(params['customer_id'])
+      user = User.find(current_user.id)
       if !user.nil?
         GetLoyaltyCardsForCustomerCostContext.call(user) 
       else
