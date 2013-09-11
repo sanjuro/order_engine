@@ -33,7 +33,7 @@ Resque.redis = Redis.new(
     :port => RESQUE['redis_port']
 )
 
-order = Order.find(2523)
+order = Order.find(2519)
 user = User.find(127)
 
 # Resque.enqueue(NotificationPusherSender, 'in_progress_event', order.customer.id, order.id, message)

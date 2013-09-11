@@ -470,10 +470,6 @@ class Order < ActiveRecord::Base
 
     # deliver_order_confirmation_email(self.customer.email)
 
-    Resque.enqueue(OrderConfirmationMailer, self, self.customer.email)
-
-    logger.info "Order Id:#{self.id}Sent user confirmation email."
-
     # send pusher notification to order manager
     # Pusher.app_id = '37591'
     # Pusher.key = 'be3c39c1555da94702ec'
@@ -483,6 +479,10 @@ class Order < ActiveRecord::Base
     Resque.enqueue(NotificationPusherSender, 'new_order_event', VOSTO_ORDER_MANAGER_ID, self.id, "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}.")
 
     p "Order Id#{self.id}:Sent store notification to In-Store Application."
+
+    Resque.enqueue(OrderConfirmationMailer, self, self.customer.email)
+
+    logger.info "Order Id:#{self.id}Sent user confirmation email."
 
     Resque.enqueue(LoyaltyAdder, self, self.customer)
 

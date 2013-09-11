@@ -7,7 +7,7 @@ class LoyaltyAdder
   	order = Order.find(sent_order['order']['id'])
 
   	order.line_items.each do |line_item|
-  		line_item.variant.add_loyalty(user['user']['id'])
+  		line_item.variant.add_loyalty(user['customer']['id'])
   	end
 
   	p "ORDER ID #{sent_order['order']['id']}:Calculated Loyalty"

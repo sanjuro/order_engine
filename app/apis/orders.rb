@@ -7,11 +7,11 @@ class Orders < Grape::API
 
     # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/orders/page/1?authentication_token=17298c88ae1a2998ebb4c4ae6ecd086d
     # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/orders/1751?authentication_token=b5a27178456753ba773d83666d276631 -v 
-    # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/orders/by_customer/127?authentication_token=b5a27178456753ba773d83666d276631 -v 
+    # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/orders/by_customer?authentication_token=d1b01126294db97ad5588aa50ae90952 -v 
     # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4", "time_to_ready": "15", "store_order_number": "6666"}' http://107.22.211.58:9000/api/v1/orders/2420/ready -v 
     # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4", "time_to_ready": "15", "store_order_number": "6666"}' http://127.0.0.1:9000/api/v1/orders/2497/in_progress -v 
     # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4", "time_to_ready": "15", "store_order_number": "6666"}' http://107.22.211.58:9000/api/v1/orders/2298/cancel?authentication_token=GFSHFSGD2ASDASD4
-    # curl -i -X POST -d '{"authentication_token":"d1b01126294db97ad5588aa50ae90952","order":{"unique_id":"spu0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "store_order_number": "6465", "line_items":[{"variant_id":"1379","quantity":"1","special_instructions": "test"}]}}' http://127.0.0.1:9000/api/v1/orders -v
+    # curl -i -X POST -d '{"authentication_token":"d1b01126294db97ad5588aa50ae90952","order":{"unique_id":"vos0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "store_order_number": "6465", "line_items":[{"variant_id":"1379","quantity":"1","special_instructions": "test"}]}}' http://127.0.0.1:9000/api/v1/orders -v
     # curl -i -X POST -d '{"authentication_token":"d1b01126294db97ad5588aa50ae90952","order":{"unique_id":"sel0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "31D25CD8-59B8-4251-B0EE-BDA5AF0C7C12", "device_type": "ios", "is_delivery": "1","shipping_method_id": "2", "ship_address": [{"address1": "24 Reid Street","address2": "","suburb_id": "62", "zipcode": "7500", "country_id": "187","latitude": "-33.960905", "longitude": "18.470102"}],"store_order_number": "6465", "line_items":[{"variant_id":"1379","quantity":"1","special_instructions": "test"}]}}' http://107.22.211.58:9000/api/v1/orders -v
     # curl -i -X POST -d '{"authentication_token":"BE33F21B5F6669D1B0E07ACC850AFEFC","order":{"unique_id":"vos0000001", "special_instructions":"I would like my Burrito on wholeweat", "device_identifier": "DEfe123123", "device_type": "blackberry", "is_delivery": "1","shipping_method_id": "2", "ship_address": {"address1": "31 Ricketts Street","address2": "De Tyger","suburb_id": "1", "zipcode": "7500","latitude": "-33.960905", "longitude": "18.470102"},"store_order_number": "6465", "line_items":[{"variant_id":"1379","quantity":"1","special_instructions": "test"}]}}' http://107.22.211.58:9000/api/v1/orders -v
     # curl -i -X POST -d '{ "authentication_token": "b5a27178456753ba773d83666d276631", "order": { "unique_id": "vos0000001", "special_instructions": "", "device_identifier": "DE953609-55B5-4238-B7E7-A40DB17E09AD", "device_type": "ios", "is_delivery": 1, "ship_address": { "address1": "31 Ricketts Street", "address2": "De Tyger", "suburb_id": "1", "zipcode": "7500", "latitude": "-33.960905", "longitude": "18.470102" }, "line_items": [ { "variant_id": "1379", "quantity": "1", "special_instructions": "test" } ] } }' http://107.22.211.58:9000/api/v1/orders -v
@@ -21,7 +21,7 @@ class Orders < Grape::API
     get "/" do  
       logger.info "Retrieved all orders"
       authenticated_user
-      logger.info "Authenticated User: #{current_user.full_name}"
+      logger.info "Authenticated User"
       orders_return = Array.new
 
       Order.all .each do |order|
@@ -29,6 +29,19 @@ class Orders < Grape::API
       end
 
       orders_return
+    end
+
+    desc "Retrieve orders for a specific customer"
+    get "/by_customer" do 
+      logger.info "Retrieveing Orders for customer with ID"
+      authenticated_user
+      logger.info "Authenticated User: #{current_user.full_name}"
+
+      if !current_user.nil?
+        GetOrdersForCustomerContext.call(current_user) 
+      else
+        error!({ "error" => "Customer error", "detail" =>  "Customer could not be found" }, 400)  
+      end
     end
 
     desc "Retrieve a specific order"
@@ -45,23 +58,6 @@ class Orders < Grape::API
         order.format_for_web_serivce
       else
         error!({ "error" => "Order error", "detail" =>  "Order could not be found" }, 400)  
-      end
-    end
-
-    desc "Retrieve orders for a specific customer"
-    params do
-      requires :customer_id, :type => Integer, :desc => "Customer id."
-    end
-    get "/by_customer/:customer_id" do 
-      logger.info "Retrieveing Orders for customer with ID: #{params[:customer_id]}"
-      authenticated_user
-      logger.info "Authenticated User: #{current_user.full_name}"
-
-      user = User.find(params['customer_id'])
-      if !user.nil?
-        GetOrdersForCustomerContext.call(user) 
-      else
-        error!({ "error" => "Customer error", "detail" =>  "Customer could not be found" }, 400)  
       end
     end
     
