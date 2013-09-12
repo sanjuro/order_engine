@@ -355,21 +355,22 @@
                                                 <ul style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;font-size:16px;font-weight:normal;color:#788c8a;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;margin-top:0;margin-bottom:18px;margin-right:0;margin-left:0;line-height:27px;">
                                                   <% @order.line_items.each do |item| %>
                                                   <li>
-                                                    <b><%= item.quantity %> X <%= item.variant.product.name %> </b> -  <%= item.price %> Total: R <%= (item.price * item.quantity) %>
+                                                    <b><%= item.quantity %> X <%= item.variant.product.name %> </b> -  <%= item.price %> Price: R <%= (item.price * item.quantity) %>
                                                   </li>
                                                    <% end %>
                                                 </ul>
                                                   </p>
                                                       <p style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;font-size:18px;font-weight:normal;color:#788c8a;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;margin-top:0;margin-bottom:18px;margin-right:0;margin-left:0;line-height:27px;"> 
-                                                       <b> <%= t(:subtotal) %>:</b>  R <%= @order.item_total %>
+                                                       <%= t(:subtotal) %>: R <%= @order.item_total %>
                                                       </p>
                                                       <p style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;font-size:18px;font-weight:normal;color:#788c8a;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;margin-top:0;margin-bottom:18px;margin-right:0;margin-left:0;line-height:27px;"> 
-                                                       <b> <%= t(:order_total) %>: </b>  R <%= @order.total %>
+                                                      <%= t(:order_total) %>:  R <%= @order.total %>
                                                       </p>
 
                                                        <p style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;font-size:18px;font-weight:normal;color:#788c8a;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;margin-top:0;margin-bottom:18px;margin-right:0;margin-left:0;line-height:27px;">
          
-                                                       </p>           
+                                                       </p>  
+                                                      <p style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;font-size:18px;font-weight:normal;color:#788c8a;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;margin-top:0;margin-bottom:18px;margin-right:0;margin-left:0;line-height:27px;"> <b>Gives us your Feedback</b> http://www.vosto.co.za/problems </p>        
                                                       <p style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;font-size:18px;font-weight:normal;color:#788c8a;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;margin-top:0;margin-bottom:18px;margin-right:0;margin-left:0;line-height:27px;"> <b>LIKE</b> us http://www.facebook.com/vostoapp <Br> <b>FOLLOW</b> us Twitter https://twitter.com/vostoapp</p>
                                                   </td>
                                              </tr>
