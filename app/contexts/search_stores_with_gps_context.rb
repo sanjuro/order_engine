@@ -26,14 +26,13 @@ class SearchStoresWithGPSContext
   		fulltext query_term do
   			boost_fields :unique_id => 10.0
         boost_fields :store_name => 5.0
-        boost_fields :tag => 2.0
   		end   
       with :is_online, true
-  		with(:location).near(latitude, longitude, :precision => 4, :bbox => true)
+  		with(:location).near(latitude, longitude, :precision => 6, :bbox => true)
       # with(:location).in_radius(latitude, longitude, 50, :bbox => true)
   		# order_by :unique_id, :desc
       order_by :location, :desc
-  		paginate :page => page, :per_page => 15
+  		paginate :page => page, :per_page => 20
   	end
 
   	search_results = search.results 
@@ -41,7 +40,7 @@ class SearchStoresWithGPSContext
   	stores_return = Array.new
   	search_results.each do |store|
       distance = store.distance_to([latitude, longitude], :km).round(2)
-      if distance <= 25
+      if distance <= 30
 		    stores_return << store.format_for_web_serivce_with_gps(latitude,longitude)
       end
   	end
