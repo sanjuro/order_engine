@@ -1,7 +1,7 @@
 # Context to assocaite to add a new order
 #
 # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/search_gps?query=kauai&latitude=-33.864809&longitude=18.570908
-# curl -i -X POST -d'{"query_term": "simply", "latitude": "-33.983967", "longitude": "18.480202"}' 'http://127.0.0.1:9000/api/v1/stores/search'
+# curl -i -X POST -d'{"query_term": "", "latitude": "-33.899261474609375", "longitude": "18.59324836730957"}' 'http://127.0.0.1:9000/api/v1/stores/search'
 # Author::    Shadley Wentzel
 
 class SearchStoresWithGPSContext
@@ -28,7 +28,7 @@ class SearchStoresWithGPSContext
         boost_fields :store_name => 5.0
   		end   
       with :is_online, true
-  		with(:location).near(latitude, longitude, :precision => 6, :bbox => true)
+  		with(:location).near(latitude, longitude, :precision => 5, :bbox => true)
       # with(:location).in_radius(latitude, longitude, 50, :bbox => true)
   		# order_by :unique_id, :desc
       order_by :location, :desc
