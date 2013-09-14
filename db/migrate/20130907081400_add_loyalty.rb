@@ -34,7 +34,7 @@ class AddLoyalty < ActiveRecord::Migration
 	      t.string :name
 	    end
 
-	    add_column :products, :product_group_id, :integer
+	    add_column :variants, :product_group_id, :integer
 	end
 
 	def self.down
@@ -44,6 +44,6 @@ class AddLoyalty < ActiveRecord::Migration
     	drop_table :products_groups
 
     	remove_column :stores, :stores_group_id
-    	remove_column :products, :products_group_id
+    	remove_column :variants, :products_group_id
 	end
 end

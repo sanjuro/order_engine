@@ -8,7 +8,7 @@ class Deal < ActiveRecord::Base
 	has_many :images, :as => :viewable, :order => :position
 
 	def deal_image
-		self.images.first.little_url
+		self.images.first.small_url
 	end
 
 	def format_for_web_serivce
