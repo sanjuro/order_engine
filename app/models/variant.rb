@@ -25,7 +25,7 @@ class Variant < ActiveRecord::Base
     belongs_to :product, :touch => true
 
     attr_accessible :presentation, :position, :option_value_ids, :reward_points_gain, :reward_points_spend, 
-                    :product_id, :option_values_attributes, :price, :option_values
+                    :product_id, :option_values_attributes, :price, :option_values, :product_group_id,
 
     attr_accessor  :sku, :name   
     attr_writer  :sku, :name  
@@ -188,9 +188,8 @@ class Variant < ActiveRecord::Base
     #   - 
     #
     def add_loyalty(user_id)
-      product = self.product
 
-      if !product.product_group_id.nil?
+      if !self.product_group_id.nil?
 
         product_group = ProductGroup.find(product.product_group_id)
 
@@ -210,7 +209,7 @@ class Variant < ActiveRecord::Base
           loyalty_card.save
         end
       else
-        p 'No Loyatly added.'
+        p 'No Loyalty added.'
       end
 
     end
