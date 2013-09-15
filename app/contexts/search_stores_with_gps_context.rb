@@ -1,7 +1,7 @@
 # Context to assocaite to add a new order
 #
 # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/search_gps?query=kauai&latitude=-33.864809&longitude=18.570908
-# curl -i -X POST -d'{"query_term": "", "latitude": "-33.97714", "longitude": "18.46475"}' 'http://127.0.0.1:9000/api/v1/stores/search'
+# curl -i -X POST -d'{"query_term": "", "latitude": "-33.899261", "longitude": "18.593347"}' 'http://127.0.0.1:9000/api/v1/stores/search'
 # curl -i -X POST -d'{"query_term": "", "latitude": "-33.89421341009438", "longitude": "18.59125812537968"}' 'http://127.0.0.1:9000/api/v1/stores/search'
 #
 # curl -i -X POST -d'{"query_term": "", "latitude": "-33.977142", "longitude": "18.464752"}' 'http://107.22.211.58:9000/api/v1/stores/search'
@@ -33,11 +33,11 @@ class SearchStoresWithGPSContext
         # boost_fields :tag => 2.0
       end   
       with :is_online, true
-      with(:location).near(latitude, longitude, :precision => 5, :bbox => true)
+      with(:location).near(latitude, longitude, :precision => 4, :bbox => true)
       # with(:location).in_radius(latitude, longitude, 50, :bbox => true)
       # order_by :unique_id, :desc
       order_by :location, :desc
-      paginate :page => page, :per_page => 20
+      paginate :page => page, :per_page => 28
     end
 
     search_results = search.results 
