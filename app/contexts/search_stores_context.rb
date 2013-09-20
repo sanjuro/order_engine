@@ -28,7 +28,7 @@ class SearchStoresContext
   		end   
       with :is_online, true
   		order_by :unique_id, :desc
-  		paginate :page => page, :per_page => 28
+  		paginate :page => page, :per_page => 15
   	end
 
   	search_results = search.results 

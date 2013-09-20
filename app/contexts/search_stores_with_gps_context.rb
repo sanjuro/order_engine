@@ -37,7 +37,7 @@ class SearchStoresWithGPSContext
       # with(:location).in_radius(latitude, longitude, 50, :bbox => true)
       # order_by :unique_id, :desc
       order_by :location, :desc
-      paginate :page => page, :per_page => 28
+      paginate :page => page, :per_page => 15
     end
 
     search_results = search.results 
