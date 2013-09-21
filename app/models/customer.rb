@@ -108,5 +108,24 @@ class Customer < User
     self.encrypted_password = self.user_pin 
     self.save
   end
+
+
+  # Function to reset a customers pin
+  #
+  # * *Args*    :
+  #   - 
+  # * *Returns* :
+  #   - 
+  # * *Raises* :
+  #   - 
+  #
+  def reset_user_pin(new_pin)
+      # generate new pin
+      new_encrypted_password = BCrypt::Password.create(new_pin)
+
+      self.user_pin = new_encrypted_password
+      self.encrypted_password = new_encrypted_password
+      self.save
+  end
     
 end

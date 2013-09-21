@@ -194,7 +194,7 @@ module CustomerRole
 	#
 	def reset_pin
 	    # generate new pin
-	    new_pin = "#{Array.new(5){rand(5)}.join}"
+ 	    new_pin = "#{Array.new(5){rand(5)}.join}"
 
 	    new_encrypted_password = BCrypt::Password.create(new_pin)
 
@@ -202,22 +202,7 @@ module CustomerRole
 		self.encrypted_password = new_encrypted_password
 		self.save
 
-	    # email pin to user
-message = <<MESSAGE_END
-From: Vosto Info <info@vosto.co.za>
-To: #{self.full_name} <#{self.email}>
-Subject: Reset Pin 
-
-Your request to reset your pin has been processed and your new pin:
-
-New Pin:#{new_pin}
-
-Please keep it in a safe place.
-MESSAGE_END
-
-		Net::SMTP.start('mail.vosto.co.za', 25, 'vosto.co.za', 'info@vosto.co.za', 'R@d6hi@..', :plain) do |smtp|
-		  smtp.send_message message, 'info@vosto.co.za', self.email
-		end
+		Resque.enqueue(NewUserPinMailer, self.id, new_pin, self.email)
 
 		return { "success" => "new pin sent"}
 	end
