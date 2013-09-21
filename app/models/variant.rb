@@ -206,6 +206,9 @@ class Variant < ActiveRecord::Base
           new_loyalty_card.save
         else
           loyalty_card.count += 1
+          if loyalty_card.count == loyalty.win_count
+            loyalty_card.is_won = true
+          end
           loyalty_card.save
         end
       else
