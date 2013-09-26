@@ -51,15 +51,29 @@ describe Orders do
         end
 
         it 'SHOULD return a 200' do      
-           get "/api/v1/orders/by_customer.json?authentication_token=CXTTTTED2ASDBSD3"    
+           get "/api/v1/orders/by_customer.json?authentication_token=d1b01126294db97ad5588aa50ae90952"    
           last_response.status.should == 200
         end
 
         it 'SHOULD return orders for the user' do
-          get "/api/v1/orders/by_customer.json?authentication_token=CXTTTTED2ASDBSD3"
+          get "/api/v1/orders/by_customer.json?authentication_token=d1b01126294db97ad5588aa50ae90952"
           retrieved_orders = JSON.parse(last_response.body)
           retrieved_orders.count.should >= 1
         end      
+
+        it 'SHOULD return store name for each order' do
+          get "/api/v1/orders/by_customer.json?authentication_token=d1b01126294db97ad5588aa50ae90952"
+          retrieved_orders = JSON.parse(last_response.body)
+          order = retrieved_orders.first
+          order["store_name"].empty?.should == false
+        end  
+
+        it 'SHOULD return store image for each order' do
+          get "/api/v1/orders/by_customer.json?authentication_token=d1b01126294db97ad5588aa50ae90952"
+          retrieved_orders = JSON.parse(last_response.body)
+          order = retrieved_orders.first
+          order["store_image"].empty?.should == false
+        end  
 
       end
     end   
@@ -67,7 +81,7 @@ describe Orders do
     context "GIVEN viewing a single order" do
 
         order = Order.find(1287)
-        p order
+
         it 'should return a 200 and the requested order number' do
           get "/api/v1/orders/#{order.id}.json?authentication_token=CXTTTTED2ASDBSD3"
           last_response.status.should == 200

@@ -706,6 +706,7 @@ class Order < ActiveRecord::Base
             "store_name" => self.store.store_name,
             "store_contact" => self.store.telephone,
             "store_order_number" => self.store_order_number,
+            "store_image" => self.store.store_icon,
             "is_delivery" => self.is_delivery,
             "delivery_total" => self.ship_total,
             "total" => self.total,
