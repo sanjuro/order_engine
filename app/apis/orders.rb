@@ -7,7 +7,7 @@ class Orders < Grape::API
 
     # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/orders/page/1?authentication_token=17298c88ae1a2998ebb4c4ae6ecd086d
     # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/orders/1751?authentication_token=b5a27178456753ba773d83666d276631 -v 
-    # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/orders/by_customer?authentication_token=d1b01126294db97ad5588aa50ae90952 -v 
+    # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/orders/by_customer?authentication_token=d1b01126294db97ad5588aa50ae90952 -v 
     # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4", "time_to_ready": "15", "store_order_number": "6666"}' http://107.22.211.58:9000/api/v1/orders/2420/ready -v 
     # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4", "time_to_ready": "15", "store_order_number": "6666"}' http://127.0.0.1:9000/api/v1/orders/2497/in_progress -v 
     # curl -i -H "Accept: application/json" -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4", "time_to_ready": "15", "store_order_number": "6666"}' http://107.22.211.58:9000/api/v1/orders/2298/cancel?authentication_token=GFSHFSGD2ASDASD4

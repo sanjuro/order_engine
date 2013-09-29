@@ -24,7 +24,7 @@ class SearchStoresContext
   		fulltext query_term do
   			boost_fields :unique_id => 10.0
   			boost_fields :store_name => 5.0
-        boost_fields :tag => 2.0
+        # boost_fields :tag => 2.0
   		end   
       with :is_online, true
   		order_by :unique_id, :desc
