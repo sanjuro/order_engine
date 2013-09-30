@@ -1,11 +1,11 @@
 # Context to assocaite to add a new order
 #
 # curl -i -H "Accept: application/json" http://localhost:9000/api/v1/stores/search_gps?query=kauai&latitude=-33.864809&longitude=18.570908
-# curl -i -X POST -d'{"query_term": "", "latitude": "-33.899261", "longitude": "18.593347", "page":"2"}' 'http://127.0.0.1:9000/api/v1/stores/search'
+# curl -i -X POST -d'{"query_term": "", "latitude": "-33.899261", "longitude": "18.593347", "page":""}' 'http://127.0.0.1:9000/api/v1/stores/search'
 # curl -i -X POST -d'{"query_term": "", "latitude": "-33.89421341009438", "longitude": "18.59125812537968"}' 'http://127.0.0.1:9000/api/v1/stores/search'
 #
-# curl -i -X POST -d'{"query_term": "", "latitude": "-33.977142", "longitude": "18.464752", "page":"1"}' 'http://107.22.211.58:9000/api/v1/stores/search'
-# curl -i -X POST -d'{"query_term": "", "latitude": "-33.89421341009438", "longitude": "18.59125812537968"}' 'http://107.22.211.58:9000/api/v1/stores/search'
+# curl -i -X POST -d '{"query_term": "", "latitude": "-33.89418256469071", "longitude": "18.591281594708562", "page":1}' 'http://107.22.211.58:9000/api/v1/stores/search' -v
+# curl -i -X POST -d '{"query_term": "", "latitude": "-33.89421341009438", "longitude": "18.59125812537968"}' 'http://107.22.211.58:9000/api/v1/stores/search'
 # Author::    Shadley Wentzel
 
 class SearchStoresWithGPSContext

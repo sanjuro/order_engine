@@ -195,7 +195,7 @@ class Variant < ActiveRecord::Base
 
         loyalty = product_group.loyalties.first
 
-        loyalty_card = LoyaltyCard.by_loyalty(loyalty.id).by_user(user_id).first
+        loyalty_card = LoyaltyCard.by_loyalty(loyalty.id).by_user(user_id).where('is_won != 1').first
 
         if loyalty_card.nil?    
           new_loyalty_card = LoyaltyCard.new
