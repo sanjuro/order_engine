@@ -78,6 +78,9 @@ module CustomerRole
 			order.create_shipment!
 			
 		end
+
+		# send first time order mail if it is first time
+    	Resque.enqueue(FirstTimeOrderUpMailer, self.id)
 		
 		order.next
 

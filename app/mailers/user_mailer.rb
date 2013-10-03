@@ -16,4 +16,20 @@ class UserMailer < ActionMailer::Base
       	 :subject => subject)
   end
 
+  def vosto_sign_up(customer, resend = false)
+    @customer = customer
+    subject = "New Customer Sign Up"
+    mail(:to => "info@vosto.co.za",
+    	 :from    => "info@vosto.co.za",
+      	 :subject => subject)
+  end
+
+  def vosto_first_order(customer, resend = false)
+    @customer = customer
+    subject = "First Time Customer Order"
+    mail(:to => "info@vosto.co.za",
+    	 :from    => "info@vosto.co.za",
+      	 :subject => subject)
+  end
+
 end
