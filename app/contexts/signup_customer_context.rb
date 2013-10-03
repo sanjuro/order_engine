@@ -31,6 +31,9 @@ class SignupCustomerContext
     @customer.profileable_id = @customer.id
     @customer.save
 
+    # send new sign up mail
+    Resque.enqueue(SignUpMailer, @customer.id)
+
     # create access grant for new customer
     access_grant = AccessGrant.find_access(@authentication_token)
     @customer.create_access_grant(access_grant.client_application_id)

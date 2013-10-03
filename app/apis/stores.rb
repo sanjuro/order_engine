@@ -9,7 +9,7 @@ class Stores < Grape::API
     # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/stores/search/thai
     # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/stores/featured
     # curl -v -H 'Accept: application/json' http://127.0.0.1:9000/api/v1/stores/53/new_orders?authentication_token=lb714q329neb1628m107a211an1176bz
-    # curl -v -H 'Accept: application/json' -X POST -d '{"authentication_token": "AXSSSSED2ASDASD2"}' http://107.22.211.58:9000/api/v1/stores/53/new_orders
+    # curl -v -H 'Accept: application/json' -X POST -d '{"authentication_token": "AXSSSSED2ASDASD2"}' http://127.0.0.1:9000/api/v1/stores/new_orders -v
     # curl -v -H 'Accept: application/json' -X POST -d '{"authentication_token": "AXSSSSED2ASDASD2",}' http://107.22.211.58:9000/api/v1/orders/1/cancel
     # curl -H 'Accept: application/json' -X POST -d '{ "query_term": "", "page":"2", "latitude": "-33.894188", "longitude": "18.591260"}' 'http://107.22.211.58:9000/api/v1/stores/search' -v
     # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/stores/1/orders_for_today?state=in_progress&authentication_token=CXTTTTED2ASDBSD3 -v
@@ -154,7 +154,7 @@ class Stores < Grape::API
       GetNewStoreOrdersContext.call(store)
     end
 
-    desc "Get new orders for store."
+    desc "Get new orders for vost."
     post "/new_orders" do
       logger.info "Retrieved all new orders"
       authenticated_user

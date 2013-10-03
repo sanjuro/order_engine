@@ -13,7 +13,7 @@ require 'resque'
 
 # resque-web config/redis.rb -L
 # bundle exec rake resque:work MODE=development TERM_CHILD=1 RESQUE_TERM_TIMEOUT=10 COUNT=1 QUEUE=* VERBOSE=1 PIDFILE=tmp/pids/resque_worker.pid  >> log/resque_worker_QUEUE.log
-# MODE=development COUNT=1 QUEUE=*  VERBOSE=1 TERM_CHILD=1 RESQUE_TERM_TIMEOUT=10 bundle exec rake resque:work >> log/resque_worker_QUEUE.log --trace
+# MODE=productiom COUNT=2 QUEUE=*  VERBOSE=1 TERM_CHILD=1 RESQUE_TERM_TIMEOUT=10 bundle exec rake resque:work >> log/resque_worker_QUEUE.log --trace
 namespace :resque do
 
     # :setup task
