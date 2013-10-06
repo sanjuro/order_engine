@@ -5,7 +5,24 @@ class LoyaltyCards < Grape::API
   
   resource 'loyalty_cards' do
 
-    # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/loyalty_cards/by_customer?authentication_token=d1b01126294db97ad5588aa50ae90952 -v
+    # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/loyalty_cards/1?authentication_token=d1b01126294db97ad5588aa50ae90952 -v
+
+    desc "Retrieve a specific loyalty card"
+    params do
+      requires :id, :type => Integer, :desc => "Loyalty Card id."
+    end
+    get "/:id" do 
+      logger.info "Retrieveing Loyalty Card with ID: #{params[:id]}"
+      authenticated_user
+      logger.info "Authenticated User: #{current_user.full_name}"
+      
+      loyalty_card = LoyaltyCard.find(params[:id])
+      if !loyalty_card.nil?
+        GetLoyaltyCardContext.call(loyalty_card.id)
+      else
+        error!({ "error" => "Loyalty Card error", "detail" =>  "Loyalty Card could not be found" }, 400)  
+      end
+    end
 
     desc "Returns all loyalty cards for a customer"
     get "/by_customer" do  

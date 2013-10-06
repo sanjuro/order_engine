@@ -4,5 +4,5 @@ class Loyalty < ActiveRecord::Base
 
   belongs_to :store_group
   belongs_to :product_group
-
+  
 end
