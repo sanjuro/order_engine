@@ -5,7 +5,7 @@ class LoyaltyCards < Grape::API
   
   resource 'loyalty_cards' do
 
-    # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/loyalty_cards/1?authentication_token=d1b01126294db97ad5588aa50ae90952 -v
+    # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/loyalty_cards/by_customer?authentication_token=d1b01126294db97ad5588aa50ae90952 -v
 
     desc "Retrieve a specific loyalty card"
     params do
