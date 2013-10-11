@@ -6,6 +6,7 @@ class Users < Grape::API
   resource 'users' do
 
     # curl -i -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4","user":{"first_name":"TEstee", "last_name":"Test","email":"shad6ster@gmail.com","mobile_number":"0833908314","user_pin":"11111"}}' http://127.0.0.1:9000/api/v1/users/create_customer
+    # curl -i -X POST -d '{"authentication_token":"CXTTTTED2ASDBSD4","email":"shad6ster@gmail.com"}' http://127.0.0.1:9000/api/v1/users/social_signin
 
     desc "Retrieve all User"
     get "/" do
@@ -35,7 +36,19 @@ class Users < Grape::API
       else
         error!({ "error" => "customer error", "detail" =>  "customer with email #{params[:user][:email]} already exists on the vosto system" }, 400)  
       end
+    end
 
+    desc "Retrieve a specific User by email only used with social login"
+    post "/social_signin" do 
+      authenticated_user
+
+      customer = User.by_email(params[:email]).first
+
+      if !customer.nil?
+        customer
+      else
+        error!({ "error" => "customer error", "detail" =>  "customer with email #{params[:email]} does not exist on the vosto system" }, 400)  
+      end
     end
 
   end

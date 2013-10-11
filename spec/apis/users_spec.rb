@@ -94,4 +94,30 @@ describe Users do
     end
   end
 
+  context "Sign in via a social login" do
+
+    describe 'POST /api/v1/users/social_signin' do
+
+      user = FactoryGirl.build(:user)
+
+      email = Hash.new
+      email = { :email => user.email }
+     
+      it 'SHOULD sign the user in' do
+        post '/api/v1/users/social_signin?authentication_token=CXTTTTED2ASDBSD4', email.to_json
+        retrieved_user = JSON.parse(last_response.body)  
+        retrieved_user['email'].should eq(user['email'])
+      end
+
+      it 'SHOULD not sign the user in' do
+        email = { :email => "asdsd2Gmail.com" }
+        post '/api/v1/users/social_signin?authentication_token=CXTTTTED2ASDBSD4', email.to_json
+        retrieved_user = JSON.parse(last_response.body)  
+        retrieved_user['email'].should eq(nil)
+      end
+
+    end
+
+  end
+
 end
