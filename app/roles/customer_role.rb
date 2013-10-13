@@ -111,6 +111,29 @@ module CustomerRole
 	    orders_return
 	end
 
+	# Function to get orders for a customer
+	#
+	# * *Args*    :
+	#   - +page+ -> the pagination size
+	# * *Returns* :
+	#   - 
+	# * *Raises* :
+	#   - 
+	#
+	def get_orders_objects(page=10)
+		@page = page
+
+		orders = Order.by_user(self.id).order('created_at DESC')
+
+	    orders_return = Hash.new
+
+	    orders.each do |order|	    	
+	      orders_return[order.id] = order.format_for_web_serivce 
+	    end
+
+	    orders_return
+	end
+
 	# Function to get favourites for a customer
 	#
 	# * *Args*    :

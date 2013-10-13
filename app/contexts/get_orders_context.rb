@@ -16,6 +16,6 @@ class GetOrdersContext
   end
 
   def call
-    @user.get_orders(@page)
+    @user.get_orders_objects(@page)
   end
 end
