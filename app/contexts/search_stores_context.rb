@@ -27,7 +27,7 @@ class SearchStoresContext
         # boost_fields :tag => 2.0
   		end   
       with :is_online, true
-  		order_by :unique_id, :desc
+  		order_by :unique_id, :asc
   		paginate :page => page, :per_page => 15
   	end
 

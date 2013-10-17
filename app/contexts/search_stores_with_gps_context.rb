@@ -36,7 +36,7 @@ class SearchStoresWithGPSContext
       with(:location).near(latitude, longitude, :precision => 4, :bbox => true)
       # with(:location).in_radius(latitude, longitude, 50, :bbox => true)
       # order_by :unique_id, :desc
-      order_by :location, :desc
+      order_by :location, :asc
       paginate :page => page, :per_page => 15
     end
 
