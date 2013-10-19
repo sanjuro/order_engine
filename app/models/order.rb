@@ -668,7 +668,7 @@ class Order < ActiveRecord::Base
             "special_instructions" => self.special_instructions,
             "time_to_ready" => self.time_to_ready,
             "state" => self.state,
-            "store_id" => self.store_id,
+            "store_id" => !self.store.nil? ? self.store.id : 'no store',
             "store_order_number" => self.store_order_number,
             "is_delivery" => self.is_delivery,
             "delivery_total" => self.ship_total,
@@ -689,6 +689,12 @@ class Order < ActiveRecord::Base
   def format_with_store_for_web_serivce
     orders_return = Hash.new
 
+    # set store to Vosto store, if no store has been associated
+    if self.store.nil?
+      vosto_store = Store.find(15)
+    end
+
+
     orders_return = { 
             "adjustment_total" => self.adjustment_total,
             "completed_at" => self.completed_at,
@@ -702,11 +708,11 @@ class Order < ActiveRecord::Base
             "special_instructions" => self.special_instructions,
             "time_to_ready" => self.time_to_ready,
             "state" => self.state,
-            "store_id" => self.store_id,
-            "store_name" => self.store.store_name,
-            "store_contact" => self.store.telephone,
+            "store_id" => !self.store.nil? ? self.store.id : 15,
+            "store_name" => !self.store.nil? ? self.store.store_name : 'no store',
+            "store_contact" => !self.store.nil? ? self.store.telephone : 'no store',
             "store_order_number" => self.store_order_number,
-            "store_image" => self.store.store_icon,
+            "store_image" => !self.store.nil? ? vosto_store.store_icon : 'no store',
             "is_delivery" => self.is_delivery,
             "delivery_total" => self.ship_total,
             "total" => self.total,

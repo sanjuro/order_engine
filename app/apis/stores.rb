@@ -154,7 +154,7 @@ class Stores < Grape::API
       GetNewStoreOrdersContext.call(store)
     end
 
-    desc "Get new orders for vost."
+    desc "Get new orders for vosto."
     post "/new_orders" do
       logger.info "Retrieved all new orders"
       authenticated_user
