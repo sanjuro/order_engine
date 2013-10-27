@@ -37,6 +37,7 @@ class Club < ActiveRecord::Base
 		club_return = Hash.new
 
 		club_return = { 
+				"id" => self.id,
 		        "club_name" => self.club_name,
 		        "club_description" => self.club_description,
 		        "is_active" => self.is_active,
