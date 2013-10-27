@@ -32,8 +32,8 @@ gem 'ruby_pagination_logic'
 
 gem 'kaminari'
 
-gem 'sunspot'
-gem 'sunspot_rails'
+gem 'sunspot', '2.0.0'
+gem 'sunspot_rails', '2.0.0'
 
 gem 'bbpush'
 gem 'pushmeup'

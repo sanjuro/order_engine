@@ -5,6 +5,8 @@ class LoyaltyCard < ActiveRecord::Base
   belongs_to :loyalty
   belongs_to :customer, :foreign_key => "user_id", :class_name => "Customer"
 
+  delegate_attributes :redeem_code, :to => :loyalty
+
   scope :by_user, lambda {|user_id| where("loyalty_cards.user_id = ?", user_id)} 
   scope :by_loyalty, lambda {|loyalty_id| where("loyalty_cards.loyalty_id = ?", loyalty_id)} 
 
@@ -15,12 +17,13 @@ class LoyaltyCard < ActiveRecord::Base
         "count" => self.count.to_s,
         "updated_at" => self.updated_at,
         "created_at" => self.created_at,
-        "is_won" => self.is_won,
+        "redeem_code" => self.redeem_code,
+        "is_won" => self.is_won,        
         "id" => self.id.to_s,
         "loyalty" => { 
             "name" => self.loyalty.name,
             "description" => self.loyalty.description,
-            "win_count" => self.loyalty.win_count.to_s,
+            "win_count" => self.loyalty.win_count.to_s,           
             "prize" => self.loyalty.prize,
             }      
     }

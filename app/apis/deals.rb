@@ -17,6 +17,23 @@ class Deals < Grape::API
       end
       deals_return
     end
+
+    desc "Redeem a specific deal"
+    params do
+      requires :id, :type => Integer, :desc => "Deal id."
+    end
+    get "/:id/redeem" do 
+      logger.info "Redeem a Deal with ID: #{params[:id]}"
+      authenticated_user
+      logger.info "Authenticated User: #{current_user.full_name}"
+
+      deal = Deal.find(params[:id])
+      if !deal.nil?
+        RedeemDealContext.call(current_user,deal.id)
+      else
+        error!({ "error" => "Deal error", "detail" =>  "Deal could not be found" }, 400)  
+      end
+    end
   end
   
 end

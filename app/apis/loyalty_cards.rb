@@ -39,5 +39,22 @@ class LoyaltyCards < Grape::API
       end
     end
 
+    desc "Punch a specific loyalty card"
+    params do
+      requires :id, :type => Integer, :desc => "Loyalty Card id."
+    end
+    get "/:id/punch" do 
+      logger.info "Punchind Loyalty Card with ID: #{params[:id]}"
+      authenticated_user
+      logger.info "Authenticated User: #{current_user.full_name}"
+      
+      loyalty_card = LoyaltyCard.find(params[:id])
+      if !loyalty_card.nil?
+        PunchLoyaltyCardContext.call(current_user,loyalty_card.id)
+      else
+        error!({ "error" => "Loyalty Card error", "detail" =>  "Loyalty Card could not be found" }, 400)  
+      end
+    end
+
   end
 end

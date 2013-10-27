@@ -88,6 +88,8 @@ class API < Grape::API
 
 	mount Addresses
 
+	mount Clubs
+
 	mount Customers
 
 	mount Deals

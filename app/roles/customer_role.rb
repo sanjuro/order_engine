@@ -208,6 +208,38 @@ module CustomerRole
         self
 	end
 
+	# Function to redeem a deal
+	# * *Args*    :
+	#   - 
+	# * *Returns* :
+	#   - 
+	# * *Raises* :
+	#   - 
+	#
+	def redeem_deal(deal)
+		deals_user = DealUser.new
+		deals_user.user_id = self
+		deals_user.deal = deal
+		deals_user.is_redeem = true
+		deals_user.save
+	end
+
+	# Function to punch a loyatly card
+	#
+	# * *Args*    :
+	#   - 
+	# * *Returns* :
+	#   - 
+	# * *Raises* :
+	#   - 
+	#
+	def punch_loyalty_card(loyalty_card)
+		loyalty_card.count += 1
+        if loyalty_card.count == loyalty.win_count
+        	loyalty_card.is_won = true
+        end
+         	loyalty_card.save
+	end
 
 	# Function to reset the pin of a csutomer
 	#

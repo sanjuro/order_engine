@@ -6,7 +6,7 @@ class Store < ActiveRecord::Base
 
   include Sunspot::ActiveRecord
 
-  attr_accessible :store_name, :unique_id, :store_description, :address, :email, :latitude, :longitude, 
+  attr_accessible :store_name, :unique_id, :store_description, :address, :email, :latitude, :longitude,
                   :manager_name, :manager_contact, :created_at, :completed_at, :updated_at, 
                   :fanpage_id, :tag, :business_hours_attributes, :is_online, :can_deliver, 
                   :is_active, :url, :telephone, :state_id, :suburb_id, :country_id, :taxonomies, :images,
@@ -67,8 +67,9 @@ class Store < ActiveRecord::Base
     string :address
     boolean :is_online
     location (:location) { Sunspot::Util::Coordinates.new(latitude, longitude) }
-    # string(:location, :as => :location) { [lat,lng].join(",") }
+    # latlon(:location) { Sunspot::Util::Coordinates.new(latitude, longitude) }
   end
+
 
   def get_shipping_method_for_delivery
     ShippingMethod.where('store_id = ?', self.id).where('shipping_method_type_id = 2')

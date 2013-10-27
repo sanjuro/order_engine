@@ -1,6 +1,7 @@
 # Context to retrieve all new orders orders for today
 #
 # Author::    Shadley Wentzel
+# curl -v -H 'Accept: application/json' -X POST -d '{"authentication_token": "AXSSSSED2ASDASD2"}' http://107.22.211.58:9000/api/v1/stores/new_orders -v
 
 class GetNewOrdersContext
 

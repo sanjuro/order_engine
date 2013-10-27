@@ -31,14 +31,28 @@ class SearchStoresWithGPSContext
         boost_fields :unique_id => 10.0
         boost_fields :store_name => 5.0
         # boost_fields :tag => 2.0
-      end   
+      end
       with :is_online, true
       with(:location).near(latitude, longitude, :precision => 4, :bbox => true)
       # with(:location).in_radius(latitude, longitude, 50, :bbox => true)
       # order_by :unique_id, :desc
-      order_by :location, :desc
+      # order_by :location, :desc
       paginate :page => page, :per_page => 15
     end
+
+    # search = Sunspot.search(Store) do
+      
+    #   adjust_solr_params do |solr_para|
+    #     solr_para[:sort] = "geodist() asc"
+    #     solr_para[:sfield] = 'location'
+    #     solr_para[:pt] = "#{latitude},#{longitude}"
+    #     solr_para[:d] = "10"
+    #     solr_para[:fq] = "_query_:\"{!geofilt}\""
+    #   end
+
+    #   paginate :page => page, :per_page => 15
+
+    # end
 
     search_results = search.results 
 
