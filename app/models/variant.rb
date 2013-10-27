@@ -202,7 +202,6 @@ class Variant < ActiveRecord::Base
           new_loyalty_card.loyalty_id = loyalty.id
           new_loyalty_card.user_id = user_id
           new_loyalty_card.count = 1
-          p new_loyalty_card
           new_loyalty_card.save
         else
           loyalty_card.count += 1

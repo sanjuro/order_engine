@@ -21,7 +21,6 @@ class Deal < ActiveRecord::Base
 		deal_return = { 
 		        "deal_name" => self.deal_name,
 		        "deal_description" => self.deal_description,
-		        "is_active" => self.is_active,
 		        "created_at" => self.created_at,
 		        "dealable_type" => self.dealable_type,
 		        "dealable_id" => self.dealable_id,
