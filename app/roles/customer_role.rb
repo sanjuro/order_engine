@@ -222,6 +222,8 @@ module CustomerRole
 		deals_user.deal = deal
 		deals_user.is_redeem = true
 		deals_user.save
+
+		true
 	end
 
 	# Function to punch a loyatly card

@@ -17,6 +17,6 @@ class RedeemDealContext
 
   def call
     deal = Deal.find(@deal_id)
-    @user.redeem_deal(@deal)
+    @user.redeem_deal(deal)
   end
 end

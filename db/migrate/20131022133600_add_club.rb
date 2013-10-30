@@ -2,12 +2,13 @@ class AddClub < ActiveRecord::Migration
   
 	 def self.up
 	    create_table :clubs, :options => "ENGINE=INODB" do |t|
-      		t.references :store
-     		t.string   :club_name
-     		t.string   :club_description
-            t.string   :address
-            t.string   :latitude
-            t.string   :longitude
+      	t.references :store
+        t.string   :unique_id
+        t.string   :club_name
+        t.string   :club_description
+        t.string   :address
+        t.string   :latitude
+        t.string   :longitude
      		t.string   :tagline
      		t.string   :tag
      		t.boolean  :is_active,  :default => true
