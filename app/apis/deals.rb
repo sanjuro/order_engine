@@ -6,7 +6,8 @@ class Deals < Grape::API
   resource 'deals' do
 
     # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/deals/ -v
-    # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/deals/1//redeem/?authentication_token=CXTTTTED2ASDBSD3 -v
+    # curl -i -H "Accept: application/json" http://127.0.0.1:9000/api/v1/deals/1/redeem/?authentication_token=CXTTTTED2ASDBSD3 -v
+    # curl -i -H "Accept: application/json" http://107.22.211.58:9000/api/v1/deals/1/redeem/?authentication_token=CXTTTTED2ASDBSD3 -v
 
     desc "Retrieve all deals"
     get "/" do

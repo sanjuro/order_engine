@@ -217,13 +217,23 @@ module CustomerRole
 	#   - 
 	#
 	def redeem_deal(deal)
-		deals_user = DealUser.new
-		deals_user.user_id = self
-		deals_user.deal = deal
-		deals_user.is_redeem = true
-		deals_user.save
 
-		true
+        start_time = Time.at((deal.start_time.hour ) * 60 * 60 + deal.start_time.min * 60 + deal.start_time.sec)
+        end_time = Time.at((deal.end_time.hour ) * 60 * 60 + deal.end_time.min * 60 + deal.end_time.sec)
+        time_now = Time.at((Time.now.hour + 2) * 60 * 60 + Time.now.min * 60 + Time.now.sec)
+
+		if (end_time >= time_now >= start_time)
+			deals_user = DealUser.new
+			deals_user.user_id = self
+			deals_user.deal = deal
+			deals_user.is_redeem = true
+			deals_user.save
+
+			return { "success" => "Deal Redeemed", "detail" =>  "Deal Redeemed" }
+		else
+			return { "error" => "Deal error", "detail" =>  "Deal could not be found" } 
+		end
+
 	end
 
 	# Function to punch a loyatly card

@@ -3,7 +3,7 @@
 # Author::    Shadley Wentzel
 class Deal < ActiveRecord::Base
 	attr_accessible :deal_name, :deal_description, :is_active, :dealable_type, :dealable_id, :prize,
-					:time_frame, :redeem_code, :created_at, :completed_at, :updated_at
+					:time_frame, :start_time, :end_time, :redeem_code, :created_at, :completed_at, :updated_at
 
 	belongs_to :club
 
