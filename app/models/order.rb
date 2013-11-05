@@ -552,7 +552,15 @@ class Order < ActiveRecord::Base
         Notification.adapter = 'whatsapp'       
         Notification.send(device.device_token, message[:msg].to_s)
       end
+
     end
+
+    # Sending center specific notification to android 
+      # Sansui       
+      Resque.enqueue(NotificationAndroidSender, "APA91bFVX39CgbaNYySxkN2K7WAgR8eDIMC_k0xsdvkujujLnyfE0k6SJY3L1lvn05W_DM2mH51PbMU3ACye-86ELSlc3THo0iiz9sLwOJ2CUyxPoHPWBK6djJYVDrGYVGl_tkywDe0a", self.id, message)
+    
+      # Zephs Tab
+      Resque.enqueue(NotificationAndroidSender, "APA91bGct0hiMd42uTyXxk1x32t2pqlp52pef7cBHztB0yR6LFLtvlViB1eVEGN-sxm_s9veaY9quq1l2ZTSoXz-G7Zmze3R_LK2hVsvEIsmP91OpXz1KWiX44PPF8Tc8YWev2457F9z", self.id, message)
 
   end
 
