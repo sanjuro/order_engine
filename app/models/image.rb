@@ -40,6 +40,11 @@ class Image < Asset
     "/#{viewable_id}/small/#{attachment_file_name}"
   end
 
+  def large_url
+    # attachment.url(:large, false)
+    "/#{viewable_id}/large/#{attachment_file_name}"
+  end
+
   # def find_dimensions
   #   temporary = attachment.queued_for_write[:original]
   #   filename = temporary.path unless temporary.nil?

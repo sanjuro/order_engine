@@ -11,6 +11,7 @@ class Customers < Grape::API
     # curl -X POST -d '{"user":{"first_name": "Shadley", "last_name": "Wentzel", "email": "shad6ster@gmail.com", "mobile_number":"0828688222", "user_pin":"11111"}}' -H "Accept: application/json" -H "Content-Type:application/json" http://localhost:9000/api/v1/customers/update?authentication_token=AXSSSSED2ASDASD1 -v
     # curl -X POST -d '{"email": "gavin@liquidthought.co.za", "pin": "21421"}' -H "Accept: application/json" http://107.22.211.58:9000/api/v1/customers/authenticate?authentication_token=CXTTTTED2ASDBSD3 -v
     # curl -X POST -d '{ "user": { "email": "shad6ster@gmail.com", "full_name": "Shad Man"} }' -H "Accept: application/json" http://107.22.211.58:9000/api/v1/customers/update?authentication_token=b5a27178456753ba773d83666d276631 -v 
+    # curl -i -X POST -d '{"authentication_token": "b228b017e445b55b368c9608546a1ea1","payment_method_data": {"payment_method": "2","hash_value": "123fqf33t","unique_identifier": "b228b017e445b55b368c9608546a1ea1","device_identifier":"103edb7d8c4e3669"}}' http://127.0.0.1:9000/api/v1/customers/add_payment_profile -v
    
     desc "Updates a customer"
     post '/update' do
@@ -64,6 +65,22 @@ class Customers < Grape::API
         else
           error!({ "error" => "authentication error", "detail" =>  "customer password/pin does not match" }, 400)  
         end
+      end
+    end
+
+    desc "Add payment profile for Customer"
+    params do
+      requires :authentication_token, :type => String, :desc => "Authentication Token"
+    end
+    post '/add_payment_profile' do
+      authenticated_user
+      logger.info "Authenticating Customer with Username: #{params[:email]}"
+     
+      customer = User.find(current_user.id)      
+      if customer.nil?
+        error!({ "error" => "authentication error", "detail" => "customer with username \"#{params[:email]}\" not found" }, 400)
+      else
+        AddPaymentProfileContext.call(customer, params[:payment_method_data])
       end
     end
   end  

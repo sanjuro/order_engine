@@ -57,7 +57,23 @@ class Store < ActiveRecord::Base
   scope :featured_stores,  where("stores.is_featured = 1")
 
   def store_icon
-    self.images.first.little_url
+    store_image = self.images.where(["attachment_file_name = :value", { :value => 'logo.png' }]).first
+
+    if store_image.nil?
+      "/15/little/logo.png"
+    else
+      store_image.little_url
+    end
+  end
+
+  def store_background_image
+    store_background_image = self.images.where(["attachment_file_name = :value", { :value => 'background.png' }]).first
+
+    if store_background_image.nil?
+      "/15/little/background.png"
+    else
+      store_background_image.little_url
+    end
   end
 
   Sunspot.setup(Store) do
@@ -97,6 +113,7 @@ class Store < ActiveRecord::Base
             "updated_at" => self.updated_at,
             "url" => self.url,
             "store_image" => self.store_icon,
+            "store_background_image" => self.store_background_image,
             "business_hours" => self.get_business_hour_info
     }
   end  
@@ -126,6 +143,7 @@ class Store < ActiveRecord::Base
             "distance" => distance,
             "url" => self.url,
             "store_image" => self.store_icon,
+            "store_background_image" => self.store_background_image,
             "business_hours" => self.get_business_hour_info
     }
   end    

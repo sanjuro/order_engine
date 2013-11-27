@@ -24,7 +24,8 @@ class SignupCustomerContext
                             :email => @user[:email],
                             :mobile_number => @user[:mobile_number],
                             :user_pin => @user[:user_pin],
-                            :profileable_type => 'customer'
+                            :profileable_type => 'customer',
+                            :payment_method_id => @user[:payment_method_id]
                             )
     @customer.save
 

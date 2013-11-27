@@ -39,13 +39,13 @@ class Order < ActiveRecord::Base
       pluck(:state).uniq
     end
   end
-  # has_many :payments, :dependent => :destroy
+  has_many :payments, :dependent => :destroy
   has_many :adjustments, :as => :adjustable, :dependent => :destroy, :order => "created_at ASC"
 
   accepts_nested_attributes_for :line_items
   accepts_nested_attributes_for :ship_address
   # accepts_nested_attributes_for :invoice
-  # accepts_nested_attributes_for :payments
+  accepts_nested_attributes_for :payments
   accepts_nested_attributes_for :shipments
   
   # before_create :create_client
@@ -101,6 +101,7 @@ class Order < ActiveRecord::Base
 
     before_transition :to => :collected do |order|
       begin
+
         # order.process_payments!
 
         order.process_line_items! 
@@ -466,7 +467,8 @@ class Order < ActiveRecord::Base
       :user_id        => self.user_id
     }, :without_protection => true)
 
-    self.send_new_order_notification
+    # uncomment this for production
+    # self.send_new_order_notification
 
     # deliver_order_confirmation_email(self.customer.email)
 
@@ -476,7 +478,8 @@ class Order < ActiveRecord::Base
     # Pusher.secret = 'deae8cae47a1c88942e1'
     # Pusher['order'].trigger('new_order_event', {:user_id => VOSTO_ORDER_MANAGER_ID,:message => "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}."})
 
-    Resque.enqueue(NotificationPusherSender, 'new_order_event', VOSTO_ORDER_MANAGER_ID, self.id, "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}.")
+    # uncomment this for production
+    # Resque.enqueue(NotificationPusherSender, 'new_order_event', VOSTO_ORDER_MANAGER_ID, self.id, "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}.")
 
     p "Order Id#{self.id}:Sent store notification to In-Store Application."
 
@@ -562,6 +565,8 @@ class Order < ActiveRecord::Base
       # Zephs Tab
       Resque.enqueue(NotificationAndroidSender, "APA91bGct0hiMd42uTyXxk1x32t2pqlp52pef7cBHztB0yR6LFLtvlViB1eVEGN-sxm_s9veaY9quq1l2ZTSoXz-G7Zmze3R_LK2hVsvEIsmP91OpXz1KWiX44PPF8Tc8YWev2457F9z", self.id, message)
 
+      # Support Tab
+      # Resque.enqueue(NotificationAndroidSender, "APA91bG6Xdb140Dj-6GcCXbIif-5OEQbEk0cWp-v3tGjjDvK2UZkrRbvZkR7Kp1Iq4OxewOpifGyWwcEg9fOOEVTLX4JrSFKUoq-Y4fi2j4Yrt7CCSljTOckYFn_hGpFSVCKEIeYCTdS-F0JlVNJaIetTlnnTkzuwQ", self.id, message)
   end
 
   def send_in_progress_nofitication
@@ -796,7 +801,7 @@ class Order < ActiveRecord::Base
       # +total+              The so-called "order total."  This is equivalent to +item_total+ plus +adjustment_total+.
       def update_totals
         # update_adjustments
-        # self.payment_total = payments.completed.map(&:amount).sum
+        self.payment_total = payments.completed.map(&:amount).sum
         self.item_total = line_items.map(&:amount).sum
         self.adjustment_total = adjustments.eligible.map(&:amount).sum
         self.total = item_total + adjustment_total

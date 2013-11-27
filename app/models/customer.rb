@@ -30,6 +30,7 @@ class Customer < User
   validates :first_name, :email, :presence => true
 
   has_one :user, :as => :profileable
+  
   accepts_nested_attributes_for :user
 
   has_many :orders

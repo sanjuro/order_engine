@@ -46,6 +46,29 @@ module CustomerRole
 		end
 
 		order.save!
+	
+		if !order_data[:payment].nil?
+
+			payemnt_data =  order_data[:payment].first
+
+			payment_profile = PaymentProfile.by_unique_token(payemnt_data[:payment_profile_id]).first
+			p payment_profile.payment_method_id
+			payment = Payment.create(
+						:order_id => order.id,
+						:source_id => payment_profile.payment_method_id,
+						:source_type => payment_profile.payment_method.type,
+						:amount => payemnt_data.amount,
+						:payment_method_id => payment_profile.payment_method_id,
+						:state => 'pending'
+					)
+	
+			payment.order = order
+		
+			order.payments << payment
+			order.save!
+
+		end
+
 		
 		if !order_data[:ship_address].nil?
 
@@ -78,6 +101,25 @@ module CustomerRole
 			order.create_shipment!
 			
 		end
+
+		# do the payment step
+    	# Resque.enqueue(PaymentProcessor, order.id)
+
+	    payment = order.payments.first
+
+	    payment_profile = PaymentProfile.active.by_customer(self.id).first
+
+	    case payment_profile.payment_method_id
+	    when 1
+	      p "Order ID #{order.id}:Doing Cash Payment"
+	      DoCashContext.call(order.customer, order)
+	    when 2
+	      p "Order ID #{order.id}:Doing Credit Card Payment"
+	      DoCreditCardPaymentContext.call(order.customer, order)
+	    else
+	      p "Order ID #{order.id}:Doing Default Payment"
+	      DoCashContext.call(order.customer, order)
+	    end
 
 		# send first time order mail if it is first time
     	Resque.enqueue(FirstTimeOrderUpMailer, self.id)
@@ -251,6 +293,73 @@ module CustomerRole
         	loyalty_card.is_won = true
         end
          	loyalty_card.save
+	end
+
+	# Function to create a payment profile for a customers
+	#
+	# * *Args*    :
+	#   - 
+	# * *Returns* :
+	#   - string + the unique token for the profile
+	# * *Raises* :
+	#   - 
+	#
+	def create_payment_profile(payment_method, payment_data)
+		payment_profiles = PaymentProfile.where('user_id = ?',self.id).all
+		
+		# make old profile in active
+		payment_profiles.each do |payment_profile|
+			payment_profile.is_active = false
+			payment_profile.save
+		end
+
+		payment_profile = PaymentProfile.new
+		payment_profile.user_id = self.id
+		payment_profile.payment_method_id = payment_method.id
+		payment_profile.is_active =	true
+		payment_data = payment_data.as_json
+		payment_profile.payment_data = payment_data
+		payment_profile.save
+
+		return payment_profile.unique_token
+	end
+
+	# Function to pay an order with a credit card
+	#
+	# * *Args*    :
+	#   - +order+ -> the order that is going to be paid
+	# * *Returns* :
+	#   - +status_code+ -> the status code of the payment
+	# * *Raises* :
+	#   - 
+	#
+	def pay_with_credit_card(order)
+
+		# get payment profile for the customer
+		payment_profile = PaymentProfile.active.by_customer(self.id).first
+		payment_data = payment_profile.payment_data
+
+		payment_method = PaymentMethod.find(payment_profile.payment_method_id)
+
+	    transaction_options = Hash.new
+	    transaction_options = {
+	          :payment_type => 'Card',
+	          :amount => order.total,
+	          # :merchant_id => order.store.merhcant_id
+	          :merchant_id => 6
+	    }
+
+	    # This will start off the initial payment step
+		payment_guid = payment_method.authorize(transaction_options)
+
+		transaction_options = Hash.new
+	    transaction_options = {
+	          :guid => payment_guid[:payment_guid],
+	          :encrypted_card_info => payment_data["secured_card_info"],
+	          :card_hash => payment_data["hash_value"]
+	    }
+	 	
+		payment_method.purchase(transaction_options)
 	end
 
 	# Function to reset the pin of a csutomer

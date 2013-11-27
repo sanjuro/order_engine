@@ -27,11 +27,14 @@ namespace :resque do
 		require File.dirname(__FILE__) + '/../database_configuration.rb'
 		require File.dirname(__FILE__) + '/../action_mailer_configuration.rb'
 		require File.dirname(__FILE__) + '/../solr_configuration.rb'
-
+       
         Dir[File.dirname(__FILE__) + '/../lib/*.rb'].each { |file| require file }
         Dir[File.dirname(__FILE__) + '/../lib/notification_adapters/*.rb'].each {|file| require file }
-		Dir[File.dirname(__FILE__) + '/../app/models/*.rb'].each {|file| require file }
-		Dir[File.dirname(__FILE__) + '/../app/models/calculator/*.rb'].each {|file| require file }
+        Dir[File.dirname(__FILE__) + '/../app/helpers/*.rb'].each {|file| require file }
+		Dir[File.dirname(__FILE__) + '/../app/models/*.rb'].each {|file| require file }        
+        Dir[File.dirname(__FILE__) + '/../app/models/calculator/*.rb'].each {|file| require file }
+        Dir[File.dirname(__FILE__) + '/../app/models/gateway/*.rb'].each {|file| require file }
+        Dir[File.dirname(__FILE__) + '/../app/models/payment_method/*.rb'].each {|file| require file }        
 		Dir[File.dirname(__FILE__) + '/../app/contexts/*.rb'].each {|file| require file }
 		Dir[File.dirname(__FILE__) + '/../app/roles/*.rb'].each {|file| require file }
 		Dir[File.dirname(__FILE__) + '/../app/mailers/*.rb'].each {|file| require file }

@@ -6,6 +6,7 @@ gem 'rack-fiber_pool',  :require => 'rack/fiber_pool'
 #                     :require => ['em-synchrony', 'em-synchrony/activerecord']
       
 gem 'em-synchrony' 
+gem 'em-http-request'
 
 gem 'grape'
 gem 'goliath'
@@ -31,6 +32,8 @@ gem 'bcrypt-ruby'
 gem 'ruby_pagination_logic'
 
 gem 'kaminari'
+
+gem 'savon'
 
 gem 'sunspot', '2.0.0'
 gem 'sunspot_rails', '2.0.0'
