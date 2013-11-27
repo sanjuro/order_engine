@@ -109,17 +109,21 @@ module CustomerRole
 
 	    payment_profile = PaymentProfile.active.by_customer(self.id).first
 
-	    case payment_profile.payment_method_id
-	    when 1
-	      p "Order ID #{order.id}:Doing Cash Payment"
-	      DoCashContext.call(order.customer, order)
-	    when 2
-	      p "Order ID #{order.id}:Doing Credit Card Payment"
-	      DoCreditCardPaymentContext.call(order.customer, order)
+	    if payment_profile.nil?
+
 	    else
-	      p "Order ID #{order.id}:Doing Default Payment"
-	      DoCashContext.call(order.customer, order)
-	    end
+		    case payment_profile.payment_method_id
+		    when 1
+		      p "Order ID #{order.id}:Doing Cash Payment"
+		      DoCashContext.call(order.customer, order)
+		    when 2
+		      p "Order ID #{order.id}:Doing Credit Card Payment"
+		      DoCreditCardPaymentContext.call(order.customer, order)
+		    else
+		      p "Order ID #{order.id}:Doing Default Payment"
+		      DoCashContext.call(order.customer, order)
+		    end
+		end
 
 		# send first time order mail if it is first time
     	Resque.enqueue(FirstTimeOrderUpMailer, self.id)

@@ -42,7 +42,7 @@ class CreatePayments < ActiveRecord::Migration
     end
 
     create_table :payment_methods do |t|
-      t.string     :gateway_type
+      t.string     :type
       t.string     :name
       t.text       :description
       t.boolean    :active,      :default => true
