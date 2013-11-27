@@ -10,16 +10,21 @@ class PaymentProcessor
 
     payment_profile = PaymentProfile.active.by_customer(order.user_id).first
 
-    case payment_profile.payment_method_id
-    when 1
-      p "Order ID #{order_id}:Doing Cash Payment"
-      DoCashContext.call(order.customer, order)
-    when 2
-      p "Order ID #{order_id}:Doing Credit Card Payment"
-      DoCreditCardPaymentContext.call(order.customer, order)
+    if payment_profile.nil?
+      p "Order ID #{order.id}:Doing Cash Payment"
+      DoCashPaymentContext.call(order.customer, order)
     else
-      p "Order ID #{order_id}:Doing Default Payment"
-      DoCashContext.call(order.customer, order)
+      case payment_profile.payment_method_id
+      when 1
+        p "Order ID #{order.id}:Doing Cash Payment"
+        DoCashPaymentContext.call(order.customer, order)
+      when 2
+        p "Order ID #{order.id}:Doing Credit Card Payment"
+        DoCreditCardPaymentContext.call(order.customer, order)
+      else
+        p "Order ID #{order.id}:Doing Default Payment"
+        DoCashContext.call(order.customer, order)
+      end
     end
   	
   end

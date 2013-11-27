@@ -52,7 +52,7 @@ module CustomerRole
 			payemnt_data =  order_data[:payment].first
 
 			payment_profile = PaymentProfile.by_unique_token(payemnt_data[:payment_profile_id]).first
-			p payment_profile.payment_method_id
+			
 			payment = Payment.create(
 						:order_id => order.id,
 						:source_id => payment_profile.payment_method_id,
@@ -110,12 +110,13 @@ module CustomerRole
 	    payment_profile = PaymentProfile.active.by_customer(self.id).first
 
 	    if payment_profile.nil?
-
+	      p "Order ID #{order.id}:Doing Cash Payment"
+	      DoCashPaymentContext.call(order.customer, order)
 	    else
 		    case payment_profile.payment_method_id
 		    when 1
 		      p "Order ID #{order.id}:Doing Cash Payment"
-		      DoCashContext.call(order.customer, order)
+		      DoCashPaymentContext.call(order.customer, order)
 		    when 2
 		      p "Order ID #{order.id}:Doing Credit Card Payment"
 		      DoCreditCardPaymentContext.call(order.customer, order)

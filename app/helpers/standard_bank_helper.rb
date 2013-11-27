@@ -10,8 +10,7 @@ module StandardBankHelper
   @@STANDARD_BANK_KEY = "123456789123456789123456"
   @@STANDARD_BANK_WSDL_URL = "http://poc.beyondpayments.com/vostoapi/Service.asmx?WSDL"
 
-  def create_channel_session
-    p "create_channel_session"
+  def create_channel_session   
 
     request_time = Time.now
     request_time_conveted = request_time.strftime("%Y-%m-%dT%H:%M:%S")
@@ -147,9 +146,9 @@ module StandardBankHelper
         "IDNumber" => "8112045070088",
         "MerchantId" => transaction_options[:merchant_id]
       }
-
+      p "begin start_payment_process"
       response = client.call(:start_payment_process, message: message)
-
+      p "end start_payment_process"
     rescue Savon::SOAPFault => fault
       fault_code = error.to_hash[:fault][:faultcode]
       p fault_code
