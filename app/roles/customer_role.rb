@@ -49,15 +49,15 @@ module CustomerRole
 	
 		if !order_data[:payment].nil?
 
-			payemnt_data =  order_data[:payment].first
-
+			payemnt_data = order_data[:payment].first
+			p payemnt_data
 			payment_profile = PaymentProfile.by_unique_token(payemnt_data[:payment_profile_id]).first
-			
+			p payment_profile
 			payment = Payment.create(
 						:order_id => order.id,
 						:source_id => payment_profile.payment_method_id,
 						:source_type => payment_profile.payment_method.type,
-						:amount => payemnt_data.amount,
+						:amount => order.total,
 						:payment_method_id => payment_profile.payment_method_id,
 						:state => 'pending'
 					)
