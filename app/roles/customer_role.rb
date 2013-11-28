@@ -49,7 +49,7 @@ module CustomerRole
 	
 		if !order_data[:payment].nil?
 
-			payment_data = order_data[:payment].first
+			payment_data = order_data[:payment]
 			p payment_data
 			payment_profile = PaymentProfile.by_unique_token(payment_data.payment_profile_id).first
 			p payment_profile
