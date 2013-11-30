@@ -21,6 +21,14 @@ class AuthenticateCustomerContext
 
     if customer
       customer.authentication_token
+
+      payment_profile = PaymentProfile.active.by_customer(customer.id).first
+
+      if payment_profile.nil?
+        payment_method_id = 0
+      else 
+        payment_method_id = payment_profile.payment_method_id
+      end
       
       return { 
               :authentication_token => customer.authentication_token,
@@ -29,8 +37,8 @@ class AuthenticateCustomerContext
               :last_name => customer.last_name,
               :username => customer.username,
               :email => customer.email,
-              :mobile_number => customer.mobile_number
-              :payment_method => customer.payment_method_id
+              :mobile_number => customer.mobile_number,
+              :payment_method => payment_method_id
             }
     else 
       return false
