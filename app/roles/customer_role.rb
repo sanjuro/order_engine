@@ -46,28 +46,28 @@ module CustomerRole
 		end
 
 		order.save!
-	
-		if !order_data[:payment].nil?
 
-			payment_data = order_data[:payment]
-			p payment_data
-			payment_profile = PaymentProfile.by_unique_token(payment_data.payment_profile_id).first
-			p payment_profile
-			payment = Payment.create(
-						:order_id => order.id,
-						:source_id => payment_profile.payment_method_id,
-						:source_type => payment_profile.payment_method.type,
-						:amount => order.total,
-						:payment_method_id => payment_profile.payment_method_id,
-						:state => 'pending'
-					)
-	
-			payment.order = order
-		
-			order.payments << payment
-			order.save!
+        if !order_data[:payment].nil?
 
-		end
+                payment_data = order_data[:payment]
+        
+                payment_profile = PaymentProfile.by_unique_token(payment_data.payment_profile_id).first
+         
+                payment = Payment.create(
+                                        :order_id => order.id,
+                                        :source_id => payment_profile.payment_method_id,
+                                        :source_type => payment_profile.payment_method.type,
+                                        :amount => order.total,
+                                        :payment_method_id => payment_profile.payment_method_id,
+                                        :state => 'pending'
+                                )
+
+                payment.order = order
+
+                order.payments << payment
+                order.save!
+
+        end
 
 		
 		if !order_data[:ship_address].nil?
@@ -103,28 +103,28 @@ module CustomerRole
 		end
 
 		# do the payment step
-    	# Resque.enqueue(PaymentProcessor, order.id)
+    	Resque.enqueue(PaymentProcessor, order.id)
 
-	    payment = order.payments.first
+	 #    payment = order.payments.first
 
-	    payment_profile = PaymentProfile.active.by_customer(self.id).first
+	 #    payment_profile = PaymentProfile.active.by_customer(self.id).first
 
-	    if payment_profile.nil?
-	      p "Order ID #{order.id}:Doing Cash Payment"
-	      DoCashPaymentContext.call(order.customer, order)
-	    else
-		    case payment_profile.payment_method_id
-		    when 1
-		      p "Order ID #{order.id}:Doing Cash Payment"
-		      DoCashPaymentContext.call(order.customer, order)
-		    when 2
-		      p "Order ID #{order.id}:Doing Credit Card Payment"
-		      DoCreditCardPaymentContext.call(order.customer, order)
-		    else
-		      p "Order ID #{order.id}:Doing Default Payment"
-		      DoCashContext.call(order.customer, order)
-		    end
-		end
+	 #    if payment_profile.nil?
+	 #      p "Order ID #{order.id}:Doing Cash Payment"
+	 #      DoCashPaymentContext.call(order.customer, order)
+	 #    else
+		#     case payment_profile.payment_method_id
+		#     when 1
+		#       p "Order ID #{order.id}:Doing Cash Payment"
+		#       DoCashPaymentContext.call(order.customer, order)
+		#     when 2
+		#       p "Order ID #{order.id}:Doing Credit Card Payment"
+		#       DoCreditCardPaymentContext.call(order.customer, order)
+		#     else
+		#       p "Order ID #{order.id}:Doing Default Payment"
+		#       DoCashContext.call(order.customer, order)
+		#     end
+		# end
 
 		# send first time order mail if it is first time
     	Resque.enqueue(FirstTimeOrderUpMailer, self.id)
@@ -346,8 +346,8 @@ module CustomerRole
 
 		payment_method = PaymentMethod.find(payment_profile.payment_method_id)
 
-	    transaction_options = Hash.new
-	    transaction_options = {
+	    auhtorization_options = Hash.new
+	    auhtorization_options = {
 	          :payment_type => 'Card',
 	          :amount => order.total,
 	          # :merchant_id => order.store.merhcant_id
@@ -355,7 +355,7 @@ module CustomerRole
 	    }
 
 	    # This will start off the initial payment step
-		payment_guid = payment_method.authorize(transaction_options)
+		payment_guid = payment_method.authorize(auhtorization_options)
 
 		transaction_options = Hash.new
 	    transaction_options = {
@@ -363,7 +363,7 @@ module CustomerRole
 	          :encrypted_card_info => payment_data["secured_card_info"],
 	          :card_hash => payment_data["hash_value"]
 	    }
-	 	
+	 
 		payment_method.purchase(transaction_options)
 	end
 

@@ -45,6 +45,7 @@ gem 'urbanairship'
 
 gem 'resque'
 
+
 group :test do 
 	gem 'rake', :groups=>[:development, :test]
 	gem 'rack-test', :group=>:test

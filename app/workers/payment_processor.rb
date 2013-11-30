@@ -10,21 +10,28 @@ class PaymentProcessor
 
     payment_profile = PaymentProfile.active.by_customer(order.user_id).first
 
-    if payment_profile.nil?
-      p "Order ID #{order.id}:Doing Cash Payment"
-      DoCashPaymentContext.call(order.customer, order)
-    else
-      case payment_profile.payment_method_id
-      when 1
+    EM.run do
+      Fiber.new {
+
+      if payment_profile.nil?
         p "Order ID #{order.id}:Doing Cash Payment"
         DoCashPaymentContext.call(order.customer, order)
-      when 2
-        p "Order ID #{order.id}:Doing Credit Card Payment"
-        DoCreditCardPaymentContext.call(order.customer, order)
       else
-        p "Order ID #{order.id}:Doing Default Payment"
-        DoCashContext.call(order.customer, order)
+        case payment_profile.payment_method_id
+        when 1
+          p "Order ID #{order.id}:Doing Cash Payment"
+          DoCashPaymentContext.call(order.customer, order)
+        when 2
+          p "Order ID #{order.id}:Doing Credit Card Payment"
+          DoCreditCardPaymentContext.call(order.customer, order)
+        else
+          p "Order ID #{order.id}:Doing Default Payment"
+          DoCashContext.call(order.customer, order)
+        end
       end
+
+        EM.stop
+      }.resume
     end
   	
   end
