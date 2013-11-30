@@ -30,6 +30,7 @@ class AuthenticateCustomerContext
               :username => customer.username,
               :email => customer.email,
               :mobile_number => customer.mobile_number
+              :payment_method => customer.payment_method_id
             }
     else 
       return false

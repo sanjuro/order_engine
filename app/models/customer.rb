@@ -25,7 +25,7 @@ class Customer < User
   # Setup accessible (or protected) attributes for your model
   attr_accessible :id, :full_name, :user_pin, :email, :gender, :encrypted_password, 
                   :remember_me, :provider, :uid, :user_attributes, :first_name, :last_name, 
-                  :mobile_number, :birthday, :user_pin
+                  :mobile_number, :birthday, :user_pin, :payment_method_id
 
   validates :first_name, :email, :presence => true
 
