@@ -9,7 +9,7 @@ class Customers < Grape::API
     # curl -d '{"authentication_token": "CXTTTTED2ASDBSD3", "email": "shadley@vosto.co.za", "pin": "12204"}' 'http://127.0.0.1:9000/api/v1/customers/authenticate' -H Content-Type:application/json -v
     # curl -d '{"authentication_token": "CXTTTTED2ASDBSD3", "email": "shadley@vosto.co.za"}' 'http://127.0.0.1:9000/api/v1/customers/reset_pin' -H Content-Type:application/json -v
     # curl -X POST -d '{"user":{"first_name": "Shadley", "last_name": "Wentzel", "email": "shad6ster@gmail.com", "mobile_number":"0828688222", "user_pin":"11111"}}' -H "Accept: application/json" -H "Content-Type:application/json" http://localhost:9000/api/v1/customers/update?authentication_token=AXSSSSED2ASDASD1 -v
-    # curl -X POST -d '{"email": "gavin@liquidthought.co.za", "pin": "21421"}' -H "Accept: application/json" http://107.22.211.58:9000/api/v1/customers/authenticate?authentication_token=CXTTTTED2ASDBSD3 -v
+    # curl -X POST -d '{"email": "shad6ster@gmail.com", "pin": "12204"}' -H "Accept: application/json" http://107.22.211.58:9000/api/v1/customers/authenticate?authentication_token=CXTTTTED2ASDBSD3 -v
     # curl -X POST -d '{ "user": { "email": "shad6ster@gmail.com", "full_name": "Shad Man"} }' -H "Accept: application/json" http://107.22.211.58:9000/api/v1/customers/update?authentication_token=b5a27178456753ba773d83666d276631 -v 
     # curl -i -X POST -d '{"authentication_token": "b228b017e445b55b368c9608546a1ea1","payment_method_data": {"payment_method": "2","hash_value": "123fqf33t","unique_identifier": "b228b017e445b55b368c9608546a1ea1","device_identifier":"103edb7d8c4e3669"}}' http://127.0.0.1:9000/api/v1/customers/add_payment_profile -v
    
