@@ -526,34 +526,36 @@ class Order < ActiveRecord::Base
     # get all devices for the store
     self.store.devices.each do |device|
 
-      case device.device_type
-      when 'android'
-        p "ORDER ID #{self.id}:Sending android notification"
+      if !device.nil?
+        case device.device_type
+        when 'android'
+          p "ORDER ID #{self.id}:Sending android notification"
 
-        message[:order_id] = self.id
-        message[:subject] = "new order"
-        message[:msg] = "new"
-        
-        # Notification.adapter = 'android'
-        # Notification.send(device.device_token, message)
+          message[:order_id] = self.id
+          message[:subject] = "new order"
+          message[:msg] = "new"
+          
+          # Notification.adapter = 'android'
+          # Notification.send(device.device_token, message)
 
-        Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
-      when 'web'
-        p "ORDER ID #{self.id}:Sending web notification"
+          Resque.enqueue(NotificationAndroidSender, device.device_token, self.id, message)
+        when 'web'
+          p "ORDER ID #{self.id}:Sending web notification"
 
-        message = "New Order: ID #{self.id} orderd at #{self.created_at}."
+          message = "New Order: ID #{self.id} orderd at #{self.created_at}."
 
-        # Notification.adapter = 'web'       
-        # Notification.send(self.store.unique_id, message)
+          # Notification.adapter = 'web'       
+          # Notification.send(self.store.unique_id, message)
 
-        Resque.enqueue(NotificationPusherSender, 'new_order_event', self.store.unique_id, self.id, message)
-      when 'whatsapp'
-        p "ORDER ID #{self.id}:Sending whatsapp notification"
+          Resque.enqueue(NotificationPusherSender, 'new_order_event', self.store.unique_id, self.id, message)
+        when 'whatsapp'
+          p "ORDER ID #{self.id}:Sending whatsapp notification"
 
-        message[:msg] = self.format_for_whatsapp
+          message[:msg] = self.format_for_whatsapp
 
-        Notification.adapter = 'whatsapp'       
-        Notification.send(device.device_token, message[:msg].to_s)
+          Notification.adapter = 'whatsapp'       
+          Notification.send(device.device_token, message[:msg].to_s)
+        end
       end
 
     end
@@ -562,6 +564,7 @@ class Order < ActiveRecord::Base
     # Sansui       
     Resque.enqueue(NotificationAndroidSender, "APA91bFVX39CgbaNYySxkN2K7WAgR8eDIMC_k0xsdvkujujLnyfE0k6SJY3L1lvn05W_DM2mH51PbMU3ACye-86ELSlc3THo0iiz9sLwOJ2CUyxPoHPWBK6djJYVDrGYVGl_tkywDe0a", self.id, message)
     
+
     # Zephs Tab
     Resque.enqueue(NotificationAndroidSender, "APA91bGct0hiMd42uTyXxk1x32t2pqlp52pef7cBHztB0yR6LFLtvlViB1eVEGN-sxm_s9veaY9quq1l2ZTSoXz-G7Zmze3R_LK2hVsvEIsmP91OpXz1KWiX44PPF8Tc8YWev2457F9z", self.id, message)
 
