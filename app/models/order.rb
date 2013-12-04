@@ -487,9 +487,9 @@ class Order < ActiveRecord::Base
 
     logger.info "Order Id:#{self.id}Sent user confirmation email."
 
-    Resque.enqueue(LoyaltyAdder, self, self.customer)
+    # Resque.enqueue(LoyaltyAdder, self, self.customer)
 
-    logger.info "Order Id:#{self.id}Loyalty calculated." 
+    # logger.info "Order Id:#{self.id}Loyalty calculated." 
   end
 
   def deliver_order_confirmation_email(recipient)
