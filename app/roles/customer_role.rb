@@ -47,27 +47,27 @@ module CustomerRole
 
 		order.save!
 
-        if !order_data[:payment].nil?
+        # if !order_data[:payment].nil?
 
-                payment_data = order_data[:payment]
+        #         payment_data = order_data[:payment]
         
-                payment_profile = PaymentProfile.by_unique_token(payment_data.payment_profile_id).first
+        #         payment_profile = PaymentProfile.by_unique_token(payment_data.payment_profile_id).first
          
-                payment = Payment.create(
-                                        :order_id => order.id,
-                                        :source_id => payment_profile.payment_method_id,
-                                        :source_type => payment_profile.payment_method.type,
-                                        :amount => order.total,
-                                        :payment_method_id => payment_profile.payment_method_id,
-                                        :state => 'pending'
-                                )
+        #         payment = Payment.create(
+        #                                 :order_id => order.id,
+        #                                 :source_id => payment_profile.payment_method_id,
+        #                                 :source_type => payment_profile.payment_method.type,
+        #                                 :amount => order.total,
+        #                                 :payment_method_id => payment_profile.payment_method_id,
+        #                                 :state => 'pending'
+        #                         )
 
-                payment.order = order
+        #         payment.order = order
 
-                order.payments << payment
-                order.save!
+        #         order.payments << payment
+        #         order.save!
 
-        end
+        # end
 
 		
 		if !order_data[:ship_address].nil?

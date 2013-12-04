@@ -6,7 +6,7 @@ class PaymentProcessor
 
   	order = Order.find(order_id)
 
-    payment = order.payments.first
+    # payment = order.payments.first
 
     payment_profile = PaymentProfile.active.by_customer(order.user_id).first
 
