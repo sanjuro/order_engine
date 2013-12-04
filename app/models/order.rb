@@ -521,8 +521,6 @@ class Order < ActiveRecord::Base
 
   def send_new_order_notification
 
-    p "ORDER ID #{self.id}:Sending new order notificaitons"
-
     message = Hash.new  
 
     # get all devices for the store
