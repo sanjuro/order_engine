@@ -560,6 +560,10 @@ class Order < ActiveRecord::Base
 
     end
 
+    message[:order_id] = self.id
+    message[:subject] = "new order"
+    message[:msg] = "new"
+
     # Sending center specific notification to android 
     # Sansui       
     # Resque.enqueue(NotificationAndroidSender, "APA91bFVX39CgbaNYySxkN2K7WAgR8eDIMC_k0xsdvkujujLnyfE0k6SJY3L1lvn05W_DM2mH51PbMU3ACye-86ELSlc3THo0iiz9sLwOJ2CUyxPoHPWBK6djJYVDrGYVGl_tkywDe0a", self.id, message)
