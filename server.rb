@@ -48,6 +48,7 @@ class API < Grape::API
 	    def logger
 	        # API.logger
 	        logger = Logger.new(File.dirname(__FILE__) + '/log/vosto_order.log')
+	        logger.formatter = Logger::Formatter.new
 			logger.level = Logger::INFO
 			logger
 	    end
