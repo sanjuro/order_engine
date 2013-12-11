@@ -470,8 +470,6 @@ class Order < ActiveRecord::Base
     # uncomment this for production
     self.send_new_order_notification
 
-    deliver_order_confirmation_email(self.customer.email)
-
     # send pusher notification to order manager
     # Pusher.app_id = '37591'
     # Pusher.key = 'be3c39c1555da94702ec'

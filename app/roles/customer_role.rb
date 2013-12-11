@@ -103,7 +103,7 @@ module CustomerRole
 		end
 
 		# do the payment step
-    	Resque.enqueue(PaymentProcessor, order.id)
+     # 	Resque.enqueue(PaymentProcessor, order.id)
 
 	 #    payment = order.payments.first
 
