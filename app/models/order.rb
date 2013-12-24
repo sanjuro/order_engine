@@ -476,6 +476,8 @@ class Order < ActiveRecord::Base
     # Pusher.secret = 'deae8cae47a1c88942e1'
     # Pusher['order'].trigger('new_order_event', {:user_id => VOSTO_ORDER_MANAGER_ID,:message => "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}."})
 
+    # these to resque calls need to move into the Roles class
+
     # uncomment this for production
     Resque.enqueue(NotificationPusherSender, 'new_order_event', VOSTO_ORDER_MANAGER_ID, self.id, "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}.")
 
