@@ -82,8 +82,8 @@ class Store < ActiveRecord::Base
     text :tag
     string :address
     boolean :is_online
-    location (:location) { Sunspot::Util::Coordinates.new(latitude, longitude) }
-    # latlon(:location) { Sunspot::Util::Coordinates.new(latitude, longitude) }
+    # location (:location) { Sunspot::Util::Coordinates.new(latitude, longitude) }
+    latlon(:location) { Sunspot::Util::Coordinates.new(latitude, longitude) }
   end
 
 
@@ -128,7 +128,7 @@ class Store < ActiveRecord::Base
             "can_deliver" => self.can_deliver,
             "created_at" => self.created_at,
             "email" => self.email,
-            "fanpage_id" => self.fanpage_id,
+            # "fanpage_id" => self.fanpage_id,
             "id" => self.id,
             "is_online" => self.is_online,
             "latitude" => self.latitude,
@@ -144,7 +144,7 @@ class Store < ActiveRecord::Base
             "url" => self.url,
             "store_image" => self.store_icon,
             "store_background_image" => self.store_background_image,
-            "business_hours" => self.get_business_hour_info
+            # "business_hours" => self.get_business_hour_info
     }
   end    
 
