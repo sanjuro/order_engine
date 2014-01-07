@@ -36,6 +36,8 @@ module CustomerRole
 							)
 
 		order_data[:line_items].each do |line_item|
+
+			puts 'line_items \n%s'%line_item
 			if line_item.kind_of?(Array)
 				variant = Variant.find(order_data[:line_items].variant_id.to_i)
 				order.add_variant(variant,order_data[:line_items].quantity.to_i, order_data[:line_items].special_instructions)
@@ -127,7 +129,8 @@ module CustomerRole
 		# end
 
 		# send first time order mail if it is first time
-    	Resque.enqueue(FirstTimeOrderUpMailer, self.id)
+		#Uncomment for production
+    	#Resque.enqueue(FirstTimeOrderUpMailer, self.id)
 		
 		order.next
 
