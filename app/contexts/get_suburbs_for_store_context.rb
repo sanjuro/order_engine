@@ -15,7 +15,7 @@ class GetSuburbsForStoreContext
   end
 
   def call
-    suburbs = Suburb.order('name ASC').all
+    
     zones_rates = ZonesRates.where('store_id = ?',store_id)
 
     suburbs_return = Array.new

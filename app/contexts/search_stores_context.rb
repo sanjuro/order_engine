@@ -31,8 +31,7 @@ class SearchStoresContext
   		paginate :page => page, :per_page => 15
   	end
 
-  	search_results = search.results 
-
+    search_results = search.results
     stores_return = Array.new
     search_results.each do |store|
       stores_return << store.format_for_web_serivce

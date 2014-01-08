@@ -224,8 +224,9 @@ class Order < ActiveRecord::Base
     end
   end 
 
-  def find_line_item_by_variant(variant)
-    line_items.detect { |line_item| line_item.variant_id == variant.id }
+  def find_line_item_by_variant(variant, special_instructions='' )
+    
+    line_items.detect { |line_item| line_item.variant_id == variant.id && line_item.special_instructions == special_instructions}
   end
 
   def allow_cancel?
@@ -239,13 +240,10 @@ class Order < ActiveRecord::Base
     true
   end
 
-  def add_variant(variant, quantity = 1, special_instructions)
-    puts 'add_varient called'
+  def add_variant(variant, quantity = 1, special_instructions = '')
     if special_instructions == ''
-      puts 'no sp instruc found in line item'
       current_item = find_line_item_by_variant(variant)
       if current_item
-        puts 'this line item was found as an existing variabt'
         current_item.quantity += quantity
         current_item.special_instructions = special_instructions
         current_item.save
@@ -253,19 +251,16 @@ class Order < ActiveRecord::Base
         create_line_item(variant,quantity,special_instructions)
       end
     else
-      puts 'else reached in add_Variant'
       create_line_item(variant,quantity,special_instructions)
       
     end
 
     self.reload
-    puts 'curent item %s '%current_item
     current_item
   end
 
 
   def create_line_item(variant, quantity, special_instructions)
-    puts 'create_line_item called'
     current_item = LineItem.new(:quantity => quantity)
     current_item.variant = variant
     current_item.price   = variant.price
