@@ -33,8 +33,11 @@ RESQUE = YAML::load(File.open('config/resque.yml'))['production']
 # Setup redis
 Resque.redis = Redis.new(
     :host => RESQUE['redis_host'],
-    :port => RESQUE['redis_port']
+    :port => RESQUE['redis_port'] 
 )
+puts 'redis values'
+puts RESQUE['redis_port']
+puts RESQUE['redis_host']
 
 class API < Grape::API
 	

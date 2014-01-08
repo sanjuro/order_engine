@@ -224,8 +224,9 @@ class Order < ActiveRecord::Base
     end
   end 
 
-  def find_line_item_by_variant(variant)
-    line_items.detect { |line_item| line_item.variant_id == variant.id }
+  def find_line_item_by_variant(variant, special_instructions='' )
+    
+    line_items.detect { |line_item| line_item.variant_id == variant.id && line_item.special_instructions == special_instructions}
   end
 
   def allow_cancel?
@@ -239,23 +240,37 @@ class Order < ActiveRecord::Base
     true
   end
 
-  def add_variant(variant, quantity = 1, special_instructions)
-    current_item = find_line_item_by_variant(variant)
-    if current_item
-      current_item.quantity += quantity
-      current_item.special_instructions = special_instructions
-      current_item.save
+  def add_variant(variant, quantity = 1, special_instructions = '')
+    if special_instructions == ''
+      current_item = find_line_item_by_variant(variant)
+      if current_item
+        current_item.quantity += quantity
+        current_item.special_instructions = special_instructions
+        current_item.save
+      else
+        create_line_item(variant,quantity,special_instructions)
+      end
     else
-      current_item = LineItem.new(:quantity => quantity)
-      current_item.variant = variant
-      current_item.price   = variant.price
-      current_item.special_instructions = special_instructions
-      self.line_items << current_item
+      create_line_item(variant,quantity,special_instructions)
+      
     end
 
     self.reload
     current_item
   end
+
+
+  def create_line_item(variant, quantity, special_instructions)
+    current_item = LineItem.new(:quantity => quantity)
+    current_item.variant = variant
+    current_item.price   = variant.price
+    current_item.special_instructions = special_instructions
+    
+    self.line_items << current_item
+    return current_item
+    
+  end
+
 
   # This is a multi-purpose method for processing logic related to changes in the Order.  It is meant to be called from
   # various observers so that the Order is aware of changes that affect totals and other values stored in the Order.
@@ -468,7 +483,7 @@ class Order < ActiveRecord::Base
     }, :without_protection => true)
 
     # uncomment this for production
-    self.send_new_order_notification
+    #self.send_new_order_notification
 
     # send pusher notification to order manager
     # Pusher.app_id = '37591'
@@ -479,14 +494,15 @@ class Order < ActiveRecord::Base
     # these to resque calls need to move into the Roles class
 
     # uncomment this for production
-    Resque.enqueue(NotificationPusherSender, 'new_order_event', VOSTO_ORDER_MANAGER_ID, self.id, "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}.")
+    #Resque.enqueue(NotificationPusherSender, 'new_order_event', VOSTO_ORDER_MANAGER_ID, self.id, "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}.")
 
     p "Order Id#{self.id}:Sent store notification to In-Store Application."
 
-    Resque.enqueue(OrderConfirmationMailer, self, self.customer.email)
+    #Resque.enqueue(OrderConfirmationMailer, self, self.customer.email)
 
     logger.info "Order Id:#{self.id}Sent user confirmation email."
 
+    # uncomment this for production
     # Resque.enqueue(LoyaltyAdder, self, self.customer)
 
     # logger.info "Order Id:#{self.id}Loyalty calculated." 
