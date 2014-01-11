@@ -130,7 +130,7 @@ module CustomerRole
 
 		# send first time order mail if it is first time
 		#Uncomment for production
-    	#Resque.enqueue(FirstTimeOrderUpMailer, self.id)
+    Resque.enqueue(FirstTimeOrderUpMailer, self.id)
 		
 		order.next
 
