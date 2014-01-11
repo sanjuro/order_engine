@@ -483,7 +483,7 @@ class Order < ActiveRecord::Base
     }, :without_protection => true)
 
     # uncomment this for production
-    #self.send_new_order_notification
+    self.send_new_order_notification
 
     # send pusher notification to order manager
     # Pusher.app_id = '37591'
@@ -494,7 +494,7 @@ class Order < ActiveRecord::Base
     # these to resque calls need to move into the Roles class
 
     # uncomment this for production
-    #Resque.enqueue(NotificationPusherSender, 'new_order_event', VOSTO_ORDER_MANAGER_ID, self.id, "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}.")
+    Resque.enqueue(NotificationPusherSender, 'new_order_event', VOSTO_ORDER_MANAGER_ID, self.id, "New Order: ID #{self.id} at #{self.store.store_name} orderd at #{self.created_at}.")
 
     p "Order Id#{self.id}:Sent store notification to In-Store Application."
 
@@ -503,7 +503,7 @@ class Order < ActiveRecord::Base
     logger.info "Order Id:#{self.id}Sent user confirmation email."
 
     # uncomment this for production
-    # Resque.enqueue(LoyaltyAdder, self, self.customer)
+    Resque.enqueue(LoyaltyAdder, self, self.customer)
 
     # logger.info "Order Id:#{self.id}Loyalty calculated." 
   end

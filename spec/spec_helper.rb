@@ -1,7 +1,7 @@
 require 'spork'
 require 'rack/test'
 require 'factory_girl'
-require './server'
+require '../server'
 
 FactoryGirl.find_definitions
 
