@@ -33,7 +33,7 @@ Resque.redis = Redis.new(
     :port => RESQUE['redis_port']
 )
 
-order = Order.find(2363)
+order = Order.find(2000)
 
 message = "Your order: #{order.number} is being cooked up at #{order.store.store_name} and will be ready in #{order.time_to_ready} minutes."
 
