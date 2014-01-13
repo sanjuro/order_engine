@@ -13,7 +13,7 @@ describe ShippingMethod do
 
     it "SHOULD have its suburbs set to Zone 9, the delivery areas we offering" do 
   
-    Store.reindex
+    @Store.reindex
     Sunspot.commit
 
       # stores = [31,103,28,165,27,40,5,90,50,35,134,25,24,4,30,42,31]
